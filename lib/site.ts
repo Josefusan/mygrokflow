@@ -9,7 +9,7 @@ export const PROMISE =
 export const NAV_ITEMS = [
   { href: "#top", id: "top", label: "Home" },
   { href: "#for", id: "for", label: "For" },
+  { href: "#get", id: "get", label: "Get" },
   { href: "#how", id: "how", label: "How" },
   { href: "#examples", id: "examples", label: "Examples" },
-  { href: "#pricing", id: "pricing", label: "Pricing" },
 ] as const;
