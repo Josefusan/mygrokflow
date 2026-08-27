@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Mark } from "@/components/mark";
 import {
   DIAGNOSTIC_EMAIL,
   DIAGNOSTIC_MAILTO,
@@ -30,11 +29,7 @@ const AUDIENCE = [
   },
 ] as const;
 
-const NOT_FOR = [
-  "Hours billed as a product",
-  "A folder of prompts",
-  "A generic agent demo",
-] as const;
+const NOT_FOR = ["students", "hobbyists", "$99 chatbot shoppers"] as const;
 
 const STEPS = [
   { n: "01", title: "Diagnostic" },
@@ -54,6 +49,9 @@ const RATES = [
   { rate: "$10K", cadence: "one-time" },
 ] as const;
 
+const sectionLabel =
+  "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
+
 function Cta({ className }: { className?: string }) {
   return (
     <Button asChild className={`h-9 rounded-full px-4 ${className ?? ""}`}>
@@ -65,7 +63,7 @@ function Cta({ className }: { className?: string }) {
 export function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="sticky top-0 z-40 border-b border-border bg-background">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
           <a href="#top" className="text-sm font-medium tracking-tight">
             {SITE_NAME}
@@ -76,15 +74,12 @@ export function Landing() {
 
       <main id="main" className="mx-auto max-w-[42rem] px-4">
         <section id="top" className="fade-in scroll-mt-12 py-16">
-          <p className="font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-            High-ticket AI automations
-          </p>
-          <h1 className="mt-3 text-3xl leading-[1.15] font-semibold tracking-tight text-foreground">
+          <p className={sectionLabel}>High-ticket AI automations</p>
+          <h1 className="mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
             {PROMISE}
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-            High-ticket systems for founders, software engineers, and
-            high-earning operators.
+            implementation included, not a prompt pack.
           </p>
           <div className="mt-6">
             <Cta />
@@ -94,7 +89,7 @@ export function Landing() {
         <Separator />
 
         <section id="for" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-sm font-medium tracking-tight">Who it&apos;s for</h2>
+          <h2 className={sectionLabel}>Who it&apos;s for</h2>
           <ul className="mt-6">
             {AUDIENCE.map((item, index) => (
               <li key={item.title}>
@@ -115,9 +110,7 @@ export function Landing() {
         <Separator />
 
         <section id="not-for" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-sm font-medium tracking-tight text-muted-foreground">
-            Not for
-          </h2>
+          <h2 className={sectionLabel}>Not for</h2>
           <ul className="mt-6">
             {NOT_FOR.map((item, index) => (
               <li key={item}>
@@ -131,7 +124,7 @@ export function Landing() {
         <Separator />
 
         <section id="how" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-sm font-medium tracking-tight">How it works</h2>
+          <h2 className={sectionLabel}>How it works</h2>
           <ol className="mt-6">
             {STEPS.map((item, index) => (
               <li key={item.n}>
@@ -152,21 +145,19 @@ export function Landing() {
         <Separator />
 
         <section id="examples" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-sm font-medium tracking-tight">
-            Example workflows
-          </h2>
+          <h2 className={sectionLabel}>Example workflows</h2>
           <div className="mt-6 grid gap-3">
             {EXAMPLES.map((item) => (
-              <Card
-                key={item.title}
-                className="rounded-lg p-4 ring-1 ring-border"
-              >
+              <Card key={item.title} className="rounded-lg p-4">
                 <CardHeader className="p-0">
                   <div className="flex items-center justify-between gap-2">
                     <CardTitle className="text-[15px] tracking-tight">
                       {item.title}
                     </CardTitle>
-                    <Badge variant="outline" className="font-mono text-[10px] uppercase">
+                    <Badge
+                      variant="outline"
+                      className="font-mono text-[10px] uppercase"
+                    >
                       Example
                     </Badge>
                   </div>
@@ -184,7 +175,7 @@ export function Landing() {
         <Separator />
 
         <section id="pricing" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-sm font-medium tracking-tight">Pricing</h2>
+          <h2 className={sectionLabel}>Pricing</h2>
           <div className="mt-6 rounded-lg border border-border">
             {RATES.map((item, index) => (
               <div key={item.rate}>
@@ -208,9 +199,9 @@ export function Landing() {
         <Separator />
 
         <section id="close" className="fade-in scroll-mt-12 py-16">
-          <h2 className="text-3xl leading-[1.15] font-semibold tracking-tight">
+          <p className="text-[15px] leading-relaxed text-muted-foreground">
             {PROMISE}
-          </h2>
+          </p>
           <div className="mt-6">
             <Cta />
           </div>
@@ -219,10 +210,7 @@ export function Landing() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4 px-4 py-8">
-          <div className="flex items-center gap-2">
-            <Mark />
-            <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
-          </div>
+          <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
           <a
             href={DIAGNOSTIC_MAILTO}
             className="text-sm text-muted-foreground hover:text-foreground"
