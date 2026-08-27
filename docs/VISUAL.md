@@ -22,13 +22,17 @@ Use CSS variables (`bg-background`, `border-border`), not `bg-zinc-*`. No `round
 
 ## Motion
 
-CSS only, 150–200ms fade (`duration-150` / `duration-200`). Honor `prefers-reduced-motion`.
+CSS only. UI fades 150–200ms (`duration-150` / `duration-180` / `duration-200`). Hero stagger `0 / 60 / 120 / 180ms`. Hover is color, border, and background only (no lift, no scale).
 
-No Framer, Magic UI, gradients, glow, Inter, X/Twitter marks, 520ms reveals, or infinite pulse.
+Background: one quiet zinc gradient on `body::before` — two low-chroma radials (`oklch` hue ~286 / ~250) plus a linear wash, ~`120vmax`, drift 32s on `transform` only. Not a rainbow mesh, not glow, not noise.
+
+Honor `prefers-reduced-motion`: kill UI fades, stagger, and canvas drift.
+
+No Framer, Magic UI, Inter, X/Twitter marks, 520ms reveals, or infinite pulse.
 
 ## shadcn
 
-Installed: `button`, `card`, `badge`, `separator` only.
+Installed: `button`, `card`, `badge`, `separator` only. Animation layer is `tw-animate-css` (already imported). Do not add unused primitives.
 
 No `avatar`, `input`, `textarea`, forms, or lucide icon grid.
 
@@ -44,7 +48,7 @@ CMO copy only. Do not invent clients, logos, metrics, testimonials, or tier name
 4. Not for — same type, quieter
 5. How it works — diagnostic → build → handoff, numbered in Geist Mono
 6. Three example cards — each with Badge “Example”
-7. Pricing — three stacked rate-card rows, hairline dividers, no 3-col grid, no Popular, no checkmarks. Copy as written: `$1,500/month`, `$5K` one-time, `$10K` one-time, plus one muted line that the diagnostic qualifies and there are no discounts. No checkout, no extra CTA.
+7. Pricing — three stacked rate-card rows, hairline dividers, no 3-col grid, no Popular, no checkmarks. Copy as written: `$1,500/month`, `$5K` one-time, `$10K` one-time, plus one muted line that the diagnostic qualifies and there are no discounts. No checkout, no extra CTA
 8. Close — same mailto pill, no form
 9. Footer — wordmark + mailto text, no social icons
 
