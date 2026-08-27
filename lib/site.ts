@@ -7,8 +7,8 @@ export const SITE_NAME = "MyGrokFlow";
 export const PROMISE =
   "We take a painful recurring workflow and turn it into a system that runs without you.";
 
-// CMO drops the published Jotform URL here. Empty = native questions on /apply.
-export const JOTFORM_EMBED_URL = "";
+export const JOTFORM_EMBED_URL =
+  "https://form.jotform.com/262387359184065";
 
 export const CONTACTS = [
   {
