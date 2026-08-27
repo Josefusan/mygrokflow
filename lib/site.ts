@@ -7,9 +7,6 @@ export const SITE_NAME = "MyGrokFlow";
 export const PROMISE =
   "We take a painful recurring workflow and turn it into a system that runs without you.";
 
-export const JOTFORM_EMBED_URL =
-  "https://form.jotform.com/262387359184065";
-
 export const CONTACTS = [
   {
     label: "Email",

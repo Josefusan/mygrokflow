@@ -3,11 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ApplyForm } from "@/components/apply-form";
 import { FooterContacts } from "@/components/footer-contacts";
-import {
-  APPLY_PATH,
-  JOTFORM_EMBED_URL,
-  SITE_NAME,
-} from "@/lib/site";
+import { APPLY_PATH, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Request a diagnostic",
@@ -20,10 +16,8 @@ const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
 
 export default function ApplyPage() {
-  const embed = JOTFORM_EMBED_URL.trim();
-
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
           <Link href="/" className="text-sm font-medium tracking-tight">
@@ -45,15 +39,7 @@ export default function ApplyPage() {
           $99 chatbot shoppers are not a fit.
         </p>
 
-        {embed ? (
-          <iframe
-            title="Request a diagnostic"
-            src={embed}
-            className="mt-10 h-[48rem] w-full rounded-lg border border-border bg-background"
-          />
-        ) : (
-          <ApplyForm />
-        )}
+        <ApplyForm />
       </main>
 
       <footer className="border-t border-border">

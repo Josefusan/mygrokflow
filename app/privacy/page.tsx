@@ -78,10 +78,11 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>Information we collect</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
-            email us, we receive that email. If you submit /apply, Jotform sends
-            us your answers: role, workflow, who does it today, price lane,
-            whether you are the decision-maker, what you need, and the contact
-            channel plus handle or email you gave.
+            email us, we receive that email. If you submit /apply, we receive
+            your answers: role, workflow, who does it today, price lane, whether
+            you are the decision-maker, what you need, and the contact channel
+            plus handle or email you gave. Submit sends that to{" "}
+            {DIAGNOSTIC_EMAIL}.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -96,9 +97,8 @@ export default function PrivacyPage() {
             set cookies or logs required to host and serve this site. If you tap
             Accept or Manage on the banner, that choice is stored in your
             browser&apos;s localStorage so we don&apos;t ask every load. That is
-            not a third-party cookie. Jotform may set its own cookies when you
-            use /apply. We do not run our own analytics or ad pixels. We do not
-            load non-essential scripts on the marketing page.
+            not a third-party cookie. We do not load non-essential scripts. There
+            are none on this site today.
           </p>
         </section>
 
@@ -114,15 +114,17 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>Sharing</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Jotform (form answers), Vercel (hosting). We do not sell personal
-            information.
+            We share information only when needed to run the business: with
+            service providers that host or secure our systems (for example
+            Vercel), or when required by law. We do not sell personal
+            information to third parties.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email and Jotform answers are kept only as long as needed for the
+            Email and /apply answers are kept only as long as needed for the
             conversation, a possible engagement, or legal/accounting
             obligations, then deleted or archived when no longer needed.
           </p>
