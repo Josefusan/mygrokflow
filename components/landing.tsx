@@ -38,9 +38,18 @@ const STEPS = [
 ] as const;
 
 const EXAMPLES = [
-  { title: "Example workflow 1" },
-  { title: "Example workflow 2" },
-  { title: "Example workflow 3" },
+  {
+    title: "Ops reporting",
+    body: "Weekly numbers that currently live in five tabs and your head, compiled and sent without you.",
+  },
+  {
+    title: "Recruiting screen",
+    body: "Inbound candidates triaged against your bar before they hit your calendar.",
+  },
+  {
+    title: "Internal tools",
+    body: "The internal app your team keeps asking for, shipped as a working system instead of another ticket.",
+  },
 ] as const;
 
 const RATES = [
@@ -164,7 +173,7 @@ export function Landing() {
                 </CardHeader>
                 <CardContent className="p-0 pt-2">
                   <p className="text-[13px] leading-relaxed text-muted-foreground">
-                    Placeholder. Not a client, not a metric.
+                    {item.body}
                   </p>
                 </CardContent>
               </Card>
