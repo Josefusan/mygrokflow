@@ -81,8 +81,7 @@ export default function PrivacyPage() {
             email us, we receive that email. If you submit /apply, Jotform sends
             us your answers: role, workflow, who does it today, price lane,
             whether you are the decision-maker, what you need, and the contact
-            channel plus handle or email you gave. Until the Jotform embed URL
-            is live, those answers can be sent to us from /apply by email.
+            channel plus handle or email you gave.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">If you pay.</span> Stripe processes
