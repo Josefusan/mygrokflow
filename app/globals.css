@@ -91,9 +91,42 @@
   html {
     @apply font-sans;
     color-scheme: dark;
+    background: var(--background);
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: transparent;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -25vmax;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        120vmax 120vmax at 18% 8%,
+        oklch(0.2 0.014 286 / 0.55),
+        transparent 58%
+      ),
+      radial-gradient(
+        90vmax 90vmax at 82% 78%,
+        oklch(0.16 0.02 250 / 0.32),
+        transparent 54%
+      ),
+      linear-gradient(
+        165deg,
+        oklch(0.14 0.006 286),
+        oklch(0.11 0.004 286) 52%,
+        oklch(0.1 0.012 250)
+      );
+    transform: translate3d(0, 0, 0);
+  }
+  a,
+  button {
+    transition-property: color, background-color, border-color, opacity, box-shadow;
+    transition-duration: 180ms;
+    transition-timing-function: ease;
   }
   ::selection {
     background: oklch(1 0 0 / 14%);
@@ -110,20 +143,56 @@
   }
 }
 
+@keyframes canvas-drift {
+  from {
+    transform: translate3d(-3.5%, -2%, 0);
+  }
+  to {
+    transform: translate3d(4.5%, 3%, 0);
+  }
+}
+
 @layer utilities {
   .fade-in {
     animation: none;
   }
+  .fade-in-d60 {
+    animation-delay: 0ms;
+  }
+  .fade-in-d120 {
+    animation-delay: 0ms;
+  }
+  .fade-in-d180 {
+    animation-delay: 0ms;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation: canvas-drift 32s ease-in-out infinite alternate;
+  }
   .fade-in {
     animation: fade-in 180ms ease-out both;
+  }
+  .fade-in-d60 {
+    animation-delay: 60ms;
+  }
+  .fade-in-d120 {
+    animation-delay: 120ms;
+  }
+  .fade-in-d180 {
+    animation-delay: 180ms;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  body::before {
+    animation: none;
+  }
+  .fade-in,
+  .fade-in-d60,
+  .fade-in-d120,
+  .fade-in-d180 {
     animation: none;
   }
 }
