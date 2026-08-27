@@ -7,10 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { FooterContacts } from "@/components/footer-contacts";
 import { LeadChat } from "@/components/lead-chat";
 import {
-  DIAGNOSTIC_EMAIL,
-  DIAGNOSTIC_MAILTO,
+  APPLY_PATH,
   PROMISE,
   SITE_NAME,
 } from "@/lib/site";
@@ -68,7 +68,7 @@ const sectionLabel =
 function Cta({ className }: { className?: string }) {
   return (
     <Button asChild className={`h-9 rounded-full px-4 ${className ?? ""}`}>
-      <a href={DIAGNOSTIC_MAILTO}>Request a diagnostic</a>
+      <a href={APPLY_PATH}>Request a diagnostic</a>
     </Button>
   );
 }
@@ -196,14 +196,22 @@ export function Landing() {
             {RATES.map((item, index) => (
               <div key={item.rate}>
                 {index > 0 ? <Separator /> : null}
-                <p className="px-4 py-4 text-[15px] font-medium tracking-tight">
-                  {item.rate}
-                  {"cadence" in item ? (
-                    <span className="ml-2 font-normal text-muted-foreground">
-                      {item.cadence}
-                    </span>
-                  ) : null}
-                </p>
+                <div className="flex items-center justify-between gap-4 px-4 py-4">
+                  <p className="text-[15px] font-medium tracking-tight">
+                    {item.rate}
+                    {"cadence" in item ? (
+                      <span className="ml-2 font-normal text-muted-foreground">
+                        {item.cadence}
+                      </span>
+                    ) : null}
+                  </p>
+                  <a
+                    href={APPLY_PATH}
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Apply
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -229,22 +237,17 @@ export function Landing() {
       </main>
 
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4 px-4 py-8">
-          <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
-          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2">
+        <div className="mx-auto flex max-w-[42rem] flex-col gap-4 px-4 py-8 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-2">
+            <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
             <a
               href="/privacy"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Privacy
             </a>
-            <a
-              href={DIAGNOSTIC_MAILTO}
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              {DIAGNOSTIC_EMAIL}
-            </a>
           </div>
+          <FooterContacts />
         </div>
       </footer>
     </div>

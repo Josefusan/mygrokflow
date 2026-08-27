@@ -3,9 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const CHAT_MAILTO =
-  "mailto:clarktechventures@gmail.com?subject=Request%20a%20diagnostic";
+import { APPLY_PATH } from "@/lib/site";
 
 const OPENER = "What workflow still needs you in it?";
 
@@ -130,7 +128,7 @@ export function LeadChat() {
           </form>
           <div className="mt-4">
             <Button asChild className="h-9 rounded-full px-4">
-              <a href={CHAT_MAILTO}>Request a diagnostic</a>
+              <a href={APPLY_PATH}>Request a diagnostic</a>
             </Button>
           </div>
         </CardContent>
