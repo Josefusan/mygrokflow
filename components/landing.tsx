@@ -75,7 +75,7 @@ function Cta({ className }: { className?: string }) {
 
 export function Landing() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
           <a href="#top" className="text-sm font-medium tracking-tight">
@@ -86,18 +86,18 @@ export function Landing() {
       </header>
 
       <main id="main" className="mx-auto max-w-[42rem] px-4">
-        <section id="top" className="fade-in scroll-mt-12 py-16">
-          <p className={sectionLabel}>High-ticket AI automations</p>
-          <h1 className="mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
+        <section id="top" className="scroll-mt-12 py-16">
+          <p className={`${sectionLabel} fade-in`}>High-ticket AI automations</p>
+          <h1 className="fade-in fade-in-d60 mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
             {HEADLINE}
           </h1>
-          <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+          <p className="fade-in fade-in-d120 mt-4 text-[15px] leading-relaxed text-muted-foreground">
             {PROMISE}
           </p>
-          <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+          <p className="fade-in fade-in-d180 mt-2 text-[15px] leading-relaxed text-muted-foreground">
             implementation included, not a prompt pack.
           </p>
-          <div className="mt-6">
+          <div className="fade-in fade-in-d180 mt-6">
             <Cta />
           </div>
         </section>
@@ -164,7 +164,10 @@ export function Landing() {
           <h2 className={sectionLabel}>Example workflows</h2>
           <div className="mt-6 grid gap-3">
             {EXAMPLES.map((item) => (
-              <Card key={item.title} className="rounded-lg p-4">
+              <Card
+                key={item.title}
+                className="rounded-lg p-4 transition-colors duration-200 hover:bg-secondary/50"
+              >
                 <CardHeader className="p-0">
                   <div className="flex items-center justify-between gap-2">
                     <CardTitle className="text-[15px] tracking-tight">
@@ -192,7 +195,7 @@ export function Landing() {
 
         <section id="pricing" className="fade-in scroll-mt-12 py-16">
           <h2 className={sectionLabel}>Pricing</h2>
-          <div className="mt-6 rounded-lg border border-border">
+          <div className="mt-6 rounded-lg border border-border transition-colors duration-200 hover:border-foreground/20">
             {RATES.map((item, index) => (
               <div key={item.rate}>
                 {index > 0 ? <Separator /> : null}
