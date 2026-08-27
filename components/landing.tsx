@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { LeadChat } from "@/components/lead-chat";
 import {
   DIAGNOSTIC_EMAIL,
   DIAGNOSTIC_MAILTO,
@@ -221,6 +222,10 @@ export function Landing() {
             <Cta />
           </div>
         </section>
+
+        <Separator />
+
+        <LeadChat />
       </main>
 
       <footer className="border-t border-border">
