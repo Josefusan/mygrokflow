@@ -220,12 +220,20 @@ export function Landing() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4 px-4 py-8">
           <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
-          <a
-            href={DIAGNOSTIC_MAILTO}
-            className="text-sm text-muted-foreground hover:text-foreground"
-          >
-            {DIAGNOSTIC_EMAIL}
-          </a>
+          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2">
+            <a
+              href="/privacy"
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              Privacy
+            </a>
+            <a
+              href={DIAGNOSTIC_MAILTO}
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              {DIAGNOSTIC_EMAIL}
+            </a>
+          </div>
         </div>
       </footer>
     </div>
