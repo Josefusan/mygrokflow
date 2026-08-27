@@ -86,10 +86,13 @@ export default function PrivacyPage() {
             not sell this data.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
-            <span className="font-medium">Cookies and analytics.</span> If we
-            use basic hosting or analytics cookies in the future, they will be
-            used only to operate and understand the site. We do not use them to
-            sell ads.
+            <span className="font-medium">Cookies and similar storage.</span> We
+            do not run analytics, ads, or marketing pixels. Essential: Vercel may
+            set cookies or logs required to host and serve this site. If you tap
+            Accept or Manage on the banner, that choice is stored in your
+            browser&apos;s localStorage so we don&apos;t ask every load. That is
+            not a third-party cookie. We do not load non-essential scripts. There
+            are none on this site today.
           </p>
         </section>
 
