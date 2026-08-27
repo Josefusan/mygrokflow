@@ -68,9 +68,9 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>What this site does</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             The site is a marketing page. Request a diagnostic is a form on{" "}
-            /apply. If we should build, payment runs through Stripe Checkout.
-            Email and other channels are public contact, not the buy path. We do
-            not run an account system or user dashboard on this site.
+            /apply. Email and other channels are public contact, not the buy
+            path. We do not run an account system or user dashboard on this
+            site.
           </p>
         </section>
 
@@ -82,11 +82,6 @@ export default function PrivacyPage() {
             us your answers: role, workflow, who does it today, price lane,
             whether you are the decision-maker, what you need, and the contact
             channel plus handle or email you gave.
-          </p>
-          <p className="mt-4 text-[15px] leading-relaxed">
-            <span className="font-medium">If you pay.</span> Stripe processes
-            the payment. We receive confirmation needed to fulfill. We do not
-            store full card numbers.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -101,10 +96,9 @@ export default function PrivacyPage() {
             set cookies or logs required to host and serve this site. If you tap
             Accept or Manage on the banner, that choice is stored in your
             browser&apos;s localStorage so we don&apos;t ask every load. That is
-            not a third-party cookie. Jotform and Stripe may set their own
-            cookies when you use /apply or pay. We do not run our own analytics
-            or ad pixels. We do not load non-essential scripts on the marketing
-            page.
+            not a third-party cookie. Jotform may set its own cookies when you
+            use /apply. We do not run our own analytics or ad pixels. We do not
+            load non-essential scripts on the marketing page.
           </p>
         </section>
 
@@ -120,18 +114,17 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>Sharing</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Jotform (form answers), Stripe (payments), Vercel (hosting). We do
-            not sell personal information.
+            Jotform (form answers), Vercel (hosting). We do not sell personal
+            information.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email, Jotform answers, and Stripe records are kept only as long as
-            needed for the conversation, a possible engagement, or
-            legal/accounting obligations, then deleted or archived when no
-            longer needed.
+            Email and Jotform answers are kept only as long as needed for the
+            conversation, a possible engagement, or legal/accounting
+            obligations, then deleted or archived when no longer needed.
           </p>
         </section>
 
