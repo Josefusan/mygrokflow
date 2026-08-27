@@ -27,7 +27,7 @@ function Cta() {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
           <Link href="/" className="text-sm font-medium tracking-tight">
