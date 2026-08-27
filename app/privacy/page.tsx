@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { FooterContacts } from "@/components/footer-contacts";
 import {
+  APPLY_PATH,
   DIAGNOSTIC_EMAIL,
   DIAGNOSTIC_MAILTO,
   SITE_NAME,
@@ -20,7 +22,7 @@ const sectionLabel =
 function Cta() {
   return (
     <Button asChild className="h-9 rounded-full px-4">
-      <a href={DIAGNOSTIC_MAILTO}>Request a diagnostic</a>
+      <Link href={APPLY_PATH}>Request a diagnostic</Link>
     </Button>
   );
 }
@@ -65,9 +67,10 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>What this site does</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            The site is a marketing page. The primary call to action opens your
-            email client (mailto) so you can request a diagnostic. We do not run
-            an account system, checkout, or user dashboard on this site.
+            The site is a marketing page. Request a diagnostic is a form on{" "}
+            /apply. If we should build, payment runs through Stripe Checkout.
+            Email and other channels are public contact, not the buy path. We do
+            not run an account system or user dashboard on this site.
           </p>
         </section>
 
@@ -75,8 +78,16 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>Information we collect</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
-            email us (including a diagnostic request), we receive whatever you
-            include in that email.
+            email us, we receive that email. If you submit /apply, Jotform sends
+            us your answers: role, workflow, who does it today, price lane,
+            whether you are the decision-maker, what you need, and the contact
+            channel plus handle or email you gave. Until the Jotform embed URL
+            is live, those answers can be sent to us from /apply by email.
+          </p>
+          <p className="mt-4 text-[15px] leading-relaxed">
+            <span className="font-medium">If you pay.</span> Stripe processes
+            the payment. We receive confirmation needed to fulfill. We do not
+            store full card numbers.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -91,8 +102,10 @@ export default function PrivacyPage() {
             set cookies or logs required to host and serve this site. If you tap
             Accept or Manage on the banner, that choice is stored in your
             browser&apos;s localStorage so we don&apos;t ask every load. That is
-            not a third-party cookie. We do not load non-essential scripts. There
-            are none on this site today.
+            not a third-party cookie. Jotform and Stripe may set their own
+            cookies when you use /apply or pay. We do not run our own analytics
+            or ad pixels. We do not load non-essential scripts on the marketing
+            page.
           </p>
         </section>
 
@@ -108,19 +121,18 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>Sharing</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            We share information only when needed to run the business: with
-            service providers that host or secure our systems (for example
-            Vercel), or when required by law. We do not sell personal
-            information to third parties.
+            Jotform (form answers), Stripe (payments), Vercel (hosting). We do
+            not sell personal information.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email and business records are kept only as long as needed for the
-            conversation, a possible engagement, or legal/accounting
-            obligations, then deleted or archived when no longer needed.
+            Email, Jotform answers, and Stripe records are kept only as long as
+            needed for the conversation, a possible engagement, or
+            legal/accounting obligations, then deleted or archived when no
+            longer needed.
           </p>
         </section>
 
@@ -135,7 +147,7 @@ export default function PrivacyPage() {
               {DIAGNOSTIC_EMAIL}
             </a>{" "}
             to ask what we hold about you, request a correction, or ask us to
-            delete emails we no longer need to keep.
+            delete records we no longer need to keep.
           </p>
         </section>
 
@@ -170,19 +182,14 @@ export default function PrivacyPage() {
       </main>
 
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-[42rem] items-center justify-between gap-4 px-4 py-8">
-          <Link href="/" className="text-sm font-medium tracking-tight">
-            {SITE_NAME}
-          </Link>
-          <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2">
+        <div className="mx-auto flex max-w-[42rem] flex-col gap-4 px-4 py-8 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-2">
+            <Link href="/" className="text-sm font-medium tracking-tight">
+              {SITE_NAME}
+            </Link>
             <span className="text-sm text-foreground">Privacy</span>
-            <a
-              href={DIAGNOSTIC_MAILTO}
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              {DIAGNOSTIC_EMAIL}
-            </a>
           </div>
+          <FooterContacts />
         </div>
       </footer>
     </div>
