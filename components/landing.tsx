@@ -14,14 +14,17 @@ import {
   SITE_NAME,
 } from "@/lib/site";
 
+const HEADLINE =
+  "Want hours back and more money from the work you already pay for, without doing it yourself.";
+
 const AUDIENCE = [
   {
     title: "Founders",
-    body: "You are the bottleneck. Recurring ops still live in your head and on your calendar. The work does not ship unless you touch it.",
+    body: "You already pay a team. The work still waits on you.",
   },
   {
     title: "Software engineers",
-    body: "You keep getting pulled into glue work that is not the product. The same handoff. The same script. The same fire.",
+    body: "They pay you to ship product. Glue is hours that never hit it.",
   },
   {
     title: "High-earning operators",
@@ -85,9 +88,12 @@ export function Landing() {
         <section id="top" className="fade-in scroll-mt-12 py-16">
           <p className={sectionLabel}>High-ticket AI automations</p>
           <h1 className="mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
-            {PROMISE}
+            {HEADLINE}
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+            {PROMISE}
+          </p>
+          <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
             implementation included, not a prompt pack.
           </p>
           <div className="mt-6">
