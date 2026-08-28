@@ -69,8 +69,7 @@ export default function PrivacyPage() {
             {DIAGNOSTIC_EMAIL}. Collection is native /apply only. No free-text
             budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
             open a Stripe Checkout session after you qualify. Stripe processes
-            that payment. Diagnostic first does not go to Stripe. Checkout is
-            not configured until STRIPE_SECRET_KEY is set on the host.
+            that payment. Diagnostic first does not go to Stripe.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
