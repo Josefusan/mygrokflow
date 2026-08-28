@@ -1,11 +1,17 @@
 import { DIAGNOSTIC_EMAIL, DIAGNOSTIC_SUBJECT } from "@/lib/site";
 
 export const APPLY_ROLES = [
-  "Founder",
+  "Founder / business owner",
+  "Agency owner",
   "Software engineer",
-  "Operator",
-  "Student or hobbyist",
-  "$99 chatbot shopper",
+  "None of these",
+] as const;
+
+export const APPLY_TEAM_SIZES = [
+  "Just me",
+  "2–10",
+  "11–50",
+  "50+",
 ] as const;
 
 export const APPLY_RATES = [
@@ -24,11 +30,13 @@ export const APPLY_CHANNELS = [
 ] as const;
 
 export type ApplyRole = (typeof APPLY_ROLES)[number];
+export type ApplyTeamSize = (typeof APPLY_TEAM_SIZES)[number];
 export type ApplyRate = (typeof APPLY_RATES)[number];
 export type ApplyChannel = (typeof APPLY_CHANNELS)[number];
 
 export type ApplyPayload = {
   role: ApplyRole;
+  teamSize: ApplyTeamSize | "";
   workflow: string;
   who: string;
   rate: ApplyRate | "";
@@ -39,11 +47,12 @@ export type ApplyPayload = {
 };
 
 const ROLES = new Set<string>(APPLY_ROLES);
+const TEAM_SIZES = new Set<string>(APPLY_TEAM_SIZES);
 const RATES = new Set<string>(APPLY_RATES);
 const CHANNELS = new Set<string>(APPLY_CHANNELS);
 
 export function isDisqualifiedRole(role: string): boolean {
-  return role === "Student or hobbyist" || role === "$99 chatbot shopper";
+  return role === "None of these";
 }
 
 function asString(value: unknown): string {
@@ -59,6 +68,7 @@ export function parseApplyPayload(
 
   const raw = input as Record<string, unknown>;
   const role = asString(raw.role);
+  const teamSize = asString(raw.teamSize);
   const workflow = asString(raw.workflow);
   const who = asString(raw.who);
   const rate = asString(raw.rate);
@@ -83,6 +93,7 @@ export function parseApplyPayload(
       ok: true,
       data: {
         role: role as ApplyRole,
+        teamSize: "",
         workflow,
         who,
         rate: "",
@@ -94,12 +105,16 @@ export function parseApplyPayload(
     };
   }
 
+  if (!TEAM_SIZES.has(teamSize)) {
+    return { ok: false, error: "Invalid team size" };
+  }
   if (!RATES.has(rate)) return { ok: false, error: "Invalid rate lane" };
 
   return {
     ok: true,
     data: {
       role: role as ApplyRole,
+      teamSize: teamSize as ApplyTeamSize,
       workflow,
       who,
       rate: rate as ApplyRate,
@@ -114,9 +129,10 @@ export function parseApplyPayload(
 export function applyMailto(data: ApplyPayload): string {
   const body = [
     `Role: ${data.role}`,
+    `Team size: ${data.teamSize || "(disqualified)"}`,
     `Workflow: ${data.workflow}`,
     `Who does it today: ${data.who}`,
-    `Rate: ${data.rate || "(disqualified before Q4)"}`,
+    `Rate: ${data.rate || "(disqualified before rate)"}`,
     `Decision-maker: ${data.decider}`,
     `What to build: ${data.need}`,
     `Contact channel: ${data.channel}`,

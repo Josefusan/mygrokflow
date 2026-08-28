@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { FooterContacts } from "@/components/footer-contacts";
 import { LeadChat } from "@/components/lead-chat";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   APPLY_PATH,
   PROMISE,
@@ -67,7 +68,7 @@ const sectionLabel =
 
 function Cta({ className }: { className?: string }) {
   return (
-    <Button asChild className={`h-9 rounded-full px-4 ${className ?? ""}`}>
+    <Button asChild className={`h-9 cursor-pointer rounded-full px-4 ${className ?? ""}`}>
       <a href={APPLY_PATH}>Request a diagnostic</a>
     </Button>
   );
@@ -78,16 +79,22 @@ export function Landing() {
     <div className="min-h-screen text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
-          <a href="#top" className="text-sm font-medium tracking-tight">
+          <a
+            href="#top"
+            className="cursor-pointer text-sm font-medium tracking-tight transition-colors duration-180 hover:text-foreground/80"
+          >
             {SITE_NAME}
           </a>
-          <Cta />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <Cta />
+          </div>
         </div>
       </header>
 
       <main id="main" className="mx-auto max-w-[42rem] px-4">
         <section id="top" className="scroll-mt-12 py-16">
-          <p className={`${sectionLabel} fade-in`}>High-ticket AI automations</p>
+          <p className={`${sectionLabel} fade-in">High-ticket AI automations</p>
           <h1 className="fade-in fade-in-d60 mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
             {HEADLINE}
           </h1>
@@ -210,7 +217,7 @@ export function Landing() {
                   </p>
                   <a
                     href={APPLY_PATH}
-                    className="text-sm text-muted-foreground hover:text-foreground"
+                    className="cursor-pointer text-sm text-muted-foreground transition-colors duration-180 hover:text-foreground"
                   >
                     Apply
                   </a>
@@ -245,7 +252,7 @@ export function Landing() {
             <span className="text-sm font-medium tracking-tight">{SITE_NAME}</span>
             <a
               href="/privacy"
-              className="text-sm text-muted-foreground hover:text-foreground"
+              className="cursor-pointer text-sm text-muted-foreground transition-colors duration-180 hover:text-foreground"
             >
               Privacy
             </a>
