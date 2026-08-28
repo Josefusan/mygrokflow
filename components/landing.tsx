@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { FooterContacts } from "@/components/footer-contacts";
 import { LeadChat } from "@/components/lead-chat";
+import { Newsletter } from "@/components/newsletter";
 import {
   APPLY_PATH,
   PROMISE,
@@ -233,6 +234,10 @@ export function Landing() {
             <Cta />
           </div>
         </section>
+
+        <Separator />
+
+        <Newsletter />
 
         <Separator />
 
