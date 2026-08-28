@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { FooterContacts } from "@/components/footer-contacts";
 import { LeadChat } from "@/components/lead-chat";
+import { SiteHeader } from "@/components/site-header";
 import {
   APPLY_PATH,
   PROMISE,
@@ -76,14 +77,7 @@ function Cta({ className }: { className?: string }) {
 export function Landing() {
   return (
     <div className="min-h-screen text-foreground">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
-          <a href="#top" className="text-sm font-medium tracking-tight">
-            {SITE_NAME}
-          </a>
-          <Cta />
-        </div>
-      </header>
+      <SiteHeader home />
 
       <main id="main" className="mx-auto max-w-[42rem] px-4">
         <section id="top" className="scroll-mt-12 py-16">
