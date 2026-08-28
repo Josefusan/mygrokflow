@@ -24,7 +24,7 @@ Use CSS variables (`bg-background`, `border-border`), not `bg-zinc-*`. No `round
 
 CSS only. UI fades 150–200ms (`duration-150` / `duration-180` / `duration-200`). Hero stagger `0 / 60 / 120 / 180ms`. Hover is color, border, and background only (no lift, no scale, no glow). Interactive controls use `cursor-pointer`.
 
-Scroll: `scroll-behavior: smooth`. Sections with `.fade-in` use `animation-timeline: view()` — opacity 0→1 plus `translateY(12px)` → 0, `entry 0%` to `entry 40%`. Same in light and dark. No scale, no glow. Browsers without view timelines keep the 180ms load fade.
+Scroll: `scroll-behavior: smooth`. Sections with `.fade-in` use `animation-timeline: view()` — opacity 0→1 plus `translateY(8px)` → 0, `entry 0%` to `entry 40%`. Same in light and dark (existing `:root` / `.dark` tokens only). No scale, no glow. Browsers without view timelines keep the 180ms load fade.
 
 Background: one quiet zinc gradient on `body::before` — two low-chroma radials (`oklch` hue ~286 / ~250) plus a linear wash, ~`120vmax`, drift 32s on `transform` only. Light uses the same geometry, higher L. Not a rainbow mesh, not glow, not noise.
 
