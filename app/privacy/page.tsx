@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { FooterContacts } from "@/components/footer-contacts";
+import { SiteHeader } from "@/components/site-header";
 import {
-  APPLY_PATH,
   DIAGNOSTIC_EMAIL,
   DIAGNOSTIC_MAILTO,
   SITE_NAME,
@@ -19,25 +18,10 @@ export const metadata: Metadata = {
 const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
 
-function Cta() {
-  return (
-    <Button asChild className="h-9 rounded-full px-4">
-      <Link href={APPLY_PATH}>Request a diagnostic</Link>
-    </Button>
-  );
-}
-
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen text-foreground">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
-          <Link href="/" className="text-sm font-medium tracking-tight">
-            {SITE_NAME}
-          </Link>
-          <Cta />
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="main" className="mx-auto max-w-[42rem] px-4 py-16">
         <h1 className="text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
@@ -97,9 +81,10 @@ export default function PrivacyPage() {
             do not run analytics, ads, or marketing pixels. Essential: Vercel may
             set cookies or logs required to host and serve this site. If you tap
             Accept or Manage on the banner, that choice is stored in your
-            browser&apos;s localStorage so we don&apos;t ask every load. That is
-            not a third-party cookie. We do not load non-essential scripts. There
-            are none on this site today.
+            browser&apos;s localStorage so we don&apos;t ask every load. Theme
+            preference is stored the same way. That is not a third-party cookie.
+            We do not load non-essential scripts. There are none on this site
+            today.
           </p>
         </section>
 
