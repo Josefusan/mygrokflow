@@ -1,30 +1,20 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { DIAGNOSTIC_EMAIL, DIAGNOSTIC_SUBJECT } from "@/lib/site";
+import {
+  APPLY_CHANNELS,
+  APPLY_RATES,
+  APPLY_ROLES,
+  applyMailto,
+  isDisqualifiedRole,
+  type ApplyPayload,
+} from "@/lib/apply";
 
 const fieldClass =
   "mt-2 w-full rounded-lg border border-border bg-background px-3 py-2 text-[13px] text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-ring";
 const labelClass = "text-[13px] font-medium tracking-tight";
 const helpClass = "mt-1 text-[13px] leading-relaxed text-muted-foreground";
-
-const ROLES = [
-  "Founder",
-  "Software engineer",
-  "Operator",
-  "Student or hobbyist",
-  "$99 chatbot shopper",
-] as const;
-
-const RATES = [
-  "$1,500/month",
-  "$5K one-time",
-  "$10K one-time",
-  "Diagnostic first",
-] as const;
-
-const CHANNELS = ["Email", "Telegram", "Signal", "LinkedIn", "X"] as const;
 
 export function ApplyForm() {
   const [role, setRole] = useState("");
@@ -35,27 +25,53 @@ export function ApplyForm() {
   const [need, setNeed] = useState("");
   const [channel, setChannel] = useState("");
   const [handle, setHandle] = useState("");
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState("");
 
-  const disqualified =
-    role === "Student or hobbyist" || role === "$99 chatbot shopper";
+  const disqualified = isDisqualifiedRole(role);
 
-  const mailto = useMemo(() => {
-    const body = [
-      `Role: ${role}`,
-      `Workflow: ${workflow}`,
-      `Who does it today: ${who}`,
-      `Rate: ${rate}`,
-      `Decision-maker: ${decider}`,
-      `What to build: ${need}`,
-      `Contact channel: ${channel}`,
-      `Handle or email: ${handle}`,
-    ].join("\n");
-    return `mailto:${DIAGNOSTIC_EMAIL}?subject=${encodeURIComponent(DIAGNOSTIC_SUBJECT)}&body=${encodeURIComponent(body)}`;
-  }, [role, workflow, who, rate, decider, need, channel, handle]);
+  function payload(): ApplyPayload {
+    return {
+      role: role as ApplyPayload["role"],
+      workflow: workflow.trim(),
+      who: who.trim(),
+      rate: disqualified ? "" : (rate as ApplyPayload["rate"]),
+      decider: decider as ApplyPayload["decider"],
+      need: need.trim(),
+      channel: channel as ApplyPayload["channel"],
+      handle: handle.trim(),
+    };
+  }
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    window.location.href = mailto;
+    setError("");
+    setPending(true);
+    const data = payload();
+    const fallback = applyMailto(data);
+
+    try {
+      const response = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = (await response.json()) as {
+        ok?: boolean;
+        mailto?: string;
+        error?: string;
+      };
+      if (!response.ok || !json.ok) {
+        setError(json.error || "Could not submit.");
+        window.location.href = fallback;
+        return;
+      }
+      window.location.href = json.mailto || fallback;
+    } catch {
+      window.location.href = fallback;
+    } finally {
+      setPending(false);
+    }
   }
 
   return (
@@ -74,7 +90,7 @@ export function ApplyForm() {
           className={fieldClass}
         >
           <option value="">Select</option>
-          {ROLES.map((item) => (
+          {APPLY_ROLES.map((item) => (
             <option key={item} value={item}>
               {item}
             </option>
@@ -122,7 +138,7 @@ export function ApplyForm() {
             className={fieldClass}
           >
             <option value="">Select</option>
-            {RATES.map((item) => (
+            {APPLY_RATES.map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
@@ -169,7 +185,7 @@ export function ApplyForm() {
           className={fieldClass}
         >
           <option value="">Select</option>
-          {CHANNELS.map((item) => (
+          {APPLY_CHANNELS.map((item) => (
             <option key={item} value={item}>
               {item}
             </option>
@@ -187,7 +203,13 @@ export function ApplyForm() {
         />
       </label>
 
-      <Button type="submit" className="h-9 w-fit rounded-full px-4">
+      {error ? <p className={helpClass}>{error}</p> : null}
+
+      <Button
+        type="submit"
+        disabled={pending}
+        className="h-9 w-fit rounded-full px-4"
+      >
         Request a diagnostic
       </Button>
     </form>
