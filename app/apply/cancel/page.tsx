@@ -7,7 +7,7 @@ import { APPLY_PATH, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Checkout cancelled",
-  description: "Stripe Checkout was cancelled.",
+  description: "Stripe Checkout was cancelled. No charge.",
   alternates: { canonical: "/apply/cancel" },
 };
 
@@ -21,8 +21,7 @@ export default function ApplyCancelPage() {
           Checkout cancelled
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          No charge. Paid lanes still go through Checkout after you qualify. You
-          can still book the 15-minute diagnostic. No discounts.
+          No charge. Next step is a short call. Pick a time.
         </p>
         <BookingGate backHref={APPLY_PATH} backLabel="Back to /apply" />
       </main>

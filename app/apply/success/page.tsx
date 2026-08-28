@@ -6,8 +6,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Book the diagnostic",
-  description: "Book the 15-minute MyGrokFlow diagnostic on Cal.com.",
+  title: "Book your diagnostic call",
+  description: "Next step is a short call. Pick a time.",
   alternates: { canonical: "/apply/success" },
 };
 
@@ -18,12 +18,10 @@ export default function ApplySuccessPage() {
 
       <main id="main" className="mx-auto max-w-[42rem] px-4 py-16">
         <h1 className="text-4xl leading-[1.1] font-medium tracking-tight">
-          Next: the 15-minute diagnostic
+          Book your diagnostic call
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          If Checkout finished, we have the paid-lane session. Diagnostic first
-          skips Checkout. Either way, we still qualify the workflow on a
-          15-minute diagnostic. No discounts.
+          Next step is a short call. Pick a time.
         </p>
         <BookingGate autoRedirect backHref="/" backLabel="Back to the site" />
       </main>
