@@ -94,7 +94,7 @@ export function Landing() {
 
       <main id="main" className="mx-auto max-w-[42rem] px-4">
         <section id="top" className="scroll-mt-12 py-16">
-          <p className={`${sectionLabel} fade-in">High-ticket AI automations</p>
+          <p className={`${sectionLabel} fade-in`}>High-ticket AI automations</p>
           <h1 className="fade-in fade-in-d60 mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
             {HEADLINE}
           </h1>
