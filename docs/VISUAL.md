@@ -24,7 +24,7 @@ Use CSS variables (`bg-background`, `border-border`), not `bg-zinc-*`. No `round
 
 CSS only. UI fades 150–200ms (`duration-150` / `duration-180` / `duration-200`). Hero stagger `0 / 60 / 120 / 180ms`. Hover is color, border, and background only (no lift, no scale, no glow). Interactive controls use `cursor-pointer`.
 
-Scroll: `scroll-behavior: smooth`. Sections with `.fade-in` use `animation-timeline: view()` (opacity only, `entry 0%` to `entry 40%`). No translate, no scale. Browsers without view timelines keep the 180ms load fade.
+Scroll: `scroll-behavior: smooth`. Sections with `.fade-in` use `animation-timeline: view()` — opacity 0→1 plus `translateY(8px)` → 0, `entry 0%` to `entry 40%`. Same in light and dark (existing `:root` / `.dark` tokens only). No scale, no glow. Browsers without view timelines keep the 180ms load fade.
 
 Background: one quiet zinc gradient on `body::before` — two low-chroma radials (`oklch` hue ~286 / ~250) plus a linear wash, ~`120vmax`, drift 32s on `transform` only. Light uses the same geometry, higher L. Not a rainbow mesh, not glow, not noise.
 
@@ -36,7 +36,7 @@ No Framer, Magic UI, Inter, X/Twitter marks, 520ms reveals, or infinite pulse.
 
 Installed: `button`, `card`, `badge`, `separator` only. Animation layer is `tw-animate-css` (already imported). Do not add unused primitives.
 
-No `avatar`, `input`, `textarea`, forms, or lucide icon grid. Footer contact icons are inline SVGs (email, Telegram, Signal, LinkedIn, X) with `aria-label`. No client logos. No brand packs.
+No `avatar`, `input`, `textarea`, forms, or lucide icon grid. Footer contact icons are inline SVGs (email, Telegram, Signal, LinkedIn, X, Substack) with `aria-label`, `currentColor` zinc. No client logos. No brand packs. No Substack orange.
 
 Primary CTA Button: `variant="default"` plus `rounded-full`. Example labels: `Badge` text `Example`.
 
@@ -52,7 +52,7 @@ CMO copy only. Do not invent clients, logos, metrics, testimonials, or tier name
 6. Three example cards — each with Badge “Example”
 7. Pricing — three stacked rate-card rows, hairline dividers, no 3-col grid, no Popular, no checkmarks. Copy as written: `$1,500/month`, `$5K` one-time, `$10K` one-time, plus one muted line that the diagnostic qualifies and there are no discounts. No checkout, no extra CTA
 8. Close — same diagnostic pill, no form
-9. Footer — wordmark + Privacy + contact icons (same URLs as before)
+9. Footer — wordmark + Privacy + contact icons (email, Telegram, Signal, LinkedIn, X, Substack)
 
 ## CTA
 

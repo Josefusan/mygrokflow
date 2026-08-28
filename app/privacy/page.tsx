@@ -53,8 +53,10 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             The site is a marketing page. Request a diagnostic is a form on{" "}
             /apply. Email and other channels are public contact, not the buy
-            path. We do not run an account system or user dashboard on this
-            site.
+            path. Footer links (email, Telegram, Signal, LinkedIn, X, Substack)
+            are outbound. Tapping Substack leaves this site; we do not collect a
+            Substack signup here. We do not run an account system or user
+            dashboard on this site.
           </p>
         </section>
 
