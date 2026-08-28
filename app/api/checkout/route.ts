@@ -35,20 +35,32 @@ export async function POST(request: Request) {
   const origin = request.headers.get("origin") || SITE_URL;
   const stripe = new Stripe(secret);
 
-  const session = await stripe.checkout.sessions.create({
-    mode: lane.mode,
-    line_items: [{ price: lane.priceId, quantity: 1 }],
-    success_url: `${origin}/apply/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/apply/cancel`,
-    metadata: { rate },
-  });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      mode: lane.mode,
+      line_items: [{ price: lane.priceId, quantity: 1 }],
+      success_url: `${origin}/apply/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/apply/cancel`,
+      metadata: { rate },
+      // Implementation, not Managed Payments digital goods. Do not assign tax codes.
+      managed_payments: { enabled: false },
+    });
 
-  if (!session.url) {
-    return NextResponse.json(
-      { ok: false, error: "Checkout session missing URL" },
-      { status: 502 },
-    );
+    if (!session.url) {
+      return NextResponse.json(
+        { ok: false, error: "Checkout session missing URL" },
+        { status: 502 },
+      );
+    }
+
+    return NextResponse.json({ ok: true, url: session.url });
+  } catch (error) {
+    if (error instanceof Stripe.errors.StripeInvalidRequestError) {
+      return NextResponse.json(
+        { ok: false, error: error.message },
+        { status: 400 },
+      );
+    }
+    return NextResponse.json({ ok: false, error: "Checkout failed" }, { status: 500 });
   }
-
-  return NextResponse.json({ ok: true, url: session.url });
 }
