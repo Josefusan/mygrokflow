@@ -24,9 +24,11 @@ Use CSS variables (`bg-background`, `border-border`), not `bg-zinc-*`. No `round
 
 CSS only. UI fades 150–200ms (`duration-150` / `duration-180` / `duration-200`). Hero stagger `0 / 60 / 120 / 180ms`. Hover is color, border, and background only (no lift, no scale, no glow). Interactive controls use `cursor-pointer`.
 
+Scroll: `scroll-behavior: smooth`. Sections with `.fade-in` use `animation-timeline: view()` (opacity only, `entry 0%` to `entry 40%`). No translate, no scale. Browsers without view timelines keep the 180ms load fade.
+
 Background: one quiet zinc gradient on `body::before` — two low-chroma radials (`oklch` hue ~286 / ~250) plus a linear wash, ~`120vmax`, drift 32s on `transform` only. Light uses the same geometry, higher L. Not a rainbow mesh, not glow, not noise.
 
-Honor `prefers-reduced-motion`: kill UI fades, stagger, and canvas drift.
+Honor `prefers-reduced-motion`: kill UI fades, stagger, canvas drift, view timelines, and smooth scroll.
 
 No Framer, Magic UI, Inter, X/Twitter marks, 520ms reveals, or infinite pulse.
 

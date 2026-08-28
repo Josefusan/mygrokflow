@@ -125,6 +125,7 @@
     @apply font-sans;
     color-scheme: light;
     background: var(--background);
+    scroll-behavior: smooth;
   }
   html.dark {
     color-scheme: dark;
@@ -244,9 +245,23 @@
   .fade-in-d180 {
     animation-delay: 180ms;
   }
+
+  @supports (animation-timeline: view()) {
+    .fade-in {
+      animation-name: fade-in;
+      animation-duration: auto;
+      animation-timing-function: ease-out;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   body::before {
     animation: none;
   }
