@@ -6,6 +6,7 @@ import {
   APPLY_CHANNELS,
   APPLY_RATES,
   APPLY_ROLES,
+  APPLY_TEAM_SIZES,
   applyMailto,
   isDisqualifiedRole,
   type ApplyPayload,
@@ -18,6 +19,7 @@ const helpClass = "mt-1 text-[13px] leading-relaxed text-muted-foreground";
 
 export function ApplyForm() {
   const [role, setRole] = useState("");
+  const [teamSize, setTeamSize] = useState("");
   const [workflow, setWorkflow] = useState("");
   const [who, setWho] = useState("");
   const [rate, setRate] = useState("");
@@ -33,6 +35,7 @@ export function ApplyForm() {
   function payload(): ApplyPayload {
     return {
       role: role as ApplyPayload["role"],
+      teamSize: teamSize as ApplyPayload["teamSize"],
       workflow: workflow.trim(),
       who: who.trim(),
       rate: disqualified ? "" : (rate as ApplyPayload["rate"]),
@@ -103,6 +106,23 @@ export function ApplyForm() {
             diagnostic. Otherwise this isn&apos;t for you.
           </p>
         ) : null}
+      </fieldset>
+
+      <fieldset>
+        <legend className={labelClass}>Team size</legend>
+        <select
+          required
+          value={teamSize}
+          onChange={(event) => setTeamSize(event.target.value)}
+          className={fieldClass}
+        >
+          <option value="">Select</option>
+          {APPLY_TEAM_SIZES.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
       </fieldset>
 
       <label className="grid gap-0">
@@ -181,7 +201,7 @@ export function ApplyForm() {
         <select
           required
           value={channel}
-          onChange={(event) => setChannel(event.target.value)}
+ marChange={(event) => setChannel(event.target.value)}
           className={fieldClass}
         >
           <option value="">Select</option>
