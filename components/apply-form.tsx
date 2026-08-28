@@ -201,7 +201,7 @@ export function ApplyForm() {
         <select
           required
           value={channel}
- marChange={(event) => setChannel(event.target.value)}
+          onChange={(event) => setChannel(event.target.value)}
           className={fieldClass}
         >
           <option value="">Select</option>
