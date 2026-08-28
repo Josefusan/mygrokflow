@@ -79,10 +79,11 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
             email us, we receive that email. If you submit /apply, we receive
-            your answers: role, workflow, who does it today, price lane, whether
-            you are the decision-maker, what you need, and the contact channel
-            plus handle or email you gave. Submit sends that to{" "}
-            {DIAGNOSTIC_EMAIL}.
+            your answers: role, team size, workflow, who does it today, price
+            lane, whether you are the decision-maker, what you need, and the
+            contact channel plus handle or email you gave. Submit sends that to{" "}
+            {DIAGNOSTIC_EMAIL}. Collection is native /apply only. No free-text
+            budget field.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
