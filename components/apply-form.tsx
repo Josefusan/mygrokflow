@@ -11,6 +11,7 @@ import {
   isDisqualifiedRole,
   type ApplyPayload,
 } from "@/lib/apply";
+import { isCheckoutLane } from "@/lib/checkout";
 
 const fieldClass =
   "mt-2 w-full rounded-lg border border-border bg-background px-3 py-2 text-[13px] text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-ring";
@@ -69,6 +70,25 @@ export function ApplyForm() {
         window.location.href = fallback;
         return;
       }
+
+      if (isCheckoutLane(data.rate)) {
+        const checkout = await fetch("/api/checkout", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ rate: data.rate }),
+        });
+        const checkoutJson = (await checkout.json()) as {
+          ok?: boolean;
+          url?: string;
+          error?: string;
+        };
+        if (checkout.ok && checkoutJson.ok && checkoutJson.url) {
+          window.location.href = checkoutJson.url;
+          return;
+        }
+        if (checkoutJson.error) setError(checkoutJson.error);
+      }
+
       window.location.href = json.mailto || fallback;
     } catch {
       window.location.href = fallback;
