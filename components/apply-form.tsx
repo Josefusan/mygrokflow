@@ -12,6 +12,7 @@ import {
   type ApplyPayload,
 } from "@/lib/apply";
 import { isCheckoutLane } from "@/lib/checkout";
+import { APPLY_PATH } from "@/lib/site";
 
 const fieldClass =
   "mt-2 w-full rounded-lg border border-border bg-background px-3 py-2 text-[13px] text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-ring";
@@ -87,6 +88,13 @@ export function ApplyForm() {
           return;
         }
         if (checkoutJson.error) setError(checkoutJson.error);
+        window.location.href = json.mailto || fallback;
+        return;
+      }
+
+      if (!disqualified) {
+        window.location.href = `${APPLY_PATH}/success`;
+        return;
       }
 
       window.location.href = json.mailto || fallback;

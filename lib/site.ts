@@ -2,6 +2,7 @@ export const DIAGNOSTIC_EMAIL = "clarktechventures@gmail.com";
 export const DIAGNOSTIC_SUBJECT = "Diagnostic request";
 export const DIAGNOSTIC_MAILTO = `mailto:${DIAGNOSTIC_EMAIL}?subject=${encodeURIComponent(DIAGNOSTIC_SUBJECT)}`;
 export const APPLY_PATH = "/apply";
+export const CAL_URL = "https://cal.com/ctvllc-availability";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
 export const PROMISE =

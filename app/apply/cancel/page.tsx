@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingGate } from "@/components/booking-gate";
 import { FooterContacts } from "@/components/footer-contacts";
 import { SiteHeader } from "@/components/site-header";
 import { APPLY_PATH, SITE_NAME } from "@/lib/site";
@@ -20,17 +21,10 @@ export default function ApplyCancelPage() {
           Checkout cancelled
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          No charge. Paid lanes still go through Checkout after you qualify.
-          Diagnostic first stays a mailto.
+          No charge. Paid lanes still go through Checkout after you qualify. You
+          can still book the 15-minute diagnostic. No discounts.
         </p>
-        <p className="mt-6">
-          <Link
-            href={APPLY_PATH}
-            className="text-[13px] text-muted-foreground hover:text-foreground"
-          >
-            Back to /apply
-          </Link>
-        </p>
+        <BookingGate backHref={APPLY_PATH} backLabel="Back to /apply" />
       </main>
 
       <footer className="border-t border-border">

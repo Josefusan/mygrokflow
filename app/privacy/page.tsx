@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-          Last updated: August 27, 2026
+          Last updated: August 28, 2026
         </p>
         <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
           MyGrokFlow (&quot;we&quot;, &quot;us&quot;) operates https://www.mygrokflow.com. This
@@ -71,7 +71,8 @@ export default function PrivacyPage() {
             {DIAGNOSTIC_EMAIL}. Collection is native /apply only. No free-text
             budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
             open a Stripe Checkout session after you qualify. Stripe processes
-            that payment. Diagnostic first does not go to Stripe.
+            that payment. Diagnostic first does not go to Stripe. The 15-minute
+            diagnostic is booked on Cal.com.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our

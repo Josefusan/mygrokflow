@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingGate } from "@/components/booking-gate";
 import { FooterContacts } from "@/components/footer-contacts";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Checkout complete",
-  description: "Stripe Checkout returned to MyGrokFlow.",
+  title: "Book the diagnostic",
+  description: "Book the 15-minute MyGrokFlow diagnostic on Cal.com.",
   alternates: { canonical: "/apply/success" },
 };
 
@@ -17,17 +18,14 @@ export default function ApplySuccessPage() {
 
       <main id="main" className="mx-auto max-w-[42rem] px-4 py-16">
         <h1 className="text-4xl leading-[1.1] font-medium tracking-tight">
-          Checkout complete
+          Next: the 15-minute diagnostic
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          If Stripe Checkout finished, we have the paid-lane session. We still
-          qualify the workflow on a 15-minute diagnostic. No discounts.
+          If Checkout finished, we have the paid-lane session. Diagnostic first
+          skips Checkout. Either way, we still qualify the workflow on a
+          15-minute diagnostic. No discounts.
         </p>
-        <p className="mt-6">
-          <Link href="/" className="text-[13px] text-muted-foreground hover:text-foreground">
-            Back to the site
-          </Link>
-        </p>
+        <BookingGate autoRedirect backHref="/" backLabel="Back to the site" />
       </main>
 
       <footer className="border-t border-border">
