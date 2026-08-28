@@ -33,4 +33,9 @@ export const CONTACTS = [
     href: "https://x.com/Josefusan111",
     text: "@Josefusan111",
   },
+  {
+    label: "Substack",
+    href: "https://substack.com/@josefucan",
+    text: "@josefucan",
+  },
 ] as const;

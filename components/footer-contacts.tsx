@@ -56,6 +56,12 @@ function ContactIcon({ label }: { label: Label }) {
           <path d="M17.3 3h3.1l-6.8 7.8L21.8 21h-5.6l-4.4-5.8L6.4 21H3.3l7.3-8.3L2.4 3h5.7l4 5.3L17.3 3Zm-1 16.2h1.7L7.8 4.7H6L16.3 19.2Z" />
         </svg>
       );
+    case "Substack":
+      return (
+        <svg {...common} fill="currentColor">
+          <path d="M22.54 8.24H1.46V5.41h21.08v2.83ZM1.46 10.81V24L12 18.11 22.54 24V10.81H1.46ZM22.54 0H1.46v2.84h21.08V0Z" />
+        </svg>
+      );
   }
 }
 
