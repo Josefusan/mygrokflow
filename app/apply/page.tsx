@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ApplyForm } from "@/components/apply-form";
 import { FooterContacts } from "@/components/footer-contacts";
 import { SiteHeader } from "@/components/site-header";
-import { APPLY_PATH } from "@/lib/site";
+import { APPLY_PATH, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Request a diagnostic",
@@ -36,7 +36,7 @@ export default function ApplyPage() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-[42rem] flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between">
           <Link href="/" className="text-sm font-medium tracking-tight">
-            MyGrokFlow
+            {SITE_NAME}
           </Link>
           <FooterContacts />
         </div>
