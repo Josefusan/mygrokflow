@@ -67,7 +67,10 @@ export default function PrivacyPage() {
             lane, whether you are the decision-maker, what you need, and the
             contact channel plus handle or email you gave. Submit sends that to{" "}
             {DIAGNOSTIC_EMAIL}. Collection is native /apply only. No free-text
-            budget field.
+            budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
+            open a Stripe Checkout session after you qualify. Stripe processes
+            that payment. Diagnostic first does not go to Stripe. Checkout is
+            not configured until STRIPE_SECRET_KEY is set on the host.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -84,7 +87,8 @@ export default function PrivacyPage() {
             browser&apos;s localStorage so we don&apos;t ask every load. Theme
             preference is stored the same way. That is not a third-party cookie.
             We do not load non-essential scripts. There are none on this site
-            today.
+            today. Stripe Checkout is hosted by Stripe; we do not set Stripe
+            cookies on this site ourselves.
           </p>
         </section>
 
@@ -102,8 +106,9 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             We share information only when needed to run the business: with
             service providers that host or secure our systems (for example
-            Vercel), or when required by law. We do not sell personal
-            information to third parties.
+            Vercel), with Stripe when you complete a paid-lane Checkout, or when
+            required by law. We do not sell personal information to third
+            parties.
           </p>
         </section>
 
@@ -112,7 +117,8 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             Email and /apply answers are kept only as long as needed for the
             conversation, a possible engagement, or legal/accounting
-            obligations, then deleted or archived when no longer needed.
+            obligations, then deleted or archived when no longer needed. Stripe
+            retains payment records under its own policy.
           </p>
         </section>
 
