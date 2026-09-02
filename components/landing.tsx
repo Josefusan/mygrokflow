@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -51,6 +52,21 @@ const PROCESS = [
     n: "03",
     title: "We build the system.",
     body: "We automate the loop and hand you something that runs without you.",
+  },
+] as const;
+
+const EXAMPLES = [
+  {
+    title: "Ops reporting",
+    body: "Weekly numbers that currently live in five tabs and your head, compiled and sent without you.",
+  },
+  {
+    title: "Recruiting screen",
+    body: "Inbound candidates triaged against your bar before they hit your calendar.",
+  },
+  {
+    title: "Internal tools",
+    body: "The internal app your team keeps asking for, shipped as a working system instead of another ticket.",
   },
 ] as const;
 
@@ -208,6 +224,39 @@ export function Landing() {
           <Separator />
 
           <ArchitectureStrip />
+
+          <Separator />
+
+          <section id="examples" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>Example workflows</h2>
+            <div className="mt-6 grid gap-3">
+              {EXAMPLES.map((item) => (
+                <Card
+                  key={item.title}
+                  className="rounded-lg p-4 transition-colors duration-200 hover:bg-secondary/50"
+                >
+                  <CardHeader className="p-0">
+                    <div className="flex items-center justify-between gap-2">
+                      <CardTitle className="text-[15px] tracking-tight">
+                        {item.title}
+                      </CardTitle>
+                      <Badge
+                        variant="outline"
+                        className="font-mono text-[10px] uppercase"
+                      >
+                        Example
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-0 pt-2">
+                    <p className="text-[13px] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
         </div>
 
         <section

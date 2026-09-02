@@ -1,22 +1,26 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { APPLY_PATH } from "@/lib/site";
 
 const FLOWS = [
   {
-    title: "Ops reporting",
-    body: "Weekly numbers that currently live in five tabs and your head, compiled and sent without you.",
-    nodes: ["Tabs", "Compile", "Send"],
+    title: "AI lead generation",
+    nodes: ["Source", "Qualify", "Handoff"],
   },
   {
-    title: "Recruiting screen",
-    body: "Inbound candidates triaged against your bar before they hit your calendar.",
-    nodes: ["Inbound", "Bar", "Calendar"],
+    title: "AI lead follow-up",
+    nodes: ["Inbox", "Next step", "Close"],
   },
   {
-    title: "Internal tools",
-    body: "The internal app your team keeps asking for, shipped as a working system instead of another ticket.",
-    nodes: ["Ask", "Build", "Runs"],
+    title: "AI lead reactivation",
+    nodes: ["Cold", "Check-in", "Route"],
+  },
+  {
+    title: "AI appointment setting",
+    nodes: ["Qualified", "Times", "Book"],
+  },
+  {
+    title: "AI customer service",
+    nodes: ["Question", "Answer", "Human"],
   },
 ] as const;
 
@@ -71,8 +75,8 @@ function FlowDiagram({ nodes }: { nodes: readonly string[] }) {
 
 export function ArchitectureStrip() {
   return (
-    <section id="examples" className="fade-in scroll-mt-12 py-16">
-      <h2 className={sectionLabel}>Example flows</h2>
+    <section id="architectures" className="fade-in scroll-mt-12 py-16">
+      <h2 className={sectionLabel}>AI automations</h2>
       <div className="-mx-4 mt-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 [scrollbar-width:thin]">
         {FLOWS.map((item) => (
           <details
@@ -80,21 +84,11 @@ export function ArchitectureStrip() {
             className="w-[min(100%,20rem)] shrink-0 snap-center rounded-[0.5rem] border border-border bg-background p-4 open:bg-secondary/50"
           >
             <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-[15px] font-medium tracking-tight">
-                  {item.title}
-                </p>
-                <Badge
-                  variant="outline"
-                  className="font-mono text-[10px] uppercase"
-                >
-                  Example
-                </Badge>
-              </div>
+              <p className="text-[15px] font-medium tracking-tight">{item.title}</p>
               <FlowDiagram nodes={item.nodes} />
             </summary>
-            <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
-              {item.body}
+            <p className="mt-3 font-mono text-[13px] leading-relaxed text-muted-foreground">
+              {item.nodes.join(" · ")}
             </p>
           </details>
         ))}
