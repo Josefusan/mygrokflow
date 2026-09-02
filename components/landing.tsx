@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { FooterContacts } from "@/components/footer-contacts";
+import { ChecklistMagnet } from "@/components/checklist-magnet";
 import { LeadChat } from "@/components/lead-chat";
 import { SiteHeader } from "@/components/site-header";
 import {
@@ -117,7 +118,7 @@ const RATES = [
     title: "$9,500/mo",
     included: [
       "Several loops in one function kept running",
-      "Deepest stack we\u2019ll take",
+      "Deepest stack we’ll take",
       "Fuller docs",
       "Priority async on those systems",
     ],
@@ -325,6 +326,10 @@ export function Landing() {
               <Cta />
             </div>
           </section>
+
+          <Separator />
+
+          <ChecklistMagnet />
 
           <Separator />
 
