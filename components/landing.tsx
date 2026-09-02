@@ -119,7 +119,7 @@ const RATES = [
     title: "$9,500/mo",
     included: [
       "Several loops in one function kept running",
-      "Deepest stack we\\u2019ll take",
+      "Deepest stack we’ll take",
       "Fuller docs",
       "Priority async on those systems",
     ],
