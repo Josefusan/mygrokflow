@@ -257,6 +257,15 @@
       animation-timeline: view();
       animation-range: entry 0% entry 40%;
     }
+    .fade-in.fade-in-d60 {
+      animation-range: entry 6% entry 46%;
+    }
+    .fade-in.fade-in-d120 {
+      animation-range: entry 12% entry 52%;
+    }
+    .fade-in.fade-in-d180 {
+      animation-range: entry 18% entry 58%;
+    }
   }
 }
 
