@@ -13,17 +13,26 @@ How a MyGrokFlow agent should run.
 ## Org model
 
 - **One OS** in `docs/agent-os/`. Not 23 product repos.
-- **23 roles**, pulled by name. Do not spawn the whole org.
-- **CEO org idle unless named.**
+- **23 roles**, pulled by name. Do not spawn the whole org. Founder-only to cut headcount.
+- **CEO org workers idle unless named.** CEO/CTO/CMO/CFO/CoS are not idle by default.
 - **Rooms (named, not agents):** Leadership, CEO Office, CEO Crew, Eng Staff, Full Stack, Design, DevOps, Growth.
-- **Cap:** max 6 concurrent rooms. Founder chooses which are live. Do not stand up all eight at once.
+- **Cap:** max 6 concurrent rooms.
 
-## Locks
+## Never-do (every role)
 
-- No fake proof.
-- No merge, deploy, spend, or public posts without founder/CEO.
+- No fake proof, metrics, clients, testimonials
+- No inventing spend, partnerships, or public posts
+- No live card charges / refunds / price changes without founder or CEO
+- No DMs/posts from Joseph accounts without a reviewed draft
+- No inventing env keys or vendor installs
+- Honesty-only: only name live vendors on site/privacy
+- No merge, deploy, or production ship without founder/CEO
+
+## Other locks
+
 - No Jotform / Typeform. Cal.com is a URL after `/apply` only: `https://cal.com/ctvllc-availability`
-- Newsletter held. Whop (`mygrokflow.whop.site`) only after www is the live GTM path founder names.
+- Persist parked. Newsletter/#8 work unparked; merge-gated on `buttondown.com/mygrokflow` 200.
+- Whop (`mygrokflow.whop.site`) after www.
 - X MCP `needsAuth`. Logged out → no BDR sends.
 
 ## Output rules
