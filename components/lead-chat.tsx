@@ -5,23 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { APPLY_PATH } from "@/lib/site";
 
-const OPENER = "What workflow still needs you in it?";
-
-const REPLIES = {
-  notFor:
-    "This isn't a prompt pack or a $99 chatbot. If you already pay for time or a team and one loop still sits on you, request a diagnostic. Otherwise this isn't for you.",
-  icp: "That's a system. Diagnostic is 15 minutes. We say yes or no, then which price.",
-  what: "We take a painful recurring workflow and turn it into a system that runs without you. Implementation included.",
-  who: "Founders who already pay a team and still wait on themselves. Engineers paid to ship product whose glue never hits it. Operators stuck on the same weekly loop.",
-  notForList: "students, hobbyists, $99 chatbot shoppers.",
-  pricing:
-    "$1,500/month, $5K one-time, $10K one-time. Diagnostic qualifies which one. No discounts.",
-  how: "Diagnostic, then build, then handoff.",
-  examples:
-    "Labeled examples, not case studies: ops reporting, recruiting screen, internal tools.",
-  unknown:
-    "I only know the offer, pricing, and who it's for. Request a diagnostic and we'll look at the actual workflow.",
-} as const;
+const SCRIPT = [
+  "Hi — this is a quick trial chat, not a live person. We take a painful recurring workflow and turn it into a system that runs without you.",
+  "Best fit: founders, agency owners, and software engineers who already pay for the work and still do the glue themselves.",
+  "Not a fit: students, hobbyists, or $99 chatbot shoppers.",
+  "Three honest prices: $1,500/month, $5K one-time, or $10K one-time. The diagnostic qualifies which one. No discounts.",
+  "Implementation is included. Not a prompt pack.",
+  "Ready for a real look? Request a diagnostic",
+] as const;
 
 type Message = { role: "assistant" | "user"; text: string };
 
@@ -33,49 +24,35 @@ function replyTo(raw: string): string {
       t,
     )
   ) {
-    return REPLIES.notFor;
+    return SCRIPT[2];
   }
 
   if (/\b(price|pricing|cost|\$1,?500|1,?500|5k|10k|discount)\b/.test(t)) {
-    return REPLIES.pricing;
+    return SCRIPT[3];
   }
 
-  if (/\b(what (do you|we|is)|automation|system that runs)\b/.test(t)) {
-    return REPLIES.what;
+  if (/\b(who|icp|audience|founder|agency|engineer|fit)\b/.test(t)) {
+    return SCRIPT[1];
   }
 
-  if (/\b(who|icp|audience)\b/.test(t)) {
-    return REPLIES.who;
+  if (/\b(implement|included|prompt pack)\b/.test(t)) {
+    return SCRIPT[4];
   }
 
-  if (/\bnot for\b/.test(t)) {
-    return REPLIES.notForList;
+  if (/\b(what (do you|we|is)|automation|system that runs|workflow)\b/.test(t)) {
+    return SCRIPT[0];
   }
 
-  if (/\b(how|process|steps?|handoff)\b/.test(t)) {
-    return REPLIES.how;
-  }
-
-  if (/\b(example|ops reporting|recruiting|internal tool)\b/.test(t)) {
-    return REPLIES.examples;
-  }
-
-  if (
-    /\b(founder|engineer|operator|workflow|loop|team|bottleneck|glue)\b/.test(t)
-  ) {
-    return REPLIES.icp;
-  }
-
-  return REPLIES.unknown;
+  return SCRIPT[5];
 }
 
 const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
 
 export function LeadChat() {
-  const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", text: OPENER },
-  ]);
+  const [messages, setMessages] = useState<Message[]>(
+    SCRIPT.map((text) => ({ role: "assistant" as const, text })),
+  );
   const [draft, setDraft] = useState("");
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
