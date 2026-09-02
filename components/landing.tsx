@@ -36,10 +36,22 @@ const AUDIENCE = [
 
 const NOT_FOR = ["students", "hobbyists", "$99 chatbot shoppers"] as const;
 
-const STEPS = [
-  { n: "01", title: "Diagnostic" },
-  { n: "02", title: "Build" },
-  { n: "03", title: "Handoff" },
+const PROCESS = [
+  {
+    n: "01",
+    title: "Bring the work.",
+    body: "Upload the knowledge you already have (docs, SOPs, examples) and name the outcome you want.",
+  },
+  {
+    n: "02",
+    title: "Show us the stack.",
+    body: "Where this runs today. The tools you already pay for.",
+  },
+  {
+    n: "03",
+    title: "We build the system.",
+    body: "We automate the loop and hand you something that runs without you.",
+  },
 ] as const;
 
 const EXAMPLES = [
@@ -178,23 +190,34 @@ export function Landing() {
 
           <Separator />
 
-          <section id="how" className="fade-in scroll-mt-12 py-16">
-            <h2 className={sectionLabel}>How it works</h2>
+          <section id="process" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>Our process</h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+              {PROMISE} Implementation included, not a prompt pack.
+            </p>
             <ol className="mt-6">
-              {STEPS.map((item, index) => (
+              {PROCESS.map((item, index) => (
                 <li key={item.n}>
                   {index > 0 ? <Separator /> : null}
-                  <div className="flex items-baseline gap-4 py-3">
-                    <span className="font-mono text-[11px] tracking-[0.14em] text-muted-foreground">
-                      {item.n}
-                    </span>
-                    <span className="text-[15px] font-medium tracking-tight">
-                      {item.title}
-                    </span>
+                  <div className="py-4">
+                    <div className="flex items-baseline gap-4">
+                      <span className="font-mono text-[11px] tracking-[0.14em] text-muted-foreground">
+                        {item.n}
+                      </span>
+                      <p className="text-[15px] font-medium tracking-tight">
+                        {item.title}
+                      </p>
+                    </div>
+                    <p className="mt-1 pl-[calc(11px+1rem+2ch)] text-[13px] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
                   </div>
                 </li>
               ))}
             </ol>
+            <div className="mt-6">
+              <Cta />
+            </div>
           </section>
 
           <Separator />
