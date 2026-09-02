@@ -58,9 +58,53 @@ const EXAMPLES = [
 ] as const;
 
 const RATES = [
-  { rate: "$1,500/month" },
-  { rate: "$5K", cadence: "one-time" },
-  { rate: "$10K", cadence: "one-time" },
+  {
+    rate: "$1,500/month",
+    included: [
+      "One painful recurring workflow kept running without you",
+      "Implementation included (not a prompt pack)",
+      "Ongoing fixes and small improvements inside that lane",
+      "Async support on the live system",
+    ],
+    excluded: [
+      "A second unrelated workflow",
+      "Building a product you resell",
+      "Unlimited new projects each month",
+      "On-site / embedded team time",
+    ],
+  },
+  {
+    rate: "$5K",
+    cadence: "one-time",
+    included: [
+      "One scoped automation built and handed off",
+      "Wired into the tools you already use",
+      "Short handoff so your team can run it",
+      "One revision pass after handoff",
+    ],
+    excluded: [
+      "Monthly care-and-feeding after the handoff window",
+      "Multi-system rebuilds",
+      "Ongoing feature backlog",
+      "A second workflow",
+    ],
+  },
+  {
+    rate: "$10K",
+    cadence: "one-time",
+    included: [
+      "A larger or multi-step workflow (or two tightly linked systems)",
+      "Deeper stack integration across the tools you already pay for",
+      "Fuller handoff docs",
+      "Short post-handoff fix window",
+    ],
+    excluded: [
+      "Open-ended retainer (that's the monthly lane)",
+      "Building a SaaS product",
+      "Unlimited revisions",
+      "Training programs or staff augmentation",
+    ],
+  },
 ] as const;
 
 const sectionLabel =
@@ -79,158 +123,184 @@ export function Landing() {
     <div className="min-h-screen text-foreground">
       <SiteHeader home />
 
-      <main id="main" className="mx-auto max-w-[42rem] px-4">
-        <section id="top" className="scroll-mt-12 py-16">
-          <p className={`${sectionLabel} fade-in`}>High-ticket AI automations</p>
-          <h1 className="fade-in fade-in-d60 mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
-            {HEADLINE}
-          </h1>
-          <p className="fade-in fade-in-d120 mt-4 text-[15px] leading-relaxed text-muted-foreground">
-            {PROMISE}
-          </p>
-          <p className="fade-in fade-in-d180 mt-2 text-[15px] leading-relaxed text-muted-foreground">
-            implementation included, not a prompt pack.
-          </p>
-          <div className="fade-in fade-in-d180 mt-6">
-            <Cta />
-          </div>
-        </section>
+      <main id="main">
+        <div className="mx-auto max-w-[42rem] px-4">
+          <section id="top" className="scroll-mt-12 py-16">
+            <p className={`${sectionLabel} fade-in`}>High-ticket AI automations</p>
+            <h1 className="fade-in fade-in-d60 mt-3 text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
+              {HEADLINE}
+            </h1>
+            <p className="fade-in fade-in-d120 mt-4 text-[15px] leading-relaxed text-muted-foreground">
+              {PROMISE}
+            </p>
+            <p className="fade-in fade-in-d180 mt-2 text-[15px] leading-relaxed text-muted-foreground">
+              implementation included, not a prompt pack.
+            </p>
+            <div className="fade-in fade-in-d180 mt-6">
+              <Cta />
+            </div>
+          </section>
 
-        <Separator />
+          <Separator />
 
-        <section id="for" className="fade-in scroll-mt-12 py-16">
-          <h2 className={sectionLabel}>Who it&apos;s for</h2>
-          <ul className="mt-6">
-            {AUDIENCE.map((item, index) => (
-              <li key={item.title}>
-                {index > 0 ? <Separator /> : null}
-                <div className="py-4">
-                  <p className="text-[15px] font-medium tracking-tight">
-                    {item.title}
-                  </p>
-                  <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">
-                    {item.body}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
+          <section id="for" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>Who it&apos;s for</h2>
+            <ul className="mt-6">
+              {AUDIENCE.map((item, index) => (
+                <li key={item.title}>
+                  {index > 0 ? <Separator /> : null}
+                  <div className="py-4">
+                    <p className="text-[15px] font-medium tracking-tight">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        <Separator />
+          <Separator />
 
-        <section id="not-for" className="fade-in scroll-mt-12 py-16">
-          <h2 className={sectionLabel}>Not for</h2>
-          <ul className="mt-6">
-            {NOT_FOR.map((item, index) => (
-              <li key={item}>
-                {index > 0 ? <Separator /> : null}
-                <p className="py-3 text-[13px] text-muted-foreground">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+          <section id="not-for" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>Not for</h2>
+            <ul className="mt-6">
+              {NOT_FOR.map((item, index) => (
+                <li key={item}>
+                  {index > 0 ? <Separator /> : null}
+                  <p className="py-3 text-[13px] text-muted-foreground">{item}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        <Separator />
+          <Separator />
 
-        <section id="how" className="fade-in scroll-mt-12 py-16">
-          <h2 className={sectionLabel}>How it works</h2>
-          <ol className="mt-6">
-            {STEPS.map((item, index) => (
-              <li key={item.n}>
-                {index > 0 ? <Separator /> : null}
-                <div className="flex items-baseline gap-4 py-3">
-                  <span className="font-mono text-[11px] tracking-[0.14em] text-muted-foreground">
-                    {item.n}
-                  </span>
-                  <span className="text-[15px] font-medium tracking-tight">
-                    {item.title}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
+          <section id="how" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>How it works</h2>
+            <ol className="mt-6">
+              {STEPS.map((item, index) => (
+                <li key={item.n}>
+                  {index > 0 ? <Separator /> : null}
+                  <div className="flex items-baseline gap-4 py-3">
+                    <span className="font-mono text-[11px] tracking-[0.14em] text-muted-foreground">
+                      {item.n}
+                    </span>
+                    <span className="text-[15px] font-medium tracking-tight">
+                      {item.title}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
 
-        <Separator />
+          <Separator />
 
-        <section id="examples" className="fade-in scroll-mt-12 py-16">
-          <h2 className={sectionLabel}>Example workflows</h2>
-          <div className="mt-6 grid gap-3">
-            {EXAMPLES.map((item) => (
+          <section id="examples" className="fade-in scroll-mt-12 py-16">
+            <h2 className={sectionLabel}>Example workflows</h2>
+            <div className="mt-6 grid gap-3">
+              {EXAMPLES.map((item) => (
+                <Card
+                  key={item.title}
+                  className="rounded-lg p-4 transition-colors duration-200 hover:bg-secondary/50"
+                >
+                  <CardHeader className="p-0">
+                    <div className="flex items-center justify-between gap-2">
+                      <CardTitle className="text-[15px] tracking-tight">
+                        {item.title}
+                      </CardTitle>
+                      <Badge
+                        variant="outline"
+                        className="font-mono text-[10px] uppercase"
+                      >
+                        Example
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-0 pt-2">
+                    <p className="text-[13px] leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <section
+          id="pricing"
+          className="fade-in mx-auto w-full max-w-[56rem] scroll-mt-12 px-4 py-16"
+        >
+          <h2 className={sectionLabel}>Pricing</h2>
+          <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
+            {RATES.map((item) => (
               <Card
-                key={item.title}
-                className="rounded-lg p-4 transition-colors duration-200 hover:bg-secondary/50"
+                key={item.rate}
+                className="flex flex-col rounded-[0.5rem] border-border p-4 transition-colors duration-200 hover:bg-secondary/50"
               >
                 <CardHeader className="p-0">
-                  <div className="flex items-center justify-between gap-2">
-                    <CardTitle className="text-[15px] tracking-tight">
-                      {item.title}
-                    </CardTitle>
-                    <Badge
-                      variant="outline"
-                      className="font-mono text-[10px] uppercase"
-                    >
-                      Example
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-0 pt-2">
-                  <p className="text-[13px] leading-relaxed text-muted-foreground">
-                    {item.body}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <Separator />
-
-        <section id="pricing" className="fade-in scroll-mt-12 py-16">
-          <h2 className={sectionLabel}>Pricing</h2>
-          <div className="mt-6 rounded-lg border border-border transition-colors duration-200 hover:border-foreground/20">
-            {RATES.map((item, index) => (
-              <div key={item.rate}>
-                {index > 0 ? <Separator /> : null}
-                <div className="flex items-center justify-between gap-4 px-4 py-4">
-                  <p className="text-[15px] font-medium tracking-tight">
+                  <CardTitle className="text-[15px] tracking-tight">
                     {item.rate}
                     {"cadence" in item ? (
                       <span className="ml-2 font-normal text-muted-foreground">
                         {item.cadence}
                       </span>
                     ) : null}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-1 flex-col p-0 pt-4">
+                  <p className={sectionLabel}>In</p>
+                  <ul className="mt-2 grid gap-1">
+                    {item.included.map((line) => (
+                      <li
+                        key={line}
+                        className="text-[13px] leading-relaxed text-muted-foreground"
+                      >
+                        {line}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className={`${sectionLabel} mt-4`}>Not in</p>
+                  <ul className="mt-2 grid gap-1">
+                    {item.excluded.map((line) => (
+                      <li
+                        key={line}
+                        className="text-[13px] leading-relaxed text-muted-foreground"
+                      >
+                        {line}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-[13px] text-muted-foreground">
+                    The diagnostic qualifies. No discounts.
                   </p>
-                  <a
-                    href={APPLY_PATH}
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Apply
-                  </a>
-                </div>
-              </div>
+                  <div className="mt-auto pt-4">
+                    <Cta />
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
-          <p className="mt-4 text-[13px] text-muted-foreground">
-            The diagnostic qualifies. No discounts.
-          </p>
         </section>
 
-        <Separator />
+        <div className="mx-auto max-w-[42rem] px-4">
+          <section id="close" className="fade-in scroll-mt-12 py-16">
+            <p className="text-[15px] leading-relaxed text-muted-foreground">
+              {PROMISE}
+            </p>
+            <div className="mt-6">
+              <Cta />
+            </div>
+          </section>
 
-        <section id="close" className="fade-in scroll-mt-12 py-16">
-          <p className="text-[15px] leading-relaxed text-muted-foreground">
-            {PROMISE}
-          </p>
-          <div className="mt-6">
-            <Cta />
-          </div>
-        </section>
+          <Separator />
 
-        <Separator />
-
-        <LeadChat />
+          <LeadChat />
+        </div>
       </main>
 
       <footer className="border-t border-border">
