@@ -68,7 +68,8 @@ export default function PrivacyPage() {
             your answers: role, team size, workflow, who does it today, price
             lane, whether you are the decision-maker, what you need, and the
             contact channel plus handle or email you gave. Submit sends that to{" "}
-            {DIAGNOSTIC_EMAIL}. Collection is native /apply only. No free-text
+            {DIAGNOSTIC_EMAIL}. If you subscribe to Without You, we receive the
+            email address you enter. Collection is native /apply only. No free-text
             budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
             open a Stripe Checkout session after you qualify. Stripe processes
             that payment. Diagnostic first does not go to Stripe. The 15-minute
@@ -98,8 +99,9 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>How we use information</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             We use information you send us to respond to diagnostic requests,
-            scope work, communicate about a possible engagement, and improve our
-            offer. We do not sell your personal information.
+            scope work, communicate about a possible engagement, send the Without
+            You note if you subscribe, and improve our offer. We do not sell your
+            personal information.
           </p>
         </section>
 
@@ -108,19 +110,19 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             We share information only when needed to run the business: with
             service providers that host or secure our systems (for example
-            Vercel), with Stripe when you complete a paid-lane Checkout, or when
-            required by law. We do not sell personal information to third
-            parties.
+            Vercel), with Stripe when you complete a paid-lane Checkout, with
+            Buttondown if you subscribe to Without You, or when required by law.
+            We do not sell personal information to third parties.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email and /apply answers are kept only as long as needed for the
-            conversation, a possible engagement, or legal/accounting
-            obligations, then deleted or archived when no longer needed. Stripe
-            retains payment records under its own policy.
+            Email, /apply answers, and newsletter subscriptions are kept only as
+            long as needed for the conversation, a possible engagement, the note,
+            or legal/accounting obligations, then deleted or archived when no
+            longer needed. Stripe retains payment records under its own policy.
           </p>
         </section>
 
