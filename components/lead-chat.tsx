@@ -9,10 +9,26 @@ const SCRIPT = [
   "Hi — this is a quick trial chat, not a live person. We take a painful recurring workflow and turn it into a system that runs without you.",
   "Best fit: founders, agency owners, and software engineers who already pay for the work and still do the glue themselves.",
   "Not a fit: students, hobbyists, or $99 chatbot shoppers.",
-  "Four honest prices: $500 audit+report, $2,000/month, $7,500/month, or $9,500/month. The diagnostic qualifies which one. No discounts.",
+  "Four honest prices: $500 audit (one-time), then $2,000/mo, $7,500/mo, or $9,500/mo. The diagnostic qualifies which one. No discounts.",
   "Implementation is included. Not a prompt pack.",
-  "Ready for a real look? Request a diagnostic",
+  "Ready for a real look? Request a diagnostic → /apply",
+  "How it works: 01 Bring the work (docs, SOPs, examples, the outcome). 02 Show us the stack you already pay for. 03 We build the system so the loop runs without you.",
+  "What we build: one painful loop as a system. Trigger in, work done, record left, you only on exceptions.",
+  "What we do not build: a prompt you still paste, a dashboard you babysit, a $99 chatbot, a SaaS you resell.",
+  "How long / what’s next: we don’t quote days in this chat. The diagnostic names the lane. Request a diagnostic → /apply",
+  "Who does the work: we implement. You bring the loop, the stack, and a decider.",
+  "$500 audit: one workflow on the table, a written what-to-automate, which monthly lane fits if any. Not a live build.",
+  "$2,000/mo: one recurring workflow kept running, implementation, fixes in that lane, async support. Not a second unrelated workflow.",
+  "$7,500/mo: a larger or multi-step loop (or two tightly linked systems), deeper stack, fuller handoff, care in that scope.",
+  "$9,500/mo: several loops in one function, deepest stack we’ll take, fuller docs, priority async on those systems.",
+  "No named case studies yet. Trading desk, CS, and BDR cards are examples of the work, not clients or metrics.",
+  "Example flows on the site: AI lead generation, follow-up, reactivation, appointment setting, customer service. Labels only.",
+  "Free worksheet: Without You — one-loop audit checklist. Get it on the site. Then request a diagnostic → /apply",
+  "Newsletter (Without You) is not a public list yet. Don’t wait on it. Diagnostic is /apply",
 ] as const;
+
+const FALLBACK =
+  "This chat is a trial FAQ, not a live person. If you have a loop that still needs you, request a diagnostic → /apply";
 
 type Message = { role: "assistant" | "user"; text: string };
 
@@ -20,41 +36,94 @@ function replyTo(raw: string): string {
   const t = raw.toLowerCase();
 
   if (
-    /\b(student|hobby|hobbyist|exploring|just looking|\$99|99 chatbot|chatbot shop|prompt pack)\b/.test(
+    /\b(student|hobby|hobbyist|exploring|just looking|\$99|99 chatbot|chatbot shop)\b/.test(
       t,
     )
   ) {
     return SCRIPT[2];
   }
 
-  if (
-    /\b(price|pricing|cost|audit|\$500|2,?000|7,?500|9,?500|discount)\b/.test(t)
-  ) {
-    return SCRIPT[3];
+  if (/\b(newsletter|buttondown|subscribe|public list)\b/.test(t)) {
+    return SCRIPT[18];
   }
+
+  if (/\b(worksheet|checklist|without you|magnet|download)\b/.test(t)) {
+    return SCRIPT[17];
+  }
+
+  if (
+    /\b(case study|case studies|proof|testimonial|clients?|metrics?|trading desk)\b/.test(
+      t,
+    )
+  ) {
+    return SCRIPT[15];
+  }
+
+  if (
+    /\b(lead gen|follow-up|reactivation|appointment|customer service|example flow)\b/.test(
+      t,
+    )
+  ) {
+    return SCRIPT[16];
+  }
+
+  if (/\b9,?500\b/.test(t)) return SCRIPT[14];
+  if (/\b7,?500\b/.test(t)) return SCRIPT[13];
+  if (/\b2,?000\b/.test(t)) return SCRIPT[12];
+  if (/\b(\$500|500 audit|audit)\b/.test(t)) return SCRIPT[11];
+
+  if (/\b(price|pricing|cost|discount|lane)\b/.test(t)) return SCRIPT[3];
+
+  if (
+    /\b(not build|don'?t build|prompt pack|saas you resell|dashboard you babysit)\b/.test(
+      t,
+    )
+  ) {
+    return SCRIPT[8];
+  }
+
+  if (/\b(what we build|what do you build|exceptions)\b/.test(t)) {
+    return SCRIPT[7];
+  }
+
+  if (/\b(how it works|process|bring the work|sops?)\b/.test(t)) {
+    return SCRIPT[6];
+  }
+
+  if (/\b(how long|timeline|how soon|what.?s next|days)\b/.test(t)) {
+    return SCRIPT[9];
+  }
+
+  if (/\b(who (does|implements)|you implement|decider)\b/.test(t)) {
+    return SCRIPT[10];
+  }
+
+  if (/\b(implement|included|not a prompt)\b/.test(t)) return SCRIPT[4];
 
   if (/\b(who|icp|audience|founder|agency|engineer|fit)\b/.test(t)) {
     return SCRIPT[1];
   }
 
-  if (/\b(implement|included|prompt pack)\b/.test(t)) {
-    return SCRIPT[4];
-  }
+  if (/\b(ready|diagnostic|apply|book)\b/.test(t)) return SCRIPT[5];
 
-  if (/\b(what (do you|we|is)|automation|system that runs|workflow)\b/.test(t)) {
+  if (
+    /\b(what (do you|we|is)|automation|system that runs|workflow|trial chat)\b/.test(
+      t,
+    )
+  ) {
     return SCRIPT[0];
   }
 
-  return SCRIPT[5];
+  return FALLBACK;
 }
 
 const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
 
 export function LeadChat() {
-  const [messages, setMessages] = useState<Message[]>(
-    SCRIPT.map((text) => ({ role: "assistant" as const, text })),
-  );
+  const [messages, setMessages] = useState<Message[]>([
+    { role: "assistant", text: SCRIPT[0] },
+  ]);
   const [draft, setDraft] = useState("");
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
