@@ -140,11 +140,16 @@ export function LeadChat() {
   }
 
   return (
-    <section id="chat" className="fade-in scroll-mt-12 py-16">
+    <section id="chat" data-slot="lead-chat" className="fade-in scroll-mt-12 py-16">
       <h2 className={sectionLabel}>Ask about the offer</h2>
       <Card className="mt-6 rounded-lg p-4">
         <CardContent className="p-0">
-          <div className="grid gap-3" aria-live="polite">
+          <div
+            className="grid gap-3"
+            role="log"
+            aria-live="polite"
+            aria-label="Trial chat"
+          >
             {messages.map((message, index) => (
               <p
                 key={`${message.role}-${index}`}
@@ -164,13 +169,14 @@ export function LeadChat() {
             </label>
             <input
               id="lead-chat-input"
+              type="text"
               value={draft}
               onChange={(event) => setDraft(event.target.value)}
               placeholder="Describe the loop that still sits on you"
               autoComplete="off"
               className="h-9 min-w-0 flex-1 rounded-full border border-border bg-background px-4 text-[13px] text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-ring"
             />
-            <Button type="submit" className="h-9 rounded-full px-4">
+            <Button type="submit" variant="outline" className="h-9 rounded-full px-4">
               Send
             </Button>
           </form>
