@@ -9,7 +9,7 @@ const SCRIPT = [
   "Hi — this is a quick trial chat, not a live person. We take a painful recurring workflow and turn it into a system that runs without you.",
   "Best fit: founders, agency owners, and software engineers who already pay for the work and still do the glue themselves.",
   "Not a fit: students, hobbyists, or $99 chatbot shoppers.",
-  "Three honest prices: $1,500/month, $5K one-time, or $10K one-time. The diagnostic qualifies which one. No discounts.",
+  "Four honest prices: $500 audit+report, $2,000/month, $7,500/month, or $9,500/month. The diagnostic qualifies which one. No discounts.",
   "Implementation is included. Not a prompt pack.",
   "Ready for a real look? Request a diagnostic",
 ] as const;
@@ -27,7 +27,9 @@ function replyTo(raw: string): string {
     return SCRIPT[2];
   }
 
-  if (/\b(price|pricing|cost|\$1,?500|1,?500|5k|10k|discount)\b/.test(t)) {
+  if (
+    /\b(price|pricing|cost|audit|\$500|2,?000|7,?500|9,?500|discount)\b/.test(t)
+  ) {
     return SCRIPT[3];
   }
 

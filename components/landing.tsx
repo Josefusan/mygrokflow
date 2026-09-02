@@ -71,50 +71,61 @@ const EXAMPLES = [
 
 const RATES = [
   {
-    rate: "$1,500/month",
+    title: "$500 audit (one-time)",
     included: [
-      "One painful recurring workflow kept running without you",
+      "One painful workflow on the table",
+      "Written report of what to automate",
+      "Which monthly lane fits, if any",
+    ],
+    excluded: [
+      "A live build",
+      "Monthly care",
+      "A booked calendar from this card",
+    ],
+  },
+  {
+    title: "$2,000/mo",
+    included: [
+      "One recurring workflow kept running without you",
       "Implementation included (not a prompt pack)",
-      "Ongoing fixes and small improvements inside that lane",
+      "Ongoing fixes inside that lane",
       "Async support on the live system",
     ],
     excluded: [
       "A second unrelated workflow",
-      "Building a product you resell",
-      "Unlimited new projects each month",
+      "A product you resell",
+      "Unlimited new projects",
       "On-site / embedded team time",
     ],
   },
   {
-    rate: "$5K",
-    cadence: "one-time",
+    title: "$7,500/mo",
     included: [
-      "One scoped automation built and handed off",
-      "Wired into the tools you already use",
-      "Short handoff so your team can run it",
-      "One revision pass after handoff",
+      "A larger or multi-step loop (or two tightly linked systems)",
+      "Deeper stack integration across tools you already pay for",
+      "Fuller handoff",
+      "Ongoing care in that scope",
     ],
     excluded: [
-      "Monthly care-and-feeding after the handoff window",
-      "Multi-system rebuilds",
-      "Ongoing feature backlog",
-      "A second workflow",
+      "Open-ended anything-goes",
+      "Building a SaaS product",
+      "Unlimited new projects",
+      "Staff augmentation",
     ],
   },
   {
-    rate: "$10K",
-    cadence: "one-time",
+    title: "$9,500/mo",
     included: [
-      "A larger or multi-step workflow (or two tightly linked systems)",
-      "Deeper stack integration across the tools you already pay for",
-      "Fuller handoff docs",
-      "Short post-handoff fix window",
+      "Several loops in one function kept running",
+      "Deepest stack we\u2019ll take",
+      "Fuller docs",
+      "Priority async on those systems",
     ],
     excluded: [
-      "Open-ended retainer (that's the monthly lane)",
-      "Building a SaaS product",
-      "Unlimited revisions",
-      "Training programs or staff augmentation",
+      "Building a product you resell",
+      "Embedding a team",
+      "Unlimited revisions across the company",
+      "Training programs",
     ],
   },
 ] as const;
@@ -256,23 +267,18 @@ export function Landing() {
 
         <section
           id="pricing"
-          className="fade-in mx-auto w-full max-w-[56rem] scroll-mt-12 px-4 py-16"
+          className="fade-in mx-auto w-full max-w-[72rem] scroll-mt-12 px-4 py-16"
         >
           <h2 className={sectionLabel}>Pricing</h2>
-          <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-4">
             {RATES.map((item) => (
               <Card
-                key={item.rate}
+                key={item.title}
                 className="flex flex-col rounded-[0.5rem] border-border p-4 transition-colors duration-200 hover:bg-secondary/50"
               >
                 <CardHeader className="p-0">
                   <CardTitle className="text-[15px] tracking-tight">
-                    {item.rate}
-                    {"cadence" in item ? (
-                      <span className="ml-2 font-normal text-muted-foreground">
-                        {item.cadence}
-                      </span>
-                    ) : null}
+                    {item.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-1 flex-col p-0 pt-4">

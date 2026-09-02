@@ -10,9 +10,10 @@ export const APPLY_ROLES = [
 export const APPLY_TEAM_SIZES = ["Just me", "2–10", "11–50", "50+"] as const;
 
 export const APPLY_RATES = [
-  "$1,500/month",
-  "$5K one-time",
-  "$10K one-time",
+  "$500 audit+report",
+  "$2,000/month",
+  "$7,500/month",
+  "$9,500/month",
   "Diagnostic first",
 ] as const;
 

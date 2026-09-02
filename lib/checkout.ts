@@ -1,15 +1,19 @@
 export const CHECKOUT_LANES = {
-  "$1,500/month": {
-    priceId: "price_1U9FIAQueSrGdHy2gRSSo2tp",
+  "$500 audit+report": {
+    priceId: "price_1UBFzRQueSrGdHy2lHAaqGxy",
+    mode: "payment" as const,
+  },
+  "$2,000/month": {
+    priceId: "price_1UBFzrQueSrGdHy2fWK0766S",
     mode: "subscription" as const,
   },
-  "$5K one-time": {
-    priceId: "price_1U9FI1QueSrGdHy24SNBoWhE",
-    mode: "payment" as const,
+  "$7,500/month": {
+    priceId: "price_1UBG04QueSrGdHy22hl64adA",
+    mode: "subscription" as const,
   },
-  "$10K one-time": {
-    priceId: "price_1U9FI2QueSrGdHy2prId4EpR",
-    mode: "payment" as const,
+  "$9,500/month": {
+    priceId: "price_1UBG04QueSrGdHy2cCme8sBP",
+    mode: "subscription" as const,
   },
 } as const;
 
