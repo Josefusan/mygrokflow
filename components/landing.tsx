@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { ArchitectureStrip } from "@/components/architecture-strip";
 import { FooterContacts } from "@/components/footer-contacts";
 import { ChecklistMagnet } from "@/components/checklist-magnet";
+import { Newsletter } from "@/components/newsletter";
 import { LeadChat } from "@/components/lead-chat";
 import { SiteHeader } from "@/components/site-header";
 import {
@@ -331,6 +332,10 @@ export function Landing() {
               <Cta />
             </div>
           </section>
+
+          <Separator />
+
+          <Newsletter />
 
           <Separator />
 
