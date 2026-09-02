@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { ArchitectureStrip } from "@/components/architecture-strip";
 import { FooterContacts } from "@/components/footer-contacts";
 import { LeadChat } from "@/components/lead-chat";
 import { SiteHeader } from "@/components/site-header";
@@ -230,6 +231,10 @@ export function Landing() {
               <Cta />
             </div>
           </section>
+
+          <Separator />
+
+          <ArchitectureStrip />
 
           <Separator />
 
