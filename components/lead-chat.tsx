@@ -71,6 +71,7 @@ function replyTo(raw: string): string {
 
 const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
+const helpClass = "mt-2 text-[13px] leading-relaxed text-muted-foreground";
 
 export function LeadChat() {
   const [messages, setMessages] = useState<Message[]>([
@@ -94,6 +95,9 @@ export function LeadChat() {
   return (
     <section id="chat" className="fade-in scroll-mt-12 py-16">
       <h2 className={sectionLabel}>Ask about the offer</h2>
+      <p className={helpClass}>
+        Canned answers. Not a live agent. This trial ends on a diagnostic.
+      </p>
       <Card className="mt-6 rounded-lg p-4">
         <CardContent className="p-0">
           <div className="grid gap-3" aria-live="polite">
