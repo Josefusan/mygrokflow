@@ -69,12 +69,12 @@ export default function PrivacyPage() {
             lane, whether you are the decision-maker, what you need, and the
             contact channel plus handle or email you gave. Submit sends that to{" "}
             {DIAGNOSTIC_EMAIL}. When Telegram notify is configured, the same
-            answers are also sent to the founder on Telegram. If that notify is
-            not configured, the form falls back to a mailto compose. Collection
-            is native /apply only. No free-text budget field. Paid lanes open a
-            Stripe Checkout session after you qualify. Stripe processes that
-            payment. Diagnostic first does not go to Stripe. The 15-minute
-            diagnostic is booked on Cal.com.
+            answers are also sent to us on Telegram. If that notify is not
+            configured or fails, the form falls back to a mailto compose.
+            Collection is native /apply only. No free-text budget field. Paid
+            lanes open a Stripe Checkout session after you qualify. Stripe
+            processes that payment. Diagnostic first does not go to Stripe. The
+            15-minute diagnostic is booked on Cal.com.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
