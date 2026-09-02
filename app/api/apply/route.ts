@@ -18,21 +18,10 @@ export async function POST(request: Request) {
   const notify = await notifyTelegram(parsed.data);
   const mailto = applyMailto(parsed.data);
 
-  if (!notify.sent) {
-    return NextResponse.json(
-      {
-        ok: false,
-        sent: false,
-        error: notify.error || "Telegram not configured",
-        mailto,
-      },
-      { status: 503 },
-    );
-  }
-
   return NextResponse.json({
     ok: true,
-    sent: true,
+    sent: notify.sent,
     mailto,
+    ...(notify.sent ? {} : { error: notify.error }),
   });
 }
