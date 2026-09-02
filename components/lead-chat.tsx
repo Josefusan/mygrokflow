@@ -24,7 +24,7 @@ const SCRIPT = [
   "No named case studies yet. Trading desk, CS, and BDR cards are examples of the work, not clients or metrics.",
   "Example flows on the site: AI lead generation, follow-up, reactivation, appointment setting, customer service. Labels only.",
   "Free worksheet: Without You — one-loop audit checklist. Get it on the site. Then request a diagnostic → /apply",
-  "Newsletter (Without You) is not a public list yet. Don’t wait on it. Diagnostic is /apply",
+  "Without You is on Substack: https://substack.com/@josefucan",
 ] as const;
 
 const FALLBACK =
@@ -43,7 +43,7 @@ function replyTo(raw: string): string {
     return SCRIPT[2];
   }
 
-  if (/\b(newsletter|buttondown|subscribe|public list)\b/.test(t)) {
+  if (/\b(newsletter|buttondown|subscribe|public list|substack)\b/.test(t)) {
     return SCRIPT[18];
   }
 
