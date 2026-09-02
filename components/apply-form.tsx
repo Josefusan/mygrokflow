@@ -193,8 +193,8 @@ export function ApplyForm() {
             ))}
           </select>
           <p className={helpClass}>
-            Diagnostic first skips Checkout. Paid lanes are $1,500/month, $5K
-            one-time, or $10K one-time.
+            Diagnostic first skips Checkout. Paid lanes are $500 audit+report,
+            $2,000/month, $7,500/month, or $9,500/month.
           </p>
         </fieldset>
       )}
