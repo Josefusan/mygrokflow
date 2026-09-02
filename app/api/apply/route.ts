@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { applyMailto, parseApplyPayload } from "@/lib/apply";
+import { notifyTelegram } from "@/lib/telegram";
 
 export async function POST(request: Request) {
   let json: unknown;
@@ -14,11 +15,24 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: parsed.error }, { status: 400 });
   }
 
-  // No SMTP env and no paid mail vendor. Mailto-compose is the notify path
-  // until DevOps sets a sender.
+  const notify = await notifyTelegram(parsed.data);
+  const mailto = applyMailto(parsed.data);
+
+  if (!notify.sent) {
+    return NextResponse.json(
+      {
+        ok: false,
+        sent: false,
+        error: notify.error || "Telegram not configured",
+        mailto,
+      },
+      { status: 503 },
+    );
+  }
+
   return NextResponse.json({
     ok: true,
-    sent: false,
-    mailto: applyMailto(parsed.data),
+    sent: true,
+    mailto,
   });
 }
