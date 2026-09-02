@@ -267,10 +267,10 @@ export function Landing() {
 
         <section
           id="pricing"
-          className="fade-in mx-auto w-full max-w-[56rem] scroll-mt-12 px-4 py-16"
+          className="fade-in mx-auto w-full max-w-[72rem] scroll-mt-12 px-4 py-16"
         >
           <h2 className={sectionLabel}>Pricing</h2>
-          <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-4">
             {RATES.map((item) => (
               <Card
                 key={item.title}
