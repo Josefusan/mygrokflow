@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-          Last updated: August 28, 2026
+          Last updated: September 2, 2026
         </p>
         <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
           MyGrokFlow (&quot;we&quot;, &quot;us&quot;) operates https://www.mygrokflow.com. This
@@ -68,12 +68,15 @@ export default function PrivacyPage() {
             your answers: role, team size, workflow, who does it today, price
             lane, whether you are the decision-maker, what you need, and the
             contact channel plus handle or email you gave. Submit sends that to{" "}
-            {DIAGNOSTIC_EMAIL}. If you subscribe to Without You, we receive the
-            email address you enter. Collection is native /apply only. No free-text
-            budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
-            open a Stripe Checkout session after you qualify. Stripe processes
-            that payment. Diagnostic first does not go to Stripe. The 15-minute
-            diagnostic is booked on Cal.com.
+            {DIAGNOSTIC_EMAIL}. When Telegram notify is configured, the same
+            answers are also sent to us on Telegram. If that notify is not
+            configured or fails, the form falls back to a mailto compose. If you
+            subscribe to Without You, we receive the email address you enter.
+            Collection is native /apply only. No free-text budget field. Paid
+            lanes ($1,500/month, $5K one-time, $10K one-time) open a Stripe
+            Checkout session after you qualify. Stripe processes that payment.
+            Diagnostic first does not go to Stripe. The 15-minute diagnostic is
+            booked on Cal.com.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -110,9 +113,10 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             We share information only when needed to run the business: with
             service providers that host or secure our systems (for example
-            Vercel), with Stripe when you complete a paid-lane Checkout, with
-            Buttondown if you subscribe to Without You, or when required by law.
-            We do not sell personal information to third parties.
+            Vercel), with Telegram when /apply notify is configured, with Stripe
+            when you complete a paid-lane Checkout, with Buttondown if you
+            subscribe to Without You, or when required by law. We do not sell
+            personal information to third parties.
           </p>
         </section>
 
