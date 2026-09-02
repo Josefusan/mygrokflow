@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { FooterContacts } from "@/components/footer-contacts";
+import { SiteHeader } from "@/components/site-header";
 import {
-  APPLY_PATH,
   DIAGNOSTIC_EMAIL,
   DIAGNOSTIC_MAILTO,
   SITE_NAME,
@@ -19,32 +18,17 @@ export const metadata: Metadata = {
 const sectionLabel =
   "font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase";
 
-function Cta() {
-  return (
-    <Button asChild className="h-9 rounded-full px-4">
-      <Link href={APPLY_PATH}>Request a diagnostic</Link>
-    </Button>
-  );
-}
-
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen text-foreground">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-12 max-w-[42rem] items-center justify-between px-4">
-          <Link href="/" className="text-sm font-medium tracking-tight">
-            {SITE_NAME}
-          </Link>
-          <Cta />
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="main" className="mx-auto max-w-[42rem] px-4 py-16">
         <h1 className="text-4xl leading-[1.1] font-medium tracking-[-0.03em] text-foreground md:text-5xl">
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-          Last updated: August 27, 2026
+          Last updated: August 28, 2026
         </p>
         <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
           MyGrokFlow (&quot;we&quot;, &quot;us&quot;) operates https://www.mygrokflow.com. This
@@ -69,8 +53,10 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             The site is a marketing page. Request a diagnostic is a form on{" "}
             /apply. Email and other channels are public contact, not the buy
-            path. We do not run an account system or user dashboard on this
-            site.
+            path. Footer links (email, Telegram, Signal, LinkedIn, X, Substack)
+            are outbound. Tapping Substack leaves this site; we do not collect a
+            Substack signup here. We do not run an account system or user
+            dashboard on this site.
           </p>
         </section>
 
@@ -79,11 +65,15 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
             email us, we receive that email. If you submit /apply, we receive
-            your answers: role, workflow, who does it today, price lane, whether
-            you are the decision-maker, what you need, and the contact channel
-            plus handle or email you gave. Submit sends that to{" "}
+            your answers: role, team size, workflow, who does it today, price
+            lane, whether you are the decision-maker, what you need, and the
+            contact channel plus handle or email you gave. Submit sends that to{" "}
             {DIAGNOSTIC_EMAIL}. If you subscribe to Without You, we receive the
-            email address you enter.
+            email address you enter. Collection is native /apply only. No free-text
+            budget field. Paid lanes ($1,500/month, $5K one-time, $10K one-time)
+            open a Stripe Checkout session after you qualify. Stripe processes
+            that payment. Diagnostic first does not go to Stripe. The 15-minute
+            diagnostic is booked on Cal.com.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -97,9 +87,11 @@ export default function PrivacyPage() {
             do not run analytics, ads, or marketing pixels. Essential: Vercel may
             set cookies or logs required to host and serve this site. If you tap
             Accept or Manage on the banner, that choice is stored in your
-            browser&apos;s localStorage so we don&apos;t ask every load. That is
-            not a third-party cookie. We do not load non-essential scripts. There
-            are none on this site today.
+            browser&apos;s localStorage so we don&apos;t ask every load. Theme
+            preference is stored the same way. That is not a third-party cookie.
+            We do not load non-essential scripts. There are none on this site
+            today. Stripe Checkout is hosted by Stripe; we do not set Stripe
+            cookies on this site ourselves.
           </p>
         </section>
 
@@ -107,17 +99,20 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>How we use information</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             We use information you send us to respond to diagnostic requests,
-            scope work, communicate about a possible engagement, send the
-            Without You note if you subscribe, and improve our offer. We do not
-            sell your personal information.
+            scope work, communicate about a possible engagement, send the Without
+            You note if you subscribe, and improve our offer. We do not sell your
+            personal information.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Sharing</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Vercel (hosting). Buttondown (newsletter) if you subscribe to
-            Without You. We do not sell personal information to third parties.
+            We share information only when needed to run the business: with
+            service providers that host or secure our systems (for example
+            Vercel), with Stripe when you complete a paid-lane Checkout, with
+            Buttondown if you subscribe to Without You, or when required by law.
+            We do not sell personal information to third parties.
           </p>
         </section>
 
@@ -125,9 +120,9 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             Email, /apply answers, and newsletter subscriptions are kept only as
-            long as needed for the conversation, a possible engagement, the
-            note, or legal/accounting obligations, then deleted or archived when
-            no longer needed.
+            long as needed for the conversation, a possible engagement, the note,
+            or legal/accounting obligations, then deleted or archived when no
+            longer needed. Stripe retains payment records under its own policy.
           </p>
         </section>
 
