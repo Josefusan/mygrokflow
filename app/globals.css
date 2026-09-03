@@ -269,6 +269,45 @@
   }
 }
 
+/* Landing page (components/landing/*): scoped dark palette. The site
+   ThemeToggle never repaints this tree; FooterContacts reads the shadcn
+   tokens overridden below. */
+.mgf-landing {
+  --mgf-bg: #0b0b0d;
+  --mgf-panel: #161618;
+  --mgf-text: #f2f2f0;
+  --mgf-muted: #9a9a9e;
+  --mgf-muted-on-video: rgba(242, 242, 240, 0.78);
+  --mgf-accent: #a3e635;
+  --mgf-border: rgba(255, 255, 255, 0.12);
+  --mgf-scrim: linear-gradient(
+    180deg,
+    rgba(11, 11, 13, 0.35) 0%,
+    rgba(11, 11, 13, 0.62) 100%
+  );
+  --muted-foreground: #9a9a9e;
+  --foreground: #f2f2f0;
+  --secondary: #1e1e22;
+  color: var(--mgf-text);
+  background: var(--mgf-bg);
+}
+
+.mgf-landing ::selection {
+  background: rgba(163, 230, 53, 0.25);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes scrollBounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(6px);
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
