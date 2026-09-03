@@ -281,8 +281,9 @@
   --mgf-accent: #a3e635;
   --mgf-border: rgba(255, 255, 255, 0.12);
   /* Translucent panel + card fills so the fixed video reads as one continuous
-     backdrop instead of alternating solid color blocks. */
-  --mgf-glass: rgba(13, 13, 16, 0.66);
+     backdrop instead of alternating solid color blocks. Opaque enough to stay
+     legible without backdrop-filter (which is unreliable over fixed video). */
+  --mgf-glass: rgba(11, 11, 13, 0.82);
   --mgf-card: rgba(255, 255, 255, 0.04);
   --mgf-scrim: linear-gradient(
     180deg,
@@ -298,6 +299,33 @@
 
 .mgf-landing ::selection {
   background: rgba(163, 230, 53, 0.25);
+}
+
+/* Card diagram motion. Dash-flow is an SVG line-flow exception to the
+   transform/opacity rule; the reduced-motion blanket below neutralizes both. */
+@keyframes mgfFlow {
+  from {
+    stroke-dashoffset: 18;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes mgfPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.mgf-flow {
+  stroke-dasharray: 3 6;
+  animation: mgfFlow 1.4s linear infinite;
+}
+.mgf-pulse {
+  animation: mgfPulse 2.4s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: no-preference) {

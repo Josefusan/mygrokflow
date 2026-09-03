@@ -1,6 +1,6 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
-export const EYEBROW = "High-ticket AI automations";
+export const EYEBROW = "Modernizing your business to become more profitable";
 
 export const HEADLINE =
   "Want hours back and more money from the work you already pay for, without doing it yourself.";
@@ -74,14 +74,17 @@ export const EXAMPLES = [
   {
     title: "AI Lead Generation",
     body: "A system that finds, qualifies, and books your best-fit prospects straight onto your calendar — pipeline that fills while you sleep, not another list to work by hand.",
+    media: "leadgen",
   },
   {
     title: "AI Customer Service",
     body: "A 24/7 support agent that answers, resolves, and escalates in your voice — customers get instant help and your team stops answering the same question twice.",
+    media: "support",
   },
   {
     title: "Ops & workflow automation",
     body: "The reporting, screening, and internal tools that eat your week — compiled, triaged, and run without you.",
+    media: "video",
   },
 ] as const;
 
