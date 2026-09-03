@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · MyGrokFlow",
   },
   description:
-    "We take a painful recurring workflow and turn it into a system that runs without you. High-ticket AI automations with implementation included.",
+    "We take a painful recurring workflow and turn it into a system that runs without you — modernizing your business to become more profitable, implementation included.",
   applicationName: "MyGrokFlow",
   keywords: [
     "AI automation",

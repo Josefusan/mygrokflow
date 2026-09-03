@@ -38,7 +38,7 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>Who we are</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            MyGrokFlow designs and ships high-ticket AI automations. Contact:{" "}
+            MyGrokFlow designs and ships AI automation systems. Contact:{" "}
             <a
               href={DIAGNOSTIC_MAILTO}
               className="text-muted-foreground hover:text-foreground"
