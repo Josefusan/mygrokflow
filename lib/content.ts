@@ -8,6 +8,9 @@ export const HEADLINE =
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE = "For founders, agency owners, and engineers.";
+export const AGNOSTIC_TAG = "Agent-agnostic — we find the optimal path.";
+export const AGNOSTIC_LINE =
+  "Agent-agnostic by design. We test the models, tools, and routes, then ship the optimal path — not whatever's trending this week.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
 export const CTA_PRIMARY = "Book a call";

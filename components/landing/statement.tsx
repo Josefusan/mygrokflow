@@ -1,5 +1,5 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { AUDIENCE, NOT_FOR, TAGLINE, notForLine } from "@/lib/content";
+import { AGNOSTIC_LINE, AUDIENCE, NOT_FOR, TAGLINE, notForLine } from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
 /** Section 002. Transparent over the video: tagline, audience, and who it is not for. */
@@ -13,7 +13,15 @@ export function Statement() {
           <SplitHeading text={TAGLINE} baseDelay={0.15} stagger={0.08} y={32} />
         </h2>
 
-        <ul className="mt-10 grid grid-cols-3 gap-8 max-[900px]:grid-cols-1">
+        <FadeUp
+          as="p"
+          delay={0.55}
+          className="mt-6 max-w-[52ch] text-[18px] leading-[1.55] text-(--mgf-text)"
+        >
+          {AGNOSTIC_LINE}
+        </FadeUp>
+
+        <ul className="mt-12 grid grid-cols-3 gap-8 max-[900px]:grid-cols-1">
           {AUDIENCE.map((item, i) => (
             <li key={item.title}>
               <FadeUp

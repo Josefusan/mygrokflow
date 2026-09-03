@@ -10,7 +10,7 @@ export function Rates() {
   return (
     <section
       id="rates"
-      className="relative z-[2] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-panel) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 backdrop-blur-xl max-[900px]:px-[18px]"
     >
       <Counter n={5} className="mb-5" />
       <SectionHead
@@ -25,7 +25,7 @@ export function Rates() {
           <li key={rate.title}>
             <FadeUp
               delay={0.4 + i * 0.12}
-              className="flex h-full flex-col rounded-[20px] border border-(--mgf-border) p-7"
+              className="flex h-full flex-col rounded-[20px] border border-(--mgf-border) bg-(--mgf-card) p-7"
             >
               <p className={label}>{rate.eyebrow}</p>
               <h3 className="mt-2 text-[clamp(28px,2.6vw,36px)] font-bold tracking-[-0.02em] text-(--mgf-text)">

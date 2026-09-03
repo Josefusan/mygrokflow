@@ -1,5 +1,5 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { AUDIENCE_LINE, EYEBROW, HEADLINE, SUPPORT_LINE } from "@/lib/content";
+import { AGNOSTIC_TAG, EYEBROW, HEADLINE } from "@/lib/content";
 import { PROMISE } from "@/lib/site";
 import { CtaRow } from "./cta-buttons";
 import { Counter, display, eyebrow } from "./section-bits";
@@ -16,54 +16,46 @@ function ScrollIndicator() {
 }
 
 /**
- * Section 001. Top ~48% is a --mgf-panel overlay holding the headline row; the
- * lower area is open to the fixed video and carries the support line.
+ * Section 001. Content sits over the fixed video against a soft left-anchored
+ * scrim (no hard panel edge), in one ordered column: meta, eyebrow, headline,
+ * promise, positioning, CTA.
  */
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative z-[1] flex min-h-svh scroll-mt-[70px] flex-col"
+      className="relative z-[1] flex min-h-svh scroll-mt-[70px] flex-col justify-center px-8 pt-[70px] pb-24 max-[900px]:px-[18px]"
     >
-      <div className="flex min-h-[48svh] flex-col bg-(--mgf-panel) pt-[70px] max-[600px]:min-h-[56svh] max-[600px]:pt-16">
-        <div className="flex flex-1 items-end px-8 pb-6 max-[900px]:px-[18px]">
-          <div className="flex w-full items-stretch gap-12 max-[900px]:flex-col max-[900px]:gap-6">
-            <div className="flex w-[32%] flex-col justify-between gap-10 max-[900px]:w-full max-[900px]:gap-6">
-              <div>
-                <FadeUp as="p" delay={0.05} className={`mb-3.5 ${eyebrow}`}>
-                  {EYEBROW}
-                </FadeUp>
-                <FadeUp as="h1" delay={0.1} className={display}>
-                  {HEADLINE}
-                </FadeUp>
-              </div>
-              <Counter n={1} delay={0.5} />
-            </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,rgba(11,11,13,0.94)_0%,rgba(11,11,13,0.6)_44%,transparent_74%)]"
+      />
 
-            <div className="flex flex-1 flex-col justify-between gap-10 max-[900px]:gap-6">
-              <FadeUp
-                as="p"
-                delay={0.25}
-                className="max-w-[340px] text-[18px] leading-[1.6] text-(--mgf-muted)"
-              >
-                {PROMISE}
-              </FadeUp>
-              <FadeUp delay={0.4}>
-                <CtaRow />
-              </FadeUp>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-1 items-center px-8 max-[900px]:items-end max-[900px]:px-[18px] max-[900px]:pb-20">
-        <FadeUp delay={0.6} className="max-w-[260px]">
-          <p className="text-[14px] leading-[1.65] text-(--mgf-text)">
-            {SUPPORT_LINE}
-          </p>
-          <p className="text-[14px] leading-[1.65] text-(--mgf-muted-on-video)">
-            {AUDIENCE_LINE}
-          </p>
+      <div className="relative max-w-[640px]">
+        <Counter n={1} className="mb-6" />
+        <FadeUp as="p" delay={0.05} className={`mb-4 ${eyebrow}`}>
+          {EYEBROW}
+        </FadeUp>
+        <FadeUp as="h1" delay={0.1} className={display}>
+          {HEADLINE}
+        </FadeUp>
+        <FadeUp
+          as="p"
+          delay={0.22}
+          className="mt-6 max-w-[46ch] text-[18px] leading-[1.6] text-(--mgf-text)"
+        >
+          {PROMISE}
+        </FadeUp>
+        <FadeUp
+          as="p"
+          delay={0.3}
+          className="mt-4 inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.04em] text-(--mgf-muted-on-video)"
+        >
+          <span aria-hidden="true" className="size-1.5 rounded-full bg-(--mgf-accent)" />
+          {AGNOSTIC_TAG}
+        </FadeUp>
+        <FadeUp delay={0.4} className="mt-9">
+          <CtaRow />
         </FadeUp>
       </div>
 

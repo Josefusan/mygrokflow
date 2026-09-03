@@ -2,6 +2,7 @@ import { FadeUp } from "@/components/motion/fade-up";
 import { CTA_SECONDARY } from "@/lib/content";
 import { APPLY_PATH, SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
+import { GrokMark } from "./grok-mark";
 
 const LINKS = [
   ["Work", "#work"],
@@ -21,8 +22,9 @@ export function LandingNav() {
       <FadeUp delay={0}>
         <a
           href="#top"
-          className={`text-[13px] font-bold uppercase tracking-[0.12em] text-(--mgf-text) hover:opacity-60 max-[600px]:text-[12px] ${focusRing}`}
+          className={`inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-(--mgf-text) hover:opacity-60 max-[600px]:text-[12px] ${focusRing}`}
         >
+          <GrokMark className="text-(--mgf-text)" />
           {SITE_NAME}
         </a>
       </FadeUp>

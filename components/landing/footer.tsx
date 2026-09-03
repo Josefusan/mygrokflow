@@ -3,6 +3,7 @@ import { FadeUp } from "@/components/motion/fade-up";
 import { NEWSLETTER } from "@/lib/content";
 import { PROMISE, SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
+import { GrokMark } from "./grok-mark";
 
 const heading = "font-mono text-[11px] uppercase text-(--mgf-muted)";
 const link = `text-[13px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
@@ -16,7 +17,8 @@ export function LandingFooter() {
     >
       <div className="grid grid-cols-3 gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-10">
         <FadeUp delay={0} className="flex flex-col items-start gap-4">
-          <span className="text-[13px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
+          <span className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
+            <GrokMark className="text-(--mgf-text)" />
             {SITE_NAME}
           </span>
           <p className="max-w-[320px] text-[14px] leading-[1.65] text-(--mgf-muted)">

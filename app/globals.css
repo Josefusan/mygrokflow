@@ -280,6 +280,10 @@
   --mgf-muted-on-video: rgba(242, 242, 240, 0.78);
   --mgf-accent: #a3e635;
   --mgf-border: rgba(255, 255, 255, 0.12);
+  /* Translucent panel + card fills so the fixed video reads as one continuous
+     backdrop instead of alternating solid color blocks. */
+  --mgf-glass: rgba(13, 13, 16, 0.66);
+  --mgf-card: rgba(255, 255, 255, 0.04);
   --mgf-scrim: linear-gradient(
     180deg,
     rgba(11, 11, 13, 0.35) 0%,

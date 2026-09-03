@@ -10,7 +10,7 @@ export function Work() {
   return (
     <section
       id="work"
-      className="relative z-[2] scroll-mt-[70px] bg-(--mgf-panel) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] bg-(--mgf-glass) px-8 pt-[70px] pb-20 backdrop-blur-xl max-[900px]:px-[18px]"
     >
       <Counter n={3} className="mb-5" />
       <SectionHead heading={WORK_HEADING} note={PROMISE} tone="panel" />
@@ -20,7 +20,7 @@ export function Work() {
           <li key={item.title}>
             <FadeUp
               delay={0.4 + i * 0.15}
-              className="flex h-full flex-col overflow-hidden rounded-[20px] border border-(--mgf-border) pt-4"
+              className="flex h-full flex-col overflow-hidden rounded-[20px] border border-(--mgf-border) bg-(--mgf-card) pt-4"
             >
               <CardVideo src={PLACEHOLDER_CARD_VIDEOS[i]} />
               <div className="px-7 pt-6 pb-7">
