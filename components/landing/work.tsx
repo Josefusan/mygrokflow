@@ -3,13 +3,12 @@ import { EXAMPLES, WORK_HEADING, WORK_NOTE } from "@/lib/content";
 import { PLACEHOLDER_CARD_VIDEOS } from "@/lib/media";
 import { PROMISE } from "@/lib/site";
 import { CardVideo } from "./card-video";
-import { LeadGenDiagram, SupportDiagram } from "./diagrams";
+import { DIAGRAMS } from "./diagrams";
 import { Counter, SectionHead } from "./section-bits";
 
 function CardMedia({ media, videoSrc }: { media: string; videoSrc: string }) {
-  if (media === "leadgen") return <LeadGenDiagram />;
-  if (media === "support") return <SupportDiagram />;
-  return <CardVideo src={videoSrc} />;
+  const Diagram = DIAGRAMS[media];
+  return Diagram ? <Diagram /> : <CardVideo src={videoSrc} />;
 }
 
 /** Section 003. Panel with three example-workflow cards. */

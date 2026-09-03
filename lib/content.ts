@@ -84,7 +84,7 @@ export const EXAMPLES = [
   {
     title: "Ops & workflow automation",
     body: "The reporting, screening, and internal tools that eat your week — compiled, triaged, and run without you.",
-    media: "video",
+    media: "ops",
   },
 ] as const;
 
