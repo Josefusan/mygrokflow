@@ -24,12 +24,20 @@ export function LandingFooter() {
           <p className="max-w-[320px] text-[14px] leading-[1.65] text-(--mgf-muted)">
             {PROMISE}
           </p>
-          <a
-            href="/privacy"
-            className={`font-mono text-[11px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
-          >
-            Privacy
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="/privacy"
+              className={`font-mono text-[11px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/disclaimer"
+              className={`font-mono text-[11px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
+            >
+              Legal Disclaimer
+            </a>
+          </div>
         </FadeUp>
 
         <FadeUp delay={0.1} className="flex flex-col items-start gap-4">
@@ -55,6 +63,18 @@ export function LandingFooter() {
         </p>
         <PrimaryCta />
       </div>
+
+      <p className="mt-6 max-w-[720px] text-[11px] leading-[1.6] text-(--mgf-muted)">
+        MyGrokFlow is an independent, agent-agnostic AI automation business and a
+        separate legal entity. It is not affiliated with, endorsed by, or
+        connected to xAI, Grok, X (formerly Twitter), Tesla, SpaceX, or Elon
+        Musk. All trademarks are the property of their respective owners and are
+        used for identification only. See our{" "}
+        <a href="/disclaimer" className="underline hover:text-(--mgf-text)">
+          Legal Disclaimer
+        </a>
+        .
+      </p>
     </footer>
   );
 }

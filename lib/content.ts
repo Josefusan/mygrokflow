@@ -21,8 +21,40 @@ export const WORK_HEADING = "What we build";
 export const WORK_NOTE = "Two flagship systems, plus the operations work behind them.";
 export const PROCESS_HEADING = "Our process";
 export const RATES_HEADING = "Rates";
+export const FAQ_HEADING = "FAQ";
+export const FAQ_NOTE =
+  "What we build, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 5;
+export const SECTION_COUNT = 6;
+
+// Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
+// data, so searches around AI automation, Grok, xAI, and X surface the site.
+export const FAQS = [
+  {
+    q: "What is MyGrokFlow?",
+    a: "MyGrokFlow is an AI automation agency that turns a painful recurring workflow into a system that runs without you. We design, build, and run AI agents and data pipelines across the software you already use, so founders, operators, and engineers get hours back and more profit from work they already pay for.",
+  },
+  {
+    q: "Do you build on Grok and xAI models?",
+    a: "Yes. MyGrokFlow is agent-agnostic. We build with frontier models including Grok, the model from xAI (Elon Musk's AI company), alongside other leading LLMs, and we pick the best model and route for each task. If Grok is the optimal engine for your automation we ship on Grok; if another model wins, we use that.",
+  },
+  {
+    q: "What is a Grok agent or Grok automation?",
+    a: "A Grok agent is an AI agent powered by xAI's Grok that reads context, calls tools, and takes real actions, not just chats. Grok automation means wiring that agent into your workflow, from lead generation and customer support to ETL data pipelines and bookkeeping, so the work completes end to end with human approval on anything sensitive.",
+  },
+  {
+    q: "Can you automate X (formerly Twitter) and the rest of our stack?",
+    a: "Yes. We connect agents to X (formerly Twitter), your CRM, help desk, booking system, ERP, and data warehouse through native APIs and MCP, so posting, monitoring, support, reporting, and data pipelines run automatically and securely.",
+  },
+  {
+    q: "Which industries and business types do you work with?",
+    a: "We work across B2B niches: eCommerce, B2B SaaS, finance, professional services, agencies, and enterprise operations. Typical builds include AI lead generation, customer support, automated ETL and data pipelines, and finance and back-office automation tailored to each stack.",
+  },
+  {
+    q: "Is my data secure when you integrate AI?",
+    a: "Yes. Every automation runs on scoped, least-privilege access with your data encrypted in transit and at rest, full audit trails, and human approval on anything destructive, so adding AI never widens your attack surface.",
+  },
+] as const;
 
 export const NEWSLETTER = {
   heading: "Without You",

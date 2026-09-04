@@ -1,4 +1,5 @@
 import { BackgroundVideo } from "@/components/landing/background-video";
+import { Faq } from "@/components/landing/faq";
 import { LandingFooter } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
 import { LandingNav } from "@/components/landing/nav";
@@ -18,6 +19,7 @@ export function Landing() {
         <Work />
         <Process />
         <Rates />
+        <Faq />
       </main>
       <LandingFooter />
     </div>
