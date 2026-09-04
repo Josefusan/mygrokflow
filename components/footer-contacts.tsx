@@ -25,6 +25,12 @@ function ContactIcon({ label }: { label: Label }) {
           <path d="m4 7 8 6 8-6" />
         </svg>
       );
+    case "LinkedIn":
+      return (
+        <svg {...common} fill="currentColor">
+          <path d="M6.5 9.5H4V20h2.5V9.5ZM5.25 4A1.5 1.5 0 1 0 5.26 7 1.5 1.5 0 0 0 5.25 4ZM20 20h-2.5v-5.4c0-1.3 0-3-1.85-3s-2.15 1.4-2.15 2.9V20H11V9.5h2.4v1.4h.03c.33-.63 1.15-1.3 2.37-1.3 2.54 0 3.2 1.67 3.2 3.84V20Z" />
+        </svg>
+      );
     case "X":
       return (
         <svg {...common} fill="currentColor">

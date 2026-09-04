@@ -59,8 +59,9 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             The site is a marketing page. The only place you send us information
             is the application form at /apply and any message you send to our
-            public contacts. Footer links (email, X, and Substack) are outbound
-            only — tapping X or Substack leaves this site, and those platforms
+            public contacts. Footer links (email, LinkedIn, X, and Substack) are outbound
+            only — tapping LinkedIn, X, or Substack leaves this site, and those
+            platforms
             then handle your data under their own privacy policies, not this one.
             We do not run an account system, login, or user dashboard on this
             site, and we do not require you to create an account to browse it.

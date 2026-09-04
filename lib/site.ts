@@ -15,6 +15,11 @@ export const CONTACTS = [
     text: DIAGNOSTIC_EMAIL,
   },
   {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/mygrokflow/",
+    text: "MyGrokFlow on LinkedIn",
+  },
+  {
     label: "X",
     href: "https://x.com/MyGrokFlow",
     text: "@MyGrokFlow",
