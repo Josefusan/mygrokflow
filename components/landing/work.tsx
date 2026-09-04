@@ -4,6 +4,8 @@ import {
   ENTERPRISE,
   EXAMPLES,
   PROJECTS,
+  SECURITY_LEAD,
+  SECURITY_NOTE,
   TEAMS,
   VERTICALS,
   WORK_HEADING,
@@ -72,6 +74,15 @@ export function Work() {
         className="mt-8 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
       >
         {WORK_STACK_NOTE}
+      </FadeUp>
+
+      <FadeUp
+        as="p"
+        delay={0.6}
+        className="mt-4 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
+      >
+        <span className="font-medium text-(--mgf-text)">{SECURITY_LEAD}</span>{" "}
+        {SECURITY_NOTE}
       </FadeUp>
     </section>
   );

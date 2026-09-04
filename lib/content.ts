@@ -279,6 +279,10 @@ export const TEAMS = [
 export const WORK_STACK_NOTE =
   "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 
+export const SECURITY_LEAD = "Secure by default.";
+export const SECURITY_NOTE =
+  "Every automation runs on scoped, least-privilege access — no shared logins, no standing keys — with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
+
 // title/included/excluded are the original copy, unchanged.
 // eyebrow/price/suffix split the title for the card header layout.
 export const RATES = [
