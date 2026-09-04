@@ -251,6 +251,12 @@ export const PROJECTS = [
     shows: "You ship agents like production software.",
     media: "screening",
   },
+  {
+    title: "Automated ETL & Data Pipelines",
+    body: "Agents that pull from your apps, warehouses, and APIs, clean and transform on a schedule, and load it where teams need it, so sales, finance, and ops work from one trustworthy source instead of stale CSV exports.",
+    shows: "You move and model data across the stack, not just query it.",
+    media: "ops",
+  },
 ] as const;
 
 // Standing "team" systems — a full crew of coordinated agents. Shown toward
