@@ -102,6 +102,11 @@ export const VERTICALS = [
     media: "cart",
   },
   {
+    title: "AI Receptionist (24/7 & After-Hours)",
+    body: "Answers every call and message — after hours and overflow included — greets callers, handles FAQs, books appointments to your calendar, and texts you the ones that can't wait. No more missed leads at 9pm.",
+    media: "support",
+  },
+  {
     title: "AI Product Concierge",
     body: "Knows your whole catalog: answers product questions, checks fit and compatibility, and recommends the right item — turning browsers into buyers.",
     media: "knowledge",
@@ -124,6 +129,41 @@ export const VERTICALS = [
   {
     title: "Churn-Risk & Renewal Agent",
     body: "Scores accounts on usage and sentiment, surfaces churn risk early, and drafts the renewal or save play so your CSMs act before it's too late.",
+    media: "reporting",
+  },
+] as const;
+
+// High-ticket enterprise / finance systems, featured up front with the
+// verticals. Offering-style cards (no `shows` line).
+export const ENTERPRISE = [
+  {
+    title: "AI ERP Optimization",
+    body: "Plugs into NetSuite, SAP, or Microsoft Dynamics to auto-reconcile ledgers, match POs to receipts, sync inventory, and close the books faster — fewer manual entries, cleaner month-end.",
+    media: "ops",
+  },
+  {
+    title: "AI Crypto On/Off-Ramp & Cross-Border FX",
+    body: "Moves value between crypto and fiat and across borders — routing each transfer for best rate and speed across currencies, with KYC/AML checks and a full audit trail.",
+    media: "fx",
+  },
+  {
+    title: "AI Backtesting Trading Desk",
+    body: "Backtests strategies over historical data with walk-forward validation and risk metrics, then surfaces the signals worth trading — quant research at machine speed.",
+    media: "trading",
+  },
+  {
+    title: "AI Bookkeeping & Reconciliation",
+    body: "Categorizes transactions, reconciles accounts, chases missing receipts, and syncs QuickBooks or Xero — a month-end close that runs itself.",
+    media: "reporting",
+  },
+  {
+    title: "AI Compliance & AML Monitoring",
+    body: "Screens transactions and counterparties for KYC/AML risk, flags anomalies for human review, and files the audit trail — coverage that scales with volume.",
+    media: "screening",
+  },
+  {
+    title: "AI Treasury & Cash-Flow Forecasting",
+    body: "Forecasts cash across accounts and entities, models scenarios, and flags shortfalls before they hit — so finance can see around corners.",
     media: "reporting",
   },
 ] as const;
@@ -206,7 +246,7 @@ export const PROJECTS = [
 ] as const;
 
 export const WORK_STACK_NOTE =
-  "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; plus ERPs, data warehouses, and the messaging and dev stacks around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
+  "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 
 // title/included/excluded are the original copy, unchanged.
 // eyebrow/price/suffix split the title for the card header layout.

@@ -1,5 +1,6 @@
 import { FadeUp } from "@/components/motion/fade-up";
 import {
+  ENTERPRISE,
   EXAMPLES,
   PROJECTS,
   VERTICALS,
@@ -10,13 +11,15 @@ import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-// Two most-important flagships first, then the eComm / B2B SaaS examples up
-// front, then the ops flagship and the wider capability set.
+// Two most-important flagships first, then the higher-ticket eComm / B2B SaaS
+// and enterprise/finance examples up front, then the ops flagship and the
+// wider capability set.
 const [LEADGEN, SUPPORT, OPS] = EXAMPLES;
 const ITEMS: readonly WorkItem[] = [
   LEADGEN,
   SUPPORT,
   ...VERTICALS,
+  ...ENTERPRISE,
   OPS,
   ...PROJECTS,
 ];

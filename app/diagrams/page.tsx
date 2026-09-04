@@ -3,6 +3,7 @@ import {
   CartDiagram,
   ContentDiagram,
   CrmDiagram,
+  FxDiagram,
   KnowledgeDiagram,
   LeadGenDiagram,
   OpsDiagram,
@@ -10,6 +11,7 @@ import {
   RestockDiagram,
   ScreeningDiagram,
   SupportDiagram,
+  TradingDiagram,
   TriageDiagram,
 } from "@/components/landing/diagrams";
 
@@ -30,6 +32,8 @@ const ITEMS = [
   { key: "restock", title: "Restock Alerts (eComm)", Diagram: RestockDiagram },
   { key: "cart", title: "eComm Customer Service", Diagram: CartDiagram },
   { key: "crm", title: "CRM Hygiene (B2B SaaS)", Diagram: CrmDiagram },
+  { key: "fx", title: "Crypto / Cross-Border FX", Diagram: FxDiagram },
+  { key: "trading", title: "Backtesting Trading Desk", Diagram: TradingDiagram },
 ] as const;
 
 /** Internal review gallery for the diagram library (noindex). */
@@ -40,7 +44,7 @@ export default function DiagramLibrary() {
         Diagram library
       </p>
       <h1 className="mt-2 text-[clamp(26px,3vw,42px)] font-bold tracking-[-0.01em] text-(--mgf-text)">
-        Eleven on-brand system diagrams
+        Thirteen on-brand system diagrams
       </h1>
       <p className="mt-3 max-w-[60ch] text-[14px] leading-[1.6] text-(--mgf-muted)">
         Same green / black language as the cards. The key next to each title is

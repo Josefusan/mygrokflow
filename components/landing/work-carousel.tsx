@@ -64,10 +64,14 @@ function Chevron({ dir }: { dir: "left" | "right" }) {
  * width and CSS scroll-snap settles on a card. Reduced-motion users get an
  * instant jump (globals.css neutralizes scroll-behavior).
  */
+const AUTOPLAY_MS = 3800;
+const GAP = 20; // matches gap-5 on the track
+
 export function WorkCarousel({ items }: { items: readonly WorkItem[] }) {
   const trackRef = useRef<HTMLUListElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   const update = useCallback(() => {
     const el = trackRef.current;
@@ -88,6 +92,25 @@ export function WorkCarousel({ items }: { items: readonly WorkItem[] }) {
     };
   }, [update]);
 
+  // Auto-advance to the left. Pauses on hover/focus/touch and when the tab is
+  // hidden; disabled entirely for reduced-motion users.
+  useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => {
+      const el = trackRef.current;
+      if (!el || document.hidden) return;
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        const card = el.querySelector("li");
+        const step = card ? card.getBoundingClientRect().width + GAP : el.clientWidth;
+        el.scrollBy({ left: step, behavior: "smooth" });
+      }
+    }, AUTOPLAY_MS);
+    return () => clearInterval(id);
+  }, [paused]);
+
   const page = (dir: 1 | -1) => {
     const el = trackRef.current;
     if (!el) return;
@@ -98,7 +121,16 @@ export function WorkCarousel({ items }: { items: readonly WorkItem[] }) {
     "inline-flex size-9 items-center justify-center rounded-full border border-(--mgf-border) text-(--mgf-text) transition-opacity hover:opacity-70 disabled:pointer-events-none disabled:opacity-25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--mgf-accent)";
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
+      onPointerDown={() => setPaused(true)}
+      onPointerUp={() => setPaused(false)}
+      onPointerCancel={() => setPaused(false)}
+    >
       <div className="mb-4 flex items-center justify-end gap-2">
         <button
           type="button"

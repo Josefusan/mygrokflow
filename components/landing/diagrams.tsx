@@ -396,6 +396,74 @@ export function CrmDiagram() {
   );
 }
 
+/* ── 12. Crypto on/off-ramp & cross-border FX ───────────────────────── */
+export function FxDiagram() {
+  const cur: [string, number][] = [
+    ["$", 78],
+    ["€", 120],
+    ["£", 162],
+  ];
+  return (
+    <Frame>
+      {cur.map(([sym, y], i) => (
+        <g key={sym}>
+          <circle cx={46} cy={y} r={13} stroke={STRUCT} strokeWidth="1.2" />
+          <text
+            x={46}
+            y={y + 4}
+            textAnchor="middle"
+            style={{ ...labelStyle, fontSize: "11px", letterSpacing: "0" }}
+            fill={INK}
+          >
+            {sym}
+          </text>
+          <Flow d={`M60 ${y} C 104 ${y}, 112 ${CY}, ${CX - 30} ${CY}`} delay={i * 0.28} opacity={0.6} />
+        </g>
+      ))}
+      {/* convert hub: swap arrows in a ring */}
+      <Ring r={28} />
+      <path d={`M${CX - 9} ${CY - 4} h16 m-4 -3 l4 3 l-4 3`} stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={`M${CX + 9} ${CY + 4} h-16 m4 -3 l-4 3 l4 3`} stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <Flow d={`M${CX + 30} ${CY} H 250`} />
+      <circle cx="276" cy={CY} r="14" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M270 120 l4 4 l9 -9" stroke={ACCENT} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <Labels left="CURRENCIES" mid="CONVERT" right="SETTLE" />
+    </Frame>
+  );
+}
+
+/* ── 13. Backtesting trading desk ───────────────────────────────────── */
+export function TradingDiagram() {
+  const pts: [number, number][] = [
+    [32, 150],
+    [46, 118],
+    [60, 134],
+    [74, 96],
+  ];
+  return (
+    <Frame>
+      {/* price line chart */}
+      <path d="M30 172 V72 M30 172 H86" stroke={STRUCT} strokeWidth="1.1" strokeOpacity="0.5" />
+      <path d="M32 150 L46 118 L60 134 L74 96" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      {pts.map(([x, y], i) => (
+        <Dot key={i} cx={x} cy={y} r={2.2} delay={i * 0.2} />
+      ))}
+      <Flow d={`M80 110 C 112 110, 116 ${CY}, ${CX - 28} ${CY}`} opacity={0.6} />
+      {/* backtest engine: ring + up/down candles */}
+      <Ring r={28} />
+      <path d={`M${CX - 7} ${CY - 10} v20`} stroke={ACCENT} strokeWidth="1.3" strokeLinecap="round" />
+      <rect x={CX - 10} y={CY - 6} width="6" height="9" rx="1" stroke={ACCENT} strokeWidth="1.3" />
+      <path d={`M${CX + 7} ${CY - 8} v20`} stroke={INK} strokeWidth="1.3" strokeLinecap="round" />
+      <rect x={CX + 4} y={CY - 2} width="6" height="8" rx="1" stroke={INK} strokeWidth="1.3" />
+      <Flow d={`M${CX + 28} ${CY} H 250`} />
+      {/* signal up */}
+      <circle cx="276" cy={CY} r="14" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M276 127 v-13 m-5 5 l5 -5 l5 5" stroke={ACCENT} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <Labels left="PRICES" mid="BACKTEST" right="SIGNAL" />
+    </Frame>
+  );
+}
+
 /** Registry — a Work card's `media` key selects its diagram. */
 export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   leadgen: LeadGenDiagram,
@@ -409,4 +477,6 @@ export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   restock: RestockDiagram,
   cart: CartDiagram,
   crm: CrmDiagram,
+  fx: FxDiagram,
+  trading: TradingDiagram,
 };
