@@ -88,6 +88,14 @@ export const EXAMPLES = [
   },
 ] as const;
 
+// A dedicated email-outbound lead-gen card, grouped with the other lead
+// generation systems at the front of the carousel.
+export const EMAIL_LEADGEN = {
+  title: "AI Email Lead Generation",
+  body: "Cold email that runs itself — finds best-fit prospects, writes personalized sequences, sends and follows up on autopilot, warms the domain, and books replies straight onto your calendar.",
+  media: "leadgen",
+} as const;
+
 // Industry-specific systems (eCommerce + B2B SaaS) featured near the front of
 // the carousel. Offering-style cards like the flagships (no `shows` line).
 export const VERTICALS = [

@@ -1,5 +1,6 @@
 import { FadeUp } from "@/components/motion/fade-up";
 import {
+  EMAIL_LEADGEN,
   ENTERPRISE,
   EXAMPLES,
   PROJECTS,
@@ -12,18 +13,43 @@ import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-// Two most-important flagships first, then the higher-ticket eComm / B2B SaaS
-// and enterprise/finance examples up front, then the ops flagship and the
-// wider capability set.
 const [LEADGEN, SUPPORT, OPS] = EXAMPLES;
-const ITEMS: readonly WorkItem[] = [
+
+// Full set in its natural authoring order; the carousel then leads with the
+// lead-generation cards, followed by customer support & ticket escalation,
+// then everything else (verticals, enterprise/finance, ops, projects, teams).
+const ALL: readonly WorkItem[] = [
   LEADGEN,
   SUPPORT,
+  EMAIL_LEADGEN,
   ...VERTICALS,
   ...ENTERPRISE,
   OPS,
   ...PROJECTS,
   ...TEAMS,
+];
+
+const LEADGEN_TITLES = new Set<string>([
+  "AI Lead Generation",
+  "AI Email Lead Generation",
+  "AI BDR Team",
+  "Agentic Sales Ops Assistant",
+]);
+const SUPPORT_TITLES = new Set<string>([
+  "AI Customer Service",
+  "eComm Customer Service Agent",
+  "AI Receptionist (24/7 & After-Hours)",
+  "AI Ticket Support",
+  "Autonomous Ticket Resolution Engine",
+  "Real-Time Voice Ops Agent",
+]);
+
+const ITEMS: readonly WorkItem[] = [
+  ...ALL.filter((i) => LEADGEN_TITLES.has(i.title)),
+  ...ALL.filter((i) => SUPPORT_TITLES.has(i.title)),
+  ...ALL.filter(
+    (i) => !LEADGEN_TITLES.has(i.title) && !SUPPORT_TITLES.has(i.title),
+  ),
 ];
 
 /** Section 003. Two flagship systems + example builds in a sliding carousel. */
