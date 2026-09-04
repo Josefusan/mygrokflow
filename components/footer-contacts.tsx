@@ -25,31 +25,6 @@ function ContactIcon({ label }: { label: Label }) {
           <path d="m4 7 8 6 8-6" />
         </svg>
       );
-    case "Telegram":
-      return (
-        <svg {...common} fill="currentColor">
-          <path d="M21.4 4.2 2.9 11.5c-1.2.5-1.2 1.6-.2 2l4.8 1.5 1.9 5.6c.2.7.7.8 1.2.4l2.6-2.1 4.4 3.2c.8.5 1.4.2 1.6-.8L22.8 5.4c.3-1.2-.4-1.7-1.4-1.2Z" />
-        </svg>
-      );
-    case "Signal":
-      return (
-        <svg
-          {...common}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1.75}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M5.5 7A3.5 3.5 0 0 1 9 3.5h6A3.5 3.5 0 0 1 18.5 7v5A3.5 3.5 0 0 1 15 15.5h-3.2L7 19v-3.5H9A3.5 3.5 0 0 1 5.5 12V7Z" />
-        </svg>
-      );
-    case "LinkedIn":
-      return (
-        <svg {...common} fill="currentColor">
-          <path d="M6.5 9.5H4V20h2.5V9.5ZM5.25 4A1.5 1.5 0 1 0 5.26 7 1.5 1.5 0 0 0 5.25 4ZM20 20h-2.5v-5.4c0-1.3 0-3-1.85-3s-2.15 1.4-2.15 2.9V20H11V9.5h2.4v1.4h.03c.33-.63 1.15-1.3 2.37-1.3 2.54 0 3.2 1.67 3.2 3.84V20Z" />
-        </svg>
-      );
     case "X":
       return (
         <svg {...common} fill="currentColor">

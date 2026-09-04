@@ -8,7 +8,7 @@ import { GrokMark } from "./grok-mark";
 const heading = "font-mono text-[11px] uppercase text-(--mgf-muted)";
 const link = `text-[13px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
-/** Uncounted footer, id="contact". Newsletter and checklist links live here now. */
+/** Uncounted footer, id="contact". Newsletter link lives here now. */
 export function LandingFooter() {
   return (
     <footer
@@ -40,9 +40,6 @@ export function LandingFooter() {
             className={link}
           >
             {NEWSLETTER.substack.label}
-          </a>
-          <a href={NEWSLETTER.checklist.href} className={link}>
-            {NEWSLETTER.checklist.label}
           </a>
         </FadeUp>
 

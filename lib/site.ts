@@ -15,24 +15,9 @@ export const CONTACTS = [
     text: DIAGNOSTIC_EMAIL,
   },
   {
-    label: "Telegram",
-    href: "https://t.me/jdev_1",
-    text: "@jdev_1",
-  },
-  {
-    label: "Signal",
-    href: "https://signal.me/#p/Josephpaisanu.888",
-    text: "@Josephpaisanu.888",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/joedeveloper1/",
-    text: "LinkedIn",
-  },
-  {
     label: "X",
-    href: "https://x.com/Josefusan111",
-    text: "@Josefusan111",
+    href: "https://x.com/MyGrokFlow",
+    text: "@MyGrokFlow",
   },
   {
     label: "Substack",

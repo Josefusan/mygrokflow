@@ -27,7 +27,6 @@ export const SECTION_COUNT = 5;
 export const NEWSLETTER = {
   heading: "Without You",
   substack: { label: "Subscribe on Substack", href: "https://substack.com/@josefucan" },
-  checklist: { label: "Get the checklist", href: "/without-you-one-loop-audit.pdf" },
 } as const;
 
 export const AUDIENCE = [

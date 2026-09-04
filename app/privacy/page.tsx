@@ -28,17 +28,23 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-          Last updated: September 2, 2026
+          Last updated: September 4, 2026
         </p>
         <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
-          MyGrokFlow (&quot;we&quot;, &quot;us&quot;) operates https://www.mygrokflow.com. This
-          policy explains what information we handle when you use the site.
+          MyGrokFlow, operated by Clark Tech Ventures LLC (&quot;MyGrokFlow&quot;,
+          &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), operates
+          https://www.mygrokflow.com (the &quot;site&quot;). This policy explains
+          what information we handle when you use the site, why, the legal bases
+          we rely on, and the rights you have. We are the controller of the
+          personal information described here. We collect only what we need to
+          respond to you and run the engagement — nothing more.
         </p>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Who we are</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            MyGrokFlow designs and ships AI automation systems. Contact:{" "}
+            MyGrokFlow designs and ships AI automation systems. For any privacy
+            question, or to exercise a right below, contact:{" "}
             <a
               href={DIAGNOSTIC_MAILTO}
               className="text-muted-foreground hover:text-foreground"
@@ -51,12 +57,13 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>What this site does</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            The site is a marketing page. Request a diagnostic is a form on{" "}
-            /apply. Email and other channels are public contact, not the buy
-            path. Footer links (email, Telegram, Signal, LinkedIn, X, Substack)
-            are outbound. Tapping Substack leaves this site; we do not collect a
-            Substack signup here. We do not run an account system or user
-            dashboard on this site.
+            The site is a marketing page. The only place you send us information
+            is the application form at /apply and any message you send to our
+            public contacts. Footer links (email, X, and Substack) are outbound
+            only — tapping X or Substack leaves this site, and those platforms
+            then handle your data under their own privacy policies, not this one.
+            We do not run an account system, login, or user dashboard on this
+            site, and we do not require you to create an account to browse it.
           </p>
         </section>
 
@@ -64,38 +71,60 @@ export default function PrivacyPage() {
           <h2 className={sectionLabel}>Information we collect</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
-            email us, we receive that email. If you submit /apply, we receive
-            your answers: role, team size, workflow, who does it today, price
-            lane, whether you are the decision-maker, what you need, and the
-            contact channel plus handle or email you gave. Submit sends that to{" "}
-            {DIAGNOSTIC_EMAIL}. When Telegram notify is configured, the same
-            answers are also sent to us on Telegram. If that notify is not
-            configured or fails, the form falls back to a mailto compose. Without
-            You is a Wednesday note on Substack; tapping Subscribe on Substack
-            leaves this site. We do not collect a Substack signup here.
-            Collection is native /apply only. No free-text budget field. Paid
-            lanes ($1,500/month, $5K one-time, $10K one-time) open a Stripe
-            Checkout session after you qualify. Stripe processes that payment.
-            Diagnostic first does not go to Stripe. The 15-minute diagnostic is
-            booked on Cal.com.
+            email us, we receive that email and whatever you choose to put in it.
+            If you submit the /apply form, we receive the answers you provide —
+            for example your role, team size, the workflow you want automated,
+            who handles it today, which rate lane fits, whether you are the
+            decision-maker, what you need, and the contact channel plus handle or
+            email you give us. Submitting sends those answers to{" "}
+            {DIAGNOSTIC_EMAIL}. Where an internal notification (for example
+            Telegram) is configured, the same answers are relayed to us there so
+            we see them quickly; if that notification is not configured or fails,
+            the form falls back to opening a pre-addressed email in your own mail
+            app, which you send yourself. We only collect what you actively
+            submit — there is no hidden tracking form field. If you choose a paid
+            rate lane, we open a Stripe Checkout session and Stripe processes the
+            payment (card details go to Stripe, never to us); booking a call
+            happens on Cal.com under its own policy. Subscribing to our
+            &quot;Without You&quot; note happens on Substack — we do not collect
+            newsletter signups on this site.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
-            hosting provider (Vercel) may automatically process standard request
+            hosting provider (Vercel) automatically processes standard request
             data such as IP address, browser type, device information, referring
-            URL, and timestamps, in order to serve and secure the site. We do
-            not sell this data.
+            URL, and timestamps, in order to serve, secure, and troubleshoot the
+            site. We do not use this data to build advertising profiles, and we
+            do not sell it.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Cookies and similar storage.</span> We
-            do not run analytics, ads, or marketing pixels. Essential: Vercel may
-            set cookies or logs required to host and serve this site. If you tap
-            Accept or Manage on the banner, that choice is stored in your
-            browser&apos;s localStorage so we don&apos;t ask every load. Theme
-            preference is stored the same way. That is not a third-party cookie.
-            We do not load non-essential scripts. There are none on this site
-            today. Stripe Checkout is hosted by Stripe; we do not set Stripe
-            cookies on this site ourselves.
+            do not run analytics, advertising, or marketing pixels, and we set no
+            tracking cookies. Vercel may set strictly necessary cookies or logs
+            required to host and secure the site. If you make a choice on the
+            cookie banner, or set a theme, that preference is saved in your
+            browser&apos;s localStorage so we do not ask again — it stays on your
+            device and is not a third-party cookie. We load no non-essential
+            scripts. Stripe Checkout and Cal.com are hosted by those providers on
+            their own domains and set their own cookies there when you use them;
+            we do not set their cookies on this site.
+          </p>
+        </section>
+
+        <section className="mt-12">
+          <h2 className={sectionLabel}>Legal bases</h2>
+          <p className="mt-4 text-[15px] leading-relaxed">
+            Where the GDPR or UK GDPR applies, we rely on: your{" "}
+            <span className="font-medium">consent</span> (which you may withdraw
+            at any time) for optional actions you initiate; the need to take{" "}
+            <span className="font-medium">steps at your request</span> and to{" "}
+            <span className="font-medium">perform a contract</span> when you apply
+            or engage us; our <span className="font-medium">legitimate
+            interests</span> in responding to enquiries, securing the site, and
+            preventing abuse, balanced against your rights; and{" "}
+            <span className="font-medium">legal obligations</span> such as tax and
+            accounting. Where we rely on legitimate interests you may object, as
+            described below.
           </p>
         </section>
 
@@ -130,17 +159,54 @@ export default function PrivacyPage() {
         </section>
 
         <section className="mt-12">
-          <h2 className={sectionLabel}>Your choices</h2>
+          <h2 className={sectionLabel}>Security</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email{" "}
+            We use reputable providers (Vercel, Stripe, Cal.com) and reasonable
+            technical and organizational measures to protect the limited
+            information we handle, and we keep access on a need-to-know basis. No
+            method of transmission or storage is perfectly secure, so we cannot
+            guarantee absolute security; if a breach ever affects your personal
+            information we will notify you and any regulator as required by law.
+          </p>
+        </section>
+
+        <section className="mt-12">
+          <h2 className={sectionLabel}>International transfers</h2>
+          <p className="mt-4 text-[15px] leading-relaxed">
+            We operate from the United States, and our providers may process data
+            in the US and other countries. Where we transfer personal information
+            out of the UK, EEA, or another region with transfer rules, we rely on
+            an appropriate safeguard such as the European Commission&apos;s
+            Standard Contractual Clauses or an adequacy decision.
+          </p>
+        </section>
+
+        <section className="mt-12">
+          <h2 className={sectionLabel}>Your rights and choices</h2>
+          <p className="mt-4 text-[15px] leading-relaxed">
+            Depending on where you live, you may have the right to access a copy
+            of the personal information we hold about you, to correct it, to
+            delete it, to port it, to restrict or object to certain processing,
+            and to withdraw consent at any time without affecting prior
+            processing. If you are in California, you also have the right to know,
+            delete, correct, and to not be discriminated against for exercising
+            these rights. We do not sell or share your personal information for
+            cross-context behavioral advertising, and we do not use it for
+            profiling that produces legal or similarly significant effects.
+          </p>
+          <p className="mt-4 text-[15px] leading-relaxed">
+            To exercise any of these, email{" "}
             <a
               href={DIAGNOSTIC_MAILTO}
               className="text-muted-foreground hover:text-foreground"
             >
               {DIAGNOSTIC_EMAIL}
-            </a>{" "}
-            to ask what we hold about you, request a correction, or ask us to
-            delete records we no longer need to keep.
+            </a>
+            . We will verify your request and respond within the time the
+            applicable law requires (generally within 30–45 days), free of
+            charge, and will not discriminate against you for asking. If you
+            believe we have mishandled your information, you may also complain to
+            your local data protection authority.
           </p>
         </section>
 
