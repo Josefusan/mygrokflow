@@ -13,8 +13,8 @@ How a MyGrokFlow agent should run.
 ## Org model
 
 - **One OS** in `docs/agent-os/`. Not 23 product repos.
-- **23 roles**, pulled by name. Do not spawn the whole org. Founder-only to cut headcount.
-- **CEO org workers idle unless named.** CEO/CTO/CMO/CFO/CoS are not idle by default.
+- **23 roles**, pulled by name.
+- **IDLE until first client** unless founder/CEO names a pull.
 - **Rooms (named, not agents):** Leadership, CEO Office, CEO Crew, Eng Staff, Full Stack, Design, DevOps, Growth.
 - **Cap:** max 6 concurrent rooms.
 
@@ -28,15 +28,14 @@ How a MyGrokFlow agent should run.
 - Honesty-only: only name live vendors on site/privacy
 - No merge, deploy, or production ship without founder/CEO
 
-## Other locks
+## Live locks
 
-- No Jotform / Typeform. Cal.com is a URL after `/apply` only: `https://cal.com/ctvllc-availability`
-- Persist parked. Newsletter/#8 work unparked; merge-gated on `buttondown.com/mygrokflow` 200.
-- Whop (`mygrokflow.whop.site`) after www.
-- X MCP `needsAuth`. Logged out → no BDR sends.
+- Prices: $500 OT / $2,000 / $7,500 / $9,500 mo. No $1,500/$5K/$10K.
+- CTA: Book a call / Apply → `/apply`. Cal.com after apply only.
+- Newsletter: Substack https://substack.com/@josefucan (not Buttondown).
+- apply→Telegram soft-fails until founder sets `TELEGRAM_*`.
 
 ## Output rules
 
 - Tight. Real facts only.
-- Pricing: catalog vs live are different; never mix. See [context/offer_catalog.md](./context/offer_catalog.md).
-- Site CTA copy: **Request a diagnostic** → `/apply`.
+- See [context/offer_catalog.md](./context/offer_catalog.md) for Stripe price IDs.

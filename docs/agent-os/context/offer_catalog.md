@@ -1,24 +1,24 @@
 # Offer catalog
 
-Diagnostic qualifies every paid path. **No discounts.** CTA: Request a diagnostic → `/apply`. Cal.com only after apply.
+Diagnostic qualifies every paid path. **No discounts.** CTAs: **Book a call** / **Apply** → `/apply`. Cal.com only after apply: `https://cal.com/ctvllc-availability`.
 
-## New catalog (not yet on Stripe or the live site)
+## Live (site + Stripe)
 
-Swap only together with site + Stripe. Do not publish one without the other.
+| Offer | Price | Stripe price ID |
+| --- | --- | --- |
+| Audit + report | $500 one-time | `price_1UBFzRQueSrGdHy2lHAaqGxy` |
+| Implementation retain | $2,000 / mo | `price_1UBFzrQueSrGdHy2fWK0766S` |
+| Implementation retain | $7,500 / mo | `price_1UBG04QueSrGdHy22hl64adA` |
+| Implementation retain | $9,500 / mo | `price_1UBG04QueSrGdHy2cCme8sBP` |
 
-| Offer | Price |
-| --- | --- |
-| Audit + report | $500 one-time |
-| Implementation retain | $2,000 / mo |
-| Implementation retain | $7,500 / mo |
-| Implementation retain | $9,500 / mo |
+Account: `acct_1U9F1aQueSrGdHy2`.
 
-## Still live (until the swap)
+## Retired (inactive)
 
-| Offer | Price |
-| --- | --- |
-| | $1,500 / mo |
-| | $5K (as live copy) |
-| | $10K (as live copy) |
+$1,500/mo, $5K one-time, $10K one-time — do not use in copy or Checkout.
 
-Do not invent tier names, “popular” badges, or extra SKUs. Cash last known: $0.
+## Door A (agencies)
+
+Same four SKUs. Paid $500 partner audit, then $7,500 or $9,500 only. Never wholesale $2,000. MCP is a private artifact, not a SKU.
+
+Do not invent tier names, “popular” badges, or a sixth price. Cash last verified: $0.
