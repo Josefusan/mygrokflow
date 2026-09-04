@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import {
+  CartDiagram,
   ContentDiagram,
+  CrmDiagram,
   KnowledgeDiagram,
   LeadGenDiagram,
   OpsDiagram,
   ReportingDiagram,
+  RestockDiagram,
   ScreeningDiagram,
   SupportDiagram,
   TriageDiagram,
@@ -24,6 +27,9 @@ const ITEMS = [
   { key: "content", title: "Content / Outbound", Diagram: ContentDiagram },
   { key: "knowledge", title: "Knowledge / RAG", Diagram: KnowledgeDiagram },
   { key: "triage", title: "Inbox Triage", Diagram: TriageDiagram },
+  { key: "restock", title: "Restock Alerts (eComm)", Diagram: RestockDiagram },
+  { key: "cart", title: "eComm Customer Service", Diagram: CartDiagram },
+  { key: "crm", title: "CRM Hygiene (B2B SaaS)", Diagram: CrmDiagram },
 ] as const;
 
 /** Internal review gallery for the diagram library (noindex). */
@@ -34,7 +40,7 @@ export default function DiagramLibrary() {
         Diagram library
       </p>
       <h1 className="mt-2 text-[clamp(26px,3vw,42px)] font-bold tracking-[-0.01em] text-(--mgf-text)">
-        Eight on-brand system diagrams
+        Eleven on-brand system diagrams
       </h1>
       <p className="mt-3 max-w-[60ch] text-[14px] leading-[1.6] text-(--mgf-muted)">
         Same green / black language as the cards. The key next to each title is

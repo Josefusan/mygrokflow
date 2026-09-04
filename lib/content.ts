@@ -88,6 +88,46 @@ export const EXAMPLES = [
   },
 ] as const;
 
+// Industry-specific systems (eCommerce + B2B SaaS) featured near the front of
+// the carousel. Offering-style cards like the flagships (no `shows` line).
+export const VERTICALS = [
+  {
+    title: "Restock & Back-in-Stock Alerts",
+    body: "Watches inventory and demand, warns you before a bestseller sells out, and pings customers the moment their size or SKU is back — recovered revenue without a spreadsheet.",
+    media: "restock",
+  },
+  {
+    title: "eComm Customer Service Agent",
+    body: "Answers “where's my order?”, processes returns and exchanges, and handles WISMO across email, chat, and DMs — in your brand voice, 24/7.",
+    media: "cart",
+  },
+  {
+    title: "AI Product Concierge",
+    body: "Knows your whole catalog: answers product questions, checks fit and compatibility, and recommends the right item — turning browsers into buyers.",
+    media: "knowledge",
+  },
+  {
+    title: "AI BDR Team",
+    body: "A team of outbound agents that researches accounts, writes personalized first-touches, runs the follow-up, and books qualified demos straight onto your calendar.",
+    media: "leadgen",
+  },
+  {
+    title: "AI CRM Hygiene",
+    body: "Keeps your CRM clean on autopilot — dedupes records, enriches missing fields, fixes stages, and flags stale deals so your pipeline data is finally trustworthy.",
+    media: "crm",
+  },
+  {
+    title: "AI Ticket Support",
+    body: "A front-line agent that resolves tier-1 tickets, drafts replies for the rest, and routes edge cases to the right human with full context attached.",
+    media: "triage",
+  },
+  {
+    title: "Churn-Risk & Renewal Agent",
+    body: "Scores accounts on usage and sentiment, surfaces churn risk early, and drafts the renewal or save play so your CSMs act before it's too late.",
+    media: "reporting",
+  },
+] as const;
+
 // Further build examples shown in the sliding carousel after the flagships.
 // `shows` is the "what this proves" line rendered under the description.
 export const PROJECTS = [

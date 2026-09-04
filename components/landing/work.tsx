@@ -1,10 +1,25 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { EXAMPLES, PROJECTS, WORK_HEADING, WORK_STACK_NOTE } from "@/lib/content";
+import {
+  EXAMPLES,
+  PROJECTS,
+  VERTICALS,
+  WORK_HEADING,
+  WORK_STACK_NOTE,
+} from "@/lib/content";
 import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-const ITEMS: readonly WorkItem[] = [...EXAMPLES, ...PROJECTS];
+// Two most-important flagships first, then the eComm / B2B SaaS examples up
+// front, then the ops flagship and the wider capability set.
+const [LEADGEN, SUPPORT, OPS] = EXAMPLES;
+const ITEMS: readonly WorkItem[] = [
+  LEADGEN,
+  SUPPORT,
+  ...VERTICALS,
+  OPS,
+  ...PROJECTS,
+];
 
 /** Section 003. Two flagship systems + example builds in a sliding carousel. */
 export function Work() {

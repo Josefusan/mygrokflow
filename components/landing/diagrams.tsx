@@ -302,6 +302,100 @@ export function TriageDiagram() {
   );
 }
 
+/* ── 9. Restock / back-in-stock alerts (eComm) ──────────────────────── */
+export function RestockDiagram() {
+  // stock bins with low accent fill levels feeding a monitor → alert bell
+  const bins: [number, number][] = [
+    [78, 8],
+    [120, 16],
+    [162, 5],
+  ];
+  return (
+    <Frame>
+      {bins.map(([y, lvl], i) => (
+        <g key={y}>
+          <rect x="30" y={y - 12} width="30" height="24" rx="5" stroke={STRUCT} strokeWidth="1.2" />
+          <rect x="33" y={y + 9 - lvl} width="24" height={lvl} rx="1.5" fill={ACCENT} fillOpacity="0.85" />
+          <Flow d={`M60 ${y} C 104 ${y}, 112 ${CY}, ${CX - 28} ${CY}`} delay={i * 0.28} opacity={0.6} />
+        </g>
+      ))}
+      {/* monitor node: package in a ring */}
+      <Ring r={28} />
+      <rect x={CX - 9} y={CY - 8} width="18" height="16" rx="2" stroke={INK} strokeWidth="1.3" />
+      <path d={`M${CX - 9} ${CY} h18 M${CX} ${CY - 8} v16`} stroke={INK} strokeWidth="1.2" />
+      <Flow d={`M${CX + 28} ${CY} H 250`} />
+      {/* alert bell */}
+      <circle cx="276" cy="103" r="1.9" fill={ACCENT} />
+      <path d="M266 126 c0 -13 4.5 -20 10 -20 s10 7 10 20 z" stroke={STRUCT} strokeWidth="1.3" />
+      <path d="M262 126 h28" stroke={STRUCT} strokeWidth="1.3" strokeLinecap="round" />
+      <path d="M272 129 a4 4 0 0 0 8 0" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />
+      <Labels left="STOCK" mid="MONITOR" right="ALERT" />
+    </Frame>
+  );
+}
+
+/* ── 10. eComm customer service ─────────────────────────────────────── */
+export function CartDiagram() {
+  const bubbles = [78, 120, 162];
+  return (
+    <Frame>
+      {bubbles.map((y, i) => (
+        <g key={y}>
+          <rect x="26" y={y - 13} width="46" height="26" rx="8" stroke={STRUCT} strokeWidth="1.2" />
+          {[38, 49, 60].map((dx) => (
+            <Dot key={dx} cx={dx} cy={y} r={2} delay={(i + dx) * 0.12} />
+          ))}
+          <Flow d={`M72 ${y} C 110 ${y}, 116 ${CY}, ${CX - 26} ${CY}`} delay={i * 0.3} opacity={0.6} />
+        </g>
+      ))}
+      <BotHead />
+      <Flow d={`M${CX + 28} ${CY} H 248`} />
+      {/* shopping cart + resolved check */}
+      <path
+        d="M252 110 h4 l3 15 h15 l3 -11 h-20"
+        stroke={INK}
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="261" cy="130" r="2" fill={INK} />
+      <circle cx="272" cy="130" r="2" fill={INK} />
+      <path d="M270 100 l4 4 l9 -9" stroke={ACCENT} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <Labels left="SHOPPER" mid="AI AGENT" right="RESOLVED" />
+    </Frame>
+  );
+}
+
+/* ── 11. CRM hygiene / dedupe (B2B SaaS) ────────────────────────────── */
+export function CrmDiagram() {
+  return (
+    <Frame>
+      {/* duplicate records */}
+      <rect x="30" y="76" width="48" height="22" rx="3" stroke={STRUCT} strokeWidth="1.2" />
+      <rect x="37" y="84" width="48" height="22" rx="3" stroke={STRUCT} strokeWidth="1.2" />
+      <Dot cx={85} cy={84} r={2.2} delay={0.2} />
+      <path d="M43 92 H70 M43 98 H62" stroke={STRUCT} strokeWidth="1.1" />
+      <rect x="30" y="148" width="48" height="22" rx="3" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M36 156 H63 M36 162 H55" stroke={STRUCT} strokeWidth="1.1" />
+      <Flow d={`M86 90 C 112 90, 116 ${CY}, ${CX - 28} ${CY}`} delay={0.15} opacity={0.6} />
+      <Flow d={`M78 159 C 112 159, 116 ${CY}, ${CX - 28} ${CY}`} delay={0.4} opacity={0.6} />
+      {/* clean/refresh spark */}
+      <Ring r={28} />
+      <path
+        d={`M${CX} ${CY - 11} V${CY + 11} M${CX - 11} ${CY} H${CX + 11} M${CX - 8} ${CY - 8} l16 16 M${CX + 8} ${CY - 8} l-16 16`}
+        stroke={ACCENT}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <Flow d={`M${CX + 28} ${CY} H 254`} />
+      {/* one clean record */}
+      <Doc x={258} y={101} />
+      <path d="M264 120 l4 4 l9 -9" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <Labels left="RECORDS" mid="DEDUPE" right="CLEAN" />
+    </Frame>
+  );
+}
+
 /** Registry — a Work card's `media` key selects its diagram. */
 export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   leadgen: LeadGenDiagram,
@@ -312,4 +406,7 @@ export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   content: ContentDiagram,
   knowledge: KnowledgeDiagram,
   triage: TriageDiagram,
+  restock: RestockDiagram,
+  cart: CartDiagram,
+  crm: CrmDiagram,
 };
