@@ -1,10 +1,10 @@
 # Offer catalog
 
-Diagnostic qualifies every paid path. **No discounts.** CTA: Request a diagnostic → `/apply`. Cal.com only after apply.
+Diagnostic qualifies every paid path. **No discounts.**
 
-## New catalog (not yet on Stripe or the live site)
+Site CTA: **Book a call** (Cal.com) primary; **Apply** → `/apply` secondary.
 
-Swap only together with site + Stripe. Do not publish one without the other.
+## Live catalog (Door B — shipped)
 
 | Offer | Price |
 | --- | --- |
@@ -13,12 +13,18 @@ Swap only together with site + Stripe. Do not publish one without the other.
 | Implementation retain | $7,500 / mo |
 | Implementation retain | $9,500 / mo |
 
-## Still live (until the swap)
+Old $1,500 / mo, $5K, and $10K are **retired** (inactive on Stripe). Do not pitch them.
 
-| Offer | Price |
-| --- | --- |
-| | $1,500 / mo |
-| | $5K (as live copy) |
-| | $10K (as live copy) |
+## Door A (agencies) — ops note only
 
-Do not invent tier names, “popular” badges, or extra SKUs. Cash last known: $0.
+- White-label fulfillment on the **same four SKUs**.
+- Paid **$500 partner audit** first.
+- Then **$7,500 / $9,500 only** — no wholesale $2,000/mo.
+- No `/agencies` site build until founder names it.
+- MCP is a private artifact inside an engagement, **not** a SKU.
+
+## Newsletter
+
+Without You is **Substack only**: https://substack.com/@josefucan. No on-site email capture. Buttondown dead.
+
+Do not invent tier names, “popular” badges, or a sixth price. Cash last known: $0.
