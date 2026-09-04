@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           what information we handle when you use the site, why, the legal bases
           we rely on, and the rights you have. We are the controller of the
           personal information described here. We collect only what we need to
-          respond to you and run the engagement — nothing more.
+          respond to you and run the engagement, nothing more.
         </p>
 
         <section className="mt-12">
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             The site is a marketing page. The only place you send us information
             is the application form at /apply and any message you send to our
             public contacts. Footer links (email, LinkedIn, X, and Substack) are outbound
-            only — tapping LinkedIn, X, or Substack leaves this site, and those
+            only. Tapping LinkedIn, X, or Substack leaves this site, and those
             platforms
             then handle your data under their own privacy policies, not this one.
             We do not run an account system, login, or user dashboard on this
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
             email us, we receive that email and whatever you choose to put in it.
-            If you submit the /apply form, we receive the answers you provide —
+            If you submit the /apply form, we receive the answers you provide,
             for example your role, team size, the workflow you want automated,
             who handles it today, which rate lane fits, whether you are the
             decision-maker, what you need, and the contact channel plus handle or
@@ -83,11 +83,11 @@ export default function PrivacyPage() {
             we see them quickly; if that notification is not configured or fails,
             the form falls back to opening a pre-addressed email in your own mail
             app, which you send yourself. We only collect what you actively
-            submit — there is no hidden tracking form field. If you choose a paid
+            submit; there is no hidden tracking form field. If you choose a paid
             rate lane, we open a Stripe Checkout session and Stripe processes the
             payment (card details go to Stripe, never to us); booking a call
             happens on Cal.com under its own policy. Subscribing to our
-            &quot;Without You&quot; note happens on Substack — we do not collect
+            &quot;Without You&quot; note happens on Substack; we do not collect
             newsletter signups on this site.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             tracking cookies. Vercel may set strictly necessary cookies or logs
             required to host and secure the site. If you make a choice on the
             cookie banner, or set a theme, that preference is saved in your
-            browser&apos;s localStorage so we do not ask again — it stays on your
+            browser&apos;s localStorage so we do not ask again; it stays on your
             device and is not a third-party cookie. We load no non-essential
             scripts. Stripe Checkout and Cal.com are hosted by those providers on
             their own domains and set their own cookies there when you use them;

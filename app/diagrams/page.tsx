@@ -16,7 +16,7 @@ import {
 } from "@/components/landing/diagrams";
 
 export const metadata: Metadata = {
-  title: "Diagram library — MyGrokFlow",
+  title: "Diagram library · MyGrokFlow",
   robots: { index: false, follow: false },
 };
 
@@ -48,7 +48,7 @@ export default function DiagramLibrary() {
       </h1>
       <p className="mt-3 max-w-[60ch] text-[14px] leading-[1.6] text-(--mgf-muted)">
         Same green / black language as the cards. The key next to each title is
-        its <code>media</code> value — point any Work card at one to swap it in.
+        its <code>media</code> value. Point any Work card at one to swap it in.
       </p>
 
       <ul className="mt-10 grid grid-cols-3 gap-6 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">

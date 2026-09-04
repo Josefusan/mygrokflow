@@ -9,7 +9,7 @@ const sectionLabel =
 export function ChecklistMagnet() {
   return (
     <section id="checklist" className="fade-in scroll-mt-12 py-16">
-      <h2 className={sectionLabel}>Without You — one-loop audit checklist</h2>
+      <h2 className={sectionLabel}>Without You: one-loop audit checklist</h2>
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <Button asChild className="h-9 rounded-full px-4">
           <a href={CHECKLIST_PDF}>Get the checklist</a>

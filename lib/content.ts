@@ -11,7 +11,7 @@ export const AUDIENCE_LINE = "For founders, agency owners, and engineers.";
 export const AGNOSTIC_TAG =
   "Agent-agnostic AI Automation that finds the optimal path to profitability";
 export const AGNOSTIC_LINE =
-  "Agent-agnostic by design. We test the models, tools, and routes, then ship the optimal path — not whatever's trending this week.";
+  "Agent-agnostic by design. We test the models, tools, and routes, then ship the optimal path, not whatever's trending this week.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
 export const CTA_PRIMARY = "Book a call";
@@ -73,17 +73,17 @@ export const PROCESS = [
 export const EXAMPLES = [
   {
     title: "AI Lead Generation",
-    body: "A system that finds, qualifies, and books your best-fit prospects straight onto your calendar — pipeline that fills while you sleep, not another list to work by hand.",
+    body: "A system that finds, qualifies, and books your best-fit prospects straight onto your calendar. Pipeline that fills while you sleep, not another list to work by hand.",
     media: "leadgen",
   },
   {
     title: "AI Customer Service",
-    body: "A 24/7 support agent that answers, resolves, and escalates in your voice — customers get instant help and your team stops answering the same question twice.",
+    body: "A 24/7 support agent that answers, resolves, and escalates in your voice. Customers get instant help and your team stops answering the same question twice.",
     media: "support",
   },
   {
     title: "Ops & workflow automation",
-    body: "The reporting, screening, and internal tools that eat your week — compiled, triaged, and run without you.",
+    body: "The reporting, screening, and internal tools that eat your week: compiled, triaged, and run without you.",
     media: "ops",
   },
 ] as const;
@@ -92,7 +92,7 @@ export const EXAMPLES = [
 // generation systems at the front of the carousel.
 export const EMAIL_LEADGEN = {
   title: "AI Email Lead Generation",
-  body: "Cold email that runs itself — finds best-fit prospects, writes personalized sequences, sends and follows up on autopilot, warms the domain, and books replies straight onto your calendar.",
+  body: "Cold email that runs itself: finds best-fit prospects, writes personalized sequences, sends and follows up on autopilot, warms the domain, and books replies straight onto your calendar.",
   media: "leadgen",
 } as const;
 
@@ -101,22 +101,22 @@ export const EMAIL_LEADGEN = {
 export const VERTICALS = [
   {
     title: "Restock & Back-in-Stock Alerts",
-    body: "Watches inventory and demand, warns you before a bestseller sells out, and pings customers the moment their size or SKU is back — recovered revenue without a spreadsheet.",
+    body: "Watches inventory and demand, warns you before a bestseller sells out, and pings customers the moment their size or SKU is back. Recovered revenue without a spreadsheet.",
     media: "restock",
   },
   {
     title: "eComm Customer Service Agent",
-    body: "Answers “where's my order?”, processes returns and exchanges, and handles WISMO across email, chat, and DMs — in your brand voice, 24/7.",
+    body: "Answers “where's my order?”, processes returns and exchanges, and handles WISMO across email, chat, and DMs, in your brand voice, 24/7.",
     media: "cart",
   },
   {
     title: "AI Receptionist (24/7 & After-Hours)",
-    body: "Answers every call and message — after hours and overflow included — greets callers, handles FAQs, books appointments to your calendar, and texts you the ones that can't wait. No more missed leads at 9pm.",
+    body: "Answers every call and message (after hours and overflow included), greets callers, handles FAQs, books appointments to your calendar, and texts you the ones that can't wait. No more missed leads at 9pm.",
     media: "support",
   },
   {
     title: "AI Product Concierge",
-    body: "Knows your whole catalog: answers product questions, checks fit and compatibility, and recommends the right item — turning browsers into buyers.",
+    body: "Knows your whole catalog: answers product questions, checks fit and compatibility, and recommends the right item, turning browsers into buyers.",
     media: "knowledge",
   },
   {
@@ -126,7 +126,7 @@ export const VERTICALS = [
   },
   {
     title: "AI CRM Hygiene",
-    body: "Keeps your CRM clean on autopilot — dedupes records, enriches missing fields, fixes stages, and flags stale deals so your pipeline data is finally trustworthy.",
+    body: "Keeps your CRM clean on autopilot: dedupes records, enriches missing fields, fixes stages, and flags stale deals so your pipeline data is finally trustworthy.",
     media: "crm",
   },
   {
@@ -146,32 +146,32 @@ export const VERTICALS = [
 export const ENTERPRISE = [
   {
     title: "AI ERP Optimization",
-    body: "Plugs into NetSuite, SAP, or Microsoft Dynamics to auto-reconcile ledgers, match POs to receipts, sync inventory, and close the books faster — fewer manual entries, cleaner month-end.",
+    body: "Plugs into NetSuite, SAP, or Microsoft Dynamics to auto-reconcile ledgers, match POs to receipts, sync inventory, and close the books faster. Fewer manual entries, cleaner month-end.",
     media: "ops",
   },
   {
     title: "AI Crypto On/Off-Ramp & Cross-Border FX",
-    body: "Moves value between crypto and fiat and across borders — routing each transfer for best rate and speed across currencies, with KYC/AML checks and a full audit trail.",
+    body: "Moves value between crypto and fiat and across borders, routing each transfer for best rate and speed across currencies, with KYC/AML checks and a full audit trail.",
     media: "fx",
   },
   {
     title: "AI Backtesting Trading Desk",
-    body: "Backtests strategies over historical data with walk-forward validation and risk metrics, then surfaces the signals worth trading — quant research at machine speed.",
+    body: "Backtests strategies over historical data with walk-forward validation and risk metrics, then surfaces the signals worth trading. Quant research at machine speed.",
     media: "trading",
   },
   {
     title: "AI Bookkeeping & Reconciliation",
-    body: "Categorizes transactions, reconciles accounts, chases missing receipts, and syncs QuickBooks or Xero — a month-end close that runs itself.",
+    body: "Categorizes transactions, reconciles accounts, chases missing receipts, and syncs QuickBooks or Xero. A month-end close that runs itself.",
     media: "reporting",
   },
   {
     title: "AI Compliance & AML Monitoring",
-    body: "Screens transactions and counterparties for KYC/AML risk, flags anomalies for human review, and files the audit trail — coverage that scales with volume.",
+    body: "Screens transactions and counterparties for KYC/AML risk, flags anomalies for human review, and files the audit trail. Coverage that scales with volume.",
     media: "screening",
   },
   {
     title: "AI Treasury & Cash-Flow Forecasting",
-    body: "Forecasts cash across accounts and entities, models scenarios, and flags shortfalls before they hit — so finance can see around corners.",
+    body: "Forecasts cash across accounts and entities, models scenarios, and flags shortfalls before they hit, so finance can see around corners.",
     media: "reporting",
   },
 ] as const;
@@ -182,7 +182,7 @@ export const PROJECTS = [
   {
     title: "Autonomous Ticket Resolution Engine",
     body: "An agent that reads the ticket, queries the database, applies the fix, and asks a human before anything destructive.",
-    shows: "You build agents that resolve — not just reply.",
+    shows: "You build agents that resolve, not just reply.",
     media: "support",
   },
   {
@@ -206,7 +206,7 @@ export const PROJECTS = [
   {
     title: "Multi-Agent Code Review Desk",
     body: "Reviewer, security scanner, and test-writer agents with consensus and conflict resolution.",
-    shows: "You orchestrate teams of agents — not toys.",
+    shows: "You orchestrate teams of agents, not toys.",
     media: "content",
   },
   {
@@ -224,7 +224,7 @@ export const PROJECTS = [
   {
     title: "Incident Response Agent",
     body: "Correlates alerts, traces, and logs; drafts the post-mortem; and suggests the rollback command.",
-    shows: "You make on-call humans faster — not obsolete.",
+    shows: "You make on-call humans faster, not obsolete.",
     media: "triage",
   },
   {
@@ -242,7 +242,7 @@ export const PROJECTS = [
   {
     title: "Agentic Sales Ops Assistant",
     body: "Enriches leads, drafts personalized outreach, syncs the CRM, tracks replies, and updates forecasts.",
-    shows: "You connect agents to revenue — not just demos.",
+    shows: "You connect agents to revenue, not just demos.",
     media: "leadgen",
   },
   {
@@ -258,30 +258,30 @@ export const PROJECTS = [
 export const TEAMS = [
   {
     title: "AI DevOps Team",
-    body: "A standing crew that watches CI/CD, triages incidents, ships deploys with rollback, and keeps infra and on-call humming — your pipeline, run without you.",
-    shows: "You run the pipeline, deploys, and incidents — not just advise on them.",
+    body: "A standing crew that watches CI/CD, triages incidents, ships deploys with rollback, and keeps infra and on-call humming. Your pipeline, run without you.",
+    shows: "You run the pipeline, deploys, and incidents, not just advise on them.",
     media: "ops",
   },
   {
     title: "AI Software Engineering Team",
-    body: "Spec-to-PR agents that scope the work, write the code, add tests, and open reviewed pull requests — a delivery team that scales with your backlog.",
+    body: "Spec-to-PR agents that scope the work, write the code, add tests, and open reviewed pull requests. A delivery team that scales with your backlog.",
     shows: "You ship real features end-to-end, reviewed and tested.",
     media: "content",
   },
   {
     title: "AI Project Manager Team",
-    body: "Coordinator agents that break down work, assign and chase tasks, flag blockers and slippage, and keep every stakeholder updated — status that maintains itself.",
+    body: "Coordinator agents that break down work, assign and chase tasks, flag blockers and slippage, and keep every stakeholder updated. Status that maintains itself.",
     shows: "You keep scope, status, and stakeholders in sync automatically.",
     media: "triage",
   },
 ] as const;
 
 export const WORK_STACK_NOTE =
-  "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
+  "Behind every build is hands-on work with the tools you already run: CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
-  "Every automation runs on scoped, least-privilege access — no shared logins, no standing keys — with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
+  "Every automation runs on scoped, least-privilege access (no shared logins, no standing keys), with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
 
 // title/included/excluded are the original copy, unchanged.
 // eyebrow/price/suffix split the title for the card header layout.

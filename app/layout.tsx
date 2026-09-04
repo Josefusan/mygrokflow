@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mygrokflow.com"),
   title: {
-    default: "MyGrokFlow — systems that run without you",
+    default: "MyGrokFlow: systems that run without you",
     template: "%s · MyGrokFlow",
   },
   description:
-    "We take a painful recurring workflow and turn it into a system that runs without you — modernizing your business to become more profitable, implementation included.",
+    "We take a painful recurring workflow and turn it into a system that runs without you. Modernizing your business to become more profitable, implementation included.",
   applicationName: "MyGrokFlow",
   keywords: [
     "AI automation",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MyGrokFlow", url: "https://mygrokflow.com" }],
   openGraph: {
-    title: "MyGrokFlow — systems that run without you",
+    title: "MyGrokFlow: systems that run without you",
     description:
       "We take a painful recurring workflow and turn it into a system that runs without you.",
     url: "https://mygrokflow.com",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "MyGrokFlow — systems that run without you",
+    title: "MyGrokFlow: systems that run without you",
     description:
       "We take a painful recurring workflow and turn it into a system that runs without you.",
   },

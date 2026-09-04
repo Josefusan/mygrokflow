@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { APPLY_PATH } from "@/lib/site";
 
 const SCRIPT = [
-  "Hi — this is a quick trial chat, not a live person. We take a painful recurring workflow and turn it into a system that runs without you.",
+  "Hi, this is a quick trial chat, not a live person. We take a painful recurring workflow and turn it into a system that runs without you.",
   "Best fit: founders, agency owners, and software engineers who already pay for the work and still do the glue themselves.",
   "Not a fit: students, hobbyists, or $99 chatbot shoppers.",
   "Four honest prices: $500 audit (one-time), then $2,000/mo, $7,500/mo, or $9,500/mo. The diagnostic qualifies which one. No discounts.",
@@ -23,7 +23,7 @@ const SCRIPT = [
   "$9,500/mo: several loops in one function, deepest stack we’ll take, fuller docs, priority async on those systems.",
   "No named case studies yet. Trading desk, CS, and BDR cards are examples of the work, not clients or metrics.",
   "Example flows on the site: AI lead generation, follow-up, reactivation, appointment setting, customer service. Labels only.",
-  "Free worksheet: Without You — one-loop audit checklist. Get it on the site. Then request a diagnostic → /apply",
+  "Free worksheet: Without You, one-loop audit checklist. Get it on the site. Then request a diagnostic → /apply",
   "Without You is on Substack: https://substack.com/@josefucan",
 ] as const;
 
