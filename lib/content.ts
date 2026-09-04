@@ -88,6 +88,86 @@ export const EXAMPLES = [
   },
 ] as const;
 
+// Further build examples shown in the sliding carousel after the flagships.
+// `shows` is the "what this proves" line rendered under the description.
+export const PROJECTS = [
+  {
+    title: "Autonomous Ticket Resolution Engine",
+    body: "An agent that reads the ticket, queries the database, applies the fix, and asks a human before anything destructive.",
+    shows: "You build agents that resolve — not just reply.",
+    media: "support",
+  },
+  {
+    title: "Deep Research Agent with Citation Graph",
+    body: "Multi-hop research, source grading, contradiction detection, and a fully cited final report.",
+    shows: "You can orchestrate long-horizon reasoning safely.",
+    media: "knowledge",
+  },
+  {
+    title: "Self-Healing Data Pipeline Agent",
+    body: "Detects schema drift in ETL jobs, drafts transformation fixes, and re-runs with rollback.",
+    shows: "You can be trusted with production data, carefully.",
+    media: "ops",
+  },
+  {
+    title: "CI Triage Agent",
+    body: "Reads failing pipeline logs, reproduces the error, opens a fix PR with tests, and waits for approval.",
+    shows: "You can embed agents into engineering workflows.",
+    media: "triage",
+  },
+  {
+    title: "Multi-Agent Code Review Desk",
+    body: "Reviewer, security scanner, and test-writer agents with consensus and conflict resolution.",
+    shows: "You orchestrate teams of agents — not toys.",
+    media: "content",
+  },
+  {
+    title: "Computer-Use Back-Office Agent",
+    body: "Browser automation for legacy portals: forms, uploads, extraction, and human takeover on CAPTCHA.",
+    shows: "You ship agents in the messy real world.",
+    media: "ops",
+  },
+  {
+    title: "Invoice Processing Agent with 3-Way Match",
+    body: "Reads invoices, matches POs and deliveries, flags exceptions, and posts to the ERP via MCP.",
+    shows: "You automate expensive enterprise workflows.",
+    media: "reporting",
+  },
+  {
+    title: "Incident Response Agent",
+    body: "Correlates alerts, traces, and logs; drafts the post-mortem; and suggests the rollback command.",
+    shows: "You make on-call humans faster — not obsolete.",
+    media: "triage",
+  },
+  {
+    title: "Real-Time Voice Ops Agent",
+    body: "Sub-second voice with tool calling, interruption handling, and clear escalation paths.",
+    shows: "You can build multimodal agents that feel human.",
+    media: "support",
+  },
+  {
+    title: "Adaptive Tutor Agent with Mastery Memory",
+    body: "Spaced repetition, difficulty routing, and long-term memory of the learner's state.",
+    shows: "You use memory systems that personalize over time.",
+    media: "knowledge",
+  },
+  {
+    title: "Agentic Sales Ops Assistant",
+    body: "Enriches leads, drafts personalized outreach, syncs the CRM, tracks replies, and updates forecasts.",
+    shows: "You connect agents to revenue — not just demos.",
+    media: "leadgen",
+  },
+  {
+    title: "Agent Eval & Regression Platform",
+    body: "Golden trajectories, CI gates that block bad prompts, and quality dashboards.",
+    shows: "You ship agents like production software.",
+    media: "screening",
+  },
+] as const;
+
+export const WORK_STACK_NOTE =
+  "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; plus ERPs, data warehouses, and the messaging and dev stacks around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
+
 // title/included/excluded are the original copy, unchanged.
 // eyebrow/price/suffix split the title for the card header layout.
 export const RATES = [

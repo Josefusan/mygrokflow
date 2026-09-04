@@ -1,17 +1,12 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { EXAMPLES, WORK_HEADING, WORK_NOTE } from "@/lib/content";
-import { PLACEHOLDER_CARD_VIDEOS } from "@/lib/media";
+import { EXAMPLES, PROJECTS, WORK_HEADING, WORK_STACK_NOTE } from "@/lib/content";
 import { PROMISE } from "@/lib/site";
-import { CardVideo } from "./card-video";
-import { DIAGRAMS } from "./diagrams";
 import { Counter, SectionHead } from "./section-bits";
+import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-function CardMedia({ media, videoSrc }: { media: string; videoSrc: string }) {
-  const Diagram = DIAGRAMS[media];
-  return Diagram ? <Diagram /> : <CardVideo src={videoSrc} />;
-}
+const ITEMS: readonly WorkItem[] = [...EXAMPLES, ...PROJECTS];
 
-/** Section 003. Panel with three example-workflow cards. */
+/** Section 003. Two flagship systems + example builds in a sliding carousel. */
 export function Work() {
   return (
     <section
@@ -21,33 +16,16 @@ export function Work() {
       <Counter n={3} className="mb-5" />
       <SectionHead heading={WORK_HEADING} note={PROMISE} tone="panel" />
 
-      <ul className="grid auto-rows-fr grid-cols-3 gap-5 max-[900px]:grid-cols-1">
-        {EXAMPLES.map((item, i) => (
-          <li key={item.title}>
-            <FadeUp
-              delay={0.4 + i * 0.15}
-              className="flex h-full flex-col overflow-hidden rounded-[20px] border border-(--mgf-border) bg-(--mgf-card) pt-4"
-            >
-              <CardMedia media={item.media} videoSrc={PLACEHOLDER_CARD_VIDEOS[i]} />
-              <div className="px-7 pt-6 pb-7">
-                <h3 className="mb-3.5 text-[18px] font-semibold text-(--mgf-text)">
-                  {item.title}
-                </h3>
-                <p className="text-[13px] leading-[1.6] text-(--mgf-muted)">
-                  {item.body}
-                </p>
-              </div>
-            </FadeUp>
-          </li>
-        ))}
-      </ul>
+      <FadeUp delay={0.35}>
+        <WorkCarousel items={ITEMS} />
+      </FadeUp>
 
       <FadeUp
         as="p"
-        delay={0.85}
-        className="mt-6 font-mono text-[11px] text-(--mgf-muted)"
+        delay={0.5}
+        className="mt-8 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
       >
-        {WORK_NOTE}
+        {WORK_STACK_NOTE}
       </FadeUp>
     </section>
   );

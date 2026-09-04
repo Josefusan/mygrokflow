@@ -341,7 +341,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html,
+  .mgf-carousel {
     scroll-behavior: auto;
   }
   body::before {
