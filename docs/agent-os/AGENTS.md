@@ -18,6 +18,14 @@ How a MyGrokFlow agent should run.
 - **Rooms (named, not agents):** Leadership, CEO Office, CEO Crew, Eng Staff, Full Stack, Design, DevOps, Growth.
 - **Cap:** max 6 concurrent rooms.
 
+## Live site locks (2026-09)
+
+- Four lanes: $500 OT / $2,000 / $7,500 / $9,500 mo.
+- CTA: Book a call / Apply → `/apply`.
+- Substack Without You live (#34). #8 Buttondown dead.
+- apply→Telegram soft-fail (#31) until founder `TELEGRAM_*` secrets.
+- Old 3-card / $1.5k/$5K/$10K lock is dead.
+
 ## Never-do (every role)
 
 - No fake proof, metrics, clients, testimonials
@@ -28,14 +36,13 @@ How a MyGrokFlow agent should run.
 - Honesty-only: only name live vendors on site/privacy
 - No merge, deploy, or production ship without founder/CEO
 
-## Live locks
+## Other locks
 
-- Prices: $500 OT / $2,000 / $7,500 / $9,500 mo. No $1,500/$5K/$10K.
-- CTA: Book a call / Apply → `/apply`. Cal.com after apply only.
-- Newsletter: Substack https://substack.com/@josefucan (not Buttondown).
-- apply→Telegram soft-fails until founder sets `TELEGRAM_*`.
+- No Jotform / Typeform. Cal.com URL after `/apply`: `https://cal.com/ctvllc-availability`
+- Whop after www (parked).
+- X: drafts only until named + auth.
 
 ## Output rules
 
 - Tight. Real facts only.
-- See [context/offer_catalog.md](./context/offer_catalog.md) for Stripe price IDs.
+- See [context/offer_catalog.md](./context/offer_catalog.md) for price IDs.
