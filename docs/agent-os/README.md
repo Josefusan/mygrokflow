@@ -22,6 +22,8 @@ This tree is **docs only**. Do not merge, deploy, spend, or post publicly withou
 - Named pulls only. CEO org idle unless named.
 - Shared OS in this repo. Do not fork a repo per role.
 - Rooms are rooms, not agents. Product cap: max 6 concurrent rooms.
-- Persist / GitHub #8 newsletter is held (`buttondown.com/mygrokflow` is 404).
-- X is logged out; no BDR sends until founder authenticates.
+- **Growth IDLE until first client** (or a named pull). No posts, DMs, or outreach.
+- Company X is `@MyGrokFlow` (branding only). Do not post from `@Josefusan111` as the company.
+- Newsletter: **Without You** is Substack only — https://substack.com/@josefucan. Buttondown / #8 is dead.
 - CTA: **Request a diagnostic** → `/apply`. Cal.com only after apply.
+- Live prices: `$500` audit OT; `$2,000` / `$7,500` / `$9,500` per month. Old `$1,500` / `$5K` / `$10K` retired.
