@@ -245,6 +245,29 @@ export const PROJECTS = [
   },
 ] as const;
 
+// Standing "team" systems — a full crew of coordinated agents. Shown toward
+// the end of the carousel, with a `shows` line like the projects.
+export const TEAMS = [
+  {
+    title: "AI DevOps Team",
+    body: "A standing crew that watches CI/CD, triages incidents, ships deploys with rollback, and keeps infra and on-call humming — your pipeline, run without you.",
+    shows: "You run the pipeline, deploys, and incidents — not just advise on them.",
+    media: "ops",
+  },
+  {
+    title: "AI Software Engineering Team",
+    body: "Spec-to-PR agents that scope the work, write the code, add tests, and open reviewed pull requests — a delivery team that scales with your backlog.",
+    shows: "You ship real features end-to-end, reviewed and tested.",
+    media: "content",
+  },
+  {
+    title: "AI Project Manager Team",
+    body: "Coordinator agents that break down work, assign and chase tasks, flag blockers and slippage, and keep every stakeholder updated — status that maintains itself.",
+    shows: "You keep scope, status, and stakeholders in sync automatically.",
+    media: "triage",
+  },
+] as const;
+
 export const WORK_STACK_NOTE =
   "Behind every build is hands-on work with the tools you already run — CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 

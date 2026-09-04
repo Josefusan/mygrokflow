@@ -3,6 +3,7 @@ import {
   ENTERPRISE,
   EXAMPLES,
   PROJECTS,
+  TEAMS,
   VERTICALS,
   WORK_HEADING,
   WORK_STACK_NOTE,
@@ -22,6 +23,7 @@ const ITEMS: readonly WorkItem[] = [
   ...ENTERPRISE,
   OPS,
   ...PROJECTS,
+  ...TEAMS,
 ];
 
 /** Section 003. Two flagship systems + example builds in a sliding carousel. */
