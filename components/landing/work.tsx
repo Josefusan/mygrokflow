@@ -1,13 +1,8 @@
 import { FadeUp } from "@/components/motion/fade-up";
 import {
-  EMAIL_LEADGEN,
-  ENTERPRISE,
-  EXAMPLES,
-  PROJECTS,
   SECURITY_LEAD,
   SECURITY_NOTE,
-  TEAMS,
-  VERTICALS,
+  SYSTEMS,
   WORK_HEADING,
   WORK_STACK_NOTE,
 } from "@/lib/content";
@@ -15,46 +10,11 @@ import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-const [LEADGEN, SUPPORT, OPS] = EXAMPLES;
+// Every card is client-outbound lead gen, BDR, or sales ops for boutique B2B
+// recruiting firms; SYSTEMS is already in carousel order with the flagships first.
+const ITEMS: readonly WorkItem[] = SYSTEMS;
 
-// Full set in its natural authoring order; the carousel then leads with the
-// lead-generation cards, followed by customer support & ticket escalation,
-// then everything else (verticals, enterprise/finance, ops, projects, teams).
-const ALL: readonly WorkItem[] = [
-  LEADGEN,
-  SUPPORT,
-  EMAIL_LEADGEN,
-  ...VERTICALS,
-  ...ENTERPRISE,
-  OPS,
-  ...PROJECTS,
-  ...TEAMS,
-];
-
-const LEADGEN_TITLES = new Set<string>([
-  "AI Lead Generation",
-  "AI Email Lead Generation",
-  "AI BDR Team",
-  "Agentic Sales Ops Assistant",
-]);
-const SUPPORT_TITLES = new Set<string>([
-  "AI Customer Service",
-  "eComm Customer Service Agent",
-  "AI Receptionist (24/7 & After-Hours)",
-  "AI Ticket Support",
-  "Autonomous Ticket Resolution Engine",
-  "Real-Time Voice Ops Agent",
-]);
-
-const ITEMS: readonly WorkItem[] = [
-  ...ALL.filter((i) => LEADGEN_TITLES.has(i.title)),
-  ...ALL.filter((i) => SUPPORT_TITLES.has(i.title)),
-  ...ALL.filter(
-    (i) => !LEADGEN_TITLES.has(i.title) && !SUPPORT_TITLES.has(i.title),
-  ),
-];
-
-/** Section 003. Two flagship systems + example builds in a sliding carousel. */
+/** Section 003. Lead-generation systems for recruiting firms in a sliding carousel. */
 export function Work() {
   return (
     <section

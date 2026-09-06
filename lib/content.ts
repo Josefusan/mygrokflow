@@ -1,54 +1,56 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
-export const EYEBROW = "Modernizing your business to become more profitable";
+export const EYEBROW =
+  "AI lead generation for boutique B2B recruiting and staffing firms";
 
 export const HEADLINE =
-  "Want hours back and more money from the work you already pay for, without doing it yourself.";
+  "Want more of the right hiring managers talking to you, without living in LinkedIn or running the outbound yourself.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
-export const AUDIENCE_LINE = "For founders, agency owners, and engineers.";
+export const AUDIENCE_LINE =
+  "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Agent-agnostic AI Automation that finds the optimal path to profitability";
+  "Agent-agnostic AI lead generation that finds the optimal path to more job orders";
 export const AGNOSTIC_LINE =
-  "Agent-agnostic by design. We test the models, tools, and routes, then ship the optimal path, not whatever's trending this week.";
+  "Most boutique recruiting firms don't have a candidate problem. They have an owner who is still the entire client-outbound system. We replace that: lists, messaging, sequences, reply handling, and the CRM/ATS and calendar handoff, built agent-agnostic on whichever models and tools win, not whatever's trending this week.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
 export const CTA_PRIMARY = "Book a call";
 export const CTA_SECONDARY = "Apply";
 
 export const WORK_HEADING = "What we build";
-export const WORK_NOTE = "Two flagship systems, plus the operations work behind them.";
 export const PROCESS_HEADING = "Our process";
 export const RATES_HEADING = "Rates";
 export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
-  "What we build, the models we use (including Grok from xAI), and how we keep your data secure.";
+  "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
 export const SECTION_COUNT = 6;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
-// data, so searches around AI automation, Grok, xAI, and X surface the site.
+// data, so searches around AI lead generation for recruiters, Grok, xAI, and X
+// surface the site.
 export const FAQS = [
   {
     q: "What is MyGrokFlow?",
-    a: "MyGrokFlow is an AI automation agency that turns a painful recurring workflow into a system that runs without you. We design, build, and run AI agents and data pipelines across the software you already use, so founders, operators, and engineers get hours back and more profit from work they already pay for.",
+    a: "MyGrokFlow is an AI automation agency that builds AI lead generation systems for boutique B2B recruiting and staffing firms. We take the client-side outbound the owner still runs by hand (finding hiring managers, messaging them, following up, and booking calls) and turn it into a system that runs without you, implementation included.",
+  },
+  {
+    q: "Who is this for?",
+    a: "Contingency and retained recruiting firms with roughly 2 to 25 recruiters, selling into employers, where the owner, managing partner, or head of BD still owns the job-order pipeline. If you are great once you have the job order and the pain is getting enough of the right hiring managers talking to you, this is built for you.",
+  },
+  {
+    q: "Is this candidate sourcing or client outbound?",
+    a: "Client outbound. We build the system that wins job orders: target employer and hiring-manager lists, personalized email, LinkedIn, and X outreach, hiring-signal triggers, reply handling, and the handoff into your ATS or CRM and calendar. We do not build candidate-spam machines.",
   },
   {
     q: "Do you build on Grok and xAI models?",
-    a: "Yes. MyGrokFlow is agent-agnostic. We build with frontier models including Grok, the model from xAI (Elon Musk's AI company), alongside other leading LLMs, and we pick the best model and route for each task. If Grok is the optimal engine for your automation we ship on Grok; if another model wins, we use that.",
+    a: "Yes. MyGrokFlow is agent-agnostic. We build with frontier models including Grok, the model from xAI (Elon Musk's AI company), alongside other leading LLMs, and we pick the best model and route for each task. If Grok is the optimal engine for your outbound we ship on Grok; if another model wins, we use that.",
   },
   {
-    q: "What is a Grok agent or Grok automation?",
-    a: "A Grok agent is an AI agent powered by xAI's Grok that reads context, calls tools, and takes real actions, not just chats. Grok automation means wiring that agent into your workflow, from lead generation and customer support to ETL data pipelines and bookkeeping, so the work completes end to end with human approval on anything sensitive.",
-  },
-  {
-    q: "Can you automate X (formerly Twitter) and the rest of our stack?",
-    a: "Yes. We connect agents to X (formerly Twitter), your CRM, help desk, booking system, ERP, and data warehouse through native APIs and MCP, so posting, monitoring, support, reporting, and data pipelines run automatically and securely.",
-  },
-  {
-    q: "Which industries and business types do you work with?",
-    a: "We work across B2B niches: eCommerce, B2B SaaS, finance, professional services, agencies, and enterprise operations. Typical builds include AI lead generation, customer support, automated ETL and data pipelines, and finance and back-office automation tailored to each stack.",
+    q: "Which ATS, CRM, and outreach tools do you work with?",
+    a: "The ones you already run: Bullhorn, Loxo, Crelate, JobAdder, Vincere, and HubSpot or Pipedrive on the CRM side; LinkedIn Sales Navigator, Apollo, and Clay for lists and enrichment; your email sending stack; X (formerly Twitter); and Cal.com or Calendly for booking. We connect agents through native APIs and MCP, so nothing gets re-platformed.",
   },
   {
     q: "Is my data secure when you integrate AI?",
@@ -63,20 +65,25 @@ export const NEWSLETTER = {
 
 export const AUDIENCE = [
   {
-    title: "Founders",
-    body: "You already pay a team. The work still waits on you.",
+    title: "Owners & managing partners",
+    body: "You're great once you have the job order. You're still the entire client-outbound system.",
   },
   {
-    title: "Software engineers",
-    body: "They pay you to ship product. Glue is hours that never hit it.",
+    title: "Heads of BD",
+    body: "You own the pipeline number. Your week goes to lists, first-touches, and follow-ups instead of the calls that close.",
   },
   {
-    title: "High-earning operators",
-    body: "You are paid to think. You still spend nights on the same report, inbox, or status loop. That is a system problem.",
+    title: "Firms of 2 to 25 recruiters",
+    body: "Contingency or retained, selling into employers. Enough placements to prove it works, not enough hands to run outbound every day.",
   },
 ] as const;
 
-export const NOT_FOR = ["students", "hobbyists", "$99 chatbot shoppers"] as const;
+export const NOT_FOR = [
+  "$99 chatbot shoppers",
+  "mega RPO procurement",
+  "candidate-spam-only shops",
+  "deck collectors",
+] as const;
 
 /** "Not for students, hobbyists, or $99 chatbot shoppers." */
 export function notForLine(items: readonly string[]): string {
@@ -88,234 +95,98 @@ export const PROCESS = [
   {
     n: "01",
     title: "Bring the work.",
-    body: "Upload the knowledge you already have (docs, SOPs, examples) and name the outcome you want.",
+    body: "Your niche, your best clients, the outreach that has worked, and the job-order number you want. Upload the docs, SOPs, and examples you already have.",
   },
   {
     n: "02",
     title: "Show us the stack.",
-    body: "Where this runs today. The tools you already pay for.",
+    body: "Your ATS or CRM, email, LinkedIn, and calendar. The tools you already pay for.",
   },
   {
     n: "03",
     title: "We build the system.",
-    body: "We automate the loop and hand you something that runs without you.",
+    body: "We automate the client-outbound loop end to end and hand you a job-order pipeline that runs without you.",
   },
 ] as const;
 
-export const EXAMPLES = [
+// Every card is client-side lead generation, BDR, or sales ops for boutique
+// B2B recruiting and staffing firms. Order = carousel order; the flagships
+// lead. `shows` is the optional proof line rendered under the description.
+export const SYSTEMS = [
   {
-    title: "AI Lead Generation",
-    body: "A system that finds, qualifies, and books your best-fit prospects straight onto your calendar. Pipeline that fills while you sleep, not another list to work by hand.",
+    title: "AI Job-Order Lead Generation",
+    body: "Finds the hiring managers who match your niche, qualifies them, and books them straight onto your calendar. A client pipeline that fills while your recruiters recruit, not another list for the owner to work by hand.",
     media: "leadgen",
   },
   {
-    title: "AI Customer Service",
-    body: "A 24/7 support agent that answers, resolves, and escalates in your voice. Customers get instant help and your team stops answering the same question twice.",
-    media: "support",
+    title: "AI Email Outbound to Hiring Managers",
+    body: "Cold email that runs itself: builds the list, writes personalized sequences from your placements and their open reqs, sends and follows up on autopilot, keeps the domain healthy, and books replies onto your calendar.",
+    media: "leadgen",
   },
   {
-    title: "Ops & workflow automation",
-    body: "The reporting, screening, and internal tools that eat your week: compiled, triaged, and run without you.",
-    media: "ops",
-  },
-] as const;
-
-// A dedicated email-outbound lead-gen card, grouped with the other lead
-// generation systems at the front of the carousel.
-export const EMAIL_LEADGEN = {
-  title: "AI Email Lead Generation",
-  body: "Cold email that runs itself: finds best-fit prospects, writes personalized sequences, sends and follows up on autopilot, warms the domain, and books replies straight onto your calendar.",
-  media: "leadgen",
-} as const;
-
-// Industry-specific systems (eCommerce + B2B SaaS) featured near the front of
-// the carousel. Offering-style cards like the flagships (no `shows` line).
-export const VERTICALS = [
-  {
-    title: "Restock & Back-in-Stock Alerts",
-    body: "Watches inventory and demand, warns you before a bestseller sells out, and pings customers the moment their size or SKU is back. Recovered revenue without a spreadsheet.",
-    media: "restock",
+    title: "LinkedIn & X Outbound, Without Living In It",
+    body: "Drafts personalized connection notes, first-touches, and follow-ups in your voice, queues them for one-click send, and logs every reply to your CRM, so you show up on LinkedIn for the conversations, not the grind.",
+    media: "leadgen",
   },
   {
-    title: "eComm Customer Service Agent",
-    body: "Answers “where's my order?”, processes returns and exchanges, and handles WISMO across email, chat, and DMs, in your brand voice, 24/7.",
-    media: "cart",
+    title: "AI BDR Team for Recruiting Firms",
+    body: "A team of outbound agents that researches target employers, writes the first-touch, runs the follow-up across channels, and books qualified intake calls with hiring managers who have budget and a req.",
+    media: "leadgen",
   },
   {
-    title: "AI Receptionist (24/7 & After-Hours)",
-    body: "Answers every call and message (after hours and overflow included), greets callers, handles FAQs, books appointments to your calendar, and texts you the ones that can't wait. No more missed leads at 9pm.",
-    media: "support",
+    title: "Hiring-Signal Radar",
+    body: "Watches job postings, funding rounds, headcount growth, leadership changes, and reqs reposted for the third time, then triggers outreach the day the signal fires. You reach the hiring manager while the search is still open.",
+    media: "screening",
   },
   {
-    title: "AI Product Concierge",
-    body: "Knows your whole catalog: answers product questions, checks fit and compatibility, and recommends the right item, turning browsers into buyers.",
+    title: "Target Employer & Hiring-Manager Lists",
+    body: "Builds and refreshes lists of employers in your niche and the people who actually own the req, enriched and verified, deduped against your ATS, past clients, and anyone already in sequence.",
     media: "knowledge",
   },
   {
-    title: "AI BDR Team",
-    body: "A team of outbound agents that researches accounts, writes personalized first-touches, runs the follow-up, and books qualified demos straight onto your calendar.",
-    media: "leadgen",
+    title: "Reply Triage & Calendar Handoff",
+    body: "Reads every reply, separates interested from out-of-office and not-now, answers the easy questions, and books the interested ones onto your calendar with the account context attached.",
+    media: "support",
   },
   {
-    title: "AI CRM Hygiene",
-    body: "Keeps your CRM clean on autopilot: dedupes records, enriches missing fields, fixes stages, and flags stale deals so your pipeline data is finally trustworthy.",
+    title: "Job-Order Pipeline & ATS Hygiene",
+    body: "Keeps Bullhorn, Loxo, Crelate, or your CRM honest: logs every touch, moves stages, dedupes contacts, and flags BD deals and job orders going cold before they die quietly.",
     media: "crm",
   },
   {
-    title: "AI Ticket Support",
-    body: "A front-line agent that resolves tier-1 tickets, drafts replies for the rest, and routes edge cases to the right human with full context attached.",
-    media: "triage",
-  },
-  {
-    title: "Churn-Risk & Renewal Agent",
-    body: "Scores accounts on usage and sentiment, surfaces churn risk early, and drafts the renewal or save play so your CSMs act before it's too late.",
-    media: "reporting",
-  },
-] as const;
-
-// High-ticket enterprise / finance systems, featured up front with the
-// verticals. Offering-style cards (no `shows` line).
-export const ENTERPRISE = [
-  {
-    title: "AI ERP Optimization",
-    body: "Plugs into NetSuite, SAP, or Microsoft Dynamics to auto-reconcile ledgers, match POs to receipts, sync inventory, and close the books faster. Fewer manual entries, cleaner month-end.",
+    title: "Multi-Channel Sequencing",
+    body: "Email, LinkedIn, X, and call tasks in one sequence per account, with timing, throttling, and stop-on-reply built in, so no hiring manager gets hit twice and none get forgotten.",
     media: "ops",
   },
   {
-    title: "AI Crypto On/Off-Ramp & Cross-Border FX",
-    body: "Moves value between crypto and fiat and across borders, routing each transfer for best rate and speed across currencies, with KYC/AML checks and a full audit trail.",
-    media: "fx",
-  },
-  {
-    title: "AI Backtesting Trading Desk",
-    body: "Backtests strategies over historical data with walk-forward validation and risk metrics, then surfaces the signals worth trading. Quant research at machine speed.",
-    media: "trading",
-  },
-  {
-    title: "AI Bookkeeping & Reconciliation",
-    body: "Categorizes transactions, reconciles accounts, chases missing receipts, and syncs QuickBooks or Xero. A month-end close that runs itself.",
+    title: "Dormant Client Re-engagement",
+    body: "Works your past clients and the candidates you placed who are now hiring managers themselves: picks the right moment, drafts the note, and books the reconnect.",
     media: "reporting",
   },
   {
-    title: "AI Compliance & AML Monitoring",
-    body: "Screens transactions and counterparties for KYC/AML risk, flags anomalies for human review, and files the audit trail. Coverage that scales with volume.",
-    media: "screening",
-  },
-  {
-    title: "AI Treasury & Cash-Flow Forecasting",
-    body: "Forecasts cash across accounts and entities, models scenarios, and flags shortfalls before they hit, so finance can see around corners.",
-    media: "reporting",
-  },
-] as const;
-
-// Further build examples shown in the sliding carousel after the flagships.
-// `shows` is the "what this proves" line rendered under the description.
-export const PROJECTS = [
-  {
-    title: "Autonomous Ticket Resolution Engine",
-    body: "An agent that reads the ticket, queries the database, applies the fix, and asks a human before anything destructive.",
-    shows: "You build agents that resolve, not just reply.",
-    media: "support",
-  },
-  {
-    title: "Deep Research Agent with Citation Graph",
-    body: "Multi-hop research, source grading, contradiction detection, and a fully cited final report.",
-    shows: "You can orchestrate long-horizon reasoning safely.",
-    media: "knowledge",
-  },
-  {
-    title: "Self-Healing Data Pipeline Agent",
-    body: "Detects schema drift in ETL jobs, drafts transformation fixes, and re-runs with rollback.",
-    shows: "You can be trusted with production data, carefully.",
-    media: "ops",
-  },
-  {
-    title: "CI Triage Agent",
-    body: "Reads failing pipeline logs, reproduces the error, opens a fix PR with tests, and waits for approval.",
-    shows: "You can embed agents into engineering workflows.",
-    media: "triage",
-  },
-  {
-    title: "Multi-Agent Code Review Desk",
-    body: "Reviewer, security scanner, and test-writer agents with consensus and conflict resolution.",
-    shows: "You orchestrate teams of agents, not toys.",
-    media: "content",
-  },
-  {
-    title: "Computer-Use Back-Office Agent",
-    body: "Browser automation for legacy portals: forms, uploads, extraction, and human takeover on CAPTCHA.",
-    shows: "You ship agents in the messy real world.",
-    media: "ops",
-  },
-  {
-    title: "Invoice Processing Agent with 3-Way Match",
-    body: "Reads invoices, matches POs and deliveries, flags exceptions, and posts to the ERP via MCP.",
-    shows: "You automate expensive enterprise workflows.",
-    media: "reporting",
-  },
-  {
-    title: "Incident Response Agent",
-    body: "Correlates alerts, traces, and logs; drafts the post-mortem; and suggests the rollback command.",
-    shows: "You make on-call humans faster, not obsolete.",
-    media: "triage",
-  },
-  {
-    title: "Real-Time Voice Ops Agent",
-    body: "Sub-second voice with tool calling, interruption handling, and clear escalation paths.",
-    shows: "You can build multimodal agents that feel human.",
-    media: "support",
-  },
-  {
-    title: "Adaptive Tutor Agent with Mastery Memory",
-    body: "Spaced repetition, difficulty routing, and long-term memory of the learner's state.",
-    shows: "You use memory systems that personalize over time.",
-    media: "knowledge",
-  },
-  {
-    title: "Agentic Sales Ops Assistant",
-    body: "Enriches leads, drafts personalized outreach, syncs the CRM, tracks replies, and updates forecasts.",
-    shows: "You connect agents to revenue, not just demos.",
+    title: "Placement-to-Referral Loop",
+    body: "Turns every placement into the next job order: check-ins at 30 and 90 days, a referral ask at the right moment, and expansion into other teams at the same employer.",
     media: "leadgen",
   },
   {
-    title: "Agent Eval & Regression Platform",
-    body: "Golden trajectories, CI gates that block bad prompts, and quality dashboards.",
-    shows: "You ship agents like production software.",
-    media: "screening",
+    title: "Inbound Job-Order Receptionist",
+    body: "Answers inbound calls and messages from hiring managers 24/7, captures the req and urgency, and books the intake call, so no job order lands in voicemail at 6pm on a Friday.",
+    media: "support",
   },
   {
-    title: "Automated ETL & Data Pipelines",
-    body: "Agents that pull from your apps, warehouses, and APIs, clean and transform on a schedule, and load it where teams need it, so sales, finance, and ops work from one trustworthy source instead of stale CSV exports.",
-    shows: "You move and model data across the stack, not just query it.",
-    media: "ops",
-  },
-] as const;
-
-// Standing "team" systems — a full crew of coordinated agents. Shown toward
-// the end of the carousel, with a `shows` line like the projects.
-export const TEAMS = [
-  {
-    title: "AI DevOps Team",
-    body: "A standing crew that watches CI/CD, triages incidents, ships deploys with rollback, and keeps infra and on-call humming. Your pipeline, run without you.",
-    shows: "You run the pipeline, deploys, and incidents, not just advise on them.",
-    media: "ops",
-  },
-  {
-    title: "AI Software Engineering Team",
-    body: "Spec-to-PR agents that scope the work, write the code, add tests, and open reviewed pull requests. A delivery team that scales with your backlog.",
-    shows: "You ship real features end-to-end, reviewed and tested.",
+    title: "Proposal & Fee-Agreement Drafting",
+    body: "Drafts the proposal, terms, and fee agreement from the intake-call notes, sends it for signature, and chases it until it is signed.",
     media: "content",
   },
   {
-    title: "AI Project Manager Team",
-    body: "Coordinator agents that break down work, assign and chase tasks, flag blockers and slippage, and keep every stakeholder updated. Status that maintains itself.",
-    shows: "You keep scope, status, and stakeholders in sync automatically.",
-    media: "triage",
+    title: "BD Reporting & Fee Forecast",
+    body: "Replies, meetings booked, job orders opened, fill rate, and forecast fees, in one weekly report the owner reads instead of builds.",
+    media: "reporting",
   },
 ] as const;
 
 export const WORK_STACK_NOTE =
-  "Behind every build is hands-on work with the tools you already run: CRMs like HubSpot, Salesforce, and Pipedrive; booking systems like Cal.com and Calendly; help desks like Zendesk and Intercom; finance and ERP stacks like QuickBooks, Xero, NetSuite, SAP, and Microsoft Dynamics; plus data warehouses and the messaging and dev tools around them. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
+  "Behind every build is hands-on work with the tools recruiting firms already run: ATS and CRM platforms like Bullhorn, Loxo, Crelate, JobAdder, Vincere, HubSpot, and Pipedrive; list and enrichment tools like LinkedIn Sales Navigator, Apollo, and Clay; your email sending stack and X (formerly Twitter); and booking systems like Cal.com and Calendly. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
