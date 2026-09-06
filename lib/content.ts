@@ -4,14 +4,18 @@ export const EYEBROW =
   "AI lead generation for boutique B2B recruiting and staffing firms";
 
 export const HEADLINE =
-  "Want more of the right hiring managers talking to you, without living in LinkedIn or running the outbound yourself.";
+  "Stop being your firm's entire outbound department. Get hiring managers with live reqs booked on your calendar every week.";
+
+// Hero-only supporting line (the global PROMISE still runs in Work + footer).
+export const HERO_PROMISE =
+  "We install the client-outbound system your firm never had: lists, messaging, sequences, reply handling, and calendar handoff. Built on the ATS and tools you already run, live in weeks. Your recruiters recruit. You get your week back.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Agent-agnostic AI lead generation that finds the optimal path to more job orders";
+  "Agent-agnostic AI lead generation. Implementation included. Measured in job orders, not prompts.";
 export const AGNOSTIC_LINE =
   "Most boutique recruiting firms don't have a candidate problem. They have an owner who is still the entire client-outbound system. We replace that: lists, messaging, sequences, reply handling, and the CRM/ATS and calendar handoff, built agent-agnostic on whichever models and tools win, not whatever's trending this week.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";

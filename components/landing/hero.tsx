@@ -1,6 +1,5 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { AGNOSTIC_TAG, EYEBROW, HEADLINE } from "@/lib/content";
-import { PROMISE } from "@/lib/site";
+import { AGNOSTIC_TAG, EYEBROW, HEADLINE, HERO_PROMISE } from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { Counter, display, eyebrow } from "./section-bits";
 
@@ -44,7 +43,7 @@ export function Hero() {
           delay={0.22}
           className="mt-6 max-w-[46ch] text-[18px] leading-[1.6] text-(--mgf-text)"
         >
-          {PROMISE}
+          {HERO_PROMISE}
         </FadeUp>
         <FadeUp
           as="p"
