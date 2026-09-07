@@ -16,43 +16,16 @@ export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
   "Measured in intake calls and job orders, not emails sent. Implementation included.";
-// Statement lead: the 360 trap, one idea per paragraph.
+// Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "Here's what a 360 desk does to a boutique firm.",
-  "One person owns the clients and the candidates. Outreach happens in the gaps. The gaps close the second a search heats up.",
-  "Client outreach is the first thing dropped and the slowest thing restarted. We call that the 360 trap.",
-  "I'm sorry to say it this plainly, but most firms in the trap don't have a candidate problem. They have an owner who is still the entire client-outbound system.",
-  "We replace that system. Not the relationship, not the brief, not the close. Those stay yours. We replace the part that only happens when you're not busy, so it happens every day.",
+  "Here's the gap in most boutique recruiting firms.",
+  "One person owns the clients and the candidates. Outreach happens in the gaps, and the gaps close the second a search heats up. We call that the 360 trap.",
+  "We fill it with AI automation for client lead generation, built on the ATS and tools you already run. The system earns the intake call. The relationship, the brief, and the close stay yours.",
+  "Three steps. Bring the work. Show us the stack. We build the system and hand you a job-order pipeline that runs without you.",
+  "So let's keep this simple. Book a call. We'll look at your outbound and tell you exactly what we'd build. No obligation after that.",
 ] as const;
 
 export const AUDIENCE_HEADING = "Here's who we work best with";
-
-export const MAYBE_LADDER = [
-  "Maybe you're the one still writing every first-touch at night, after the searches are done.",
-  "Maybe you hired a BDM, paid them for six months, and got two job orders.",
-  "Maybe you paid a lead-gen agency, got a spreadsheet of emails sent, and eight meetings that went nowhere.",
-  "Maybe three clients carry the firm and you know exactly what happens if one goes quiet.",
-  "Maybe your recruiters are great once the job order lands, and it is still on you to land it.",
-] as const;
-export const MAYBE_CLOSE =
-  "If none of that sounds like you, this is not for you. If it does, keep reading.";
-
-export const WANTS = [
-  "You want hiring managers with live reqs on your calendar every week, whether you were free that week or not.",
-  "You want your recruiters recruiting and your name on the brief, not on the sequence.",
-  "You want it built on the ATS and tools you already run, not another platform to log into.",
-] as const;
-export const DO_NOT_WANTS = [
-  "You do not want a $99 chatbot.",
-  "You do not want your LinkedIn restricted because a server was sending while you slept.",
-  "You do not want a hiring manager in your niche to get a message from your firm that reads like every other recruiter's.",
-] as const;
-
-export const HONEST_NUMBER =
-  "Cold reply rates in this industry run 3 to 5 percent. We don't pretend otherwise. What we do is make sure that 3 to 5 percent lands on your calendar with context attached, that the other 95 never hear from you twice by accident, and that the follow-up goes to eight touches where most reps stop at two. We measure in intake calls and job orders. Emails sent is not a number we report.";
-
-export const SELECTIVITY_CLOSE =
-  "We take on a small number of firms at a time. Not because we're precious about it, but because this is built by hand on your stack, and that takes our attention. So let's keep this simple. Book a call. We'll look at your outbound and tell you exactly what we'd build. You're under no obligation after that.";
 
 export const APHORISM = "Pipeline is outreach that happens while you're busy.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";
@@ -92,6 +65,10 @@ export const FAQS = [
   {
     q: "Which ATS, CRM, and outreach tools do you work with?",
     a: "The ones you already run: Bullhorn, Loxo, Crelate, JobAdder, Vincere, and HubSpot or Pipedrive on the CRM side; LinkedIn Sales Navigator, Apollo, and Clay for lists and enrichment; your email sending stack; X (formerly Twitter); and Cal.com or Calendly for booking. We connect agents through native APIs and MCP, so nothing gets re-platformed.",
+  },
+  {
+    q: "I've paid for lead generation before and got junk meetings. Why is this different?",
+    a: "Cold reply rates in this industry run 3 to 5 percent. We don't pretend otherwise. What we do is make sure that 3 to 5 percent lands on your calendar with context attached, that the other 95 never hear from you twice by accident, and that the follow-up goes to eight touches where most reps stop at two. We measure in intake calls and job orders. Emails sent is not a number we report.",
   },
   {
     q: "Will this get my LinkedIn restricted or my domain flagged?",

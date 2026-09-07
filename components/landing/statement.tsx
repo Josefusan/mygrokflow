@@ -3,31 +3,24 @@ import {
   APHORISM,
   AUDIENCE,
   AUDIENCE_HEADING,
-  DO_NOT_WANTS,
-  HONEST_NUMBER,
-  MAYBE_CLOSE,
-  MAYBE_LADDER,
   NOT_FOR,
-  SELECTIVITY_CLOSE,
   STATEMENT_LEAD,
   TAGLINE,
-  WANTS,
   notForLine,
 } from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
 const body = "text-[17px] leading-[1.6] text-(--mgf-text)";
-const quiet = "text-[15px] leading-[1.65] text-(--mgf-muted-on-video)";
 const mono = "font-mono text-[11px] uppercase text-(--mgf-muted-on-video)";
 
 /**
- * Section 002. Transparent over the video. Long-form statement: the 360 trap,
- * who we work best with, the "maybe you're" and "you want" ladders, the honest
- * number, the not-for line, the selectivity close, and the aphorism callback.
+ * Section 002. Transparent over the video: the gap we fill (the 360 trap),
+ * the process in one line, who we work best with, the not-for line, and the
+ * aphorism callback.
  */
 export function Statement() {
   return (
-    <section className="relative z-[1] flex min-h-svh flex-col justify-center px-8 pt-[70px] pb-16 max-[900px]:px-[18px]">
+    <section className="relative z-[1] flex min-h-svh flex-col justify-center px-8 pt-[70px] pb-12 max-[900px]:px-[18px]">
       <div className="max-w-[720px]">
         <Counter n={2} className="mb-5" />
 
@@ -64,53 +57,11 @@ export function Statement() {
           ))}
         </ul>
 
-        <ul className="mt-12 flex max-w-[60ch] flex-col gap-3">
-          {MAYBE_LADDER.map((line, i) => (
-            <li key={line}>
-              <FadeUp as="p" delay={0.1 + i * 0.06} className={quiet}>
-                {line}
-              </FadeUp>
-            </li>
-          ))}
-        </ul>
-        <FadeUp as="p" delay={0.45} className={`mt-5 max-w-[56ch] ${body}`}>
-          {MAYBE_CLOSE}
-        </FadeUp>
-
-        <div className="mt-12 grid grid-cols-2 gap-8 max-[900px]:grid-cols-1">
-          <ul className="flex flex-col gap-3 border-t border-(--mgf-border) pt-4">
-            {WANTS.map((line, i) => (
-              <li key={line}>
-                <FadeUp as="p" delay={0.1 + i * 0.06} className={quiet}>
-                  {line}
-                </FadeUp>
-              </li>
-            ))}
-          </ul>
-          <ul className="flex flex-col gap-3 border-t border-(--mgf-border) pt-4">
-            {DO_NOT_WANTS.map((line, i) => (
-              <li key={line}>
-                <FadeUp as="p" delay={0.2 + i * 0.06} className={quiet}>
-                  {line}
-                </FadeUp>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <FadeUp as="p" delay={0.15} className={`mt-12 max-w-[60ch] ${quiet}`}>
-          {HONEST_NUMBER}
-        </FadeUp>
-
-        <FadeUp as="p" delay={0.2} className={`mt-8 ${mono}`}>
+        <FadeUp as="p" delay={1.25} className={`mt-8 ${mono}`}>
           {notForLine(NOT_FOR)}
         </FadeUp>
 
-        <FadeUp as="p" delay={0.25} className={`mt-8 max-w-[56ch] ${body}`}>
-          {SELECTIVITY_CLOSE}
-        </FadeUp>
-
-        <FadeUp as="p" delay={0.3} className={`mt-10 ${mono} text-(--mgf-accent)`}>
+        <FadeUp as="p" delay={1.3} className={`mt-6 ${mono} text-(--mgf-accent)`}>
           {APHORISM}
         </FadeUp>
       </div>
