@@ -4,11 +4,11 @@ export const EYEBROW =
   "AI lead generation for boutique recruiting and staffing firms";
 
 export const HEADLINE =
-  "Your recruiters fill the job orders. Landing them is still on you.";
+  "We implement AI automation so your recruiting firm lands more job orders, without you running the outreach yourself.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "Every search you win pulls you off client outreach. Every slow month puts you back on it. We build the outbound that keeps hiring managers booking intake calls with you, whether you had time that week or not. Your recruiters recruit. You stop being the pipeline.";
+  "Cold email, LinkedIn notes, follow-ups, and intake calls booked straight to your calendar, built on the ATS you already run. Your recruiters recruit. Hiring managers keep booking.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
