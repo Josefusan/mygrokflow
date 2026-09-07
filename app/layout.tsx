@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · MyGrokFlow",
   },
   description:
-    "We implement AI automation with human-level quality, so your recruiting firm lands more job orders without you running the outreach yourself. Cold email, LinkedIn notes, follow-ups, and intake calls booked straight to your calendar, built on the ATS you already run. AI lead generation for boutique B2B recruiting and staffing firms, agent-agnostic on frontier models including Grok (from xAI), implementation included.",
+    "You are the best BD rep your firm has. That is the problem. MyGrokFlow installs the client-outbound system for boutique recruiting and staffing firms that runs while you're busy: cold email, LinkedIn, follow-ups, and intake calls on your calendar. Measured in intake calls and job orders, not emails sent. Implementation included.",
   applicationName: "MyGrokFlow",
   category: "technology",
   keywords: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MyGrokFlow: AI automation that runs without you",
     description:
-      "AI lead generation for boutique B2B recruiting and staffing firms. Client and job-order outbound that runs without the owner, built agent-agnostic on frontier models including Grok (from xAI).",
+      "Client outbound for boutique recruiting and staffing firms. A job-order pipeline that books intake calls while the owner is busy. Implementation included.",
     url: "https://mygrokflow.com",
     siteName: "MyGrokFlow",
     type: "website",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     creator: "@MyGrokFlow",
     title: "MyGrokFlow: AI automation that runs without you",
     description:
-      "AI lead generation for recruiting firms. Client outbound that runs without the owner, on frontier models including Grok (from xAI).",
+      "Client outbound for boutique recruiting firms. A job-order pipeline that runs while you're busy.",
     images: ["/icon.svg"],
   },
   robots: {

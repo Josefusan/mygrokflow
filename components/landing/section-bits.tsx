@@ -8,9 +8,8 @@ export const eyebrow =
   "font-mono text-[11px] uppercase tracking-[0.16em] text-(--mgf-muted)";
 
 /**
- * Word-by-word heading reveal. The split words are flex items with no
- * whitespace between them, so assistive tech gets the plain string and the
- * animated copy is hidden from it.
+ * Word-by-word heading reveal. Words keep real spaces between them, so the
+ * heading reads as one string to assistive tech and text extraction.
  */
 export function SplitHeading({
   text,
@@ -24,18 +23,13 @@ export function SplitHeading({
   y: number;
 }) {
   return (
-    <>
-      <span className="sr-only">{text}</span>
-      <span aria-hidden="true">
-        <SplitText
-          text={text}
-          baseDelay={baseDelay}
-          stagger={stagger}
-          duration={0.7}
-          y={y}
-        />
-      </span>
-    </>
+    <SplitText
+      text={text}
+      baseDelay={baseDelay}
+      stagger={stagger}
+      duration={0.7}
+      y={y}
+    />
   );
 }
 

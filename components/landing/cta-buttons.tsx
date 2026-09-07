@@ -1,4 +1,4 @@
-import { CTA_PRIMARY, CTA_SECONDARY } from "@/lib/content";
+import { CTA_PRIMARY, CTA_PRIMARY_SHORT, CTA_SECONDARY } from "@/lib/content";
 import { APPLY_PATH, CAL_URL } from "@/lib/site";
 
 export const focusRing =
@@ -24,26 +24,28 @@ type PillProps = {
   variant?: keyof typeof pillVariant;
   size?: keyof typeof pillSize;
   className?: string;
+  /** Compact surfaces (nav) use the short label. */
+  short?: boolean;
 };
 
-/** The conversion action: always "Book a call" → CAL_URL. */
+/** The conversion action: "Apply" (the $500 diagnostic) → /apply. */
 export function PrimaryCta({
   variant = "primary",
   size = "default",
   className = "",
+  short = false,
 }: PillProps) {
   return (
     <a
-      href={CAL_URL}
-      rel="noopener noreferrer"
+      href={APPLY_PATH}
       className={`${pillBase} ${pillSize[size]} ${pillVariant[variant]} ${className}`}
     >
-      {CTA_PRIMARY}
+      {short ? CTA_PRIMARY_SHORT : CTA_PRIMARY}
     </a>
   );
 }
 
-/** "Apply" → /apply (the application funnel), as an outline pill or a plain text link. */
+/** "Book a fit call" → CAL_URL, as an outline pill or a plain text link. */
 export function SecondaryCta({
   variant = "pill",
   className = "",
@@ -56,7 +58,7 @@ export function SecondaryCta({
       ? `${textLink} ${className}`
       : `${pillBase} ${pillSize.default} ${pillVariant.secondary} ${className}`;
   return (
-    <a href={APPLY_PATH} className={cls}>
+    <a href={CAL_URL} rel="noopener noreferrer" className={cls}>
       {CTA_SECONDARY}
     </a>
   );
