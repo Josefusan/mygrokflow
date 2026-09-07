@@ -1,23 +1,60 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
 export const EYEBROW =
-  "AI lead generation for boutique B2B recruiting and staffing firms";
+  "AI lead generation for boutique recruiting and staffing firms";
 
 export const HEADLINE =
-  "Stop being your firm's entire outbound department. Get hiring managers with live reqs booked on your calendar every week.";
+  "You are the best BD rep your firm has. That is the problem.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "We install the client-outbound system your firm never had: lists, messaging, sequences, reply handling, and calendar handoff. Built on the ATS and tools you already run, live in weeks. Your recruiters recruit. You get your week back.";
+  "Every job order you fill pulls you off outreach. Every quiet month puts you back on it. We install the client-outbound system that runs while you're busy: the list, the cold email, the LinkedIn note, the follow-up, the reply, and the intake call on your calendar. Your recruiters recruit. You get your firm back.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Agent-agnostic AI lead generation. Implementation included. Measured in job orders, not prompts.";
-export const AGNOSTIC_LINE =
-  "Most boutique recruiting firms don't have a candidate problem. They have an owner who is still the entire client-outbound system. We replace that: lists, messaging, sequences, reply handling, and the CRM/ATS and calendar handoff, built agent-agnostic on whichever models and tools win, not whatever's trending this week.";
+  "Measured in intake calls and job orders, not emails sent. Implementation included.";
+// Statement lead: the 360 trap, one idea per paragraph.
+export const STATEMENT_LEAD = [
+  "Here's what a 360 desk does to a boutique firm.",
+  "One person owns the clients and the candidates. Outreach happens in the gaps. The gaps close the second a search heats up.",
+  "Client outreach is the first thing dropped and the slowest thing restarted. We call that the 360 trap.",
+  "I'm sorry to say it this plainly, but most firms in the trap don't have a candidate problem. They have an owner who is still the entire client-outbound system.",
+  "We replace that system. Not the relationship, not the brief, not the close. Those stay yours. We replace the part that only happens when you're not busy, so it happens every day.",
+] as const;
+
+export const AUDIENCE_HEADING = "Here's who we work best with";
+
+export const MAYBE_LADDER = [
+  "Maybe you're the one still writing every first-touch at night, after the searches are done.",
+  "Maybe you hired a BDM, paid them for six months, and got two job orders.",
+  "Maybe you paid a lead-gen agency, got a spreadsheet of emails sent, and eight meetings that went nowhere.",
+  "Maybe three clients carry the firm and you know exactly what happens if one goes quiet.",
+  "Maybe your recruiters are great once the job order lands, and it is still on you to land it.",
+] as const;
+export const MAYBE_CLOSE =
+  "If none of that sounds like you, this is not for you. If it does, keep reading.";
+
+export const WANTS = [
+  "You want hiring managers with live reqs on your calendar every week, whether you were free that week or not.",
+  "You want your recruiters recruiting and your name on the brief, not on the sequence.",
+  "You want it built on the ATS and tools you already run, not another platform to log into.",
+] as const;
+export const DO_NOT_WANTS = [
+  "You do not want a $99 chatbot.",
+  "You do not want your LinkedIn restricted because a server was sending while you slept.",
+  "You do not want a hiring manager in your niche to get a message from your firm that reads like every other recruiter's.",
+] as const;
+
+export const HONEST_NUMBER =
+  "Cold reply rates in this industry run 3 to 5 percent. We don't pretend otherwise. What we do is make sure that 3 to 5 percent lands on your calendar with context attached, that the other 95 never hear from you twice by accident, and that the follow-up goes to eight touches where most reps stop at two. We measure in intake calls and job orders. Emails sent is not a number we report.";
+
+export const SELECTIVITY_CLOSE =
+  "We take on a small number of firms at a time. Not because we're precious about it, but because this is built by hand on your stack, and that takes our attention. So let's keep this simple. Book a call. We'll look at your outbound and tell you exactly what we'd build. You're under no obligation after that.";
+
+export const APHORISM = "Pipeline is outreach that happens while you're busy.";
 export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
 export const CTA_PRIMARY = "Book a call";
@@ -57,6 +94,14 @@ export const FAQS = [
     a: "The ones you already run: Bullhorn, Loxo, Crelate, JobAdder, Vincere, and HubSpot or Pipedrive on the CRM side; LinkedIn Sales Navigator, Apollo, and Clay for lists and enrichment; your email sending stack; X (formerly Twitter); and Cal.com or Calendly for booking. We connect agents through native APIs and MCP, so nothing gets re-platformed.",
   },
   {
+    q: "Will this get my LinkedIn restricted or my domain flagged?",
+    a: "No. LinkedIn is not banning outreach. It is banning unattended servers running your account. Our LinkedIn and X messages are drafted by the system and sent from your own session on a human-paced schedule with daily caps. Email runs on warmed sending domains separate from your main one, with volume limits and stop-on-reply. If a channel's rules change, the system changes with them.",
+  },
+  {
+    q: "My niche is relationship-based. Won't AI outreach sound generic?",
+    a: "It would if it were generic. Every first-touch is written from the hiring manager's actual open req, your relevant placements, and the signal that triggered the message (a repost, a funding round, a leadership change). The system earns the intake call. The relationship, the brief, and the close stay with you.",
+  },
+  {
     q: "Is my data secure when you integrate AI?",
     a: "Yes. Every automation runs on scoped, least-privilege access with your data encrypted in transit and at rest, full audit trails, and human approval on anything destructive, so adding AI never widens your attack surface.",
   },
@@ -69,8 +114,8 @@ export const NEWSLETTER = {
 
 export const AUDIENCE = [
   {
-    title: "Owners & managing partners",
-    body: "You're great once you have the job order. You're still the entire client-outbound system.",
+    title: "Owners and managing partners",
+    body: "You are good at this. Everyone says the firm is doing well. You're grateful, and you want it to grow past your own calendar.",
   },
   {
     title: "Heads of BD",
@@ -78,14 +123,14 @@ export const AUDIENCE = [
   },
   {
     title: "Firms of 2 to 25 recruiters",
-    body: "Contingency or retained, selling into employers. Enough placements to prove it works, not enough hands to run outbound every day.",
+    body: "Contingency or retained, selling into employers. Enough placements to prove it works. Not enough hands to run outbound every day.",
   },
 ] as const;
 
 export const NOT_FOR = [
   "$99 chatbot shoppers",
   "mega RPO procurement",
-  "candidate-spam-only shops",
+  "candidate-spam shops",
   "deck collectors",
 ] as const;
 
