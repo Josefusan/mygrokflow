@@ -8,7 +8,7 @@ export const HEADLINE =
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "Every job order you fill pulls you off outreach. Every quiet month puts you back on it. We install the client-outbound system that runs while you're busy: the list, the cold email, the LinkedIn note, the follow-up, the reply, and the intake call on your calendar. Your recruiters recruit. You get your firm back.";
+  "Every job order you fill pulls you off outreach. Every quiet month puts you back on it. We install the outbound system that runs while you're busy, from cold email to a booked intake call. Your recruiters recruit. You get your firm back.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
