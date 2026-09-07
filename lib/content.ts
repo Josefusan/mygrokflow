@@ -18,11 +18,9 @@ export const AGNOSTIC_TAG =
   "AI lead generation for recruiting firms. Measured in intake calls and job orders, not emails sent.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "Here's the gap in most boutique recruiting firms.",
-  "One person owns the clients and the candidates. Outreach happens in the gaps, and the gaps close the second a search heats up. We call that the 360 trap.",
-  "We fill it with AI automation for client lead generation, built on the ATS and tools you already run. The system earns the intake call. The relationship, the brief, and the close stay yours.",
-  "Three steps. Bring the work. Show us the stack. We build the system and hand you a job-order pipeline that runs without you.",
-  "So let's keep this simple. Book a call. We'll look at your outbound and tell you exactly what we'd build. No obligation after that.",
+  "Most boutique recruiting firms have the same gap: the owner is the only one doing client outreach, and it stops the moment a search gets busy.",
+  "We fill that gap with AI automation. It finds hiring managers, writes the outreach, follows up, and books the intake call. You keep the relationship and the close.",
+  "Bring the work, show us your stack, and we build it. Book a call and we'll tell you exactly what we'd build. No obligation.",
 ] as const;
 
 export const AUDIENCE_HEADING = "Here's who we work best with";
