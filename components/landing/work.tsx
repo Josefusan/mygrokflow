@@ -4,16 +4,17 @@ import {
   SECURITY_NOTE,
   SYSTEMS,
   WORK_HEADING,
-  WORK_NOTE,
   WORK_STACK_NOTE,
 } from "@/lib/content";
+import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-// One system, three cards, in the order the work happens.
+// Every card is client-outbound lead gen, BDR, or sales ops for boutique B2B
+// recruiting firms; SYSTEMS is already in carousel order with the flagships first.
 const ITEMS: readonly WorkItem[] = SYSTEMS;
 
-/** Section 003. The three parts of the client-outbound system we install. */
+/** Section 003. Lead-generation systems for recruiting firms in a sliding carousel. */
 export function Work() {
   return (
     <section
@@ -21,7 +22,7 @@ export function Work() {
       className="relative z-[1] scroll-mt-[70px] bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={3} className="mb-5" />
-      <SectionHead heading={WORK_HEADING} note={WORK_NOTE} tone="panel" />
+      <SectionHead heading={WORK_HEADING} note={PROMISE} tone="panel" />
 
       <FadeUp delay={0.35}>
         <WorkCarousel items={ITEMS} />

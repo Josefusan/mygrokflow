@@ -127,12 +127,14 @@ export function SplitText({
   const words = text.split(" ");
 
   return (
-    <span className={className} style={style}>
+    <span
+      className={className}
+      style={{ display: "flex", flexWrap: "wrap", gap: "0.25em", ...style }}
+    >
       {words.map((word, i) =>
         reduce ? (
           <span key={`${word}-${i}`} className={wordClassName}>
             {word}
-            {i < words.length - 1 ? " " : ""}
           </span>
         ) : (
           <motion.span
@@ -145,7 +147,6 @@ export function SplitText({
             transition={{ duration, delay: baseDelay + i * stagger, ease: EASE }}
           >
             {word}
-            {i < words.length - 1 ? " " : ""}
           </motion.span>
         )
       )}

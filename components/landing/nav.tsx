@@ -1,6 +1,6 @@
 import { FadeUp } from "@/components/motion/fade-up";
 import { CTA_SECONDARY } from "@/lib/content";
-import { CAL_URL, SITE_NAME } from "@/lib/site";
+import { APPLY_PATH, SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 
@@ -44,12 +44,12 @@ export function LandingNav() {
 
       <div className="flex items-center gap-6">
         <FadeUp delay={0.3} className="max-[900px]:hidden">
-          <a href={CAL_URL} rel="noopener noreferrer" className={navLink}>
+          <a href={APPLY_PATH} className={navLink}>
             {CTA_SECONDARY}
           </a>
         </FadeUp>
         <FadeUp delay={0.35}>
-          <PrimaryCta size="compact" short />
+          <PrimaryCta size="compact" />
         </FadeUp>
       </div>
     </nav>

@@ -1,109 +1,84 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
 export const EYEBROW =
-  "Client outbound for boutique recruiting and staffing firms";
+  "AI lead generation for boutique recruiting and staffing firms";
 
 export const HEADLINE =
-  "You are the best BD rep your firm has. That is the problem.";
+  "We implement AI automation with human-level quality, so your recruiting firm lands more job orders without you running the outreach yourself.";
 
-// Hero-only supporting line (the global PROMISE still runs in the footer).
+// Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "You're already the closer once a hiring manager is on the phone. The firm still bottoms out when that calendar depends on you finding who's hiring and booking the meeting yourself. We install the client-outbound system that runs while you're busy: cold email, LinkedIn, follow-ups, and intake calls on your calendar. Your recruiters recruit. You get your firm back.";
+  "Cold email, LinkedIn notes, follow-ups, and intake calls booked straight to your calendar, built on the ATS you already run. Your recruiters recruit. Hiring managers keep booking.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
+export const AUDIENCE_LINE =
+  "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Measured in intake calls and job orders, not emails sent. Implementation included.";
-
-// CTAs. Primary = Apply (the $500 diagnostic). Secondary = a fit call.
-export const CTA_PRIMARY = "Apply: $500 diagnostic";
-export const CTA_PRIMARY_SHORT = "Apply";
-export const CTA_SECONDARY = "Book a fit call";
-
-// Statement (section 002): the 360 trap.
+  "AI lead generation for recruiting firms. Measured in intake calls and job orders, not emails sent.";
+// Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "Here's what a 360 desk does to a boutique firm.",
-  "One person owns the clients and the candidates. Outreach happens in the gaps. The gaps close the second a search heats up. Client outreach is the first thing dropped and the slowest thing restarted.",
-  "We call that the 360 trap. Most firms don't have a candidate problem. They have an owner who is still the entire client-outbound system.",
-  "We fill that gap with a client-outbound system that finds companies actively hiring and books the intake call, while your recruiters recruit. You keep the relationship and the close.",
-  "More candidates won't fix a quiet book. Hiring-manager conversations will.",
+  "Most boutique recruiting firms have the same gap: the owner is the only one doing client outreach, and it stops the moment a search gets busy.",
+  "We fill that gap with AI automation. It finds hiring managers, writes the outreach, follows up, and books the intake call. You keep the relationship and the close.",
+  "Bring the work, show us your stack, and we build it. Book a call and we'll tell you exactly what we'd build. No obligation.",
 ] as const;
 
 export const AUDIENCE_HEADING = "Here's who we work best with";
 
-export const MAYBE_LADDER = [
-  "Maybe you're the one who still writes every first-touch, at night, after the searches are done.",
-  "Maybe you hired a BDM, paid them for six months, and got two job orders.",
-  "Maybe you paid a lead-gen agency, got a spreadsheet of emails sent, and eight meetings that went nowhere.",
-  "Maybe three clients carry the firm and you know exactly what happens if one of them goes quiet.",
-  "Maybe your recruiters are great once the job order lands, and it is still on you to land it.",
-] as const;
-export const MAYBE_CLOSE =
-  "If none of that sounds like you, this is not for you. If it does, keep reading.";
-
-export const WANTS = [
-  "You want hiring managers with live reqs on your calendar every week, whether you were free that week or not.",
-  "You want your recruiters recruiting and your name on the brief, not on the sequence.",
-  "You want this built on the ATS and tools you already run, not another platform to log into.",
-] as const;
-export const DO_NOT_WANTS = [
-  "You do not want a $99 chatbot.",
-  "You do not want your LinkedIn restricted because a server was sending while you slept.",
-  "You do not want a hiring manager in your niche to get a message from your firm that reads like every other recruiter's.",
-] as const;
-
-export const SELECTIVITY_CLOSE =
-  "We take on a small number of firms at a time, not because we are precious about it, but because a system like this is built by hand on your stack, and that takes our attention. So let's keep this simple. Apply for the $500 diagnostic. We'll look at your outbound and tell you exactly what we'd build. You're under no obligation after that.";
-
 export const APHORISM = "Pipeline is outreach that happens while you're busy.";
+export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
-export const RATES_NOTE =
-  "Apply for the $500 diagnostic to see what fits. No discounts.";
+export const CTA_PRIMARY = "Book a call";
+export const CTA_SECONDARY = "Apply";
 
-export const WORK_HEADING = "What we install";
-export const WORK_NOTE =
-  "One client-outbound system. Not a product wall. We take the painful owner-as-BD loop and turn it into a job-order pipeline that runs without you.";
+export const WORK_HEADING = "What we build";
 export const PROCESS_HEADING = "Our process";
 export const RATES_HEADING = "Rates";
 export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
-  "Client outbound for boutique recruiting firms: how it works, who it's for, and how we handle LinkedIn, domains, and your data.";
+  "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
 export const SECTION_COUNT = 6;
 
-// Honest Q&A. Doubles as on-page content and FAQPage structured data.
+// Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
+// data, so searches around AI lead generation for recruiters, Grok, xAI, and X
+// surface the site.
 export const FAQS = [
   {
     q: "What is MyGrokFlow?",
-    a: "Done-for-you systems that replace the owner-as-outbound gap in boutique recruiting firms with a job-order pipeline: one that finds companies actively hiring, reaches the hiring manager, and books the intake call on your calendar while your recruiters recruit. Implementation included.",
+    a: "MyGrokFlow is an AI automation agency that builds AI lead generation systems for boutique B2B recruiting and staffing firms. We take the client-side outbound the owner still runs by hand (finding hiring managers, messaging them, following up, and booking calls) and turn it into a system that runs without you, implementation included.",
   },
   {
     q: "Who is this for?",
-    a: "Owners, managing partners, and heads of BD at contingency or retained recruiting and staffing firms with roughly 2 to 25 recruiters, selling into employers. You are great once you have the job order. The pain is landing enough of them without living in LinkedIn yourself.",
+    a: "Contingency and retained recruiting firms with roughly 2 to 25 recruiters, selling into employers, where the owner, managing partner, or head of BD still owns the job-order pipeline. If you are great once you have the job order and the pain is getting enough of the right hiring managers talking to you, this is built for you.",
   },
   {
     q: "Is this candidate sourcing or client outbound?",
-    a: "Client outbound only. We build the system that wins job orders: hiring-manager lists, personalized cold email and LinkedIn outreach, follow-ups, reply handling, and the handoff into your ATS and calendar. We do not build candidate-spam machines.",
+    a: "Client outbound. We build the system that wins job orders: target employer and hiring-manager lists, personalized email, LinkedIn, and X outreach, hiring-signal triggers, reply handling, and the handoff into your ATS or CRM and calendar. We do not build candidate-spam machines.",
+  },
+  {
+    q: "Do you build on Grok and xAI models?",
+    a: "Yes. MyGrokFlow is agent-agnostic. We build with frontier models including Grok, the model from xAI (Elon Musk's AI company), alongside other leading LLMs, and we pick the best model and route for each task. If Grok is the optimal engine for your outbound we ship on Grok; if another model wins, we use that.",
+  },
+  {
+    q: "Which ATS, CRM, and outreach tools do you work with?",
+    a: "The ones you already run: Bullhorn, Loxo, Crelate, JobAdder, Vincere, and HubSpot or Pipedrive on the CRM side; LinkedIn Sales Navigator, Apollo, and Clay for lists and enrichment; your email sending stack; X (formerly Twitter); and Cal.com or Calendly for booking. We connect agents through native APIs and MCP, so nothing gets re-platformed.",
   },
   {
     q: "I've paid for lead generation before and got junk meetings. Why is this different?",
-    a: "We measure intake calls and job orders, not emails sent. The $500 diagnostic maps your niche, your best clients, and your current BD motion before any retainer, so the target list and the angles are yours, not a generic template. If the diagnostic says this won't work for your desk, we tell you that instead.",
+    a: "Cold reply rates in this industry run 3 to 5 percent. We don't pretend otherwise. What we do is make sure that 3 to 5 percent lands on your calendar with context attached, that the other 95 never hear from you twice by accident, and that the follow-up goes to eight touches where most reps stop at two. We measure in intake calls and job orders. Emails sent is not a number we report.",
   },
   {
     q: "Will this get my LinkedIn restricted or my domain flagged?",
-    a: "The risk is real, so we design around it. LinkedIn restricts unattended servers running accounts, not people doing outreach. LinkedIn and X messages are drafted by the system and sent from your own session on a human-paced schedule with daily caps. Email runs on warmed sending domains separate from your main one, with volume limits and stop-on-reply. If a channel's rules change, the system changes with them.",
+    a: "No. LinkedIn is not banning outreach. It is banning unattended servers running your account. Our LinkedIn and X messages are drafted by the system and sent from your own session on a human-paced schedule with daily caps. Email runs on warmed sending domains separate from your main one, with volume limits and stop-on-reply. If a channel's rules change, the system changes with them.",
   },
   {
-    q: "My niche is relationship-based. Won't this sound generic?",
+    q: "My niche is relationship-based. Won't AI outreach sound generic?",
     a: "It would if it were generic. Every first-touch is written from the hiring manager's actual open req, your relevant placements, and the signal that triggered the message (a repost, a funding round, a leadership change). The system earns the intake call. The relationship, the brief, and the close stay with you.",
   },
   {
-    q: "Is my data secure?",
-    a: "Yes. Every automation runs on scoped, least-privilege access with your data encrypted in transit and at rest, full audit trails, and human approval on anything destructive.",
-  },
-  {
-    q: "Which models do you build on?",
-    a: "Whichever wins for the task. We are agent-agnostic and build on frontier models including Grok from xAI alongside other leading LLMs.",
+    q: "Is my data secure when you integrate AI?",
+    a: "Yes. Every automation runs on scoped, least-privilege access with your data encrypted in transit and at rest, full audit trails, and human approval on anything destructive, so adding AI never widens your attack surface.",
   },
 ] as const;
 
@@ -154,82 +129,138 @@ export const PROCESS = [
   {
     n: "03",
     title: "We build the system.",
-    body: "The client-outbound loop end to end: a job-order pipeline that runs without you.",
+    body: "We automate the client-outbound loop end to end and hand you a job-order pipeline that runs without you.",
   },
 ] as const;
 
-// The three cards in "What we install". One system, three parts, in the order
-// the work happens: find who's hiring, reach them, book the intake call.
+// Every card is client-side lead generation, BDR, or sales ops for boutique
+// B2B recruiting and staffing firms. Order = carousel order; the flagships
+// lead. `shows` is the optional proof line rendered under the description.
 export const SYSTEMS = [
   {
-    title: "Hiring-manager lists & signal radar",
-    body: "Employers in your niche and the people who own the req: enriched, verified, and deduped against your ATS, past clients, and active sequences. Watches job posts, funding, headcount, leadership changes, and reposted reqs, then queues outreach while the search is still open.",
-    media: "screening",
-  },
-  {
-    title: "Cold email + LinkedIn & X outbound",
-    body: "Personalized first-touches and follow-ups written from your placements and their open reqs. Email on warmed domains with stop-on-reply. LinkedIn and X drafted in your voice on a human-paced schedule. You show up for the conversations, not the grind.",
+    title: "AI Job-Order Lead Generation",
+    body: "Finds the hiring managers who match your niche, qualifies them, and books them straight onto your calendar. A client pipeline that fills while your recruiters recruit, not another list for the owner to work by hand.",
     media: "leadgen",
   },
   {
-    title: "Reply triage & calendar handoff",
-    body: "Reads every reply, separates interested from out-of-office and not-now, answers the easy questions, and books interested hiring managers onto your calendar with account context attached. You keep the relationship, the brief, and the close.",
+    title: "AI Email Outbound to Hiring Managers",
+    body: "Cold email that runs itself: builds the list, writes personalized sequences from your placements and their open reqs, sends and follows up on autopilot, keeps the domain healthy, and books replies onto your calendar.",
+    media: "leadgen",
+  },
+  {
+    title: "LinkedIn & X Outbound, Without Living In It",
+    body: "Drafts personalized connection notes, first-touches, and follow-ups in your voice, queues them for one-click send, and logs every reply to your CRM, so you show up on LinkedIn for the conversations, not the grind.",
+    media: "leadgen",
+  },
+  {
+    title: "AI BDR Team for Recruiting Firms",
+    body: "A team of outbound agents that researches target employers, writes the first-touch, runs the follow-up across channels, and books qualified intake calls with hiring managers who have budget and a req.",
+    media: "leadgen",
+  },
+  {
+    title: "Hiring-Signal Radar",
+    body: "Watches job postings, funding rounds, headcount growth, leadership changes, and reqs reposted for the third time, then triggers outreach the day the signal fires. You reach the hiring manager while the search is still open.",
+    media: "screening",
+  },
+  {
+    title: "Target Employer & Hiring-Manager Lists",
+    body: "Builds and refreshes lists of employers in your niche and the people who actually own the req, enriched and verified, deduped against your ATS, past clients, and anyone already in sequence.",
+    media: "knowledge",
+  },
+  {
+    title: "Reply Triage & Calendar Handoff",
+    body: "Reads every reply, separates interested from out-of-office and not-now, answers the easy questions, and books the interested ones onto your calendar with the account context attached.",
     media: "support",
+  },
+  {
+    title: "Job-Order Pipeline & ATS Hygiene",
+    body: "Keeps Bullhorn, Loxo, Crelate, or your CRM honest: logs every touch, moves stages, dedupes contacts, and flags BD deals and job orders going cold before they die quietly.",
+    media: "crm",
+  },
+  {
+    title: "Multi-Channel Sequencing",
+    body: "Email, LinkedIn, X, and call tasks in one sequence per account, with timing, throttling, and stop-on-reply built in, so no hiring manager gets hit twice and none get forgotten.",
+    media: "ops",
+  },
+  {
+    title: "Dormant Client Re-engagement",
+    body: "Works your past clients and the candidates you placed who are now hiring managers themselves: picks the right moment, drafts the note, and books the reconnect.",
+    media: "reporting",
+  },
+  {
+    title: "Placement-to-Referral Loop",
+    body: "Turns every placement into the next job order: check-ins at 30 and 90 days, a referral ask at the right moment, and expansion into other teams at the same employer.",
+    media: "leadgen",
+  },
+  {
+    title: "Inbound Job-Order Receptionist",
+    body: "Answers inbound calls and messages from hiring managers 24/7, captures the req and urgency, and books the intake call, so no job order lands in voicemail at 6pm on a Friday.",
+    media: "support",
+  },
+  {
+    title: "Proposal & Fee-Agreement Drafting",
+    body: "Drafts the proposal, terms, and fee agreement from the intake-call notes, sends it for signature, and chases it until it is signed.",
+    media: "content",
+  },
+  {
+    title: "BD Reporting & Fee Forecast",
+    body: "Replies, meetings booked, job orders opened, fill rate, and forecast fees, in one weekly report the owner reads instead of builds.",
+    media: "reporting",
   },
 ] as const;
 
 export const WORK_STACK_NOTE =
-  "Built on the ATS and CRM you already run (Bullhorn, Loxo, Crelate, JobAdder, Vincere, HubSpot, Pipedrive), plus Sales Navigator, Apollo, or Clay for lists, your email stack, X, and Cal.com or Calendly, connected through native APIs and MCP.";
+  "Behind every build is hands-on work with the tools recruiting firms already run: ATS and CRM platforms like Bullhorn, Loxo, Crelate, JobAdder, Vincere, HubSpot, and Pipedrive; list and enrichment tools like LinkedIn Sales Navigator, Apollo, and Clay; your email sending stack and X (formerly Twitter); and booking systems like Cal.com and Calendly. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
 
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
-  "Scoped, least-privilege access with no shared logins, encryption in transit and at rest, full audit trails, and human approval on anything destructive.";
+  "Every automation runs on scoped, least-privilege access (no shared logins, no standing keys), with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
 
+// title/included/excluded are the original copy, unchanged.
 // eyebrow/price/suffix split the title for the card header layout.
 export const RATES = [
   {
     title: "$500 audit (one-time)",
-    eyebrow: "One-time diagnostic",
+    eyebrow: "One-time",
     price: "$500",
     suffix: "audit",
     included: [
-      "Your niche and current BD motion on the table",
-      "Sample hiring-company and hiring-manager list logic",
-      "Sequence angles for one specialty",
-      "Written go/no-go and which monthly lane fits",
+      "One painful workflow on the table",
+      "Written report of what to automate",
+      "Which monthly lane fits, if any",
     ],
     excluded: [
-      "A live, always-on pipeline",
+      "A live build",
       "Monthly care",
-      "Guaranteed meetings from the audit alone",
+      "A booked calendar from this card",
     ],
   },
   {
     title: "$2,000/mo",
-    eyebrow: "Boutique starter, one vertical",
+    eyebrow: "Monthly",
     price: "$2,000",
     suffix: "/mo",
     included: [
-      "One done-for-you client-outbound lane kept running",
-      "Lists plus email and LinkedIn touches",
-      "Reply triage toward intake calls",
-      "Implementation included, ongoing fixes, async support",
+      "One recurring workflow kept running without you",
+      "Implementation included (not a prompt pack)",
+      "Ongoing fixes inside that lane",
+      "Async support on the live system",
     ],
     excluded: [
-      "Multi-specialty or multi-desk sprawl",
       "A second unrelated workflow",
       "A product you resell",
-      "On-site or embedded team time",
+      "Unlimited new projects",
+      "On-site / embedded team time",
     ],
   },
   {
     title: "$7,500/mo",
-    eyebrow: "Target seat",
+    eyebrow: "Monthly",
     price: "$7,500",
     suffix: "/mo",
     included: [
-      "A larger or multi-step client-outbound loop (or two tightly linked systems)",
-      "Deeper stack integration across the tools you already pay for",
+      "A larger or multi-step loop (or two tightly linked systems)",
+      "Deeper stack integration across tools you already pay for",
       "Fuller handoff",
       "Ongoing care in that scope",
     ],
@@ -242,19 +273,19 @@ export const RATES = [
   },
   {
     title: "$9,500/mo",
-    eyebrow: "Target seat",
+    eyebrow: "Monthly",
     price: "$9,500",
     suffix: "/mo",
     included: [
-      "Several loops in one BD function kept running",
-      "Deepest stack we'll take",
+      "Several loops in one function kept running",
+      "Deepest stack we’ll take",
       "Fuller docs",
       "Priority async on those systems",
     ],
     excluded: [
-      "A product you resell",
+      "Building a product you resell",
       "Embedding a team",
-      "Unlimited company-wide revisions",
+      "Unlimited revisions across the company",
       "Training programs",
     ],
   },
