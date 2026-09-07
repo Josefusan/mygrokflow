@@ -4,7 +4,7 @@ export const EYEBROW =
   "AI lead generation for boutique recruiting and staffing firms";
 
 export const HEADLINE =
-  "We implement AI automation with human-level quality, so your firm lands more job orders without running the outreach yourself.";
+  "More job orders, without running the outreach yourself. We automate it with human-level quality.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
