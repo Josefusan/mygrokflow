@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · MyGrokFlow",
   },
   description:
-    "You are the best BD rep your firm has. That is the problem. MyGrokFlow installs the outbound system that runs while you're busy, from cold email to a booked intake call. AI lead generation for boutique B2B recruiting and staffing firms, agent-agnostic on frontier models including Grok (from xAI), implementation included.",
+    "Your recruiters fill the job orders. Landing them is still on you. MyGrokFlow builds the client outbound that keeps hiring managers booking intake calls with you, from cold email to a booked call, whether you had time that week or not. AI lead generation for boutique B2B recruiting and staffing firms, agent-agnostic on frontier models including Grok (from xAI), implementation included.",
   applicationName: "MyGrokFlow",
   category: "technology",
   keywords: [

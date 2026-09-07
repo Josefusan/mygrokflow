@@ -4,18 +4,18 @@ export const EYEBROW =
   "AI lead generation for boutique recruiting and staffing firms";
 
 export const HEADLINE =
-  "You are the best BD rep your firm has. That is the problem.";
+  "Your recruiters fill the job orders. Landing them is still on you.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "Every job order you fill pulls you off outreach. Every quiet month puts you back on it. We install the outbound system that runs while you're busy, from cold email to a booked intake call. Your recruiters recruit. You get your firm back.";
+  "Every search you win pulls you off client outreach. Every slow month puts you back on it. We build the outbound that keeps hiring managers booking intake calls with you, whether you had time that week or not. Your recruiters recruit. You stop being the pipeline.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Measured in intake calls and job orders, not emails sent. Implementation included.";
+  "AI lead generation for recruiting firms. Measured in intake calls and job orders, not emails sent.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
   "Here's the gap in most boutique recruiting firms.",
