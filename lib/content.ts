@@ -50,7 +50,7 @@ export const FAQS = [
   },
   {
     q: "Who is this for?",
-    a: "Contingency and retained recruiting firms with roughly 2 to 25 recruiters, selling into employers, where the owner, managing partner, or head of BD still owns the job-order pipeline. If you are great once you have the job order and the pain is getting enough of the right hiring managers talking to you, this is built for you.",
+    a: "Recruiting and staffing firms selling into employers, where the owner, managing partner, or head of BD still owns the job-order pipeline. If you are great once you have the job order and the pain is getting enough of the right hiring managers talking to you, this is built for you. Firm size does not matter, the need does.",
   },
   {
     q: "Is this candidate sourcing or client outbound?",
