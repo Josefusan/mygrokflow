@@ -8,14 +8,14 @@ export const HEADLINE =
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "Cold email, LinkedIn notes, follow-ups, and intake calls booked straight to your calendar, built on the ATS you already run. Your recruiters recruit. Hiring managers keep booking.";
+  "Cold email, LinkedIn notes, follow-ups, and qualified calls booked straight to your calendar, built on the tools you already run. Your team does the work only they can. Your pipeline keeps filling.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "Built for recruiting and staffing firms. Measured in booked calls and job orders, not emails sent.";
+  "Built for lead-driven teams, recruiting and staffing firms included. Measured in booked calls and closed deals, not emails sent.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
   "Most boutique recruiting firms have the same gap: the owner is the only one doing client outreach, and it stops the moment a search gets busy.",
