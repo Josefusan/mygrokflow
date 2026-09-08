@@ -7,6 +7,7 @@ import { GrokMark } from "./grok-mark";
 const LINKS = [
   ["Work", "#work"],
   ["Process", "#process"],
+  ["Example", "#case"],
   ["Rates", "#rates"],
   ["FAQ", "#faq"],
   ["Contact", "#contact"],

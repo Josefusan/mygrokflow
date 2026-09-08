@@ -12,7 +12,7 @@ export function Rates() {
       id="rates"
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
-      <Counter n={5} className="mb-5" />
+      <Counter n={6} className="mb-5" />
       <SectionHead
         heading={RATES_HEADING}
         note={RATES_NOTE}

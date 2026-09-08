@@ -38,7 +38,7 @@ export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
   "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 6;
+export const SECTION_COUNT = 7;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
 // data, so searches around AI lead generation for recruiters, Grok, xAI, and X
@@ -376,3 +376,40 @@ export const RATES = [
     excluded: [],
   },
 ] as const;
+
+// Section 005: an illustrative, honest case study. We do not have a client to
+// name yet, so this is a working model of one boutique recruiting desk, with
+// modeled target math (not guarantees). Framed plainly so it reads as an
+// example, never as a fabricated client result.
+export const CASE_LABEL = "Illustrative example, not a client";
+export const CASE_HEADING = "One recruiting desk, modeled end to end";
+export const CASE_INTRO =
+  "We would rather show you the honest version than a logo we do not have. So here is a working model: a boutique contingency firm, six recruiters, one vertical, where the owner is the only person doing client outreach and it only happens in the gaps between placements.";
+
+// Before / after the build.
+export const CASE_BEFORE_HEADING = "Before";
+export const CASE_BEFORE = [
+  "Owner runs client outreach in the cracks, a couple of hours a week when a search is not on fire.",
+  "New job orders come from referrals and the same handful of repeat clients.",
+  "Pipeline stalls the moment a big placement lands, then starts cold again.",
+] as const;
+
+export const CASE_AFTER_HEADING = "After we install the system";
+export const CASE_AFTER = [
+  "Target employer and hiring-manager lists rebuilt for the niche and refreshed weekly.",
+  "Cold email plus LinkedIn outreach in the owner's voice, sent and followed up on autopilot.",
+  "Every reply triaged, and interested hiring managers booked straight onto the calendar.",
+] as const;
+
+// Modeled monthly targets from the $500 audit, not guarantees.
+export const CASE_METRICS = [
+  { value: "1,200", label: "hiring-manager contacts researched, enriched, and verified each month" },
+  { value: "3 to 5%", label: "reply rate on cold outreach, the honest range, not an inflated one" },
+  { value: "10 to 15", label: "qualified intake calls booked onto the owner's calendar monthly" },
+  { value: "2 to 4", label: "net-new job orders a month, beyond the usual referrals" },
+] as const;
+
+export const CASE_DISCLAIMER =
+  "These are modeled targets from the $500 audit, not promises. Reply and booking rates move with your niche, list quality, and offer. We show you the math for your desk before you commit to anything.";
+export const CASE_CLOSE =
+  "The owner stops being the pipeline. The desk keeps filling while the team places.";
