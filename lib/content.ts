@@ -440,3 +440,4 @@ export const PLAYBOOK_ERROR =
   "Enter a valid email and we will hand it right over.";
 export const PLAYBOOK_FINE_PRINT =
   "One email, the playbook, and the occasional note on what is working. Unsubscribe anytime.";
+export const PLAYBOOK_POWERED = "Powered by Buttondown.";

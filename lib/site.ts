@@ -6,6 +6,11 @@ export const CAL_URL = "https://cal.com/mygrokflow-availability/15min";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
 export const PLAYBOOK_PDF = "/mygrokflow-operator-playbook.pdf";
+// Buttondown embed: posting the email here subscribes them to the newsletter
+// and triggers Buttondown's new-subscriber notification. No server key needed.
+export const BUTTONDOWN_EMBED_URL =
+  "https://buttondown.com/api/emails/embed-subscribe/MyGrokFlow";
+export const BUTTONDOWN_REFER_URL = "https://buttondown.com/refer/MyGrokFlow";
 export const PROMISE =
   "We take a painful recurring workflow and turn it into a system that runs without you.";
 

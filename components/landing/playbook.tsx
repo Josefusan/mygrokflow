@@ -14,8 +14,9 @@ import {
   PLAYBOOK_INTRO,
   PLAYBOOK_LABEL,
   PLAYBOOK_PLACEHOLDER,
+  PLAYBOOK_POWERED,
 } from "@/lib/content";
-import { PLAYBOOK_PDF } from "@/lib/site";
+import { BUTTONDOWN_EMBED_URL, BUTTONDOWN_REFER_URL, PLAYBOOK_PDF } from "@/lib/site";
 import { focusRing } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
@@ -39,10 +40,13 @@ export function Playbook() {
     }
     setState("submitting");
     try {
-      await fetch("/api/subscribe", {
+      // Subscribe them to the Buttondown newsletter (which also fires
+      // Buttondown's new-subscriber notification). no-cors keeps them on-page;
+      // the response is opaque but the subscription still registers.
+      await fetch(BUTTONDOWN_EMBED_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: value }),
+        mode: "no-cors",
+        body: new URLSearchParams({ email: value }),
       });
     } catch {
       // Capture is best-effort; deliver the asset either way.
@@ -144,6 +148,15 @@ export function Playbook() {
               )}
             </form>
           )}
+
+          <a
+            href={BUTTONDOWN_REFER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-5 inline-flex text-[10px] uppercase tracking-[0.12em] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
+          >
+            {PLAYBOOK_POWERED}
+          </a>
         </FadeUp>
       </div>
     </section>
