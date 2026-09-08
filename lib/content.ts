@@ -239,6 +239,11 @@ export const SYSTEMS = [
     media: "content",
   },
   {
+    title: "Custom Scope & Pricing Agent",
+    body: "Turns a rough brief into a priced proposal in minutes: it interprets the client's requirements, breaks the work into a clear scope of deliverables and phases, and applies your rate card and margins to return a defensible quote you can send with confidence. The judgment of your best estimator, on demand, so nothing is underquoted and no opportunity waits days for a number.",
+    media: "fx",
+  },
+  {
     title: "Meeting Notes & CRM Auto-Logging",
     body: "Joins the call, transcribes it, writes the summary and next steps, updates the CRM, and drafts the follow-up email before the rep has left the meeting.",
     media: "reporting",
