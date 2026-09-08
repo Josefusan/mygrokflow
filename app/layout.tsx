@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · MyGrokFlow",
   },
   description:
-    "More job orders, without running the outreach yourself. We automate it with human-level quality. Cold email, LinkedIn notes, follow-ups, and intake calls booked straight to your calendar, built on the ATS you already run. AI lead generation for boutique B2B recruiting and staffing firms, agent-agnostic on frontier models including Grok (from xAI), implementation included.",
+    "More pipeline, less busywork. AI automation for lead generation, sales operations, and customer support, built with human-level quality for boutique B2B recruiting and staffing firms. Cold email, LinkedIn, follow-ups, and booked calls on the tools you already run, agent-agnostic on frontier models including Grok (from xAI), implementation included.",
   applicationName: "MyGrokFlow",
   category: "technology",
   keywords: [
@@ -52,6 +52,8 @@ export const metadata: Metadata = {
     "Bullhorn automation",
     "Loxo automation",
     "recruiting sales ops",
+    "AI sales operations",
+    "AI customer support automation",
   ],
   authors: [{ name: "MyGrokFlow", url: "https://mygrokflow.com" }],
   creator: "MyGrokFlow",

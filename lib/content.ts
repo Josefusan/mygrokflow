@@ -1,10 +1,10 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
 export const EYEBROW =
-  "AI lead generation for boutique recruiting and staffing firms";
+  "AI automation for lead generation, sales operations, and customer support";
 
 export const HEADLINE =
-  "More job orders, without running the outreach yourself. We automate it with human-level quality.";
+  "More pipeline, less busywork. We automate it with human-level quality.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
@@ -15,7 +15,7 @@ export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
 export const AGNOSTIC_TAG =
-  "AI lead generation for recruiting firms. Measured in intake calls and job orders, not emails sent.";
+  "Built for recruiting and staffing firms. Measured in booked calls and job orders, not emails sent.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
   "Most boutique recruiting firms have the same gap: the owner is the only one doing client outreach, and it stops the moment a search gets busy.",
@@ -206,6 +206,21 @@ export const SYSTEMS = [
     title: "BD Reporting & Fee Forecast",
     body: "Replies, meetings booked, job orders opened, fill rate, and forecast fees, in one weekly report the owner reads instead of builds.",
     media: "reporting",
+  },
+  {
+    title: "AI Customer Support Agent",
+    body: "Answers, resolves, and escalates across email and chat in your voice, 24/7. Handles the repeat questions instantly and routes the rest to a human with full context attached, so response times drop and your team stops firefighting.",
+    media: "support",
+  },
+  {
+    title: "Sales Follow-Up & Nurture",
+    body: "Never lets a warm reply go cold: keeps every deal moving with timely, personalized follow-ups, answers questions, and books the next call, so the conversations you started actually close.",
+    media: "crm",
+  },
+  {
+    title: "Inbound Lead Qualification & Routing",
+    body: "Reads every inbound form, email, and DM, qualifies against your criteria, enriches the contact, and routes it to the right person or books the call, so no good lead sits unanswered.",
+    media: "triage",
   },
 ] as const;
 
