@@ -38,7 +38,7 @@ export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
   "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 7;
+export const SECTION_COUNT = 8;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
 // data, so searches around AI lead generation for recruiters, Grok, xAI, and X
@@ -418,3 +418,25 @@ export const CASE_DISCLAIMER =
   "These are modeled targets from the $500 audit, not promises. Reply and booking rates move with your niche, list quality, and offer. We show you the math for your desk before you commit to anything.";
 export const CASE_CLOSE =
   "The owner stops being the pipeline. The desk keeps filling while the team places.";
+
+// Section 006: the lead magnet. A free PDF in exchange for an email, delivered
+// on submit and captured to the list when the backend is configured.
+export const PLAYBOOK_LABEL = "Free download";
+export const PLAYBOOK_HEADING = "The Operator Playbook";
+export const PLAYBOOK_INTRO =
+  "The short version of how we do this: the automations we install, the order we install them in, and how a small team books more calls without adding headcount. Drop your email and it is yours, no call required.";
+export const PLAYBOOK_BULLETS = [
+  "The systems that fill a pipeline while your team stays on the work only they can do.",
+  "The sequence we build them in, so the first wins pay for the rest.",
+  "The honest math on reply rates and booked calls, not inflated promises.",
+] as const;
+export const PLAYBOOK_CTA = "Get the playbook";
+export const PLAYBOOK_PLACEHOLDER = "you@company.com";
+export const PLAYBOOK_DONE = "Your playbook is ready.";
+export const PLAYBOOK_DONE_NOTE =
+  "It opened in a new tab. If it did not, use the link below.";
+export const PLAYBOOK_DONE_LINK = "Download the Operator Playbook";
+export const PLAYBOOK_ERROR =
+  "Enter a valid email and we will hand it right over.";
+export const PLAYBOOK_FINE_PRINT =
+  "One email, the playbook, and the occasional note on what is working. Unsubscribe anytime.";

@@ -5,6 +5,7 @@ export const APPLY_PATH = "/apply";
 export const CAL_URL = "https://cal.com/mygrokflow-availability/15min";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
+export const PLAYBOOK_PDF = "/mygrokflow-operator-playbook.pdf";
 export const PROMISE =
   "We take a painful recurring workflow and turn it into a system that runs without you.";
 

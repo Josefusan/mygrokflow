@@ -8,6 +8,7 @@ const LINKS = [
   ["Work", "#work"],
   ["Process", "#process"],
   ["Example", "#case"],
+  ["Playbook", "#playbook"],
   ["Rates", "#rates"],
   ["FAQ", "#faq"],
   ["Contact", "#contact"],

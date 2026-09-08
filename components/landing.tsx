@@ -4,6 +4,7 @@ import { Faq } from "@/components/landing/faq";
 import { LandingFooter } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
 import { LandingNav } from "@/components/landing/nav";
+import { Playbook } from "@/components/landing/playbook";
 import { Process } from "@/components/landing/process";
 import { Rates } from "@/components/landing/rates";
 import { Statement } from "@/components/landing/statement";
@@ -20,6 +21,7 @@ export function Landing() {
         <Work />
         <Process />
         <CaseStudy />
+        <Playbook />
         <Rates />
         <Faq />
       </main>
