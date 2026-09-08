@@ -64,17 +64,21 @@ export function Rates() {
                   ))}
                 </ul>
 
-                <p className={`mt-5 ${label}`}>Not in</p>
-                <ul className="mt-2 grid gap-1.5">
-                  {rate.excluded.map((line) => (
-                    <li
-                      key={line}
-                      className="text-[13px] leading-[1.6] text-(--mgf-muted)"
-                    >
-                      {line}
-                    </li>
-                  ))}
-                </ul>
+                {rate.excluded.length > 0 && (
+                  <>
+                    <p className={`mt-5 ${label}`}>Not in</p>
+                    <ul className="mt-2 grid gap-1.5">
+                      {rate.excluded.map((line) => (
+                        <li
+                          key={line}
+                          className="text-[13px] leading-[1.6] text-(--mgf-muted)"
+                        >
+                          {line}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
 
                 <div className="mt-auto pt-7">
                   <PrimaryCta
