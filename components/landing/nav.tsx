@@ -10,6 +10,7 @@ const LINKS = [
   ["Example", "#case"],
   ["Playbook", "#playbook"],
   ["Rates", "#rates"],
+  ["Custom", "#custom"],
   ["FAQ", "#faq"],
   ["Contact", "#contact"],
 ] as const;

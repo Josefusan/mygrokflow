@@ -38,7 +38,7 @@ export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
   "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 8;
+export const SECTION_COUNT = 9;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
 // data, so searches around AI lead generation for recruiters, Grok, xAI, and X
@@ -441,3 +441,17 @@ export const PLAYBOOK_ERROR =
 export const PLAYBOOK_FINE_PRINT =
   "One email, the playbook, and the occasional note on what is working. Unsubscribe anytime.";
 export const PLAYBOOK_POWERED = "Powered by Buttondown.";
+
+// Section 008: the custom-build panel. Sits below the rate cards for the
+// situations the standard packages do not cover. Anchored by "Book a call".
+export const CUSTOM_LABEL = "Custom builds";
+export const CUSTOM_HEADING = "When your situation is one of a kind";
+export const CUSTOM_INTRO =
+  "The cards above cover what most teams need. Some workflows do not fit a template. When yours is niche, regulated, or built around a process only you run, we design the automation from the ground up, around how your business actually works.";
+export const CUSTOM_BULLETS = [
+  "We map the exact workflow that is costing you time and hands, then build the system that runs it end to end.",
+  "One bespoke automation or a connected set, wired into the tools, data, and rules you already work with.",
+  "Built for the edge cases: unusual approvals, sensitive data, industry constraints, the steps no off-the-shelf tool touches.",
+] as const;
+export const CUSTOM_CLOSE =
+  "Bring the messy, specific problem. On the call we will tell you plainly whether we can automate it, how we would build it, and what it takes.";

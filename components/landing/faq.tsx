@@ -24,7 +24,7 @@ export function Faq() {
         // Structured data for rich results; content mirrors the visible FAQ.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
       />
-      <Counter n={8} className="mb-5" />
+      <Counter n={9} className="mb-5" />
       <SectionHead heading={FAQ_HEADING} note={FAQ_NOTE} tone="panel" uppercase />
 
       <ul className="mx-auto grid max-w-[820px] gap-3">

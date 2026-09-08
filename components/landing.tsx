@@ -1,5 +1,6 @@
 import { BackgroundVideo } from "@/components/landing/background-video";
 import { CaseStudy } from "@/components/landing/case-study";
+import { CustomSolution } from "@/components/landing/custom-solution";
 import { Faq } from "@/components/landing/faq";
 import { LandingFooter } from "@/components/landing/footer";
 import { Hero } from "@/components/landing/hero";
@@ -23,6 +24,7 @@ export function Landing() {
         <CaseStudy />
         <Playbook />
         <Rates />
+        <CustomSolution />
         <Faq />
       </main>
       <LandingFooter />
