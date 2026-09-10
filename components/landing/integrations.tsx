@@ -82,7 +82,7 @@ export function Integrations() {
       id="stack"
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
-      <Counter n={9} className="mb-5" />
+      <Counter n={10} className="mb-5" />
       <SectionHead heading={STACK_HEADING} tone="panel" />
 
       <FadeUp delay={0.3} className="mgf-marquee flex flex-col gap-3">

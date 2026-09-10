@@ -28,13 +28,14 @@ export const CTA_PRIMARY = "Book a call";
 export const CTA_SECONDARY = "Apply";
 
 export const WORK_HEADING = "What we build";
+export const SYSTEM_HEADING = "How it works";
 export const PROCESS_HEADING = "Our process";
 export const RATES_HEADING = "Rates";
 export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
   "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 10;
+export const SECTION_COUNT = 11;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
 // data, so searches around AI lead generation for recruiters, Grok, xAI, and X
@@ -116,15 +117,68 @@ export const PROCESS = [
   },
 ] as const;
 
-// 30 marketable AI automations for any business, carousel order. Weighted to
-// lead generation and outbound BDR up top, then customer support, sales ops,
-// and internal operations. `media` selects a DIAGRAMS SVG; `shows` is an
-// optional proof line rendered under the description.
+// Section 004: the lead engine, stage by stage. The four stages every AI lead
+// generation system moves through, each paired with its on-brand diagram
+// (`media` selects a DIAGRAMS SVG). This is the model we build and run for you.
+export const SYSTEM_NOTE =
+  "From first click to booked call, the loop we build and run for you. Four stages, one engine.";
+export const SYSTEM_STAGES = [
+  {
+    n: "Stage 1",
+    title: "Create interest",
+    body: "Paid ads, content, and outbound put your offer in front of the right people and generate attention, so the top of the funnel never runs dry.",
+    media: "ads",
+  },
+  {
+    n: "Stage 2",
+    title: "Generate leads",
+    body: "Targeted offers and landing pages turn that attention into real leads: the right people raise their hand and submit their info.",
+    media: "leadgen",
+  },
+  {
+    n: "Stage 3",
+    title: "Automate appointment booking",
+    body: "AI agents contact every lead within seconds, day or night, qualify them against your criteria, and book the good ones straight onto your calendar.",
+    media: "calendar",
+  },
+  {
+    n: "Stage 4",
+    title: "Install backend systems",
+    body: "AI sales agents, workflow automation, and efficiency systems run behind the scenes, so the whole engine keeps turning without adding headcount.",
+    media: "ops",
+  },
+] as const;
+
+// Marketable AI automations for any business, in carousel order. The showcase
+// examples lead (BDR, paid ads, appointment booking, after-hours calls,
+// customer support), then lead gen, sales ops, and internal operations.
+// `media` selects a DIAGRAMS SVG; `shows` is an optional proof line rendered
+// under the description.
 export const SYSTEMS = [
   {
     title: "AI BDR Team",
     body: "A team of outbound agents that researches your accounts, writes the first touch, runs every follow-up across channels, and books qualified calls straight onto your calendar. A full-time SDR desk that never sleeps, for less than one hire.",
     media: "leadgen",
+  },
+  {
+    title: "AI Ad Campaign Manager",
+    body: "Launches, tests, and optimizes your paid ads across Google, Meta, and beyond: writes the copy and creative variations, shifts budget to what converts, and pauses what does not, so every dollar chases the lowest cost per booked appointment, day and night.",
+    media: "ads",
+  },
+  {
+    title: "AI Appointment Booking",
+    body: "Turns every call, form, and message into a confirmed appointment on your calendar. It answers the questions, offers real open slots, books the time, and sends the reminders, so your schedule fills itself without anyone playing phone tag.",
+    media: "calendar",
+  },
+  {
+    title: "After-Hours Call Answering",
+    body: "Answers every call the moment your front desk cannot: nights, weekends, lunch, and the busy stretches. Callers get a real conversation in your voice, their details are captured, and the appointment is booked before they hang up, so nothing lands in voicemail.",
+    media: "phone",
+  },
+  {
+    title: "AI Customer Support Agent",
+    body: "Answers, resolves, and escalates across email, chat, and web in your voice, 24/7. Handles the repeat questions instantly and hands the rest to a human with full context, so response times drop and your team stops firefighting.",
+    media: "support",
   },
   {
     title: "AI Lead Generation Machine",
@@ -190,11 +244,6 @@ export const SYSTEMS = [
     title: "Outbound Personalization at Scale",
     body: "Researches every prospect, their company, and their recent moves, then writes a first line that sounds hand-written, across thousands of contacts. The reply rates of a researcher, at the speed of software.",
     media: "content",
-  },
-  {
-    title: "AI Customer Support Agent",
-    body: "Answers, resolves, and escalates across email, chat, and web in your voice, 24/7. Handles the repeat questions instantly and hands the rest to a human with full context, so response times drop and your team stops firefighting.",
-    media: "support",
   },
   {
     title: "24/7 AI Receptionist",
@@ -363,39 +412,39 @@ export const RATES = [
 ] as const;
 
 // Section 005: an illustrative, honest case study. We do not have a client to
-// name yet, so this is a working model of one boutique recruiting desk, with
-// modeled target math (not guarantees). Framed plainly so it reads as an
-// example, never as a fabricated client result.
+// name yet, so this is a working model of one dental practice, with modeled
+// target math (not guarantees). Framed plainly so it reads as an example,
+// never as a fabricated client result.
 export const CASE_LABEL = "Illustrative example, not a client";
-export const CASE_HEADING = "One recruiting desk, modeled end to end";
+export const CASE_HEADING = "One dental practice, modeled end to end";
 
 // Before / after the build.
 export const CASE_BEFORE_HEADING = "Before";
 export const CASE_BEFORE = [
-  "Owner runs client outreach in the cracks, a couple of hours a week when a search is not on fire.",
-  "New job orders come from referrals and the same handful of repeat clients.",
-  "Pipeline stalls the moment a big placement lands, then starts cold again.",
+  "The front desk misses a third of inbound calls while chairside, and most callers never leave a voicemail.",
+  "Nights, weekends, and lunch go to an answering machine, so new-patient calls book with whoever picks up first.",
+  "No-shows and last-minute cancels leave chairs empty, and lapsed patients are never followed up.",
 ] as const;
 
 export const CASE_AFTER_HEADING = "After we install the system";
 export const CASE_AFTER = [
-  "Target employer and hiring-manager lists rebuilt for the niche and refreshed weekly.",
-  "Cold email plus LinkedIn outreach in the owner's voice, sent and followed up on autopilot.",
-  "Every reply triaged, and interested hiring managers booked straight onto the calendar.",
+  "An AI receptionist answers every call and message, day or night, in the practice's own voice.",
+  "New and returning patients are booked straight into the schedule, with insurance and reason-for-visit captured up front.",
+  "Automatic reminders and reactivation win back no-shows and lapsed patients before a chair sits empty.",
 ] as const;
 
 // Modeled monthly targets from the $500 audit, not guarantees.
 export const CASE_METRICS = [
-  { value: "1,200", label: "hiring-manager contacts researched, enriched, and verified each month" },
-  { value: "3 to 5%", label: "reply rate on cold outreach, the honest range, not an inflated one" },
-  { value: "10 to 15", label: "qualified intake calls booked onto the owner's calendar monthly" },
-  { value: "2 to 4", label: "net-new job orders a month, beyond the usual referrals" },
+  { value: "100%", label: "of inbound calls and messages answered, including nights and weekends" },
+  { value: "30 to 40%", label: "fewer no-shows once automated reminders and confirmations run" },
+  { value: "15 to 25", label: "new-patient appointments booked a month, beyond walk-ins and referrals" },
+  { value: "40+", label: "lapsed patients reactivated a month from the list you already own" },
 ] as const;
 
 export const CASE_DISCLAIMER =
-  "These are modeled targets from the $500 audit, not promises. Reply and booking rates move with your niche, list quality, and offer. We show you the math for your desk before you commit to anything.";
+  "These are modeled targets from the $500 audit, not promises. Answer, booking, and no-show rates move with your call volume, schedule, and offer. We show you the math for your practice before you commit to anything.";
 export const CASE_CLOSE =
-  "The owner stops being the pipeline. The desk keeps filling while the team places.";
+  "The front desk stops missing calls. The chairs stay full while the team treats patients.";
 
 // Section 006: the lead magnet. A free PDF in exchange for an email, delivered
 // on submit and captured to the list when the backend is configured.

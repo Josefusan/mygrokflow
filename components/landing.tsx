@@ -10,6 +10,7 @@ import { Playbook } from "@/components/landing/playbook";
 import { Process } from "@/components/landing/process";
 import { Rates } from "@/components/landing/rates";
 import { Statement } from "@/components/landing/statement";
+import { SystemFlow } from "@/components/landing/system-flow";
 import { Work } from "@/components/landing/work";
 
 export function Landing() {
@@ -21,6 +22,7 @@ export function Landing() {
         <Hero />
         <Statement />
         <Work />
+        <SystemFlow />
         <Process />
         <CaseStudy />
         <Playbook />

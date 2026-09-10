@@ -10,7 +10,7 @@ export function Process() {
       id="process"
       className="relative z-[1] flex min-h-svh scroll-mt-[70px] flex-col justify-center px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
-      <Counter n={4} className="mb-5" />
+      <Counter n={5} className="mb-5" />
       <SectionHead heading={PROCESS_HEADING} note={SUPPORT_LINE} tone="video" />
 
       <ol className="grid grid-cols-3 gap-5 max-[900px]:grid-cols-1">

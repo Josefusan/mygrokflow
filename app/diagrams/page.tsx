@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import {
+  AdsDiagram,
+  CalendarDiagram,
   CartDiagram,
   ContentDiagram,
   CrmDiagram,
@@ -7,6 +9,7 @@ import {
   KnowledgeDiagram,
   LeadGenDiagram,
   OpsDiagram,
+  PhoneDiagram,
   ReportingDiagram,
   RestockDiagram,
   ScreeningDiagram,
@@ -22,6 +25,9 @@ export const metadata: Metadata = {
 
 const ITEMS = [
   { key: "leadgen", title: "AI Lead Generation", Diagram: LeadGenDiagram },
+  { key: "ads", title: "Paid Ads Automation", Diagram: AdsDiagram },
+  { key: "calendar", title: "Appointment Booking", Diagram: CalendarDiagram },
+  { key: "phone", title: "After-Hours Call Answering", Diagram: PhoneDiagram },
   { key: "support", title: "AI Customer Service", Diagram: SupportDiagram },
   { key: "ops", title: "Ops & workflow automation", Diagram: OpsDiagram },
   { key: "reporting", title: "AI Reporting", Diagram: ReportingDiagram },
@@ -44,7 +50,7 @@ export default function DiagramLibrary() {
         Diagram library
       </p>
       <h1 className="mt-2 text-[clamp(26px,3vw,42px)] font-bold tracking-[-0.01em] text-(--mgf-text)">
-        Thirteen on-brand system diagrams
+        Sixteen on-brand system diagrams
       </h1>
       <p className="mt-3 max-w-[60ch] text-[14px] leading-[1.6] text-(--mgf-muted)">
         Same green / black language as the cards. The key next to each title is

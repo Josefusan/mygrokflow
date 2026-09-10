@@ -18,7 +18,7 @@ export function CustomSolution() {
       id="custom"
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
-      <Counter n={8} className="mb-5" />
+      <Counter n={9} className="mb-5" />
       <SectionHead heading={CUSTOM_HEADING} tone="panel" />
 
       <FadeUp

@@ -464,6 +464,110 @@ export function TradingDiagram() {
   );
 }
 
+/* ── 14. Paid ads automation ────────────────────────────────────────── */
+export function AdsDiagram() {
+  const creatives = [78, 120, 162];
+  return (
+    <Frame>
+      {creatives.map((y, i) => (
+        <g key={y}>
+          {/* ad creative: image tile */}
+          <rect x="28" y={y - 13} width="40" height="26" rx="4" stroke={STRUCT} strokeWidth="1.2" />
+          <circle cx="38" cy={y - 4} r="2.4" fill={ACCENT} fillOpacity="0.85" />
+          <path
+            d={`M31 ${y + 8} l7 -7 l5 4 l6 -5 l6 8`}
+            stroke={STRUCT}
+            strokeWidth="1.1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <Flow d={`M68 ${y} C 108 ${y}, 114 ${CY}, ${CX - 30} ${CY}`} delay={i * 0.28} opacity={0.6} />
+        </g>
+      ))}
+      {/* optimizer hub: ring + rising trend */}
+      <Ring />
+      <path
+        d={`M${CX - 12} ${CY + 8} L${CX - 3} ${CY - 2} L${CX + 3} ${CY + 3} L${CX + 12} ${CY - 8}`}
+        stroke={ACCENT}
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d={`M${CX + 12} ${CY - 8} h-6 m6 0 v6`}
+        stroke={ACCENT}
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Flow d={`M${CX + 30} ${CY} H 252`} />
+      {/* target = conversion */}
+      <circle cx="274" cy={CY} r="16" stroke={STRUCT} strokeWidth="1.2" />
+      <circle cx="274" cy={CY} r="9" stroke={STRUCT} strokeWidth="1.2" />
+      <circle cx="274" cy={CY} r="3" fill={ACCENT} className="mgf-pulse" />
+      <Labels left="CREATIVE" mid="OPTIMIZE" right="CONVERT" />
+    </Frame>
+  );
+}
+
+/* ── 15. Appointment booking ────────────────────────────────────────── */
+export function CalendarDiagram() {
+  const bubbles = [80, 120, 160];
+  return (
+    <Frame>
+      {bubbles.map((y, i) => (
+        <g key={y}>
+          <rect x="26" y={y - 12} width="44" height="24" rx="8" stroke={STRUCT} strokeWidth="1.2" />
+          {[37, 47, 57].map((dx) => (
+            <Dot key={dx} cx={dx} cy={y} r={1.9} delay={(i + dx) * 0.12} />
+          ))}
+          <Flow d={`M70 ${y} C 110 ${y}, 116 ${CY}, ${CX - 26} ${CY}`} delay={i * 0.28} opacity={0.6} />
+        </g>
+      ))}
+      <BotHead />
+      <Flow d={`M${CX + 28} ${CY} H 244`} />
+      {/* calendar with one open slot and one booked slot */}
+      <rect x="246" y="96" width="48" height="48" rx="6" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M246 110 H294" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M258 92 v8 M282 92 v8" stroke={INK} strokeWidth="1.4" strokeLinecap="round" />
+      <rect x="254" y="116" width="32" height="9" rx="2.5" stroke={STRUCT} strokeWidth="1.1" />
+      <rect x="254" y="129" width="32" height="10" rx="2.5" fill={ACCENT} fillOpacity="0.9" className="mgf-pulse" />
+      <path
+        d="M259 134 l3 3 l6 -6"
+        stroke="#0b0b0d"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Labels left="INQUIRY" mid="AI AGENT" right="BOOKED" />
+    </Frame>
+  );
+}
+
+/* ── 16. After-hours call answering ─────────────────────────────────── */
+export function PhoneDiagram() {
+  return (
+    <Frame>
+      {/* moon = after hours */}
+      <path d="M40 70 a9 9 0 1 0 8 11 a7 7 0 0 1 -8 -11 z" stroke={STRUCT} strokeWidth="1.2" />
+      {/* ringing smartphone */}
+      <rect x="34" y="98" width="38" height="56" rx="8" stroke={INK} strokeWidth="1.4" />
+      <path d="M46 106 h14" stroke={STRUCT} strokeWidth="1.2" strokeLinecap="round" />
+      <circle cx="53" cy="146" r="2.4" fill={STRUCT} />
+      {/* incoming ring waves */}
+      <path d="M80 108 q9 8 9 18 q0 10 -9 18" stroke={ACCENT} strokeWidth="1.4" strokeLinecap="round" className="mgf-flow" />
+      <path d="M74 116 q5 5 5 10 q0 5 -5 10" stroke={ACCENT} strokeWidth="1.3" strokeLinecap="round" />
+      <Flow d={`M92 ${CY} C 118 ${CY}, 122 ${CY}, ${CX - 26} ${CY}`} />
+      <BotHead />
+      <Flow d={`M${CX + 28} ${CY} H 252`} />
+      {/* booked check */}
+      <circle cx="274" cy={CY} r="15" stroke={STRUCT} strokeWidth="1.2" />
+      <path d="M267 120 l5 5 l9 -10" stroke={ACCENT} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      <Labels left="OFF HOURS" mid="AI ANSWERS" right="BOOKED" />
+    </Frame>
+  );
+}
+
 /** Registry — a Work card's `media` key selects its diagram. */
 export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   leadgen: LeadGenDiagram,
@@ -479,4 +583,7 @@ export const DIAGRAMS: Record<string, () => React.ReactElement> = {
   crm: CrmDiagram,
   fx: FxDiagram,
   trading: TradingDiagram,
+  ads: AdsDiagram,
+  calendar: CalendarDiagram,
+  phone: PhoneDiagram,
 };
