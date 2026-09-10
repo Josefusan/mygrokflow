@@ -4,7 +4,36 @@ import { STACK_HEADING, STACK_NOTE, STACK_TOOLS } from "@/lib/content";
 import { Counter, SectionHead } from "./section-bits";
 
 const chip =
-  "inline-flex shrink-0 items-center rounded-full border border-(--mgf-border) bg-(--mgf-card) px-4 py-2 font-mono text-[12px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
+  "inline-flex shrink-0 items-center gap-2.5 rounded-full border border-(--mgf-border) bg-(--mgf-card) py-1.5 pl-1.5 pr-4 font-mono text-[12px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
+
+// Real logo on a small light tile so multicolor and dark brand marks stay
+// legible over the dark section.
+const tile =
+  "grid size-7 shrink-0 place-items-center overflow-hidden rounded-full bg-white";
+
+type Tool = { readonly name: string; readonly slug: string };
+
+function Chip({ tool, dup = false }: { tool: Tool; dup?: boolean }) {
+  return (
+    <li
+      className={chip}
+      {...(dup ? { "data-dup": "true", "aria-hidden": "true" } : {})}
+    >
+      <span className={tile}>
+        <img
+          src={`/logos/${tool.slug}.png`}
+          alt=""
+          width={20}
+          height={20}
+          loading="lazy"
+          decoding="async"
+          className="size-5 object-contain"
+        />
+      </span>
+      {tool.name}
+    </li>
+  );
+}
 
 /**
  * One marquee row. The tool list is rendered twice so a -50% translate loops
@@ -17,7 +46,7 @@ function Row({
   dir,
   dur,
 }: {
-  tools: readonly string[];
+  tools: readonly Tool[];
   dir: "ltr" | "rtl";
   dur: string;
 }) {
@@ -29,14 +58,10 @@ function Row({
       aria-label="Tools we integrate with"
     >
       {tools.map((t) => (
-        <li key={t} className={chip}>
-          {t}
-        </li>
+        <Chip key={t.slug} tool={t} />
       ))}
       {tools.map((t) => (
-        <li key={`${t}-dup`} data-dup="true" aria-hidden="true" className={chip}>
-          {t}
-        </li>
+        <Chip key={`${t.slug}-dup`} tool={t} dup />
       ))}
     </ul>
   );
