@@ -72,9 +72,10 @@ function Row({
  * we plug agents into. Rows drift in opposite directions and pause on hover.
  */
 export function Integrations() {
-  const half = Math.ceil(STACK_TOOLS.length / 2);
-  const rowA = STACK_TOOLS.slice(0, half);
-  const rowB = STACK_TOOLS.slice(half);
+  const third = Math.ceil(STACK_TOOLS.length / 3);
+  const rowA = STACK_TOOLS.slice(0, third);
+  const rowB = STACK_TOOLS.slice(third, third * 2);
+  const rowC = STACK_TOOLS.slice(third * 2);
 
   return (
     <section
@@ -85,8 +86,9 @@ export function Integrations() {
       <SectionHead heading={STACK_HEADING} note={STACK_NOTE} tone="panel" />
 
       <FadeUp delay={0.3} className="mgf-marquee flex flex-col gap-3">
-        <Row tools={rowA} dir="ltr" dur="62s" />
-        <Row tools={rowB} dir="rtl" dur="74s" />
+        <Row tools={rowA} dir="ltr" dur="72s" />
+        <Row tools={rowB} dir="rtl" dur="86s" />
+        <Row tools={rowC} dir="ltr" dur="80s" />
       </FadeUp>
     </section>
   );

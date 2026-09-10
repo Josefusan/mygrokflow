@@ -462,11 +462,18 @@ export const CUSTOM_CLOSE =
 // list stays honest and easy to extend from here.
 export const STACK_HEADING = "Works with your stack";
 export const STACK_NOTE =
-  "We plug agents into the outbound stack your BDRs and AEs already run: sales engagement, CRM, data and enrichment, dialers, and the tools around them, connected through native APIs and MCP. Nothing gets ripped out or re-platformed.";
+  "We build on the frontier AI models and plug agents into the tools your team already runs: sales engagement, CRM, data and enrichment, dialers, real estate platforms, and support, connected through native APIs and MCP. Nothing gets ripped out or re-platformed.";
 // name is the visible label; slug maps to /public/logos/<slug>.png (real brand
 // favicons, self-hosted). Keep the two in sync when adding a tool.
 export const STACK_TOOLS = [
-  // Sales engagement and outbound (the BDR/AE core, leads the row)
+  // Frontier AI models we build on
+  { name: "ChatGPT", slug: "chatgpt" },
+  { name: "Claude", slug: "claude" },
+  { name: "Grok", slug: "grok" },
+  { name: "Gemini", slug: "gemini" },
+  { name: "DeepSeek", slug: "deepseek" },
+  { name: "Kimi", slug: "kimi" },
+  // Sales engagement and outbound (the BDR/AE core)
   { name: "Outreach", slug: "outreach" },
   { name: "Salesloft", slug: "salesloft" },
   { name: "Groove", slug: "groove" },
@@ -479,6 +486,7 @@ export const STACK_TOOLS = [
   { name: "Reply.io", slug: "reply" },
   { name: "Amplemarket", slug: "amplemarket" },
   { name: "Lavender", slug: "lavender" },
+  { name: "Expandi", slug: "expandi" },
   { name: "Clay", slug: "clay" },
   // Data, enrichment, and intent
   { name: "ZoomInfo", slug: "zoominfo" },
@@ -504,6 +512,7 @@ export const STACK_TOOLS = [
   // Conversation intelligence and dialers
   { name: "Gong", slug: "gong" },
   { name: "Chorus", slug: "chorus" },
+  { name: "Clari", slug: "clari" },
   { name: "Orum", slug: "orum" },
   { name: "Nooks", slug: "nooks" },
   { name: "Aircall", slug: "aircall" },
@@ -513,6 +522,17 @@ export const STACK_TOOLS = [
   { name: "Chili Piper", slug: "chilipiper" },
   { name: "Vidyard", slug: "vidyard" },
   { name: "Loom", slug: "loom" },
+  // Real estate agent and broker software
+  { name: "BoldTrail", slug: "kvcore" },
+  { name: "Lofty", slug: "lofty" },
+  { name: "BoomTown", slug: "boomtown" },
+  { name: "CINC", slug: "cinc" },
+  { name: "Real Geeks", slug: "realgeeks" },
+  { name: "Sierra Interactive", slug: "sierra" },
+  { name: "Top Producer", slug: "topproducer" },
+  { name: "Dotloop", slug: "dotloop" },
+  { name: "SkySlope", slug: "skyslope" },
+  { name: "Zillow", slug: "zillow" },
   // Channels and comms
   { name: "Gmail", slug: "gmail" },
   { name: "Outlook", slug: "outlook" },
