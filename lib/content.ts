@@ -46,7 +46,7 @@ export const FAQS = [
   },
   {
     q: "Who is this for?",
-    a: "Recruiting and staffing firms selling into employers, where the owner, managing partner, or head of BD still owns the job-order pipeline. If you are great once you have the job order and the pain is getting enough of the right hiring managers talking to you, this is built for you. Firm size does not matter, the need does.",
+    a: "Any B2B company where a founder, owner, or head of sales still owns the pipeline by hand. If you are great once you are in the room and the pain is getting enough of the right buyers talking to you, or keeping customers close after the sale, this is built for you. Company size does not matter, the need does.",
   },
   {
     q: "Is this candidate sourcing or client outbound?",
