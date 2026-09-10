@@ -582,4 +582,20 @@ export const STACK_TOOLS = [
   { name: "Stripe", slug: "stripe" },
   { name: "Bill.com", slug: "billcom" },
   { name: "FreshBooks", slug: "freshbooks" },
+  // Med spa, spa, and wellness
+  { name: "Zenoti", slug: "zenoti" },
+  { name: "Mindbody", slug: "mindbody" },
+  { name: "Boulevard", slug: "boulevard" },
+  { name: "Vagaro", slug: "vagaro" },
+  { name: "Fresha", slug: "fresha" },
+  { name: "AestheticsPro", slug: "aestheticspro" },
+  { name: "Aesthetic Record", slug: "aestheticrecord" },
+  { name: "Pabau", slug: "pabau" },
+  // Dental practice management
+  { name: "Dentrix", slug: "dentrix" },
+  { name: "Open Dental", slug: "opendental" },
+  { name: "Curve Dental", slug: "curvedental" },
+  { name: "Denticon", slug: "denticon" },
+  { name: "Weave", slug: "weave" },
+  { name: "NexHealth", slug: "nexhealth" },
 ] as const;
