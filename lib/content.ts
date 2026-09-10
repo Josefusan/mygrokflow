@@ -38,7 +38,7 @@ export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
   "AI lead generation for recruiting firms, the models we use (including Grok from xAI), and how we keep your data secure.";
 
-export const SECTION_COUNT = 9;
+export const SECTION_COUNT = 10;
 
 // Honest, keyword-rich Q&A. Doubles as on-page content and FAQPage structured
 // data, so searches around AI lead generation for recruiters, Grok, xAI, and X
@@ -455,3 +455,60 @@ export const CUSTOM_BULLETS = [
 ] as const;
 export const CUSTOM_CLOSE =
   "Bring the messy, specific problem. On the call we will tell you plainly whether we can automate it, how we would build it, and what it takes.";
+
+// Section 009: the integrations marquee. A scrolling wall of the sales, ATS,
+// and support tools we plug agents into, so buyers see their own stack and
+// know nothing gets ripped out or re-platformed. Names only, no logos: the
+// list stays honest and easy to extend from here.
+export const STACK_HEADING = "Works with your stack";
+export const STACK_NOTE =
+  "We connect agents to the CRMs, applicant tracking, outreach, and support tools you already run, through native APIs and MCP. Nothing gets ripped out or re-platformed.";
+export const STACK_TOOLS = [
+  "HubSpot",
+  "Salesforce",
+  "Pipedrive",
+  "GoHighLevel",
+  "Zoho CRM",
+  "Close",
+  "Copper",
+  "Monday.com",
+  "Attio",
+  "Follow Up Boss",
+  "Keap",
+  "Bullhorn",
+  "Greenhouse",
+  "Lever",
+  "Ashby",
+  "Workable",
+  "JobAdder",
+  "Loxo",
+  "Crelate",
+  "Vincere",
+  "JazzHR",
+  "Recruiterflow",
+  "LinkedIn Sales Navigator",
+  "Apollo",
+  "Clay",
+  "Outreach",
+  "Salesloft",
+  "Instantly",
+  "Smartlead",
+  "Lemlist",
+  "ZoomInfo",
+  "Gong",
+  "Zendesk",
+  "Intercom",
+  "Freshdesk",
+  "Help Scout",
+  "Front",
+  "Gorgias",
+  "Gmail",
+  "Outlook",
+  "Slack",
+  "Telegram",
+  "WhatsApp",
+  "X",
+  "Discord",
+  "Cal.com",
+  "Calendly",
+] as const;

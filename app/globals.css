@@ -328,6 +328,63 @@
   animation: mgfPulse 2.4s ease-in-out infinite;
 }
 
+/* Integrations marquee (Section 009). Each row holds the tool list twice, so a
+   -50% translate loops seamlessly. Edges fade under a mask. Hover/focus pauses
+   both rows. Reduced motion drops the animation and wraps the chips into a
+   static centered cloud, hiding the duplicate copy. */
+@keyframes mgfMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes mgfMarqueeRev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.mgf-marquee {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  overflow: hidden;
+}
+.mgf-marquee-row {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+.mgf-marquee-row[data-dir="ltr"] {
+  animation: mgfMarquee var(--mgf-marquee-dur, 60s) linear infinite;
+}
+.mgf-marquee-row[data-dir="rtl"] {
+  animation: mgfMarqueeRev var(--mgf-marquee-dur, 60s) linear infinite;
+}
+.mgf-marquee:hover .mgf-marquee-row,
+.mgf-marquee:focus-within .mgf-marquee-row {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   @keyframes scrollBounce {
     0%,
@@ -344,6 +401,19 @@
   html,
   .mgf-carousel {
     scroll-behavior: auto;
+  }
+  .mgf-marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .mgf-marquee-row {
+    animation: none !important;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mgf-marquee-row li[data-dup="true"] {
+    display: none;
   }
   body::before {
     animation: none;
