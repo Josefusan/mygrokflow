@@ -562,6 +562,8 @@ export const STACK_TOOLS = [
   { name: "LinkedIn", slug: "linkedin" },
   { name: "X (Twitter)", slug: "x" },
   { name: "Instagram", slug: "instagram" },
+  { name: "TikTok", slug: "tiktok" },
+  { name: "Facebook", slug: "facebook" },
   { name: "WhatsApp", slug: "whatsapp" },
   { name: "Telegram", slug: "telegram" },
   { name: "Discord", slug: "discord" },
@@ -572,4 +574,12 @@ export const STACK_TOOLS = [
   { name: "Help Scout", slug: "helpscout" },
   { name: "Front", slug: "front" },
   { name: "Gorgias", slug: "gorgias" },
+  // Finance, accounting, and ERP
+  { name: "QuickBooks", slug: "quickbooks" },
+  { name: "Xero", slug: "xero" },
+  { name: "NetSuite", slug: "netsuite" },
+  { name: "Sage", slug: "sage" },
+  { name: "Stripe", slug: "stripe" },
+  { name: "Bill.com", slug: "billcom" },
+  { name: "FreshBooks", slug: "freshbooks" },
 ] as const;
