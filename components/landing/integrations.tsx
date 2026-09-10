@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { FadeUp } from "@/components/motion/fade-up";
-import { STACK_HEADING, STACK_NOTE, STACK_TOOLS } from "@/lib/content";
+import { STACK_HEADING, STACK_TOOLS } from "@/lib/content";
 import { Counter, SectionHead } from "./section-bits";
 
 const chip =
@@ -83,7 +83,7 @@ export function Integrations() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={9} className="mb-5" />
-      <SectionHead heading={STACK_HEADING} note={STACK_NOTE} tone="panel" />
+      <SectionHead heading={STACK_HEADING} tone="panel" />
 
       <FadeUp delay={0.3} className="mgf-marquee flex flex-col gap-3">
         <Row tools={rowA} dir="ltr" dur="72s" />

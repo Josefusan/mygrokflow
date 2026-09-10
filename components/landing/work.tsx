@@ -4,7 +4,6 @@ import {
   SECURITY_NOTE,
   SYSTEMS,
   WORK_HEADING,
-  WORK_STACK_NOTE,
 } from "@/lib/content";
 import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
@@ -32,14 +31,6 @@ export function Work() {
         as="p"
         delay={0.5}
         className="mt-8 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
-      >
-        {WORK_STACK_NOTE}
-      </FadeUp>
-
-      <FadeUp
-        as="p"
-        delay={0.6}
-        className="mt-4 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
       >
         <span className="font-medium text-(--mgf-text)">{SECURITY_LEAD}</span>{" "}
         {SECURITY_NOTE}

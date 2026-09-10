@@ -14,11 +14,8 @@ export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
 export const AUDIENCE_LINE =
   "For owners, managing partners, and heads of BD at recruiting firms.";
-export const AGNOSTIC_TAG =
-  "Built for lead-driven teams, recruiting and staffing firms included. Measured in booked calls and closed deals, not emails sent.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "Most boutique recruiting firms have the same gap: the owner is the only one doing client outreach, and it stops the moment a search gets busy.",
   "We fill that gap with AI automation. It finds hiring managers, writes the outreach, follows up, and books the intake call. You keep the relationship and the close.",
   "Bring the work, show us your stack, and we build it. Book a call and we'll tell you exactly what we'd build. No obligation.",
 ] as const;
@@ -26,7 +23,6 @@ export const STATEMENT_LEAD = [
 export const AUDIENCE_HEADING = "Here's who we work best with";
 
 export const APHORISM = "Pipeline is outreach that happens while you're busy.";
-export const RATES_NOTE = "Book a call to see what fits. No discounts.";
 
 export const CTA_PRIMARY = "Book a call";
 export const CTA_SECONDARY = "Apply";
@@ -101,19 +97,6 @@ export const AUDIENCE = [
     body: "Contingency or retained, selling into employers. Enough placements to prove it works. Not enough hands to run outbound every day.",
   },
 ] as const;
-
-export const NOT_FOR = [
-  "$99 chatbot shoppers",
-  "mega RPO procurement",
-  "candidate-spam shops",
-  "deck collectors",
-] as const;
-
-/** "Not for students, hobbyists, or $99 chatbot shoppers." */
-export function notForLine(items: readonly string[]): string {
-  const head = items.slice(0, -1).join(", ");
-  return `Not for ${head}, or ${items[items.length - 1]}.`;
-}
 
 export const PROCESS = [
   {
@@ -295,9 +278,6 @@ export const SYSTEMS = [
   },
 ] as const;
 
-export const WORK_STACK_NOTE =
-  "Behind every build is hands-on work with the tools recruiting firms already run: ATS and CRM platforms like Bullhorn, Loxo, Crelate, JobAdder, Vincere, HubSpot, and Pipedrive; list and enrichment tools like LinkedIn Sales Navigator, Apollo, and Clay; your email sending stack and X (formerly Twitter); and booking systems like Cal.com and Calendly. We connect agents to your existing stack through native APIs and MCP, so you get the fullest possible value out of the software you already pay for.";
-
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
   "Every automation runs on scoped, least-privilege access (no shared logins, no standing keys), with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
@@ -388,8 +368,6 @@ export const RATES = [
 // example, never as a fabricated client result.
 export const CASE_LABEL = "Illustrative example, not a client";
 export const CASE_HEADING = "One recruiting desk, modeled end to end";
-export const CASE_INTRO =
-  "We would rather show you the honest version than a logo we do not have. So here is a working model: a boutique contingency firm, six recruiters, one vertical, where the owner is the only person doing client outreach and it only happens in the gaps between placements.";
 
 // Before / after the build.
 export const CASE_BEFORE_HEADING = "Before";
@@ -423,8 +401,6 @@ export const CASE_CLOSE =
 // on submit and captured to the list when the backend is configured.
 export const PLAYBOOK_LABEL = "Free download";
 export const PLAYBOOK_HEADING = "The Operator Playbook";
-export const PLAYBOOK_INTRO =
-  "The short version of how we do this: the automations we install, the order we install them in, and how a small team books more calls without adding headcount. Drop your email and it is yours, no call required.";
 export const PLAYBOOK_BULLETS = [
   "The systems that fill a pipeline while your team stays on the work only they can do.",
   "The sequence we build them in, so the first wins pay for the rest.",
@@ -446,8 +422,6 @@ export const PLAYBOOK_POWERED = "Powered by Buttondown.";
 // situations the standard packages do not cover. Anchored by "Book a call".
 export const CUSTOM_LABEL = "Custom builds";
 export const CUSTOM_HEADING = "When your situation is one of a kind";
-export const CUSTOM_INTRO =
-  "The cards above cover what most teams need. Some workflows do not fit a template. When yours is niche, regulated, or built around a process only you run, we design the automation from the ground up, around how your business actually works.";
 export const CUSTOM_BULLETS = [
   "We map the exact workflow that is costing you time and hands, then build the system that runs it end to end.",
   "One bespoke automation or a connected set, wired into the tools, data, and rules you already work with.",
@@ -461,8 +435,6 @@ export const CUSTOM_CLOSE =
 // know nothing gets ripped out or re-platformed. Names only, no logos: the
 // list stays honest and easy to extend from here.
 export const STACK_HEADING = "Works with your stack";
-export const STACK_NOTE =
-  "We build on the frontier AI models and plug agents into the tools your team already runs: sales engagement, CRM, data and enrichment, dialers, real estate platforms, and support, connected through native APIs and MCP. Nothing gets ripped out or re-platformed.";
 // name is the visible label; slug maps to /public/logos/<slug>.png (real brand
 // favicons, self-hosted). Keep the two in sync when adding a tool.
 export const STACK_TOOLS = [

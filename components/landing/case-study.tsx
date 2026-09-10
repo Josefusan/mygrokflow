@@ -7,7 +7,6 @@ import {
   CASE_CLOSE,
   CASE_DISCLAIMER,
   CASE_HEADING,
-  CASE_INTRO,
   CASE_LABEL,
   CASE_METRICS,
 } from "@/lib/content";
@@ -28,7 +27,7 @@ export function CaseStudy() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={5} className="mb-5" />
-      <SectionHead heading={CASE_HEADING} note={CASE_INTRO} tone="panel" />
+      <SectionHead heading={CASE_HEADING} tone="panel" />
 
       <FadeUp
         as="p"

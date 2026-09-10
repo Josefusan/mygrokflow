@@ -1,5 +1,5 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { AGNOSTIC_TAG, EYEBROW, HEADLINE, HERO_PROMISE } from "@/lib/content";
+import { EYEBROW, HEADLINE, HERO_PROMISE } from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { Counter, display, eyebrow } from "./section-bits";
 
@@ -44,14 +44,6 @@ export function Hero() {
           className="mt-6 max-w-[46ch] text-[18px] leading-[1.6] text-(--mgf-text)"
         >
           {HERO_PROMISE}
-        </FadeUp>
-        <FadeUp
-          as="p"
-          delay={0.3}
-          className="mt-4 inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.04em] text-(--mgf-muted-on-video)"
-        >
-          <span aria-hidden="true" className="size-1.5 rounded-full bg-(--mgf-accent)" />
-          {AGNOSTIC_TAG}
         </FadeUp>
         <FadeUp delay={0.4} className="mt-9">
           <CtaRow />

@@ -71,7 +71,7 @@ export function SectionHead({
   uppercase = false,
 }: {
   heading: string;
-  note: string;
+  note?: string;
   tone: "panel" | "video";
   uppercase?: boolean;
 }) {
@@ -84,13 +84,15 @@ export function SectionHead({
           <SplitHeading text={heading} baseDelay={0.1} stagger={0.1} y={28} />
         </h2>
       </div>
-      <FadeUp
-        as="p"
-        delay={0.25}
-        className={`max-w-[320px] pt-2 text-[14px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
-      >
-        {note}
-      </FadeUp>
+      {note ? (
+        <FadeUp
+          as="p"
+          delay={0.25}
+          className={`max-w-[320px] pt-2 text-[14px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
+        >
+          {note}
+        </FadeUp>
+      ) : null}
     </div>
   );
 }

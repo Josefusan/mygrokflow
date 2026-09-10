@@ -11,7 +11,6 @@ import {
   PLAYBOOK_ERROR,
   PLAYBOOK_FINE_PRINT,
   PLAYBOOK_HEADING,
-  PLAYBOOK_INTRO,
   PLAYBOOK_LABEL,
   PLAYBOOK_PLACEHOLDER,
   PLAYBOOK_POWERED,
@@ -62,7 +61,7 @@ export function Playbook() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={6} className="mb-5" />
-      <SectionHead heading={PLAYBOOK_HEADING} note={PLAYBOOK_INTRO} tone="panel" />
+      <SectionHead heading={PLAYBOOK_HEADING} tone="panel" />
 
       <div className="grid grid-cols-2 items-start gap-8 max-[900px]:grid-cols-1">
         {/* What is inside */}

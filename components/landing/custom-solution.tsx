@@ -3,7 +3,6 @@ import {
   CUSTOM_BULLETS,
   CUSTOM_CLOSE,
   CUSTOM_HEADING,
-  CUSTOM_INTRO,
   CUSTOM_LABEL,
 } from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
@@ -20,7 +19,7 @@ export function CustomSolution() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={8} className="mb-5" />
-      <SectionHead heading={CUSTOM_HEADING} note={CUSTOM_INTRO} tone="panel" />
+      <SectionHead heading={CUSTOM_HEADING} tone="panel" />
 
       <FadeUp
         delay={0.35}

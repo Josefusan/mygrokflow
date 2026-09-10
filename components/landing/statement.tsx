@@ -3,10 +3,8 @@ import {
   APHORISM,
   AUDIENCE,
   AUDIENCE_HEADING,
-  NOT_FOR,
   STATEMENT_LEAD,
   TAGLINE,
-  notForLine,
 } from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
@@ -56,10 +54,6 @@ export function Statement() {
             </li>
           ))}
         </ul>
-
-        <FadeUp as="p" delay={1.25} className={`mt-8 ${mono}`}>
-          {notForLine(NOT_FOR)}
-        </FadeUp>
 
         <FadeUp as="p" delay={1.3} className={`mt-6 ${mono} text-(--mgf-accent)`}>
           {APHORISM}
