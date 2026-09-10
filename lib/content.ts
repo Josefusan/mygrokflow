@@ -561,6 +561,7 @@ export const STACK_TOOLS = [
   { name: "Microsoft Teams", slug: "teams" },
   { name: "LinkedIn", slug: "linkedin" },
   { name: "X (Twitter)", slug: "x" },
+  { name: "Instagram", slug: "instagram" },
   { name: "WhatsApp", slug: "whatsapp" },
   { name: "Telegram", slug: "telegram" },
   { name: "Discord", slug: "discord" },
