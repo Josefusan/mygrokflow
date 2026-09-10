@@ -1,5 +1,9 @@
 import { CTA_PRIMARY, CTA_SECONDARY } from "@/lib/content";
-import { APPLY_PATH, CAL_URL } from "@/lib/site";
+import { CAL_URL } from "@/lib/site";
+
+// The free lead magnet lives in the Playbook section; the secondary CTA scrolls
+// to it rather than to the application funnel.
+const PLAYBOOK_ANCHOR = "#playbook";
 
 export const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--mgf-accent)";
@@ -43,7 +47,7 @@ export function PrimaryCta({
   );
 }
 
-/** "Apply" → /apply (the application funnel), as an outline pill or a plain text link. */
+/** The free lead magnet → the Playbook section, as an outline pill or a text link. */
 export function SecondaryCta({
   variant = "pill",
   className = "",
@@ -56,7 +60,7 @@ export function SecondaryCta({
       ? `${textLink} ${className}`
       : `${pillBase} ${pillSize.default} ${pillVariant.secondary} ${className}`;
   return (
-    <a href={APPLY_PATH} className={cls}>
+    <a href={PLAYBOOK_ANCHOR} className={cls}>
       {CTA_SECONDARY}
     </a>
   );

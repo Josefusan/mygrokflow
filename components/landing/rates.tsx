@@ -1,11 +1,11 @@
 import { FadeUp } from "@/components/motion/fade-up";
-import { RATES, RATES_HEADING } from "@/lib/content";
+import { RATES, RATES_FOOT, RATES_HEADING, RATES_NOTE } from "@/lib/content";
 import { CtaRow, PrimaryCta } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
 const label = "font-mono text-[11px] uppercase text-(--mgf-muted)";
 
-/** Section 005. Four rate cards; the best-value lane is highlighted. */
+/** Section 008. Three public retainers; Core is the highlighted default buy. */
 export function Rates() {
   return (
     <section
@@ -13,11 +13,11 @@ export function Rates() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={8} className="mb-5" />
-      <SectionHead heading={RATES_HEADING} tone="panel" uppercase />
+      <SectionHead heading={RATES_HEADING} note={RATES_NOTE} tone="panel" uppercase />
 
-      <ul className="grid auto-rows-fr grid-cols-4 gap-5 max-[1100px]:grid-cols-2 max-[600px]:grid-cols-1">
+      <ul className="grid auto-rows-fr grid-cols-3 gap-5 max-[900px]:grid-cols-1">
         {RATES.map((rate, i) => {
-          const featured = rate.badge !== "";
+          const featured = rate.featured;
           return (
             <li key={rate.title}>
               <FadeUp
@@ -28,8 +28,14 @@ export function Rates() {
                     : "border-(--mgf-border) bg-(--mgf-card)"
                 }`}
               >
-                {featured && (
-                  <span className="absolute -top-2.5 left-7 rounded-full bg-(--mgf-accent) px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg)">
+                {rate.badge && (
+                  <span
+                    className={`absolute -top-2.5 left-7 rounded-full px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] ${
+                      featured
+                        ? "bg-(--mgf-accent) text-(--mgf-bg)"
+                        : "border border-(--mgf-border) bg-(--mgf-card) text-(--mgf-muted)"
+                    }`}
+                  >
                     {rate.badge}
                   </span>
                 )}
@@ -40,6 +46,13 @@ export function Rates() {
                     {rate.suffix}
                   </span>
                 </h3>
+
+                <p className="mt-3 text-[13.5px] font-medium leading-[1.5] text-(--mgf-text)">
+                  {rate.tagline}
+                </p>
+                <p className="mt-2 text-[12px] leading-[1.55] text-(--mgf-muted)">
+                  {rate.who}
+                </p>
 
                 <hr className="my-5 border-0 border-t border-(--mgf-border)" />
 
@@ -75,6 +88,12 @@ export function Rates() {
                   </>
                 )}
 
+                {rate.note && (
+                  <p className="mt-5 border-t border-(--mgf-border) pt-4 text-[12px] leading-[1.55] text-(--mgf-muted)">
+                    {rate.note}
+                  </p>
+                )}
+
                 <div className="mt-auto pt-7">
                   <PrimaryCta
                     variant={featured ? "primary" : "secondary"}
@@ -87,7 +106,15 @@ export function Rates() {
         })}
       </ul>
 
-      <FadeUp delay={0.9} className="mt-10">
+      <FadeUp
+        as="p"
+        delay={0.85}
+        className="mt-7 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
+      >
+        {RATES_FOOT}
+      </FadeUp>
+
+      <FadeUp delay={0.9} className="mt-8">
         <CtaRow secondary="link" />
       </FadeUp>
     </section>

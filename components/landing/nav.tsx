@@ -1,6 +1,6 @@
 import { FadeUp } from "@/components/motion/fade-up";
 import { CTA_SECONDARY } from "@/lib/content";
-import { APPLY_PATH, SITE_NAME } from "@/lib/site";
+import { SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 
@@ -49,7 +49,7 @@ export function LandingNav() {
 
       <div className="flex items-center gap-6">
         <FadeUp delay={0.3} className="max-[900px]:hidden">
-          <a href={APPLY_PATH} className={navLink}>
+          <a href="#playbook" className={navLink}>
             {CTA_SECONDARY}
           </a>
         </FadeUp>

@@ -96,8 +96,8 @@ function CaseFlow() {
 
 /**
  * Section 005. An illustrative, honest case study on the glass panel: one
- * boutique recruiting desk modeled end to end, before/after columns, modeled
- * target metrics, and a plain disclaimer that these are projections.
+ * med spa modeled end to end, before/after columns, modeled target metrics,
+ * and a plain disclaimer that these are projections.
  */
 export function CaseStudy() {
   return (

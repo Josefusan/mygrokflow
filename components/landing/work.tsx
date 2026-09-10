@@ -9,11 +9,11 @@ import { PROMISE } from "@/lib/site";
 import { Counter, SectionHead } from "./section-bits";
 import { WorkCarousel, type WorkItem } from "./work-carousel";
 
-// Every card is client-outbound lead gen, BDR, or sales ops for boutique B2B
-// recruiting firms; SYSTEMS is already in carousel order with the flagships first.
+// Marketable AI automations across front desk, booking, follow-up, and support;
+// SYSTEMS is already in carousel order with the flagships first.
 const ITEMS: readonly WorkItem[] = SYSTEMS;
 
-/** Section 003. Lead-generation systems for recruiting firms in a sliding carousel. */
+/** Section 003. Front-desk, booking, and follow-up systems in a sliding carousel. */
 export function Work() {
   return (
     <section
