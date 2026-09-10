@@ -42,7 +42,7 @@ export const SECTION_COUNT = 10;
 export const FAQS = [
   {
     q: "What is MyGrokFlow?",
-    a: "MyGrokFlow is an AI automation agency that builds AI lead generation systems for boutique B2B recruiting and staffing firms. We take the client-side outbound the owner still runs by hand (finding hiring managers, messaging them, following up, and booking calls) and turn it into a system that runs without you, implementation included.",
+    a: "MyGrokFlow is an AI automation agency that builds AI lead generation and customer support systems for B2B companies. We take the outbound your team still runs by hand (finding the right buyers, messaging them, following up, and booking calls) and the support work that keeps customers happy and coming back, and turn both into systems that run without you, implementation included.",
   },
   {
     q: "Who is this for?",
