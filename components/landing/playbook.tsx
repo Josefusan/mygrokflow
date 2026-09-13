@@ -13,6 +13,7 @@ import {
   PLAYBOOK_HEADING,
   PLAYBOOK_LABEL,
   PLAYBOOK_NAME_PLACEHOLDER,
+  PLAYBOOK_NOTE,
   PLAYBOOK_PHONE_PLACEHOLDER,
   PLAYBOOK_PLACEHOLDER,
   PLAYBOOK_SOCIAL_PLACEHOLDER,
@@ -98,7 +99,7 @@ export function Playbook() {
       className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
     >
       <Counter n={7} className="mb-5" />
-      <SectionHead heading={PLAYBOOK_HEADING} tone="panel" />
+      <SectionHead heading={PLAYBOOK_HEADING} note={PLAYBOOK_NOTE} tone="panel" />
 
       <div className="grid grid-cols-2 items-start gap-8 max-[900px]:grid-cols-1">
         {/* What is inside */}

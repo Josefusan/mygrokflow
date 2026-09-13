@@ -5,7 +5,7 @@ export const APPLY_PATH = "/apply";
 export const CAL_URL = "https://cal.com/mygrokflow-availability/15min";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
-export const PLAYBOOK_PDF = "/mygrokflow-operator-playbook.pdf";
+export const PLAYBOOK_PDF = "/mygrokflow-clinic-front-desk-playbook.pdf";
 // Web3Forms access key: public by design (it ships in the client form) and
 // only routes submissions to the inbox it was issued for. Free plan rejects
 // server-side calls, so the browser posts to Web3Forms directly.

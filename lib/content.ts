@@ -327,7 +327,9 @@ export const CASE_CLOSE =
 // Section 006: the lead magnet. A free PDF in exchange for an email, delivered
 // on submit and captured to the list when the backend is configured.
 export const PLAYBOOK_LABEL = "Free download";
-export const PLAYBOOK_HEADING = "The Med Spa Front Desk Playbook";
+export const PLAYBOOK_HEADING = "The Clinic Front Desk Playbook";
+export const PLAYBOOK_NOTE =
+  "Written for med spas, hair transplant clinics, and beauty clinics.";
 export const PLAYBOOK_BULLETS = [
   "The systems that keep your schedule full while your team stays with clients.",
   "The missed-call, after-hours, and no-show fixes, in the order we install them.",
@@ -341,7 +343,7 @@ export const PLAYBOOK_SOCIAL_PLACEHOLDER = "Instagram @ or LinkedIn URL";
 export const PLAYBOOK_DONE = "Your playbook is ready.";
 export const PLAYBOOK_DONE_NOTE =
   "It opened in a new tab. If it did not, use the link below.";
-export const PLAYBOOK_DONE_LINK = "Download the Med Spa Front Desk Playbook";
+export const PLAYBOOK_DONE_LINK = "Download the Clinic Front Desk Playbook";
 export const PLAYBOOK_ERROR =
   "Add your name, email, phone, and Instagram or LinkedIn, and we will hand it right over.";
 export const PLAYBOOK_FINE_PRINT =

@@ -23,7 +23,7 @@ export async function emailLead(data: LeadPayload): Promise<boolean> {
         email: data.email,
         phone: data.phone,
         instagram_or_linkedin: data.social,
-        source: "Med Spa Front Desk Playbook",
+        source: "Clinic Front Desk Playbook",
       }),
     });
     return response.ok;
