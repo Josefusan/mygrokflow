@@ -12,48 +12,85 @@ import {
   PLAYBOOK_FINE_PRINT,
   PLAYBOOK_HEADING,
   PLAYBOOK_LABEL,
+  PLAYBOOK_NAME_PLACEHOLDER,
+  PLAYBOOK_PHONE_PLACEHOLDER,
   PLAYBOOK_PLACEHOLDER,
-  PLAYBOOK_POWERED,
+  PLAYBOOK_SOCIAL_PLACEHOLDER,
 } from "@/lib/content";
-import { BUTTONDOWN_EMBED_URL, BUTTONDOWN_REFER_URL, PLAYBOOK_PDF } from "@/lib/site";
+import { PLAYBOOK_PDF } from "@/lib/site";
+import { emailLead } from "@/lib/web3forms";
 import { focusRing } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
 type State = "idle" | "submitting" | "done" | "error";
 
+type Fields = {
+  name: string;
+  email: string;
+  phone: string;
+  social: string;
+  company: string; // honeypot: real people leave this empty
+};
+
+const EMPTY: Fields = { name: "", email: "", phone: "", social: "", company: "" };
+
+const inputClass = (invalid: boolean) =>
+  `h-12 w-full rounded-full border bg-(--mgf-bg)/40 px-5 text-[14px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${
+    invalid ? "border-(--mgf-accent)" : "border-(--mgf-border)"
+  } ${focusRing}`;
+
 /**
- * Section 006. The lead magnet: a free PDF in exchange for an email. On submit
- * we attempt to capture the email to the list, then deliver the PDF regardless,
- * so the download never breaks even when capture is unavailable.
+ * Section 006. The lead magnet: a free PDF in exchange for name, email, phone,
+ * and an Instagram or LinkedIn handle. On submit we POST the lead to our own
+ * API (which emails and persists it), then deliver the PDF regardless, so the
+ * download never breaks even when capture is unavailable.
  */
 export function Playbook() {
-  const [email, setEmail] = useState("");
+  const [fields, setFields] = useState<Fields>(EMPTY);
   const [state, setState] = useState<State>("idle");
+
+  const set = (key: keyof Fields) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFields((f) => ({ ...f, [key]: e.target.value }));
+    if (state === "error") setState("idle");
+  };
+
+  function validate(f: Fields): boolean {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim());
+    return Boolean(f.name.trim() && emailOk && f.phone.trim() && f.social.trim());
+  }
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const value = email.trim();
-    if (!value.includes("@") || !value.includes(".")) {
+    if (!validate(fields)) {
       setState("error");
       return;
     }
     setState("submitting");
-    try {
-      // Subscribe them to the Buttondown newsletter (which also fires
-      // Buttondown's new-subscriber notification). no-cors keeps them on-page;
-      // the response is opaque but the subscription still registers.
-      await fetch(BUTTONDOWN_EMBED_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: new URLSearchParams({ email: value }),
-      });
-    } catch {
-      // Capture is best-effort; deliver the asset either way.
+    // Honeypot filled means a bot: pretend it worked and send nothing.
+    if (!fields.company) {
+      const lead = {
+        name: fields.name.trim(),
+        email: fields.email.trim(),
+        phone: fields.phone.trim(),
+        social: fields.social.trim(),
+      };
+      // Email the lead (Web3Forms, browser-only) and persist it (our API) in
+      // parallel. Both are best-effort: the asset is delivered either way.
+      await Promise.all([
+        emailLead(lead),
+        fetch("/api/playbook", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(lead),
+        }).catch(() => undefined),
+      ]);
     }
     // Open in a new tab from within the click handler so it is not blocked.
     window.open(PLAYBOOK_PDF, "_blank", "noopener,noreferrer");
     setState("done");
   }
+
+  const invalid = state === "error";
 
   return (
     <section
@@ -108,9 +145,23 @@ export function Playbook() {
               </a>
             </div>
           ) : (
-            <form onSubmit={onSubmit} className="mt-5" noValidate>
+            <form onSubmit={onSubmit} className="mt-5 flex flex-col gap-3" noValidate>
+              <label htmlFor="playbook-name" className="sr-only">
+                Your name
+              </label>
+              <input
+                id="playbook-name"
+                type="text"
+                autoComplete="name"
+                placeholder={PLAYBOOK_NAME_PLACEHOLDER}
+                value={fields.name}
+                onChange={set("name")}
+                aria-invalid={invalid && !fields.name.trim()}
+                className={inputClass(invalid && !fields.name.trim())}
+              />
+
               <label htmlFor="playbook-email" className="sr-only">
-                Work email
+                Email
               </label>
               <input
                 id="playbook-email"
@@ -118,44 +169,76 @@ export function Playbook() {
                 inputMode="email"
                 autoComplete="email"
                 placeholder={PLAYBOOK_PLACEHOLDER}
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (state === "error") setState("idle");
-                }}
-                aria-invalid={state === "error"}
-                className={`h-12 w-full rounded-full border border-(--mgf-border) bg-(--mgf-bg)/40 px-5 text-[14px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${focusRing}`}
+                value={fields.email}
+                onChange={set("email")}
+                aria-invalid={invalid && !fields.email.trim()}
+                className={inputClass(invalid && !fields.email.trim())}
               />
+
+              <label htmlFor="playbook-phone" className="sr-only">
+                Mobile number
+              </label>
+              <input
+                id="playbook-phone"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder={PLAYBOOK_PHONE_PLACEHOLDER}
+                value={fields.phone}
+                onChange={set("phone")}
+                aria-invalid={invalid && !fields.phone.trim()}
+                className={inputClass(invalid && !fields.phone.trim())}
+              />
+
+              <label htmlFor="playbook-social" className="sr-only">
+                Instagram @ or LinkedIn URL
+              </label>
+              <input
+                id="playbook-social"
+                type="text"
+                autoComplete="off"
+                placeholder={PLAYBOOK_SOCIAL_PLACEHOLDER}
+                value={fields.social}
+                onChange={set("social")}
+                aria-invalid={invalid && !fields.social.trim()}
+                className={inputClass(invalid && !fields.social.trim())}
+              />
+
+              {/* Honeypot: hidden from people, tempting to bots. */}
+              <div aria-hidden="true" className="hidden">
+                <label htmlFor="playbook-company">Company</label>
+                <input
+                  id="playbook-company"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={fields.company}
+                  onChange={set("company")}
+                />
+              </div>
+
               <button
                 type="submit"
                 disabled={state === "submitting"}
-                className={`mt-3 inline-flex h-12 w-full items-center justify-center rounded-full border border-(--mgf-accent) bg-(--mgf-accent) text-[11px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg) hover:opacity-90 disabled:opacity-60 ${focusRing}`}
+                className={`mt-1 inline-flex h-12 w-full items-center justify-center rounded-full border border-(--mgf-accent) bg-(--mgf-accent) text-[11px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg) hover:opacity-90 disabled:opacity-60 ${focusRing}`}
               >
                 {state === "submitting" ? "Sending…" : PLAYBOOK_CTA}
               </button>
-              {state === "error" ? (
+
+              {invalid ? (
                 <p
                   role="alert"
-                  className="mt-3 text-[12px] leading-[1.5] text-(--mgf-accent)"
+                  className="text-[12px] leading-[1.5] text-(--mgf-accent)"
                 >
                   {PLAYBOOK_ERROR}
                 </p>
               ) : (
-                <p className="mt-3 text-[12px] leading-[1.5] text-(--mgf-muted)">
+                <p className="text-[12px] leading-[1.5] text-(--mgf-muted)">
                   {PLAYBOOK_FINE_PRINT}
                 </p>
               )}
             </form>
           )}
-
-          <a
-            href={BUTTONDOWN_REFER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`mt-5 inline-flex text-[10px] uppercase tracking-[0.12em] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
-          >
-            {PLAYBOOK_POWERED}
-          </a>
         </FadeUp>
       </div>
     </section>

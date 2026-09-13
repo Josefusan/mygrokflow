@@ -6,6 +6,10 @@ export const CAL_URL = "https://cal.com/mygrokflow-availability/15min";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
 export const PLAYBOOK_PDF = "/mygrokflow-operator-playbook.pdf";
+// Web3Forms access key: public by design (it ships in the client form) and
+// only routes submissions to the inbox it was issued for. Free plan rejects
+// server-side calls, so the browser posts to Web3Forms directly.
+export const WEB3FORMS_ACCESS_KEY = "3a40628f-a25e-43d0-8136-59a44d0c6486";
 // Buttondown embed: posting the email here subscribes them to the newsletter
 // and triggers Buttondown's new-subscriber notification. No server key needed.
 export const BUTTONDOWN_EMBED_URL =

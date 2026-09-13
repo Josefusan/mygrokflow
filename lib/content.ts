@@ -334,16 +334,18 @@ export const PLAYBOOK_BULLETS = [
   "The honest math on missed calls, no-shows, and booked consults, not inflated promises.",
 ] as const;
 export const PLAYBOOK_CTA = "Get the playbook";
+export const PLAYBOOK_NAME_PLACEHOLDER = "Your name";
 export const PLAYBOOK_PLACEHOLDER = "you@yourclinic.com";
+export const PLAYBOOK_PHONE_PLACEHOLDER = "Mobile number";
+export const PLAYBOOK_SOCIAL_PLACEHOLDER = "Instagram @ or LinkedIn URL";
 export const PLAYBOOK_DONE = "Your playbook is ready.";
 export const PLAYBOOK_DONE_NOTE =
   "It opened in a new tab. If it did not, use the link below.";
 export const PLAYBOOK_DONE_LINK = "Download the Med Spa Front Desk Playbook";
 export const PLAYBOOK_ERROR =
-  "Enter a valid email and we will hand it right over.";
+  "Add your name, email, phone, and Instagram or LinkedIn, and we will hand it right over.";
 export const PLAYBOOK_FINE_PRINT =
-  "One email, the playbook, and the occasional note on what is working. Unsubscribe anytime.";
-export const PLAYBOOK_POWERED = "Powered by Buttondown.";
+  "We send the playbook and the occasional note on what is working. No spam, and we never share your details.";
 
 // Section 008: the custom-build panel. Sits below the rate cards for the
 // situations the standard packages do not cover. Anchored by "Book a call".
