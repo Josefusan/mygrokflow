@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { APPLY_PATH, SITE_NAME } from "@/lib/site";
+import { CAL_URL, SITE_NAME } from "@/lib/site";
 
 export function SiteHeader({ home = false }: { home?: boolean }) {
   return (
@@ -19,11 +19,9 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button asChild className="h-9 rounded-full px-4">
-            {home ? (
-              <a href={APPLY_PATH}>Request a diagnostic</a>
-            ) : (
-              <Link href={APPLY_PATH}>Request a diagnostic</Link>
-            )}
+            <a href={CAL_URL} target="_blank" rel="noopener noreferrer">
+              Book a strategy call
+            </a>
           </Button>
         </div>
       </div>

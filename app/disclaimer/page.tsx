@@ -108,7 +108,7 @@ export default function DisclaimerPage() {
           <h2 className={sectionLabel}>Third-party links and services</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
             This site may link to third-party websites and services we do not
-            control (for example X, LinkedIn, Substack, Cal.com, and Stripe). We
+            control (for example X, LinkedIn, Substack, and Cal.com). We
             are not responsible for their content, policies, or practices, and a
             link does not imply endorsement.
           </p>

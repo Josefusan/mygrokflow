@@ -66,10 +66,10 @@ If you cannot name the exception rule, you are not ready to automate. Write the 
 ### 5. What to do with this page
 
 1. Circle one loop. One.
-2. If you scored 3+ and the “worth replacing” boxes are yes, request a diagnostic: https://www.mygrokflow.com/apply
+2. If you scored 3+ and the “worth replacing” boxes are yes, book a strategy call: https://cal.com/mygrokflow-availability/15min
 3. We will tell you whether it is a system, a hire, or something to ignore.
 4. If we take it, it is implementation. A scoped outcome that runs without you. Not a prompt pack.
 
-MyGrokFlow designs and ships that kind of system for people who already pay for leverage. No discounts. Diagnostic first.
+MyGrokFlow designs and ships that kind of system for people who already pay for leverage. No discounts. Strategy call first.
 
-Request a diagnostic → https://www.mygrokflow.com/apply
+Book a strategy call → https://cal.com/mygrokflow-availability/15min

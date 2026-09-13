@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         <p className="mt-4 font-mono text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
-          Last updated: September 4, 2026
+          Last updated: September 12, 2026
         </p>
         <p className="mt-6 text-[15px] leading-relaxed text-muted-foreground">
           MyGrokFlow, operated by Clark Tech Ventures LLC (&quot;MyGrokFlow&quot;,
@@ -57,9 +57,9 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>What this site does</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            The site is a marketing page. The only place you send us information
-            is the application form at /apply and any message you send to our
-            public contacts. Footer links (email, LinkedIn, X, and Substack) are outbound
+            The site is a marketing page. The only places you send us information
+            are the free playbook form on the home page and any message you send
+            to our public contacts. Booking a call happens on Cal.com. Footer links (email, LinkedIn, X, and Substack) are outbound
             only. Tapping LinkedIn, X, or Substack leaves this site, and those
             platforms
             then handle your data under their own privacy policies, not this one.
@@ -73,22 +73,16 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Information you send us.</span> If you
             email us, we receive that email and whatever you choose to put in it.
-            If you submit the /apply form, we receive the answers you provide,
-            for example your role, team size, the workflow you want automated,
-            who handles it today, which rate lane fits, whether you are the
-            decision-maker, what you need, and the contact channel plus handle or
-            email you give us. Submitting sends those answers to{" "}
-            {DIAGNOSTIC_EMAIL}. Where an internal notification (for example
-            Telegram) is configured, the same answers are relayed to us there so
-            we see them quickly; if that notification is not configured or fails,
-            the form falls back to opening a pre-addressed email in your own mail
-            app, which you send yourself. We only collect what you actively
-            submit; there is no hidden tracking form field. If you choose a paid
-            rate lane, we open a Stripe Checkout session and Stripe processes the
-            payment (card details go to Stripe, never to us); booking a call
-            happens on Cal.com under its own policy. Subscribing to our
-            &quot;Without You&quot; note happens on Substack; we do not collect
-            newsletter signups on this site.
+            If you request the free playbook, we receive the name, email address,
+            phone number, and Instagram handle or LinkedIn URL you enter.
+            Submitting sends those details to {DIAGNOSTIC_EMAIL} through
+            Web3Forms, a form delivery service, and stores a copy, with the time
+            of submission and your IP address, in a database hosted by Upstash so
+            we can follow up. We only collect what you actively submit; there is
+            no hidden tracking form field. Booking a call happens on Cal.com under
+            its own policy. Subscribing to our &quot;Without You&quot; note
+            happens on Substack; we do not collect newsletter signups on this
+            site.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed">
             <span className="font-medium">Technical information.</span> Our
@@ -106,9 +100,9 @@ export default function PrivacyPage() {
             cookie banner, or set a theme, that preference is saved in your
             browser&apos;s localStorage so we do not ask again; it stays on your
             device and is not a third-party cookie. We load no non-essential
-            scripts. Stripe Checkout and Cal.com are hosted by those providers on
-            their own domains and set their own cookies there when you use them;
-            we do not set their cookies on this site.
+            scripts. Cal.com is hosted by that provider on its own domain and sets
+            its own cookies there when you use it; we do not set its cookies on
+            this site.
           </p>
         </section>
 
@@ -119,8 +113,8 @@ export default function PrivacyPage() {
             <span className="font-medium">consent</span> (which you may withdraw
             at any time) for optional actions you initiate; the need to take{" "}
             <span className="font-medium">steps at your request</span> and to{" "}
-            <span className="font-medium">perform a contract</span> when you apply
-            or engage us; our <span className="font-medium">legitimate
+            <span className="font-medium">perform a contract</span> when you
+            request the playbook, book a call, or engage us; our <span className="font-medium">legitimate
             interests</span> in responding to enquiries, securing the site, and
             preventing abuse, balanced against your rights; and{" "}
             <span className="font-medium">legal obligations</span> such as tax and
@@ -132,9 +126,9 @@ export default function PrivacyPage() {
         <section className="mt-12">
           <h2 className={sectionLabel}>How we use information</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            We use information you send us to respond to diagnostic requests,
-            scope work, communicate about a possible engagement, and improve our
-            offer. We do not sell your personal information.
+            We use information you send us to deliver the playbook, follow up on
+            it, scope work, communicate about a possible engagement, and improve
+            our offer. We do not sell your personal information.
           </p>
         </section>
 
@@ -143,26 +137,24 @@ export default function PrivacyPage() {
           <p className="mt-4 text-[15px] leading-relaxed">
             We share information only when needed to run the business: with
             service providers that host or secure our systems (for example
-            Vercel), with Telegram when /apply notify is configured, with Stripe
-            when you complete a paid-lane Checkout, or when required by law. We
-            do not sell personal information to third parties.
+            Vercel, Web3Forms, and Upstash), or when required by law. We do not
+            sell personal information to third parties.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Retention</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            Email and /apply answers are kept only as long as needed for the
-            conversation, a possible engagement, or legal/accounting
-            obligations, then deleted or archived when no longer needed. Stripe
-            retains payment records under its own policy.
+            Email and playbook form details are kept only as long as needed for
+            the conversation, a possible engagement, or legal/accounting
+            obligations, then deleted or archived when no longer needed.
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className={sectionLabel}>Security</h2>
           <p className="mt-4 text-[15px] leading-relaxed">
-            We use reputable providers (Vercel, Stripe, Cal.com) and reasonable
+            We use reputable providers (Vercel, Web3Forms, Upstash, Cal.com) and reasonable
             technical and organizational measures to protect the limited
             information we handle, and we keep access on a need-to-know basis. No
             method of transmission or storage is perfectly secure, so we cannot
