@@ -19,9 +19,9 @@ const pillSize = {
 
 const pillVariant = {
   primary:
-    "border-(--mgf-text) bg-(--mgf-text) text-(--mgf-bg) hover:border-white hover:bg-white",
+    "border-(--mgf-text) bg-(--mgf-text) text-(--mgf-bg) hover:opacity-85",
   secondary:
-    "border-white/35 bg-transparent text-(--mgf-text) hover:border-(--mgf-text) hover:bg-(--mgf-text) hover:text-(--mgf-bg)",
+    "border-(--mgf-text)/35 bg-transparent text-(--mgf-text) hover:border-(--mgf-text) hover:bg-(--mgf-text) hover:text-(--mgf-bg)",
 } as const;
 
 export const textLink = `font-mono text-[12px] uppercase tracking-[0.08em] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
@@ -47,8 +47,8 @@ export function PrimaryCta({
     >
       {size === "compact" ? (
         <>
-          <span className="max-[1500px]:hidden">{CTA_PRIMARY}</span>
-          <span className="min-[1501px]:hidden">{CTA_PRIMARY_SHORT}</span>
+          <span className="max-[1100px]:hidden">{CTA_PRIMARY}</span>
+          <span className="min-[1101px]:hidden">{CTA_PRIMARY_SHORT}</span>
         </>
       ) : (
         CTA_PRIMARY

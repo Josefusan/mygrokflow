@@ -37,14 +37,8 @@ export const zh: Dict = {
   CTA_PRIMARY_SHORT: "预约通话",
   CTA_SECONDARY: "免费领取手册",
   NAV_LINKS: [
-    { label: "服务", href: "#work" },
-    { label: "原理", href: "#system" },
-    { label: "流程", href: "#process" },
-    { label: "案例", href: "#case" },
     { label: "手册", href: "#playbook" },
     { label: "价格", href: "#rates" },
-    { label: "定制", href: "#custom" },
-    { label: "软件", href: "#stack" },
     { label: "常见问题", href: "#faq" },
     { label: "联系", href: "#contact" },
   ],
@@ -221,4 +215,6 @@ export const zh: Dict = {
   FOOTER_LEGAL:
     "MyGrokFlow 是一家独立、不绑定特定代理的 AI 自动化公司，是独立的法律实体。与 xAI、Grok、X（原 Twitter）、Tesla、SpaceX 或 Elon Musk 没有任何隶属、背书或关联关系。所有商标归其各自所有者所有，仅用于识别目的。请参阅我们的",
   LANG_LABEL: "语言",
+  THEME_TO_LIGHT: "切换到浅色模式",
+  THEME_TO_DARK: "切换到深色模式",
 };

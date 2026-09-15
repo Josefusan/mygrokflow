@@ -9,7 +9,7 @@ function ScrollIndicator() {
   return (
     <div
       aria-hidden="true"
-      className="absolute bottom-8 left-1/2 flex h-9 w-[22px] -translate-x-1/2 justify-center rounded-[11px] border-[1.5px] border-[rgba(242,242,240,0.6)] pt-1.5"
+      className="absolute bottom-8 left-1/2 flex h-9 w-[22px] -translate-x-1/2 justify-center rounded-[11px] border-[1.5px] border-(--mgf-text)/60 pt-1.5"
     >
       <span className="h-2 w-[3px] rounded-[2px] bg-(--mgf-accent) motion-safe:animate-[scrollBounce_2s_ease-in-out_infinite]" />
     </div>
@@ -30,7 +30,8 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(100deg,rgba(11,11,13,0.94)_0%,rgba(11,11,13,0.6)_44%,transparent_74%)]"
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "var(--mgf-hero-scrim)" }}
       />
 
       <div className="relative max-w-[640px]">

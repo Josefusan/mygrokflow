@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { BG_CLIP, FALLBACK_RADIAL } from "@/lib/media";
+import { BG_CLIPS, FALLBACK_RADIAL } from "@/lib/media";
+import { useTheme } from "@/lib/theme";
 import { useVideoAllowed } from "./use-video-allowed";
 
 /**
@@ -15,7 +16,8 @@ import { useVideoAllowed } from "./use-video-allowed";
 export function BackgroundVideo() {
   const allowed = useVideoAllowed();
   const [failed, setFailed] = useState(false);
-  const { sources, poster } = BG_CLIP;
+  const theme = useTheme();
+  const { sources, poster } = BG_CLIPS[theme];
   const lastIndex = sources.length - 1;
 
   return (
@@ -30,6 +32,7 @@ export function BackgroundVideo() {
     >
       {allowed && !failed ? (
         <video
+          key={theme}
           poster={poster}
           autoPlay
           muted

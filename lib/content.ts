@@ -492,14 +492,8 @@ export { PROMISE } from "./site";
 // UI chrome strings that used to be literals in components. Kept here so every
 // visible word on the landing page is translatable.
 export const NAV_LINKS = [
-  { label: "Work", href: "#work" },
-  { label: "How", href: "#system" },
-  { label: "Process", href: "#process" },
-  { label: "Example", href: "#case" },
   { label: "Playbook", href: "#playbook" },
   { label: "Rates", href: "#rates" },
-  { label: "Custom", href: "#custom" },
-  { label: "Stack", href: "#stack" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const;
@@ -513,6 +507,8 @@ export const FOOTER_DISCLAIMER = "Legal Disclaimer";
 export const FOOTER_LEGAL =
   "MyGrokFlow is an independent, agent-agnostic AI automation business and a separate legal entity. It is not affiliated with, endorsed by, or connected to xAI, Grok, X (formerly Twitter), Tesla, SpaceX, or Elon Musk. All trademarks are the property of their respective owners and are used for identification only. See our";
 export const LANG_LABEL = "Language";
+export const THEME_TO_LIGHT = "Switch to light mode";
+export const THEME_TO_DARK = "Switch to dark mode";
 export const META_TITLE = "MyGrokFlow: AI front desk for med spas and aesthetics clinics";
 export const META_DESCRIPTION =
   "An AI receptionist that answers every call, books the consult into your own software, cuts no-shows, and follows up on every lead. Built and installed for independent med spas and aesthetics clinics.";

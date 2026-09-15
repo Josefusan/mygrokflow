@@ -16,8 +16,7 @@ export const PLACEHOLDER_CARD_VIDEOS = [
   `${CDN}/hf_20260513_221104_fb538584-5b87-495f-952e-09ddd5a1792a.mp4`,
 ] as const;
 
-export const FALLBACK_RADIAL =
-  "radial-gradient(80vmax 60vmax at 20% 10%, #1C1C22, transparent 60%)";
+export const FALLBACK_RADIAL = "var(--mgf-radial)";
 
 export type VideoSource = { src: string; type: "video/webm" | "video/mp4" };
 
@@ -35,16 +34,21 @@ export type BackgroundClip = {
  */
 export const HAS_CLINIC_BG = true;
 
-export const CLINIC_BG: BackgroundClip = {
-  sources: [
-    { src: "/media/clinic-bg.webm", type: "video/webm" },
-    { src: "/media/clinic-bg.mp4", type: "video/mp4" },
-  ],
-  poster: "/media/clinic-bg-poster.jpg",
-};
+function clip(base: string): BackgroundClip {
+  return {
+    sources: [
+      { src: `/media/${base}.webm`, type: "video/webm" },
+      { src: `/media/${base}.mp4`, type: "video/mp4" },
+    ],
+    poster: `/media/${base}-poster.jpg`,
+  };
+}
 
 const PLACEHOLDER_BG: BackgroundClip = {
   sources: [{ src: PLACEHOLDER_BG_VIDEO, type: "video/mp4" }],
 };
 
-export const BG_CLIP: BackgroundClip = HAS_CLINIC_BG ? CLINIC_BG : PLACEHOLDER_BG;
+/** One clip per theme; the light one is the same move on a pale ground. */
+export const BG_CLIPS: Record<"dark" | "light", BackgroundClip> = HAS_CLINIC_BG
+  ? { dark: clip("clinic-bg"), light: clip("clinic-bg-light") }
+  : { dark: PLACEHOLDER_BG, light: PLACEHOLDER_BG };

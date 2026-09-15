@@ -37,14 +37,8 @@ export const es: Dict = {
   CTA_PRIMARY_SHORT: "Agenda una llamada",
   CTA_SECONDARY: "Descarga la guía gratis",
   NAV_LINKS: [
-    { label: "Servicios", href: "#work" },
-    { label: "Cómo", href: "#system" },
-    { label: "Proceso", href: "#process" },
-    { label: "Ejemplo", href: "#case" },
     { label: "Guía", href: "#playbook" },
     { label: "Tarifas", href: "#rates" },
-    { label: "A medida", href: "#custom" },
-    { label: "Software", href: "#stack" },
     { label: "FAQ", href: "#faq" },
     { label: "Contacto", href: "#contact" },
   ],
@@ -221,4 +215,6 @@ export const es: Dict = {
   FOOTER_LEGAL:
     "MyGrokFlow es un negocio independiente de automatización con IA, agnóstico en cuanto a agentes, y una entidad legal separada. No está afiliado, respaldado ni conectado con xAI, Grok, X (antes Twitter), Tesla, SpaceX ni Elon Musk. Todas las marcas pertenecen a sus respectivos dueños y se usan solo con fines de identificación. Consulta nuestro",
   LANG_LABEL: "Idioma",
+  THEME_TO_LIGHT: "Cambiar a modo claro",
+  THEME_TO_DARK: "Cambiar a modo oscuro",
 };

@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation";
 import { useContent, useLocale } from "@/components/i18n-provider";
-import { LOCALES, localePath, type Locale } from "@/lib/i18n";
+import { LOCALE_LABELS, LOCALES, localePath, type Locale } from "@/lib/i18n";
 import { focusRing } from "./cta-buttons";
 
 /**
- * Compact locale select for the nav. Shows the two-letter code so it fits next
- * to the CTA on a phone; the footer carries the full native-name links.
+ * Locale select for the nav. Every option is written in its own language so a
+ * visitor can find theirs without reading the current one.
  */
 export function LanguageSwitch({ className = "" }: { className?: string }) {
   const locale = useLocale();
@@ -24,12 +24,11 @@ export function LanguageSwitch({ className = "" }: { className?: string }) {
           const next = e.target.value as Locale;
           router.push(localePath(next) + window.location.hash);
         }}
-        style={{ colorScheme: "dark" }}
-        className={`h-9 cursor-pointer appearance-none rounded-full border border-(--mgf-border) bg-transparent pr-7 pl-3.5 font-mono text-[12px] uppercase tracking-[0.08em] text-(--mgf-text) hover:border-(--mgf-text) ${focusRing}`}
+        className={`h-9 cursor-pointer appearance-none rounded-full border border-(--mgf-border) bg-transparent pr-7 pl-3.5 font-mono text-[12px] tracking-[0.04em] text-(--mgf-text) hover:border-(--mgf-text) ${focusRing}`}
       >
         {LOCALES.map((l) => (
           <option key={l} value={l}>
-            {l.toUpperCase()}
+            {LOCALE_LABELS[l]}
           </option>
         ))}
       </select>

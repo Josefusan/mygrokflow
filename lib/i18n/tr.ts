@@ -37,14 +37,8 @@ export const tr: Dict = {
   CTA_PRIMARY_SHORT: "Görüşme ayarla",
   CTA_SECONDARY: "Ücretsiz rehberi al",
   NAV_LINKS: [
-    { label: "Hizmetler", href: "#work" },
-    { label: "Nasıl", href: "#system" },
-    { label: "Süreç", href: "#process" },
-    { label: "Örnek", href: "#case" },
     { label: "Rehber", href: "#playbook" },
     { label: "Fiyatlar", href: "#rates" },
-    { label: "Özel", href: "#custom" },
-    { label: "Yazılım", href: "#stack" },
     { label: "SSS", href: "#faq" },
     { label: "İletişim", href: "#contact" },
   ],
@@ -221,4 +215,6 @@ export const tr: Dict = {
   FOOTER_LEGAL:
     "MyGrokFlow bağımsız, ajan bağımsız bir yapay zekâ otomasyon işletmesi ve ayrı bir tüzel kişiliktir. xAI, Grok, X (eski adıyla Twitter), Tesla, SpaceX veya Elon Musk ile bağlantılı, onaylı veya ilişkili değildir. Tüm ticari markalar ilgili sahiplerine aittir ve yalnızca tanımlama amacıyla kullanılmıştır. Bkz.",
   LANG_LABEL: "Dil",
+  THEME_TO_LIGHT: "Açık moda geç",
+  THEME_TO_DARK: "Koyu moda geç",
 };

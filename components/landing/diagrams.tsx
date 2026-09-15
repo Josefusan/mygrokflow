@@ -8,17 +8,16 @@
  * it in DIAGRAMS. Point a Work card at it with the matching `media` key.
  */
 
-const CARD_RADIAL =
-  "radial-gradient(70% 60% at 30% 20%, #1C1C22, transparent 70%)";
-const STRUCT = "rgba(242,242,240,0.18)";
-const INK = "rgba(242,242,240,0.85)";
+const CARD_RADIAL = "var(--mgf-well)";
+const STRUCT = "var(--mgf-struct)";
+const INK = "var(--mgf-ink)";
 const ACCENT = "var(--mgf-accent)";
 
 const labelStyle = {
   fontFamily: "var(--font-mono), monospace",
   fontSize: "8.5px",
   letterSpacing: "0.14em",
-  fill: "rgba(242,242,240,0.5)",
+  fill: "var(--mgf-ink-soft)",
 } as const;
 
 const CX = 168;
@@ -534,7 +533,7 @@ export function CalendarDiagram() {
       <rect x="254" y="129" width="32" height="10" rx="2.5" fill={ACCENT} fillOpacity="0.9" className="mgf-pulse" />
       <path
         d="M259 134 l3 3 l6 -6"
-        stroke="#0b0b0d"
+        stroke="var(--mgf-bg)"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useVideoAllowed } from "./use-video-allowed";
 
-const CARD_RADIAL =
-  "radial-gradient(70% 60% at 30% 20%, #1C1C22, transparent 70%)";
+const CARD_RADIAL = "var(--mgf-well)";
 
 /** 4:3 media well for a Work card. Dark gradient first; clip only when allowed. */
 export function CardVideo({ src }: { src: string }) {

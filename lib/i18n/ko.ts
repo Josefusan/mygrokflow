@@ -37,14 +37,8 @@ export const ko: Dict = {
   CTA_PRIMARY_SHORT: "상담 예약",
   CTA_SECONDARY: "무료 플레이북 받기",
   NAV_LINKS: [
-    { label: "서비스", href: "#work" },
-    { label: "작동 방식", href: "#system" },
-    { label: "진행 과정", href: "#process" },
-    { label: "사례", href: "#case" },
     { label: "플레이북", href: "#playbook" },
     { label: "요금", href: "#rates" },
-    { label: "맞춤", href: "#custom" },
-    { label: "연동", href: "#stack" },
     { label: "FAQ", href: "#faq" },
     { label: "문의", href: "#contact" },
   ],
@@ -221,4 +215,6 @@ export const ko: Dict = {
   FOOTER_LEGAL:
     "MyGrokFlow는 특정 에이전트에 종속되지 않는 독립 AI 자동화 사업체이자 별개의 법인입니다. xAI, Grok, X(구 Twitter), Tesla, SpaceX 또는 Elon Musk와 제휴, 보증, 연관 관계가 없습니다. 모든 상표는 각 소유자의 자산이며 식별 목적으로만 사용됩니다. 자세한 내용은",
   LANG_LABEL: "언어",
+  THEME_TO_LIGHT: "라이트 모드로 전환",
+  THEME_TO_DARK: "다크 모드로 전환",
 };

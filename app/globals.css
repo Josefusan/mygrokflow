@@ -269,9 +269,9 @@
   }
 }
 
-/* Landing page (components/landing/*): scoped dark palette. The site
-   ThemeToggle never repaints this tree; FooterContacts reads the shadcn
-   tokens overridden below. */
+/* Landing page (components/landing/*): scoped palette, dark by default with a
+   light override below. FooterContacts reads the shadcn tokens overridden
+   here. */
 .mgf-landing {
   --mgf-bg: #0b0b0d;
   --mgf-panel: #161618;
@@ -290,11 +290,64 @@
     rgba(11, 11, 13, 0.58) 0%,
     rgba(11, 11, 13, 0.78) 100%
   );
+  --mgf-nav: rgba(11, 11, 13, 0.72);
+  --mgf-hero-scrim: linear-gradient(
+    100deg,
+    rgba(11, 11, 13, 0.94) 0%,
+    rgba(11, 11, 13, 0.6) 44%,
+    transparent 74%
+  );
+  --mgf-radial: radial-gradient(80vmax 60vmax at 20% 10%, #1c1c22, transparent 60%);
+  /* Diagram wells and SVG ink (components/landing/diagrams.tsx, case-study.tsx). */
+  --mgf-well: radial-gradient(70% 60% at 30% 20%, #1c1c22, transparent 70%);
+  --mgf-well-wide: radial-gradient(85% 130% at 50% -20%, #1c1c22, transparent 70%);
+  --mgf-struct: rgba(242, 242, 240, 0.18);
+  --mgf-ink: rgba(242, 242, 240, 0.85);
+  --mgf-ink-soft: rgba(242, 242, 240, 0.5);
   --muted-foreground: #9a9a9e;
   --foreground: #f2f2f0;
   --secondary: #1e1e22;
   color: var(--mgf-text);
   background: var(--mgf-bg);
+}
+
+/* Light mode: same layout, pale warm ground, darker lime so labels stay
+   readable on white. Toggled by removing .dark from <html> (lib/theme.ts). */
+html:not(.dark) .mgf-landing {
+  --mgf-bg: #f4f3ef;
+  --mgf-panel: #ebeae5;
+  --mgf-text: #0b0b0d;
+  --mgf-muted: #5c5c61;
+  --mgf-muted-on-video: rgba(11, 11, 13, 0.74);
+  --mgf-accent: #4d7c0f;
+  --mgf-border: rgba(11, 11, 13, 0.14);
+  --mgf-glass: rgba(244, 243, 239, 0.86);
+  --mgf-card: rgba(11, 11, 13, 0.04);
+  --mgf-scrim: linear-gradient(
+    180deg,
+    rgba(244, 243, 239, 0.5) 0%,
+    rgba(244, 243, 239, 0.74) 100%
+  );
+  --mgf-nav: rgba(244, 243, 239, 0.78);
+  --mgf-hero-scrim: linear-gradient(
+    100deg,
+    rgba(244, 243, 239, 0.94) 0%,
+    rgba(244, 243, 239, 0.6) 44%,
+    transparent 74%
+  );
+  --mgf-radial: radial-gradient(80vmax 60vmax at 20% 10%, #ffffff, transparent 60%);
+  --mgf-well: radial-gradient(70% 60% at 30% 20%, #ffffff, transparent 70%);
+  --mgf-well-wide: radial-gradient(85% 130% at 50% -20%, #ffffff, transparent 70%);
+  --mgf-struct: rgba(11, 11, 13, 0.2);
+  --mgf-ink: rgba(11, 11, 13, 0.85);
+  --mgf-ink-soft: rgba(11, 11, 13, 0.55);
+  --muted-foreground: #5c5c61;
+  --foreground: #0b0b0d;
+  --secondary: #e4e3de;
+}
+
+html:not(.dark) .mgf-landing ::selection {
+  background: rgba(77, 124, 15, 0.22);
 }
 
 .mgf-landing ::selection {

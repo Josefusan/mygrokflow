@@ -1,12 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { applyTheme, useTheme } from "@/lib/theme";
 
-const STORAGE_KEY = "mygrokflow-theme";
-
-type Theme = "light" | "dark";
-
-function SunIcon() {
+export function SunIcon() {
   return (
     <svg
       width={16}
@@ -25,7 +21,7 @@ function SunIcon() {
   );
 }
 
-function MoonIcon() {
+export function MoonIcon() {
   return (
     <svg
       width={16}
@@ -43,28 +39,14 @@ function MoonIcon() {
   );
 }
 
+/** Theme toggle for the legal pages (shadcn tokens). */
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    const next: Theme = stored === "light" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-  }, []);
-
-  function toggle() {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    window.localStorage.setItem(STORAGE_KEY, next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-  }
-
+  const theme = useTheme();
   return (
     <button
       type="button"
-      aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-      onClick={toggle}
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={() => applyTheme(theme === "dark" ? "light" : "dark")}
       className="inline-flex size-9 cursor-pointer items-center justify-center rounded-full text-muted-foreground transition-colors duration-200 hover:bg-secondary hover:text-foreground"
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}

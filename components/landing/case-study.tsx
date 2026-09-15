@@ -8,8 +8,8 @@ import { Counter, SectionHead } from "./section-bits";
 
 const colHeading = "font-mono text-[12px] uppercase tracking-[0.14em] text-(--mgf-muted)";
 
-const STRUCT = "rgba(242,242,240,0.18)";
-const INK = "rgba(242,242,240,0.85)";
+const STRUCT = "var(--mgf-struct)";
+const INK = "var(--mgf-ink)";
 const ACCENT = "var(--mgf-accent)";
 
 const flowLabel =
@@ -27,8 +27,7 @@ function CaseFlow() {
       aria-hidden="true"
       className="relative w-full overflow-hidden rounded-[20px] border border-(--mgf-border) bg-(--mgf-bg)"
       style={{
-        backgroundImage:
-          "radial-gradient(85% 130% at 50% -20%, #1c1c22, transparent 70%)",
+        backgroundImage: "var(--mgf-well-wide)",
       }}
     >
       <svg viewBox="0 0 680 172" className="w-full" fill="none">
@@ -39,7 +38,7 @@ function CaseFlow() {
         <circle cx="79" cy="112" r="2.6" fill={STRUCT} />
         <path d="M110 70 q10 9 10 20 q0 11 -10 20" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" className="mgf-flow" />
         <path d="M104 78 q6 6 6 12 q0 6 -6 12" stroke={ACCENT} strokeWidth="1.4" strokeLinecap="round" />
-        <text x="82" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[11px] tracking-[0.12em]">
+        <text x="82" y="150" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
           CALLS &amp; MESSAGES
         </text>
 
@@ -64,8 +63,8 @@ function CaseFlow() {
         <path d="M572 50 v12 M600 50 v12" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
         <rect x="566" y="84" width="40" height="10" rx="2.5" stroke={STRUCT} strokeWidth="1.2" />
         <rect x="566" y="99" width="40" height="11" rx="2.5" fill={ACCENT} fillOpacity="0.92" />
-        <path d="M573 105 l3.5 3.5 l7 -7" stroke="#0b0b0d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="586" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[11px] tracking-[0.12em]">
+        <path d="M573 105 l3.5 3.5 l7 -7" stroke="var(--mgf-bg)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="586" y="150" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
           BOOKED &amp; REMINDED
         </text>
       </svg>

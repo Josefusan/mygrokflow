@@ -4,7 +4,8 @@
 # Grades toward the site palette (darker, slightly desaturated), strips audio,
 # trims to a short loop, scales to 1920 wide, and prints the payload sizes.
 #
-# Usage: scripts/prepare-bg-video.sh media-raw/clinic-bg-raw.mp4 [start_seconds] [duration_seconds]
+# Usage: scripts/prepare-bg-video.sh media-raw/clinic-bg-raw.mp4 [start_seconds] [duration_seconds] [base_name]
+#   base_name defaults to clinic-bg; use clinic-bg-light for the light-mode clip.
 # Then set HAS_CLINIC_BG = true in lib/media.ts and commit the three files.
 set -euo pipefail
 
@@ -12,7 +13,7 @@ IN="${1:?raw clip path required}"
 START="${2:-0}"
 DUR="${3:-8}"
 OUT_DIR="public/media"
-BASE="clinic-bg"
+BASE="${4:-clinic-bg}"
 # Grade: pull exposure down, soften saturation, keep contrast. The page scrim
 # adds its own 58-78% darkening on top, so this stays gentle.
 GRADE="eq=brightness=-0.05:contrast=1.04:saturation=0.82"
