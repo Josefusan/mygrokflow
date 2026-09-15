@@ -1,6 +1,6 @@
 # Background clip brief: med spa treatment room
 
-Status: waiting on footage. The live site still plays the May 2026 Higgsfield placeholder from a third-party CDN (`PLACEHOLDER_BG_VIDEO` in `lib/media.ts`).
+Status: interim. The live site plays a self-hosted 16 second dark gradient loop (ffmpeg `gradients` filter, palindromed so it loops without a jump) from `public/media/clinic-bg.*`. Real clinic footage from the brief below replaces it through the same pipeline. The May 2026 Higgsfield placeholder (`PLACEHOLDER_BG_VIDEO`) is no longer used.
 
 ## Use
 

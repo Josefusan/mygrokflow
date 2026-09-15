@@ -33,7 +33,7 @@ export type BackgroundClip = {
  * from the brief in docs/media/clinic-bg-brief.md. Flip HAS_CLINIC_BG to true
  * in the same commit that adds the three files under public/media/.
  */
-export const HAS_CLINIC_BG = false;
+export const HAS_CLINIC_BG = true;
 
 export const CLINIC_BG: BackgroundClip = {
   sources: [
