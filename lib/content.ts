@@ -1,13 +1,13 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
 export const EYEBROW =
-  "AI front desk for med spas and aesthetics clinics";
+  "The AI front desk for med spas and aesthetics clinics";
 
-export const HEADLINE = "Stop losing consults to missed calls and no-shows.";
+export const HEADLINE = "Every call answered. Every consult booked. Even at 6pm on a Friday.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "AI that answers every call, books the appointment, and follows up on every lead, day or night. We build it and install it for you.";
+  "An AI receptionist that picks up when your team is in a treatment room, books the consult into your own calendar, and follows up on every lead. We install it. You keep the client.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
@@ -15,17 +15,18 @@ export const AUDIENCE_LINE =
   "For owners, co-owners, and clinic managers at independent med spas and aesthetics clinics in Dallas to Fort Worth.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "Our AI answers every call and message, books the consult, sends the reminders, and follows up on every lead, day or night. You keep the client and the treatment.",
-  "Show us your phones, calendar, and booking software. We build the rest. Book a strategy call and we'll tell you exactly what we'd build, no obligation.",
+  "Right now a caller hits voicemail while you are mid-treatment. Most never call back. They book with whoever picks up.",
+  "We fix that. Our AI answers every call and DM, books the consult, sends the reminders, and follows up on every lead. Day or night. You keep the client and the treatment.",
+  "Show us your phones, calendar, and booking software. We build the rest. On the strategy call we tell you exactly what we would install, no obligation.",
 ] as const;
 
-export const AUDIENCE_HEADING = "Here's who we work best with";
+export const AUDIENCE_HEADING = "Who this is for";
 
 export const APHORISM =
   "Every missed call is a booking that went to another clinic.";
 
 export const CTA_PRIMARY = "Book a strategy call";
-export const CTA_SECONDARY = "Free playbook";
+export const CTA_SECONDARY = "Get the free playbook";
 
 export const WORK_HEADING = "What we build";
 export const SYSTEM_HEADING = "How it works";
@@ -33,7 +34,7 @@ export const PROCESS_HEADING = "Our process";
 export const RATES_HEADING = "Rates";
 export const FAQ_HEADING = "FAQ";
 export const FAQ_NOTE =
-  "AI receptionist and booking automation for med spas and aesthetics clinics, the tools we integrate with, and how we keep your data secure.";
+  "Straight answers on the AI front desk, the software we plug into, and how we keep your data safe.";
 
 export const SECTION_COUNT = 11;
 
@@ -75,11 +76,11 @@ export const NEWSLETTER = {
 export const AUDIENCE = [
   {
     title: "Owners and co-owners",
-    body: "You inject, you consult, and you run the business. Calls go to voicemail while you are with a client, and that voicemail is a lost booking.",
+    body: "You inject, you consult, and you run the business. A call that hits voicemail while you are with a client is a consult that booked somewhere else.",
   },
   {
     title: "Clinic and office managers",
-    body: "You own the schedule. Your day goes to phone tag, reminders, and lead follow-up instead of the clients in the room.",
+    body: "You own the schedule. Your day goes to phone tag, reminders, and chasing leads instead of the clients in the lobby.",
   },
   {
     title: "Clinics of 2 to 10 staff, up to 3 locations",
@@ -90,18 +91,18 @@ export const AUDIENCE = [
 export const PROCESS = [
   {
     n: "01",
-    title: "Bring the work.",
-    body: "Your calls, calendar, lead sources, and the questions clients ask most. Share the intake forms, offers, and scripts you already have.",
+    title: "Show us the leaks.",
+    body: "Your call log, calendar, lead sources, and the questions clients ask most. Plus any intake forms and scripts you already use.",
   },
   {
     n: "02",
     title: "Show us the stack.",
-    body: "Your booking software (Zenoti, Boulevard, Mindbody, and the rest), phones, and calendar. The tools you already pay for.",
+    body: "Your booking software, phones, and calendar. Zenoti, Boulevard, Mindbody, and the rest. The tools you already pay for.",
   },
   {
     n: "03",
     title: "We build the system.",
-    body: "We automate the receptionist, booking, reminder, and follow-up loop end to end and hand you a schedule that fills without you.",
+    body: "We wire the receptionist, booking, reminder, and follow-up loop end to end. You get a schedule that fills without you.",
   },
 ] as const;
 
@@ -109,30 +110,30 @@ export const PROCESS = [
 // generation system moves through, each paired with its on-brand diagram
 // (`media` selects a DIAGRAMS SVG). This is the model we build and run for you.
 export const SYSTEM_NOTE =
-  "From missed call to booked consult, the loop we build and run for you. Four stages, one engine.";
+  "From missed call to booked consult. Four stages, one loop, built and run for you.";
 export const SYSTEM_STAGES = [
   {
     n: "Stage 1",
     title: "Answer every call and DM",
-    body: "The AI receptionist picks up when your team is in a room, after hours, and during the rush. Callers get a real answer instead of voicemail, and DMs get caught instead of lost.",
+    body: "Picks up when your team is in a room, after hours, and during the rush. A real answer instead of voicemail. DMs caught instead of lost.",
     media: "phone",
   },
   {
     n: "Stage 2",
     title: "Book the consult",
-    body: "It answers the common questions, checks your live availability, and books the consult straight into Zenoti, Boulevard, or Mindbody. No callback loop, no double entry.",
+    body: "Answers the common questions, checks live availability, and books straight into Zenoti, Boulevard, or Mindbody. No callback, no double entry.",
     media: "calendar",
   },
   {
     n: "Stage 3",
     title: "Cut the no-shows",
-    body: "Reminders and confirmations go out before every visit, and a freed-up slot is offered to your waitlist when someone cancels, so chairs get filled instead of written off.",
+    body: "Reminders and confirmations before every visit. A cancelled slot goes to your waitlist. Chairs get filled instead of written off.",
     media: "ops",
   },
   {
     n: "Stage 4",
     title: "Reactivate and repeat",
-    body: "Old leads, missed calls, and lapsed clients get a fast, on-brand recall with a booking link, so the list you already own starts producing again.",
+    body: "Old leads, missed calls, and lapsed clients get an on-brand recall with a booking link. The list you already own starts producing again.",
     media: "crm",
   },
 ] as const;
@@ -144,59 +145,59 @@ export const SYSTEM_STAGES = [
 export const SYSTEMS = [
   {
     title: "24/7 AI Receptionist",
-    body: "Answers calls and messages around the clock, handles the common questions about hours and treatments, and books the consult, so nothing lands in voicemail at 6pm on a Friday.",
+    body: "Picks up every call and message, answers the questions about hours and treatments, and books the consult. Nothing lands in voicemail at 6pm on a Friday.",
     media: "support",
   },
   {
     title: "After-Hours Call Answering",
-    body: "Covers every call your front desk cannot: nights, weekends, lunch, and back-to-back appointments. Callers get a real conversation in your clinic's voice and a booked consult before they hang up.",
+    body: "Nights, weekends, lunch, and back-to-back appointments. Callers get a real conversation in your clinic's voice and a booked consult before they hang up.",
     media: "phone",
   },
   {
     title: "AI Appointment Booking",
-    body: "Turns every call, form, and message into a confirmed appointment. It answers the questions, offers real open slots, books the time, and sends the reminders. No phone tag.",
+    body: "Every call, form, and DM becomes a confirmed appointment in Zenoti, Boulevard, or Mindbody. Real open slots, reminders sent. No phone tag.",
     media: "calendar",
   },
   {
     title: "Missed-Call Text-Back",
-    body: "The second a call goes unanswered, the caller gets a friendly text that answers their question and offers a time to book. Voicemail becomes an appointment while your team stays in the room.",
+    body: "A call goes unanswered. Seconds later the caller has a text that answers their question and offers a time. Voicemail becomes an appointment while your team stays in the room.",
     media: "leadgen",
   },
   {
     title: "No-Show Reduction",
-    body: "Confirmations and reminders go out before every visit, and when someone cancels, the open slot is offered to your waitlist. Fewer empty chairs, and no one chasing anyone by hand.",
+    body: "Confirmations and reminders before every visit. When someone cancels, the slot goes to your waitlist. Fewer empty chairs, and nobody chasing anyone by hand.",
     media: "ops",
   },
   {
     title: "Lapsed-Client Recall",
-    body: "Finds the clients who are due for a touch-up or went quiet, picks the right moment, drafts the note, and books the return visit. Revenue hiding in the list you already own.",
+    body: "Finds the clients due for a touch-up or gone quiet, sends the right note at the right time, and books the return visit. Revenue hiding in the list you already own.",
     media: "crm",
   },
   {
     title: "Inbound Form & DM Qualification",
-    body: "Reads every website form, Instagram and Facebook DM, and inbound message, answers the first questions, and books the ready ones, so no inquiry sits unread overnight.",
+    body: "Reads every website form and Instagram or Facebook DM, answers the first questions, and books the ready ones. No inquiry sits unread overnight.",
     media: "triage",
   },
   {
     title: "AI Follow-Up & Nurture",
-    body: "Keeps every warm inquiry moving with timely, personal follow-ups, answers questions about treatments and pricing, and books the consult, so conversations turn into visits.",
+    body: "Every warm inquiry gets a timely, personal follow-up until it books or says no. Questions about treatments and pricing answered on the spot.",
     media: "crm",
   },
   {
     title: "AI Ad Campaign Manager",
-    body: "Launches, tests, and optimizes your paid ads across Google, Meta, and Instagram. Shifts budget to what converts and pauses what does not, so every dollar chases the lowest cost per booked consult.",
+    body: "Runs your Google, Meta, and Instagram ads. Moves budget to what books consults and pauses what does not.",
     media: "ads",
   },
   {
     title: "AI Customer Support Agent",
-    body: "Answers, resolves, and escalates across email, chat, and web in your clinic's voice. Repeat questions about pricing, hours, and scheduling get instant answers. The rest goes to your team with full context.",
+    body: "Answers email, chat, and web in your clinic's voice. Pricing, hours, and scheduling handled instantly. Anything else goes to your team with full context.",
     media: "support",
   },
 ] as const;
 
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
-  "Every automation runs on scoped, least-privilege access, with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive.";
+  "Scoped, least-privilege access. Your data encrypted in transit and at rest, inside infrastructure you control. Full audit trail. A human approves anything destructive.";
 
 // Three public monthly retainers. eyebrow/price/suffix split the header; Core
 // carries the badge as the default buy. Add-ons are quoted on the call, never
@@ -213,7 +214,7 @@ export const RATES = [
     suffix: "/mo",
     badge: "",
     featured: false,
-    tagline: "Missed and after-hours calls become booked consults on your stack.",
+    tagline: "Missed and after-hours calls become booked consults.",
     who: "Single-location clinic where the main leak is missed or after-hours calls. Not most clinics.",
     note: "",
     included: [
@@ -241,7 +242,7 @@ export const RATES = [
     badge: "Recommended",
     featured: true,
     tagline:
-      "After-hours stops leaking, and a second source of booked consults comes back online.",
+      "Everything in Essential, plus a second source of booked consults.",
     who: "Independent med spa, 2 to 10 staff, up to 3 locations, where the owner should not live in follow-up.",
     note: "The gap vs Essential is a second booked-consult source. We map it against your average consult on the call.",
     included: [

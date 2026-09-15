@@ -15,7 +15,7 @@ export const BUTTONDOWN_EMBED_URL =
   "https://buttondown.com/api/emails/embed-subscribe/MyGrokFlow";
 export const BUTTONDOWN_REFER_URL = "https://buttondown.com/refer/MyGrokFlow";
 export const PROMISE =
-  "We take a painful recurring workflow and turn it into a system that runs without you.";
+  "The front desk that never misses a call. Built and installed for your clinic.";
 
 export const CONTACTS = [
   {

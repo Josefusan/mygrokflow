@@ -8,7 +8,7 @@ const PLAYBOOK_ANCHOR = "#playbook";
 export const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--mgf-accent)";
 
-const pillBase = `inline-flex items-center justify-center rounded-full border text-[12px] font-medium uppercase tracking-[0.08em] ${focusRing}`;
+const pillBase = `inline-flex items-center justify-center whitespace-nowrap rounded-full border text-[12px] font-medium uppercase tracking-[0.08em] ${focusRing}`;
 
 const pillSize = {
   default: "min-h-11 px-9 py-3.5",
