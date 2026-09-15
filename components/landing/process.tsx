@@ -20,13 +20,13 @@ export function Process() {
               delay={0.35 + i * 0.12}
               className="border-t border-(--mgf-border) py-6"
             >
-              <span className="font-mono text-[11px] text-(--mgf-accent)">
+              <span className="font-mono text-[12px] text-(--mgf-accent)">
                 {step.n}
               </span>
-              <h3 className="mt-3 text-[18px] font-semibold text-(--mgf-text)">
+              <h3 className="mt-3 text-[20px] font-semibold text-(--mgf-text)">
                 {step.title}
               </h3>
-              <p className="mt-2 text-[13px] leading-[1.65] text-(--mgf-muted-on-video)">
+              <p className="mt-2 text-[15px] leading-[1.65] text-(--mgf-muted-on-video)">
                 {step.body}
               </p>
             </FadeUp>

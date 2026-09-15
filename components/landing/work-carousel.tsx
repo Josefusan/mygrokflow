@@ -20,12 +20,12 @@ function Card({ item }: { item: WorkItem }) {
     <article className="flex h-full flex-col overflow-hidden rounded-[20px] border border-(--mgf-border) bg-(--mgf-card) pt-4">
       <CardMedia media={item.media} />
       <div className="flex flex-1 flex-col px-7 pt-6 pb-7">
-        <h3 className="mb-3.5 text-[18px] font-semibold text-(--mgf-text)">
+        <h3 className="mb-3.5 text-[20px] font-semibold text-(--mgf-text)">
           {item.title}
         </h3>
-        <p className="text-[13px] leading-[1.6] text-(--mgf-muted)">{item.body}</p>
+        <p className="text-[15px] leading-[1.6] text-(--mgf-muted)">{item.body}</p>
         {item.shows ? (
-          <p className="mt-auto flex gap-2 pt-4 text-[12px] leading-[1.55]">
+          <p className="mt-auto flex gap-2 pt-4 text-[14px] leading-[1.55]">
             <span aria-hidden="true" className="text-(--mgf-accent)">
               ➣
             </span>

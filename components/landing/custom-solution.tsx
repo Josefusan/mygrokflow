@@ -25,7 +25,7 @@ export function CustomSolution() {
         delay={0.35}
         className="rounded-[20px] border border-(--mgf-accent) bg-(--mgf-card) p-8 shadow-[0_0_0_1px_var(--mgf-accent)] max-[600px]:p-6"
       >
-        <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-(--mgf-accent)">
+        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-(--mgf-accent)">
           {CUSTOM_LABEL}
         </p>
 
@@ -34,7 +34,7 @@ export function CustomSolution() {
             <li key={line}>
               <FadeUp
                 delay={0.4 + i * 0.1}
-                className="flex gap-3 text-[14px] leading-[1.6] text-(--mgf-text)"
+                className="flex gap-3 text-[16px] leading-[1.6] text-(--mgf-text)"
               >
                 <span aria-hidden="true" className="text-(--mgf-accent)">
                   ✓
@@ -45,7 +45,7 @@ export function CustomSolution() {
           ))}
         </ul>
 
-        <p className="mt-7 max-w-[620px] text-[14px] leading-[1.65] text-(--mgf-muted)">
+        <p className="mt-7 max-w-[620px] text-[16px] leading-[1.65] text-(--mgf-muted)">
           {CUSTOM_CLOSE}
         </p>
 

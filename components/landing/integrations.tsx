@@ -4,7 +4,7 @@ import { STACK_HEADING, STACK_TOOLS } from "@/lib/content";
 import { Counter, SectionHead } from "./section-bits";
 
 const chip =
-  "inline-flex shrink-0 items-center gap-2.5 rounded-full border border-(--mgf-border) bg-(--mgf-card) py-1.5 pl-1.5 pr-4 font-mono text-[12px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
+  "inline-flex shrink-0 items-center gap-2.5 rounded-full border border-(--mgf-border) bg-(--mgf-card) py-1.5 pl-1.5 pr-4 font-mono text-[14px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
 
 // Real logo on a small light tile so multicolor and dark brand marks stay
 // legible over the dark section.

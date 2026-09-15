@@ -3,7 +3,7 @@ import { RATES, RATES_FOOT, RATES_HEADING, RATES_NOTE } from "@/lib/content";
 import { CtaRow, PrimaryCta } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
-const label = "font-mono text-[11px] uppercase text-(--mgf-muted)";
+const label = "font-mono text-[12px] uppercase text-(--mgf-muted)";
 
 /** Section 008. Three public retainers; Core is the highlighted default buy. */
 export function Rates() {
@@ -30,7 +30,7 @@ export function Rates() {
               >
                 {rate.badge && (
                   <span
-                    className={`absolute -top-2.5 left-7 rounded-full px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] ${
+                    className={`absolute -top-2.5 left-7 rounded-full px-2.5 py-1 font-mono text-[11px] font-semibold uppercase tracking-[0.08em] ${
                       featured
                         ? "bg-(--mgf-accent) text-(--mgf-bg)"
                         : "border border-(--mgf-border) bg-(--mgf-card) text-(--mgf-muted)"
@@ -40,17 +40,17 @@ export function Rates() {
                   </span>
                 )}
                 <p className={label}>{rate.eyebrow}</p>
-                <h3 className="mt-2 text-[clamp(28px,2.6vw,36px)] font-bold tracking-[-0.02em] text-(--mgf-text)">
+                <h3 className="mt-2 text-[clamp(30px,2.8vw,40px)] font-bold tracking-[-0.02em] text-(--mgf-text)">
                   {rate.price}{" "}
-                  <span className="font-mono text-[11px] font-normal tracking-normal text-(--mgf-muted)">
+                  <span className="font-mono text-[12px] font-normal tracking-normal text-(--mgf-muted)">
                     {rate.suffix}
                   </span>
                 </h3>
 
-                <p className="mt-3 text-[13.5px] font-medium leading-[1.5] text-(--mgf-text)">
+                <p className="mt-3 text-[15px] font-medium leading-[1.5] text-(--mgf-text)">
                   {rate.tagline}
                 </p>
-                <p className="mt-2 text-[12px] leading-[1.55] text-(--mgf-muted)">
+                <p className="mt-2 text-[14px] leading-[1.55] text-(--mgf-muted)">
                   {rate.who}
                 </p>
 
@@ -61,7 +61,7 @@ export function Rates() {
                   {rate.included.map((line) => (
                     <li
                       key={line}
-                      className="flex items-start gap-2.5 text-[13px] leading-[1.6] text-(--mgf-text)"
+                      className="flex items-start gap-2.5 text-[15px] leading-[1.6] text-(--mgf-text)"
                     >
                       <span
                         aria-hidden="true"
@@ -79,7 +79,7 @@ export function Rates() {
                       {rate.excluded.map((line) => (
                         <li
                           key={line}
-                          className="text-[13px] leading-[1.6] text-(--mgf-muted)"
+                          className="text-[15px] leading-[1.6] text-(--mgf-muted)"
                         >
                           {line}
                         </li>
@@ -89,7 +89,7 @@ export function Rates() {
                 )}
 
                 {rate.note && (
-                  <p className="mt-5 border-t border-(--mgf-border) pt-4 text-[12px] leading-[1.55] text-(--mgf-muted)">
+                  <p className="mt-5 border-t border-(--mgf-border) pt-4 text-[14px] leading-[1.55] text-(--mgf-muted)">
                     {rate.note}
                   </p>
                 )}
@@ -109,7 +109,7 @@ export function Rates() {
       <FadeUp
         as="p"
         delay={0.85}
-        className="mt-7 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
+        className="mt-7 max-w-[72ch] text-[15px] leading-[1.7] text-(--mgf-muted)"
       >
         {RATES_FOOT}
       </FadeUp>

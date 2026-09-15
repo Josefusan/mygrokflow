@@ -5,8 +5,8 @@ import { PROMISE, SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 
-const heading = "font-mono text-[11px] uppercase text-(--mgf-muted)";
-const link = `text-[13px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
+const heading = "font-mono text-[12px] uppercase text-(--mgf-muted)";
+const link = `text-[15px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
 /** Uncounted footer, id="contact". Newsletter link lives here now. */
 export function LandingFooter() {
@@ -17,23 +17,23 @@ export function LandingFooter() {
     >
       <div className="grid grid-cols-3 gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-10">
         <FadeUp delay={0} className="flex flex-col items-start gap-4">
-          <span className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
+          <span className="inline-flex items-center gap-2 text-[15px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
             <GrokMark className="text-(--mgf-text)" />
             {SITE_NAME}
           </span>
-          <p className="max-w-[320px] text-[14px] leading-[1.65] text-(--mgf-muted)">
+          <p className="max-w-[320px] text-[16px] leading-[1.65] text-(--mgf-muted)">
             {PROMISE}
           </p>
           <div className="flex items-center gap-4">
             <a
               href="/privacy"
-              className={`font-mono text-[11px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
+              className={`font-mono text-[12px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
             >
               Privacy Policy
             </a>
             <a
               href="/disclaimer"
-              className={`font-mono text-[11px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
+              className={`font-mono text-[12px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
             >
               Legal Disclaimer
             </a>
@@ -58,13 +58,13 @@ export function LandingFooter() {
       </div>
 
       <div className="mt-16 flex items-center justify-between gap-4 border-t border-(--mgf-border) pt-6 max-[600px]:flex-col max-[600px]:items-start">
-        <p className="font-mono text-[11px] text-(--mgf-muted)">
+        <p className="font-mono text-[12px] text-(--mgf-muted)">
           © {new Date().getFullYear()} {SITE_NAME}
         </p>
         <PrimaryCta />
       </div>
 
-      <p className="mt-6 max-w-[720px] text-[11px] leading-[1.6] text-(--mgf-muted)">
+      <p className="mt-6 max-w-[720px] text-[12px] leading-[1.6] text-(--mgf-muted)">
         MyGrokFlow is an independent, agent-agnostic AI automation business and a
         separate legal entity. It is not affiliated with, endorsed by, or
         connected to xAI, Grok, X (formerly Twitter), Tesla, SpaceX, or Elon

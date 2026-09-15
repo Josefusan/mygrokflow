@@ -30,7 +30,7 @@ export function Work() {
       <FadeUp
         as="p"
         delay={0.5}
-        className="mt-8 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
+        className="mt-8 max-w-[72ch] text-[15px] leading-[1.7] text-(--mgf-muted)"
       >
         <span className="font-medium text-(--mgf-text)">{SECURITY_LEAD}</span>{" "}
         {SECURITY_NOTE}

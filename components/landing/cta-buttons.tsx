@@ -8,7 +8,7 @@ const PLAYBOOK_ANCHOR = "#playbook";
 export const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--mgf-accent)";
 
-const pillBase = `inline-flex items-center justify-center rounded-full border text-[11px] font-medium uppercase tracking-[0.08em] ${focusRing}`;
+const pillBase = `inline-flex items-center justify-center rounded-full border text-[12px] font-medium uppercase tracking-[0.08em] ${focusRing}`;
 
 const pillSize = {
   default: "min-h-11 px-9 py-3.5",
@@ -22,7 +22,7 @@ const pillVariant = {
     "border-white/35 bg-transparent text-(--mgf-text) hover:border-(--mgf-text) hover:bg-(--mgf-text) hover:text-(--mgf-bg)",
 } as const;
 
-export const textLink = `font-mono text-[11px] uppercase tracking-[0.08em] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
+export const textLink = `font-mono text-[12px] uppercase tracking-[0.08em] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
 type PillProps = {
   variant?: keyof typeof pillVariant;

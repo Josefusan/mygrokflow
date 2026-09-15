@@ -8,8 +8,8 @@ import {
 } from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
-const body = "text-[17px] leading-[1.6] text-(--mgf-text)";
-const mono = "font-mono text-[11px] uppercase text-(--mgf-muted-on-video)";
+const body = "text-[19px] leading-[1.6] text-(--mgf-text)";
+const mono = "font-mono text-[12px] uppercase text-(--mgf-muted-on-video)";
 
 /**
  * Section 002. Transparent over the video: the gap we fill (the 360 trap),
@@ -22,7 +22,7 @@ export function Statement() {
       <div className="max-w-[720px]">
         <Counter n={2} className="mb-5" />
 
-        <h2 className="text-[clamp(26px,3vw,42px)] font-bold uppercase leading-[1.08] tracking-[-0.01em] text-(--mgf-text)">
+        <h2 className="text-[clamp(28px,3.2vw,46px)] font-bold uppercase leading-[1.08] tracking-[-0.01em] text-(--mgf-text)">
           <SplitHeading text={TAGLINE} baseDelay={0.15} stagger={0.08} y={32} />
         </h2>
 
@@ -44,10 +44,10 @@ export function Statement() {
                 delay={0.9 + i * 0.1}
                 className="border-t border-(--mgf-border) pt-4"
               >
-                <h3 className="text-[14px] font-semibold text-(--mgf-text)">
+                <h3 className="text-[16px] font-semibold text-(--mgf-text)">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-[13px] leading-[1.65] text-(--mgf-muted-on-video)">
+                <p className="mt-1.5 text-[15px] leading-[1.65] text-(--mgf-muted-on-video)">
                   {item.body}
                 </p>
               </FadeUp>

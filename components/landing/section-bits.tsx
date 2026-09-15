@@ -2,10 +2,10 @@ import { FadeUp, SplitText } from "@/components/motion/fade-up";
 import { SECTION_COUNT } from "@/lib/content";
 
 export const display =
-  "text-[clamp(26px,3vw,42px)] font-bold leading-[1.05] tracking-[-0.01em] text-(--mgf-text)";
+  "text-[clamp(28px,3.2vw,46px)] font-bold leading-[1.05] tracking-[-0.01em] text-(--mgf-text)";
 
 export const eyebrow =
-  "font-mono text-[11px] uppercase tracking-[0.16em] text-(--mgf-muted)";
+  "font-mono text-[12px] uppercase tracking-[0.16em] text-(--mgf-muted)";
 
 /**
  * Word-by-word heading reveal. The split words are flex items with no
@@ -53,7 +53,7 @@ export function Counter({
   return (
     <FadeUp
       delay={delay}
-      className={`font-mono text-[11px] tracking-[0.08em] text-(--mgf-accent) ${className}`}
+      className={`font-mono text-[12px] tracking-[0.08em] text-(--mgf-accent) ${className}`}
     >
       {pad(n)} / {pad(SECTION_COUNT)}
     </FadeUp>
@@ -88,7 +88,7 @@ export function SectionHead({
         <FadeUp
           as="p"
           delay={0.25}
-          className={`max-w-[320px] pt-2 text-[14px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
+          className={`max-w-[320px] pt-2 text-[16px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
         >
           {note}
         </FadeUp>

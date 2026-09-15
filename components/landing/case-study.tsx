@@ -14,14 +14,14 @@ import { CtaRow } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 import { Counter, SectionHead } from "./section-bits";
 
-const colHeading = "font-mono text-[11px] uppercase tracking-[0.14em] text-(--mgf-muted)";
+const colHeading = "font-mono text-[12px] uppercase tracking-[0.14em] text-(--mgf-muted)";
 
 const STRUCT = "rgba(242,242,240,0.18)";
 const INK = "rgba(242,242,240,0.85)";
 const ACCENT = "var(--mgf-accent)";
 
 const flowLabel =
-  "font-mono text-[10px] uppercase tracking-[0.12em] text-(--mgf-muted)";
+  "font-mono text-[11px] uppercase tracking-[0.12em] text-(--mgf-muted)";
 
 /**
  * Branded end-to-end flow for the example: inbound patient calls and messages
@@ -47,7 +47,7 @@ function CaseFlow() {
         <circle cx="79" cy="112" r="2.6" fill={STRUCT} />
         <path d="M110 70 q10 9 10 20 q0 11 -10 20" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" className="mgf-flow" />
         <path d="M104 78 q6 6 6 12 q0 6 -6 12" stroke={ACCENT} strokeWidth="1.4" strokeLinecap="round" />
-        <text x="82" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[10px] tracking-[0.12em]">
+        <text x="82" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[11px] tracking-[0.12em]">
           CALLS &amp; MESSAGES
         </text>
 
@@ -59,7 +59,7 @@ function CaseFlow() {
         <circle cx="340" cy="90" r="38" stroke={ACCENT} strokeWidth="1.6" strokeOpacity="0.9" className="mgf-flow" />
         <circle cx="340" cy="90" r="46" stroke={STRUCT} strokeWidth="1" strokeOpacity="0.5" />
 
-        <text x="340" y="150" textAnchor="middle" className="fill-[var(--mgf-accent)] font-mono text-[10px] tracking-[0.16em]">
+        <text x="340" y="150" textAnchor="middle" className="fill-[var(--mgf-accent)] font-mono text-[11px] tracking-[0.16em]">
           MYGROKFLOW
         </text>
 
@@ -73,7 +73,7 @@ function CaseFlow() {
         <rect x="566" y="84" width="40" height="10" rx="2.5" stroke={STRUCT} strokeWidth="1.2" />
         <rect x="566" y="99" width="40" height="11" rx="2.5" fill={ACCENT} fillOpacity="0.92" />
         <path d="M573 105 l3.5 3.5 l7 -7" stroke="#0b0b0d" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <text x="586" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[10px] tracking-[0.12em]">
+        <text x="586" y="150" textAnchor="middle" className="fill-[rgba(242,242,240,0.5)] font-mono text-[11px] tracking-[0.12em]">
           BOOKED &amp; REMINDED
         </text>
       </svg>
@@ -111,7 +111,7 @@ export function CaseStudy() {
       <FadeUp
         as="p"
         delay={0.2}
-        className="inline-block rounded-full border border-(--mgf-border) px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-(--mgf-accent)"
+        className="inline-block rounded-full border border-(--mgf-border) px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-(--mgf-accent)"
       >
         {CASE_LABEL}
       </FadeUp>
@@ -132,7 +132,7 @@ export function CaseStudy() {
             {CASE_BEFORE.map((line) => (
               <li
                 key={line}
-                className="flex gap-3 text-[13px] leading-[1.6] text-(--mgf-muted)"
+                className="flex gap-3 text-[15px] leading-[1.6] text-(--mgf-muted)"
               >
                 <span aria-hidden="true" className="text-(--mgf-muted)">
                   ✕
@@ -154,7 +154,7 @@ export function CaseStudy() {
             {CASE_AFTER.map((line) => (
               <li
                 key={line}
-                className="flex gap-3 text-[13px] leading-[1.6] text-(--mgf-text)"
+                className="flex gap-3 text-[15px] leading-[1.6] text-(--mgf-text)"
               >
                 <span aria-hidden="true" className="text-(--mgf-accent)">
                   ✓
@@ -174,10 +174,10 @@ export function CaseStudy() {
               delay={0.45 + i * 0.08}
               className="h-full rounded-[20px] border border-(--mgf-border) bg-(--mgf-card) p-7"
             >
-              <p className="text-[clamp(28px,3vw,40px)] font-bold leading-none tracking-[-0.01em] text-(--mgf-text)">
+              <p className="text-[clamp(30px,3.2vw,44px)] font-bold leading-none tracking-[-0.01em] text-(--mgf-text)">
                 {m.value}
               </p>
-              <p className="mt-3 text-[12px] leading-[1.55] text-(--mgf-muted)">
+              <p className="mt-3 text-[14px] leading-[1.55] text-(--mgf-muted)">
                 {m.label}
               </p>
             </FadeUp>
@@ -188,7 +188,7 @@ export function CaseStudy() {
       <FadeUp
         as="p"
         delay={0.7}
-        className="mt-8 max-w-[72ch] text-[13px] leading-[1.7] text-(--mgf-muted)"
+        className="mt-8 max-w-[72ch] text-[15px] leading-[1.7] text-(--mgf-muted)"
       >
         {CASE_DISCLAIMER}
       </FadeUp>
@@ -196,7 +196,7 @@ export function CaseStudy() {
       <FadeUp
         as="p"
         delay={0.78}
-        className="mt-6 font-mono text-[11px] uppercase tracking-[0.06em] text-(--mgf-accent)"
+        className="mt-6 font-mono text-[12px] uppercase tracking-[0.06em] text-(--mgf-accent)"
       >
         {CASE_CLOSE}
       </FadeUp>

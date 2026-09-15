@@ -36,7 +36,7 @@ type Fields = {
 const EMPTY: Fields = { name: "", email: "", phone: "", social: "", company: "" };
 
 const inputClass = (invalid: boolean) =>
-  `h-12 w-full rounded-full border bg-(--mgf-bg)/40 px-5 text-[14px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${
+  `h-12 w-full rounded-full border bg-(--mgf-bg)/40 px-5 text-[16px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${
     invalid ? "border-(--mgf-accent)" : "border-(--mgf-border)"
   } ${focusRing}`;
 
@@ -108,7 +108,7 @@ export function Playbook() {
             <li key={line}>
               <FadeUp
                 delay={0.3 + i * 0.08}
-                className="flex gap-3 text-[14px] leading-[1.6] text-(--mgf-text)"
+                className="flex gap-3 text-[16px] leading-[1.6] text-(--mgf-text)"
               >
                 <span aria-hidden="true" className="text-(--mgf-accent)">
                   ✓
@@ -124,23 +124,23 @@ export function Playbook() {
           delay={0.4}
           className="rounded-[20px] border border-(--mgf-accent) bg-(--mgf-card) p-7 shadow-[0_0_0_1px_var(--mgf-accent)]"
         >
-          <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-(--mgf-accent)">
+          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-(--mgf-accent)">
             {PLAYBOOK_LABEL}
           </p>
 
           {state === "done" ? (
             <div className="mt-5">
-              <p className="text-[16px] font-semibold text-(--mgf-text)">
+              <p className="text-[18px] font-semibold text-(--mgf-text)">
                 {PLAYBOOK_DONE}
               </p>
-              <p className="mt-2 text-[13px] leading-[1.6] text-(--mgf-muted)">
+              <p className="mt-2 text-[15px] leading-[1.6] text-(--mgf-muted)">
                 {PLAYBOOK_DONE_NOTE}
               </p>
               <a
                 href={PLAYBOOK_PDF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-4 inline-flex text-[13px] font-medium text-(--mgf-accent) underline underline-offset-4 hover:opacity-70 ${focusRing}`}
+                className={`mt-4 inline-flex text-[15px] font-medium text-(--mgf-accent) underline underline-offset-4 hover:opacity-70 ${focusRing}`}
               >
                 {PLAYBOOK_DONE_LINK}
               </a>
@@ -221,7 +221,7 @@ export function Playbook() {
               <button
                 type="submit"
                 disabled={state === "submitting"}
-                className={`mt-1 inline-flex h-12 w-full items-center justify-center rounded-full border border-(--mgf-accent) bg-(--mgf-accent) text-[11px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg) hover:opacity-90 disabled:opacity-60 ${focusRing}`}
+                className={`mt-1 inline-flex h-12 w-full items-center justify-center rounded-full border border-(--mgf-accent) bg-(--mgf-accent) text-[12px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg) hover:opacity-90 disabled:opacity-60 ${focusRing}`}
               >
                 {state === "submitting" ? "Sending…" : PLAYBOOK_CTA}
               </button>
@@ -229,12 +229,12 @@ export function Playbook() {
               {invalid ? (
                 <p
                   role="alert"
-                  className="text-[12px] leading-[1.5] text-(--mgf-accent)"
+                  className="text-[14px] leading-[1.5] text-(--mgf-accent)"
                 >
                   {PLAYBOOK_ERROR}
                 </p>
               ) : (
-                <p className="text-[12px] leading-[1.5] text-(--mgf-muted)">
+                <p className="text-[14px] leading-[1.5] text-(--mgf-muted)">
                   {PLAYBOOK_FINE_PRINT}
                 </p>
               )}

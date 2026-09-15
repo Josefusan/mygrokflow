@@ -32,13 +32,13 @@ export function SystemFlow() {
             >
               <StageMedia media={stage.media} />
               <div className="flex flex-1 flex-col px-7 pt-6 pb-7">
-                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-(--mgf-accent)">
+                <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-(--mgf-accent)">
                   {stage.n}
                 </span>
-                <h3 className="mt-2.5 text-[18px] font-semibold text-(--mgf-text)">
+                <h3 className="mt-2.5 text-[20px] font-semibold text-(--mgf-text)">
                   {stage.title}
                 </h3>
-                <p className="mt-3 text-[13px] leading-[1.6] text-(--mgf-muted)">
+                <p className="mt-3 text-[15px] leading-[1.6] text-(--mgf-muted)">
                   {stage.body}
                 </p>
               </div>
