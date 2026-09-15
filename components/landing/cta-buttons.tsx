@@ -47,8 +47,8 @@ export function PrimaryCta({
     >
       {size === "compact" ? (
         <>
-          <span className="max-[600px]:hidden">{CTA_PRIMARY}</span>
-          <span className="min-[601px]:hidden">{CTA_PRIMARY_SHORT}</span>
+          <span className="max-[1500px]:hidden">{CTA_PRIMARY}</span>
+          <span className="min-[1501px]:hidden">{CTA_PRIMARY_SHORT}</span>
         </>
       ) : (
         CTA_PRIMARY
