@@ -1,13 +1,13 @@
 // Every string the landing page renders lives here or in lib/site.ts.
 
 export const EYEBROW =
-  "AI receptionist and booking systems for med spas and aesthetics clinics";
+  "AI front desk for med spas and aesthetics clinics";
 
 export const HEADLINE = "Stop losing consults to missed calls and no-shows.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "We build the systems that answer every call, book the appointment, and follow up on every lead, so your front desk is covered after hours and on your busiest days. Implementation included, not a prompt pack.";
+  "AI that answers every call, books the appointment, and follows up on every lead, day or night. We build it and install it for you.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
@@ -15,8 +15,8 @@ export const AUDIENCE_LINE =
   "For owners, co-owners, and clinic managers at independent med spas and aesthetics clinics in Dallas to Fort Worth.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "We fill that gap with AI systems that answer every call and message, book the consult, send the reminders, and follow up on every lead, day or night. You keep the client relationship and the treatment.",
-  "Bring your calls, calendar, lead sources, and booking software, and we build it. Book a strategy call and we'll tell you exactly what we'd build. No obligation.",
+  "Our AI answers every call and message, books the consult, sends the reminders, and follows up on every lead, day or night. You keep the client and the treatment.",
+  "Show us your phones, calendar, and booking software. We build the rest. Book a strategy call and we'll tell you exactly what we'd build, no obligation.",
 ] as const;
 
 export const AUDIENCE_HEADING = "Here's who we work best with";
