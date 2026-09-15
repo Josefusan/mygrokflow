@@ -8,7 +8,7 @@ import {
 } from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
-const body = "text-[19px] leading-[1.6] text-(--mgf-text)";
+const body = "text-[20px] leading-[1.6] text-(--mgf-text)";
 const mono = "font-mono text-[12px] uppercase text-(--mgf-muted-on-video)";
 
 /**
@@ -18,7 +18,7 @@ const mono = "font-mono text-[12px] uppercase text-(--mgf-muted-on-video)";
  */
 export function Statement() {
   return (
-    <section className="relative z-[1] flex min-h-svh flex-col justify-center px-8 pt-[70px] pb-12 max-[900px]:px-[18px]">
+    <section className="relative z-[1] flex min-h-svh flex-col justify-center px-8 pt-[96px] pb-16 max-[900px]:px-[18px]">
       <div className="max-w-[720px]">
         <Counter n={2} className="mb-5" />
 
@@ -37,17 +37,17 @@ export function Statement() {
         <FadeUp as="p" delay={0.85} className={`mt-12 ${mono}`}>
           {AUDIENCE_HEADING}
         </FadeUp>
-        <ul className="mt-4 grid grid-cols-3 gap-8 max-[900px]:grid-cols-1">
+        <ul className="mt-5 grid grid-cols-3 gap-10 max-[900px]:grid-cols-1">
           {AUDIENCE.map((item, i) => (
             <li key={item.title}>
               <FadeUp
                 delay={0.9 + i * 0.1}
                 className="border-t border-(--mgf-border) pt-4"
               >
-                <h3 className="text-[16px] font-semibold text-(--mgf-text)">
+                <h3 className="text-[17px] font-semibold text-(--mgf-text)">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-[15px] leading-[1.65] text-(--mgf-muted-on-video)">
+                <p className="mt-1.5 text-[16px] leading-[1.65] text-(--mgf-muted-on-video)">
                   {item.body}
                 </p>
               </FadeUp>

@@ -18,7 +18,7 @@ export function SystemFlow() {
   return (
     <section
       id="system"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={4} className="mb-5" />
       <SectionHead heading={SYSTEM_HEADING} note={SYSTEM_NOTE} tone="panel" />
@@ -35,10 +35,10 @@ export function SystemFlow() {
                 <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-(--mgf-accent)">
                   {stage.n}
                 </span>
-                <h3 className="mt-2.5 text-[20px] font-semibold text-(--mgf-text)">
+                <h3 className="mt-2.5 text-[22px] font-semibold text-(--mgf-text)">
                   {stage.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-[1.6] text-(--mgf-muted)">
+                <p className="mt-3 text-[16px] leading-[1.6] text-(--mgf-muted)">
                   {stage.body}
                 </p>
               </div>

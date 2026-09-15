@@ -16,7 +16,7 @@ export function CustomSolution() {
   return (
     <section
       id="custom"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={9} className="mb-5" />
       <SectionHead heading={CUSTOM_HEADING} tone="panel" />
@@ -34,7 +34,7 @@ export function CustomSolution() {
             <li key={line}>
               <FadeUp
                 delay={0.4 + i * 0.1}
-                className="flex gap-3 text-[16px] leading-[1.6] text-(--mgf-text)"
+                className="flex gap-3 text-[17px] leading-[1.6] text-(--mgf-text)"
               >
                 <span aria-hidden="true" className="text-(--mgf-accent)">
                   ✓
@@ -45,7 +45,7 @@ export function CustomSolution() {
           ))}
         </ul>
 
-        <p className="mt-7 max-w-[620px] text-[16px] leading-[1.65] text-(--mgf-muted)">
+        <p className="mt-7 max-w-[620px] text-[17px] leading-[1.65] text-(--mgf-muted)">
           {CUSTOM_CLOSE}
         </p>
 

@@ -7,7 +7,7 @@ export const HEADLINE = "Stop losing consults to missed calls and no-shows.";
 
 // Hero-only supporting line (the global PROMISE still runs in Work + footer).
 export const HERO_PROMISE =
-  "We build the systems that answer every call, book the appointment, and follow up on every lead, so your front desk is covered during treatments, after hours, and on your busiest days. Implementation included, not a prompt pack.";
+  "We build the systems that answer every call, book the appointment, and follow up on every lead, so your front desk is covered after hours and on your busiest days. Implementation included, not a prompt pack.";
 
 export const SUPPORT_LINE = "Implementation included, not a prompt pack.";
 export const TAGLINE = "Systems that run without you.";
@@ -15,8 +15,8 @@ export const AUDIENCE_LINE =
   "For owners, co-owners, and clinic managers at independent med spas and aesthetics clinics in Dallas to Fort Worth.";
 // Statement (section 002): the gap we fill, the process in one line, the ask.
 export const STATEMENT_LEAD = [
-  "We fill that gap with AI systems. They answer every call and message, book the consult, send the reminders, and follow up on every lead, day or night. You keep the client relationship and the treatment.",
-  "Bring your calls, calendar, and lead sources, show us your booking software, and we build it. Book a strategy call and we'll tell you exactly what we'd build. No obligation.",
+  "We fill that gap with AI systems that answer every call and message, book the consult, send the reminders, and follow up on every lead, day or night. You keep the client relationship and the treatment.",
+  "Bring your calls, calendar, lead sources, and booking software, and we build it. Book a strategy call and we'll tell you exactly what we'd build. No obligation.",
 ] as const;
 
 export const AUDIENCE_HEADING = "Here's who we work best with";
@@ -114,7 +114,7 @@ export const SYSTEM_STAGES = [
   {
     n: "Stage 1",
     title: "Answer every call and DM",
-    body: "The AI receptionist picks up when your team is in a room, after hours, and during the rush. Callers get a real answer instead of voicemail, and new Instagram and Facebook DMs get caught instead of lost.",
+    body: "The AI receptionist picks up when your team is in a room, after hours, and during the rush. Callers get a real answer instead of voicemail, and DMs get caught instead of lost.",
     media: "phone",
   },
   {
@@ -126,13 +126,13 @@ export const SYSTEM_STAGES = [
   {
     n: "Stage 3",
     title: "Cut the no-shows",
-    body: "Automatic reminders and confirmations go out before every visit, and a freed-up slot gets offered to your waitlist when someone cancels, so chairs get filled instead of written off.",
+    body: "Reminders and confirmations go out before every visit, and a freed-up slot is offered to your waitlist when someone cancels, so chairs get filled instead of written off.",
     media: "ops",
   },
   {
     n: "Stage 4",
     title: "Reactivate and repeat",
-    body: "Old leads, missed calls, and lapsed clients get a fast, on-brand recall with a booking link, so the list you already own starts producing again and the loop keeps filling your calendar.",
+    body: "Old leads, missed calls, and lapsed clients get a fast, on-brand recall with a booking link, so the list you already own starts producing again.",
     media: "crm",
   },
 ] as const;
@@ -144,59 +144,59 @@ export const SYSTEM_STAGES = [
 export const SYSTEMS = [
   {
     title: "24/7 AI Receptionist",
-    body: "Answers inbound calls and messages around the clock, captures who is calling and what they want, handles the common questions about hours and treatments, and books the consult, so nothing lands in voicemail at 6pm on a Friday.",
+    body: "Answers calls and messages around the clock, handles the common questions about hours and treatments, and books the consult, so nothing lands in voicemail at 6pm on a Friday.",
     media: "support",
   },
   {
     title: "After-Hours Call Answering",
-    body: "Answers every call the moment your front desk cannot: nights, weekends, lunch, and back-to-back appointments. Callers get a real conversation in your clinic's voice, their details are captured, and the consult is booked before they hang up.",
+    body: "Covers every call your front desk cannot: nights, weekends, lunch, and back-to-back appointments. Callers get a real conversation in your clinic's voice and a booked consult before they hang up.",
     media: "phone",
   },
   {
     title: "AI Appointment Booking",
-    body: "Turns every call, form, and message into a confirmed appointment on your calendar. It answers the questions, offers real open slots, books the time, and sends the reminders, so your schedule fills itself without anyone playing phone tag.",
+    body: "Turns every call, form, and message into a confirmed appointment. It answers the questions, offers real open slots, books the time, and sends the reminders. No phone tag.",
     media: "calendar",
   },
   {
     title: "Missed-Call Text-Back",
-    body: "The second a call goes unanswered, the caller gets a friendly text that answers their question and offers a time to book. The consult you would have lost to voicemail turns into an appointment while your team stays with the client in the room.",
+    body: "The second a call goes unanswered, the caller gets a friendly text that answers their question and offers a time to book. Voicemail becomes an appointment while your team stays in the room.",
     media: "leadgen",
   },
   {
     title: "No-Show Reduction",
-    body: "Automatic confirmations and reminders go out before every visit, and when someone cancels, the open slot is offered to your waitlist. Fewer empty chairs and fewer last-minute holes in the day, with no one chasing anyone by hand.",
+    body: "Confirmations and reminders go out before every visit, and when someone cancels, the open slot is offered to your waitlist. Fewer empty chairs, and no one chasing anyone by hand.",
     media: "ops",
   },
   {
     title: "Lapsed-Client Recall",
-    body: "Mines your list for clients who are due for a touch-up or went quiet, picks the right moment, drafts the note, and books the return visit. Revenue hiding in the list you already own.",
+    body: "Finds the clients who are due for a touch-up or went quiet, picks the right moment, drafts the note, and books the return visit. Revenue hiding in the list you already own.",
     media: "crm",
   },
   {
     title: "Inbound Form & DM Qualification",
-    body: "Reads every website form, Instagram and Facebook DM, and inbound message, answers the first questions, and books the ready ones or routes the rest, so no inquiry sits unread overnight.",
+    body: "Reads every website form, Instagram and Facebook DM, and inbound message, answers the first questions, and books the ready ones, so no inquiry sits unread overnight.",
     media: "triage",
   },
   {
     title: "AI Follow-Up & Nurture",
-    body: "Never lets a warm inquiry go cold: keeps every lead moving with timely, personalized follow-ups, answers questions about treatments and pricing, and books the consult, so the conversations you started actually turn into visits.",
+    body: "Keeps every warm inquiry moving with timely, personal follow-ups, answers questions about treatments and pricing, and books the consult, so conversations turn into visits.",
     media: "crm",
   },
   {
     title: "AI Ad Campaign Manager",
-    body: "Launches, tests, and optimizes your paid ads across Google, Meta, and Instagram: writes the copy and creative, shifts budget to what converts, and pauses what does not, so every dollar chases the lowest cost per booked consult.",
+    body: "Launches, tests, and optimizes your paid ads across Google, Meta, and Instagram. Shifts budget to what converts and pauses what does not, so every dollar chases the lowest cost per booked consult.",
     media: "ads",
   },
   {
     title: "AI Customer Support Agent",
-    body: "Answers, resolves, and escalates across email, chat, and web in your clinic's voice. Handles the repeat questions about pricing, hours, and scheduling instantly and hands the rest to your team with full context, so response times drop.",
+    body: "Answers, resolves, and escalates across email, chat, and web in your clinic's voice. Repeat questions about pricing, hours, and scheduling get instant answers. The rest goes to your team with full context.",
     media: "support",
   },
 ] as const;
 
 export const SECURITY_LEAD = "Secure by default.";
 export const SECURITY_NOTE =
-  "Every automation runs on scoped, least-privilege access (no shared logins, no standing keys), with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive. The point is simple: add AI without widening your attack surface.";
+  "Every automation runs on scoped, least-privilege access, with your data encrypted in transit and at rest and kept inside infrastructure you control. Full audit trails, and human approval on anything destructive.";
 
 // Three public monthly retainers. eyebrow/price/suffix split the header; Core
 // carries the badge as the default buy. Add-ons are quoted on the call, never
@@ -217,16 +217,16 @@ export const RATES = [
     who: "Single-location clinic where the main leak is missed or after-hours calls. Not most clinics.",
     note: "",
     included: [
-      "One done-for-you lane only: missed-call and after-hours capture, booked as a consult on your booking software (Zenoti, Boulevard, Mindbody, and the rest)",
-      "Missed-call text-back installed with the lane, same lane, not a second product",
+      "One done-for-you lane: missed-call and after-hours capture, booked as a consult on your booking software",
+      "Missed-call text-back, installed with the lane",
       "Implementation included for that lane",
-      "Go-live and your first booked consult from this lane, dated on the strategy call",
+      "Go-live and first booked consult dated on the strategy call",
       "In-lane fixes as things change",
       "One admin or owner point of contact",
     ],
     excluded: [
       "Recall and reactivation",
-      "Inbound lead or DM follow-up beyond the missed and after-hours lane",
+      "Inbound lead or DM follow-up",
       "Multi-channel lead gen or ads management",
       "Multiple locations",
       "Custom CRM rebuild",
@@ -246,9 +246,9 @@ export const RATES = [
     note: "The gap vs Essential is a second booked-consult source. We map it against your average consult on the call.",
     included: [
       "Everything in Essential",
-      "The higher-ROI second lane: dead-list recall and reactivation, or inbound lead and DM follow-up. We choose it on the strategy call from your numbers, you do not pick here",
+      "The higher-ROI second lane: recall and reactivation, or inbound lead and DM follow-up. We choose it from your numbers on the strategy call",
       "One outcome either way: booked consults",
-      "Go-live and first booked consult dates for lane one and lane two, set on the strategy call",
+      "Go-live and first booked consult dates for both lanes, set on the strategy call",
       "Monthly in-scope fixes",
       "Exception queue for edge cases and misfires",
       "Simple status: consults booked and no-shows touched",
@@ -273,7 +273,7 @@ export const RATES = [
     note: "",
     included: [
       "Everything in Core",
-      "Recall and reactivation AND new-lead and inbound follow-up, both included",
+      "Recall and reactivation plus new-lead and inbound follow-up, both included",
       "Multi-location routing included for up to 3 locations",
       "Higher volume cap",
       "Faster go-live and priority async",
@@ -320,7 +320,7 @@ export const CASE_METRICS = [
 ] as const;
 
 export const CASE_DISCLAIMER =
-  "These are modeled targets we map on the strategy call, not promises. Answer, booking, and no-show rates move with your call volume, schedule, and offer. We show you the math for your clinic before you commit to anything.";
+  "Modeled targets we map on the strategy call, not promises. Your numbers move with call volume, schedule, and offer, and we show you the math before you commit to anything.";
 export const CASE_CLOSE =
   "The front desk stops missing calls. The chairs stay full while your team treats clients.";
 
@@ -359,7 +359,7 @@ export const CUSTOM_BULLETS = [
   "Deeper builds for the workflows and tools the core loop does not already cover.",
 ] as const;
 export const CUSTOM_CLOSE =
-  "Bring the specific problem. On the strategy call we will tell you plainly whether we can automate it, how we would build it, and what it takes. Add-ons are quoted there, not sold as tiers.";
+  "Bring the specific problem. On the strategy call we tell you plainly whether we can automate it, how we would build it, and what it takes. Add-ons are quoted there, not sold as tiers.";
 
 // Section 009: the integrations marquee. A scrolling wall of the sales, ATS,
 // and support tools we plug agents into, so buyers see their own stack and

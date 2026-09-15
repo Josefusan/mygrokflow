@@ -41,7 +41,7 @@ export function Hero() {
         <FadeUp
           as="p"
           delay={0.22}
-          className="mt-6 max-w-[46ch] text-[20px] leading-[1.6] text-(--mgf-text)"
+          className="mt-6 max-w-[46ch] text-[22px] leading-[1.6] text-(--mgf-text)"
         >
           {HERO_PROMISE}
         </FadeUp>

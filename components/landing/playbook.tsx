@@ -36,7 +36,7 @@ type Fields = {
 const EMPTY: Fields = { name: "", email: "", phone: "", social: "", company: "" };
 
 const inputClass = (invalid: boolean) =>
-  `h-12 w-full rounded-full border bg-(--mgf-bg)/40 px-5 text-[16px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${
+  `h-12 w-full rounded-full border bg-(--mgf-bg)/40 px-5 text-[17px] text-(--mgf-text) placeholder:text-(--mgf-muted) ${
     invalid ? "border-(--mgf-accent)" : "border-(--mgf-border)"
   } ${focusRing}`;
 
@@ -96,7 +96,7 @@ export function Playbook() {
   return (
     <section
       id="playbook"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={7} className="mb-5" />
       <SectionHead heading={PLAYBOOK_HEADING} note={PLAYBOOK_NOTE} tone="panel" />
@@ -108,7 +108,7 @@ export function Playbook() {
             <li key={line}>
               <FadeUp
                 delay={0.3 + i * 0.08}
-                className="flex gap-3 text-[16px] leading-[1.6] text-(--mgf-text)"
+                className="flex gap-3 text-[17px] leading-[1.6] text-(--mgf-text)"
               >
                 <span aria-hidden="true" className="text-(--mgf-accent)">
                   ✓
@@ -130,17 +130,17 @@ export function Playbook() {
 
           {state === "done" ? (
             <div className="mt-5">
-              <p className="text-[18px] font-semibold text-(--mgf-text)">
+              <p className="text-[19px] font-semibold text-(--mgf-text)">
                 {PLAYBOOK_DONE}
               </p>
-              <p className="mt-2 text-[15px] leading-[1.6] text-(--mgf-muted)">
+              <p className="mt-2 text-[16px] leading-[1.6] text-(--mgf-muted)">
                 {PLAYBOOK_DONE_NOTE}
               </p>
               <a
                 href={PLAYBOOK_PDF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-4 inline-flex text-[15px] font-medium text-(--mgf-accent) underline underline-offset-4 hover:opacity-70 ${focusRing}`}
+                className={`mt-4 inline-flex text-[16px] font-medium text-(--mgf-accent) underline underline-offset-4 hover:opacity-70 ${focusRing}`}
               >
                 {PLAYBOOK_DONE_LINK}
               </a>
@@ -229,12 +229,12 @@ export function Playbook() {
               {invalid ? (
                 <p
                   role="alert"
-                  className="text-[14px] leading-[1.5] text-(--mgf-accent)"
+                  className="text-[15px] leading-[1.5] text-(--mgf-accent)"
                 >
                   {PLAYBOOK_ERROR}
                 </p>
               ) : (
-                <p className="text-[14px] leading-[1.5] text-(--mgf-muted)">
+                <p className="text-[15px] leading-[1.5] text-(--mgf-muted)">
                   {PLAYBOOK_FINE_PRINT}
                 </p>
               )}

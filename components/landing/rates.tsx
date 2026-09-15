@@ -10,7 +10,7 @@ export function Rates() {
   return (
     <section
       id="rates"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={8} className="mb-5" />
       <SectionHead heading={RATES_HEADING} note={RATES_NOTE} tone="panel" uppercase />
@@ -22,7 +22,7 @@ export function Rates() {
             <li key={rate.title}>
               <FadeUp
                 delay={0.4 + i * 0.12}
-                className={`relative flex h-full flex-col rounded-[20px] border p-7 ${
+                className={`relative flex h-full flex-col rounded-[20px] border p-8 ${
                   featured
                     ? "border-(--mgf-accent) bg-(--mgf-card) shadow-[0_0_0_1px_var(--mgf-accent)]"
                     : "border-(--mgf-border) bg-(--mgf-card)"
@@ -47,21 +47,21 @@ export function Rates() {
                   </span>
                 </h3>
 
-                <p className="mt-3 text-[15px] font-medium leading-[1.5] text-(--mgf-text)">
+                <p className="mt-3 text-[16px] font-medium leading-[1.5] text-(--mgf-text)">
                   {rate.tagline}
                 </p>
-                <p className="mt-2 text-[14px] leading-[1.55] text-(--mgf-muted)">
+                <p className="mt-2 text-[15px] leading-[1.55] text-(--mgf-muted)">
                   {rate.who}
                 </p>
 
                 <hr className="my-5 border-0 border-t border-(--mgf-border)" />
 
                 <p className={label}>In</p>
-                <ul className="mt-2 grid gap-1.5">
+                <ul className="mt-3 grid gap-2.5">
                   {rate.included.map((line) => (
                     <li
                       key={line}
-                      className="flex items-start gap-2.5 text-[15px] leading-[1.6] text-(--mgf-text)"
+                      className="flex items-start gap-2.5 text-[16px] leading-[1.6] text-(--mgf-text)"
                     >
                       <span
                         aria-hidden="true"
@@ -75,11 +75,11 @@ export function Rates() {
                 {rate.excluded.length > 0 && (
                   <>
                     <p className={`mt-5 ${label}`}>Not in</p>
-                    <ul className="mt-2 grid gap-1.5">
+                    <ul className="mt-3 grid gap-2.5">
                       {rate.excluded.map((line) => (
                         <li
                           key={line}
-                          className="text-[15px] leading-[1.6] text-(--mgf-muted)"
+                          className="text-[16px] leading-[1.6] text-(--mgf-muted)"
                         >
                           {line}
                         </li>
@@ -89,7 +89,7 @@ export function Rates() {
                 )}
 
                 {rate.note && (
-                  <p className="mt-5 border-t border-(--mgf-border) pt-4 text-[14px] leading-[1.55] text-(--mgf-muted)">
+                  <p className="mt-5 border-t border-(--mgf-border) pt-4 text-[15px] leading-[1.55] text-(--mgf-muted)">
                     {rate.note}
                   </p>
                 )}
@@ -109,7 +109,7 @@ export function Rates() {
       <FadeUp
         as="p"
         delay={0.85}
-        className="mt-7 max-w-[72ch] text-[15px] leading-[1.7] text-(--mgf-muted)"
+        className="mt-7 max-w-[72ch] text-[16px] leading-[1.7] text-(--mgf-muted)"
       >
         {RATES_FOOT}
       </FadeUp>

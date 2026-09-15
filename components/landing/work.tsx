@@ -18,7 +18,7 @@ export function Work() {
   return (
     <section
       id="work"
-      className="relative z-[1] scroll-mt-[70px] bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={3} className="mb-5" />
       <SectionHead heading={WORK_HEADING} note={PROMISE} tone="panel" />
@@ -30,7 +30,7 @@ export function Work() {
       <FadeUp
         as="p"
         delay={0.5}
-        className="mt-8 max-w-[72ch] text-[15px] leading-[1.7] text-(--mgf-muted)"
+        className="mt-8 max-w-[72ch] text-[16px] leading-[1.7] text-(--mgf-muted)"
       >
         <span className="font-medium text-(--mgf-text)">{SECURITY_LEAD}</span>{" "}
         {SECURITY_NOTE}

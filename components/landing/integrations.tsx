@@ -4,7 +4,7 @@ import { STACK_HEADING, STACK_TOOLS } from "@/lib/content";
 import { Counter, SectionHead } from "./section-bits";
 
 const chip =
-  "inline-flex shrink-0 items-center gap-2.5 rounded-full border border-(--mgf-border) bg-(--mgf-card) py-1.5 pl-1.5 pr-4 font-mono text-[14px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
+  "inline-flex shrink-0 items-center gap-2.5 rounded-full border border-(--mgf-border) bg-(--mgf-card) py-1.5 pl-1.5 pr-4 font-mono text-[15px] tracking-[0.02em] whitespace-nowrap text-(--mgf-muted) transition-colors duration-200 hover:border-(--mgf-accent) hover:text-(--mgf-text)";
 
 // Real logo on a small light tile so multicolor and dark brand marks stay
 // legible over the dark section.
@@ -80,7 +80,7 @@ export function Integrations() {
   return (
     <section
       id="stack"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={10} className="mb-5" />
       <SectionHead heading={STACK_HEADING} tone="panel" />

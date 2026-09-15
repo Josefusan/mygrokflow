@@ -28,7 +28,7 @@ export function LandingNav() {
       <FadeUp delay={0}>
         <a
           href="#top"
-          className={`inline-flex items-center gap-2 text-[15px] font-bold uppercase tracking-[0.12em] text-(--mgf-text) hover:opacity-60 max-[600px]:text-[14px] ${focusRing}`}
+          className={`inline-flex items-center gap-2 text-[16px] font-bold uppercase tracking-[0.12em] text-(--mgf-text) hover:opacity-60 max-[600px]:text-[15px] ${focusRing}`}
         >
           <GrokMark className="text-(--mgf-text)" />
           {SITE_NAME}

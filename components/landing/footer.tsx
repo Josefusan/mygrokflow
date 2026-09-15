@@ -6,7 +6,7 @@ import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 
 const heading = "font-mono text-[12px] uppercase text-(--mgf-muted)";
-const link = `text-[15px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
+const link = `text-[16px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
 /** Uncounted footer, id="contact". Newsletter link lives here now. */
 export function LandingFooter() {
@@ -17,11 +17,11 @@ export function LandingFooter() {
     >
       <div className="grid grid-cols-3 gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-10">
         <FadeUp delay={0} className="flex flex-col items-start gap-4">
-          <span className="inline-flex items-center gap-2 text-[15px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
+          <span className="inline-flex items-center gap-2 text-[16px] font-bold uppercase tracking-[0.12em] text-(--mgf-text)">
             <GrokMark className="text-(--mgf-text)" />
             {SITE_NAME}
           </span>
-          <p className="max-w-[320px] text-[16px] leading-[1.65] text-(--mgf-muted)">
+          <p className="max-w-[320px] text-[17px] leading-[1.65] text-(--mgf-muted)">
             {PROMISE}
           </p>
           <div className="flex items-center gap-4">

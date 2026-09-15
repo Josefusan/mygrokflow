@@ -8,7 +8,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative z-[1] flex min-h-svh scroll-mt-[70px] flex-col justify-center px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] flex min-h-svh scroll-mt-[70px] flex-col justify-center px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <Counter n={5} className="mb-5" />
       <SectionHead heading={PROCESS_HEADING} note={SUPPORT_LINE} tone="video" />
@@ -23,10 +23,10 @@ export function Process() {
               <span className="font-mono text-[12px] text-(--mgf-accent)">
                 {step.n}
               </span>
-              <h3 className="mt-3 text-[20px] font-semibold text-(--mgf-text)">
+              <h3 className="mt-3 text-[22px] font-semibold text-(--mgf-text)">
                 {step.title}
               </h3>
-              <p className="mt-2 text-[15px] leading-[1.65] text-(--mgf-muted-on-video)">
+              <p className="mt-2 text-[16px] leading-[1.65] text-(--mgf-muted-on-video)">
                 {step.body}
               </p>
             </FadeUp>

@@ -78,7 +78,7 @@ export function SectionHead({
   const noteColor =
     tone === "panel" ? "text-(--mgf-muted)" : "text-(--mgf-muted-on-video)";
   return (
-    <div className="mb-8 flex items-start gap-12 max-[900px]:flex-col max-[900px]:gap-4">
+    <div className="mb-12 flex items-start gap-12 max-[900px]:flex-col max-[900px]:gap-4">
       <div className="w-[32%] max-[900px]:w-full">
         <h2 className={`max-w-[320px] ${display} ${uppercase ? "uppercase" : ""}`}>
           <SplitHeading text={heading} baseDelay={0.1} stagger={0.1} y={28} />
@@ -88,7 +88,7 @@ export function SectionHead({
         <FadeUp
           as="p"
           delay={0.25}
-          className={`max-w-[320px] pt-2 text-[16px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
+          className={`max-w-[320px] pt-2 text-[17px] leading-[1.65] max-[900px]:pt-0 ${noteColor}`}
         >
           {note}
         </FadeUp>

@@ -17,7 +17,7 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[70px] pb-20 max-[900px]:px-[18px]"
+      className="relative z-[1] scroll-mt-[70px] border-t border-(--mgf-border) bg-(--mgf-glass) px-8 pt-[96px] pb-24 max-[900px]:px-[18px]"
     >
       <script
         type="application/ld+json"
@@ -32,16 +32,16 @@ export function Faq() {
           <li key={f.q}>
             <FadeUp delay={0.3 + i * 0.06}>
               <details className="group rounded-[16px] border border-(--mgf-border) bg-(--mgf-card) px-6 py-5">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-[17px] font-semibold text-(--mgf-text) [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-[18px] font-semibold text-(--mgf-text) [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <span
                     aria-hidden="true"
-                    className="mt-1 shrink-0 font-mono text-[16px] text-(--mgf-accent) transition-transform duration-200 group-open:rotate-45"
+                    className="mt-1 shrink-0 font-mono text-[17px] text-(--mgf-accent) transition-transform duration-200 group-open:rotate-45"
                   >
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-[15px] leading-[1.7] text-(--mgf-muted)">
+                <p className="mt-3 text-[16px] leading-[1.7] text-(--mgf-muted)">
                   {f.a}
                 </p>
               </details>
