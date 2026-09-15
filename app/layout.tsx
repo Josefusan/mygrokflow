@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CookieBanner } from "@/components/cookie-banner";
+import { META_DESCRIPTION, META_TITLE } from "@/lib/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,11 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mygrokflow.com"),
   title: {
-    default: "MyGrokFlow: systems that run without you",
+    default: META_TITLE,
     template: "%s · MyGrokFlow",
   },
-  description:
-    "AI receptionist and booking systems for independent med spas and aesthetics clinics in Dallas to Fort Worth. We answer every call, book the consult, cut no-shows, and follow up on every lead, built on the software you already run, implementation included.",
+  description: META_DESCRIPTION,
   applicationName: "MyGrokFlow",
   category: "technology",
   keywords: [
@@ -52,9 +52,8 @@ export const metadata: Metadata = {
   creator: "MyGrokFlow",
   publisher: "MyGrokFlow",
   openGraph: {
-    title: "MyGrokFlow: AI receptionist and booking for med spas",
-    description:
-      "AI systems for independent med spas and aesthetics clinics in Dallas to Fort Worth: answer every call, book the consult, cut no-shows, and follow up on every lead. Implementation included.",
+    title: META_TITLE,
+    description: META_DESCRIPTION,
     url: "https://mygrokflow.com",
     siteName: "MyGrokFlow",
     type: "website",
@@ -65,9 +64,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@MyGrokFlow",
     creator: "@MyGrokFlow",
-    title: "MyGrokFlow: AI receptionist and booking for med spas",
-    description:
-      "AI receptionist and booking for med spas and aesthetics clinics. Answer every call, book the consult, cut no-shows. Implementation included.",
+    title: META_TITLE,
+    description: META_DESCRIPTION,
     images: ["/icon.svg"],
   },
   robots: {

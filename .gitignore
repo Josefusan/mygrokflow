@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw video drops for scripts/prepare-bg-video.sh (never committed)
+/media-raw/
