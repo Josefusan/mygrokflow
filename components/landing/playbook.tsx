@@ -2,22 +2,7 @@
 
 import { useState } from "react";
 import { FadeUp } from "@/components/motion/fade-up";
-import {
-  PLAYBOOK_BULLETS,
-  PLAYBOOK_CTA,
-  PLAYBOOK_DONE,
-  PLAYBOOK_DONE_LINK,
-  PLAYBOOK_DONE_NOTE,
-  PLAYBOOK_ERROR,
-  PLAYBOOK_FINE_PRINT,
-  PLAYBOOK_HEADING,
-  PLAYBOOK_LABEL,
-  PLAYBOOK_NAME_PLACEHOLDER,
-  PLAYBOOK_NOTE,
-  PLAYBOOK_PHONE_PLACEHOLDER,
-  PLAYBOOK_PLACEHOLDER,
-  PLAYBOOK_SOCIAL_PLACEHOLDER,
-} from "@/lib/content";
+import { useContent } from "@/components/i18n-provider";
 import { PLAYBOOK_PDF } from "@/lib/site";
 import { emailLead } from "@/lib/web3forms";
 import { focusRing } from "./cta-buttons";
@@ -47,6 +32,7 @@ const inputClass = (invalid: boolean) =>
  * download never breaks even when capture is unavailable.
  */
 export function Playbook() {
+  const { PLAYBOOK_BULLETS, PLAYBOOK_CTA, PLAYBOOK_DONE, PLAYBOOK_DONE_LINK, PLAYBOOK_DONE_NOTE, PLAYBOOK_ERROR, PLAYBOOK_FINE_PRINT, PLAYBOOK_HEADING, PLAYBOOK_LABEL, PLAYBOOK_NAME_PLACEHOLDER, PLAYBOOK_NOTE, PLAYBOOK_PHONE_PLACEHOLDER, PLAYBOOK_PLACEHOLDER, PLAYBOOK_SENDING, PLAYBOOK_SOCIAL_PLACEHOLDER } = useContent();
   const [fields, setFields] = useState<Fields>(EMPTY);
   const [state, setState] = useState<State>("idle");
 
@@ -223,7 +209,7 @@ export function Playbook() {
                 disabled={state === "submitting"}
                 className={`mt-1 inline-flex h-12 w-full items-center justify-center rounded-full border border-(--mgf-accent) bg-(--mgf-accent) text-[12px] font-semibold uppercase tracking-[0.08em] text-(--mgf-bg) hover:opacity-90 disabled:opacity-60 ${focusRing}`}
               >
-                {state === "submitting" ? "Sending…" : PLAYBOOK_CTA}
+                {state === "submitting" ? PLAYBOOK_SENDING : PLAYBOOK_CTA}
               </button>
 
               {invalid ? (

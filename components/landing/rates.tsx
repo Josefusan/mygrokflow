@@ -1,5 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import { RATES, RATES_FOOT, RATES_HEADING, RATES_NOTE } from "@/lib/content";
 import { CtaRow, PrimaryCta } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
@@ -7,6 +9,7 @@ const label = "font-mono text-[12px] uppercase text-(--mgf-muted)";
 
 /** Section 008. Three public retainers; Core is the highlighted default buy. */
 export function Rates() {
+  const { RATES, RATES_FOOT, RATES_HEADING, RATES_IN, RATES_NOTE, RATES_OUT } = useContent();
   return (
     <section
       id="rates"
@@ -56,7 +59,7 @@ export function Rates() {
 
                 <hr className="my-5 border-0 border-t border-(--mgf-border)" />
 
-                <p className={label}>In</p>
+                <p className={label}>{RATES_IN}</p>
                 <ul className="mt-3 grid gap-2.5">
                   {rate.included.map((line) => (
                     <li
@@ -74,7 +77,7 @@ export function Rates() {
 
                 {rate.excluded.length > 0 && (
                   <>
-                    <p className={`mt-5 ${label}`}>Not in</p>
+                    <p className={`mt-5 ${label}`}>{RATES_OUT}</p>
                     <ul className="mt-3 grid gap-2.5">
                       {rate.excluded.map((line) => (
                         <li

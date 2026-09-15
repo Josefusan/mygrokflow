@@ -1,5 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import { SYSTEM_HEADING, SYSTEM_NOTE, SYSTEM_STAGES } from "@/lib/content";
 import { DIAGRAMS } from "./diagrams";
 import { Counter, SectionHead } from "./section-bits";
 
@@ -15,6 +17,7 @@ function StageMedia({ media }: { media: string }) {
  * so this stays a server component.
  */
 export function SystemFlow() {
+  const { SYSTEM_HEADING, SYSTEM_NOTE, SYSTEM_STAGES } = useContent();
   return (
     <section
       id="system"

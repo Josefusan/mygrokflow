@@ -1,5 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp, SplitText } from "@/components/motion/fade-up";
-import { SECTION_COUNT } from "@/lib/content";
 
 export const display =
   "text-[clamp(28px,3.2vw,46px)] font-bold leading-[1.05] tracking-[-0.01em] text-(--mgf-text)";
@@ -49,6 +51,7 @@ export function Counter({
   delay?: number;
   className?: string;
 }) {
+  const { SECTION_COUNT } = useContent();
   const pad = (v: number) => String(v).padStart(3, "0");
   return (
     <FadeUp

@@ -1,5 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import { EYEBROW, HEADLINE, HERO_PROMISE } from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { Counter, display, eyebrow } from "./section-bits";
 
@@ -20,6 +22,7 @@ function ScrollIndicator() {
  * promise, positioning, CTA.
  */
 export function Hero() {
+  const { EYEBROW, HEADLINE, HERO_PROMISE } = useContent();
   return (
     <section
       id="top"

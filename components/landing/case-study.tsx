@@ -1,15 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import {
-  CASE_AFTER,
-  CASE_AFTER_HEADING,
-  CASE_BEFORE,
-  CASE_BEFORE_HEADING,
-  CASE_CLOSE,
-  CASE_DISCLAIMER,
-  CASE_HEADING,
-  CASE_LABEL,
-  CASE_METRICS,
-} from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 import { Counter, SectionHead } from "./section-bits";
@@ -100,6 +92,7 @@ function CaseFlow() {
  * and a plain disclaimer that these are projections.
  */
 export function CaseStudy() {
+  const { CASE_AFTER, CASE_AFTER_HEADING, CASE_BEFORE, CASE_BEFORE_HEADING, CASE_CLOSE, CASE_DISCLAIMER, CASE_HEADING, CASE_LABEL, CASE_METRICS } = useContent();
   return (
     <section
       id="case"

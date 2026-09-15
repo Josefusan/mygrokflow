@@ -1,7 +1,11 @@
+"use client";
+
+import { useContent, useLocale } from "@/components/i18n-provider";
+import Link from "next/link";
 import { FooterContacts } from "@/components/footer-contacts";
 import { FadeUp } from "@/components/motion/fade-up";
-import { NEWSLETTER } from "@/lib/content";
-import { PROMISE, SITE_NAME } from "@/lib/site";
+import { LOCALE_LABELS, LOCALES, localePath } from "@/lib/i18n";
+import { SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
 
@@ -10,6 +14,8 @@ const link = `text-[16px] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
 /** Uncounted footer, id="contact". Newsletter link lives here now. */
 export function LandingFooter() {
+  const { FOOTER_CONTACT, FOOTER_DISCLAIMER, FOOTER_LEGAL, FOOTER_PRIVACY, LANG_LABEL, NEWSLETTER, PROMISE } = useContent();
+  const locale = useLocale();
   return (
     <footer
       id="contact"
@@ -25,18 +31,18 @@ export function LandingFooter() {
             {PROMISE}
           </p>
           <div className="flex items-center gap-4">
-            <a
+            <Link
               href="/privacy"
               className={`font-mono text-[12px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
             >
-              Privacy Policy
-            </a>
-            <a
+              {FOOTER_PRIVACY}
+            </Link>
+            <Link
               href="/disclaimer"
               className={`font-mono text-[12px] text-(--mgf-muted) hover:text-(--mgf-text) ${focusRing}`}
             >
-              Legal Disclaimer
-            </a>
+              {FOOTER_DISCLAIMER}
+            </Link>
           </div>
         </FadeUp>
 
@@ -52,7 +58,7 @@ export function LandingFooter() {
         </FadeUp>
 
         <FadeUp delay={0.2} className="flex flex-col items-start gap-4">
-          <h2 className={heading}>Contact</h2>
+          <h2 className={heading}>{FOOTER_CONTACT}</h2>
           <FooterContacts />
         </FadeUp>
       </div>
@@ -65,16 +71,27 @@ export function LandingFooter() {
       </div>
 
       <p className="mt-6 max-w-[720px] text-[12px] leading-[1.6] text-(--mgf-muted)">
-        MyGrokFlow is an independent, agent-agnostic AI automation business and a
-        separate legal entity. It is not affiliated with, endorsed by, or
-        connected to xAI, Grok, X (formerly Twitter), Tesla, SpaceX, or Elon
-        Musk. All trademarks are the property of their respective owners and are
-        used for identification only. See our{" "}
-        <a href="/disclaimer" className="underline hover:text-(--mgf-text)">
-          Legal Disclaimer
-        </a>
+        {FOOTER_LEGAL}{" "}
+        <Link href="/disclaimer" className="underline hover:text-(--mgf-text)">
+          {FOOTER_DISCLAIMER}
+        </Link>
         .
       </p>
+
+      <nav aria-label={LANG_LABEL} className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+        <span className="font-mono text-[12px] uppercase text-(--mgf-muted)">{LANG_LABEL}</span>
+        {LOCALES.map((l) => (
+          <Link
+            key={l}
+            href={localePath(l)}
+            hrefLang={l}
+            aria-current={l === locale ? "page" : undefined}
+            className={`text-[14px] hover:opacity-60 ${l === locale ? "text-(--mgf-text) underline underline-offset-4" : "text-(--mgf-muted)"} ${focusRing}`}
+          >
+            {LOCALE_LABELS[l]}
+          </Link>
+        ))}
+      </nav>
     </footer>
   );
 }

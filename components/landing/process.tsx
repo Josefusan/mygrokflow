@@ -1,10 +1,13 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import { PROCESS, PROCESS_HEADING, SUPPORT_LINE } from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
 /** Section 004. Transparent over the video: three steps and a CTA row. */
 export function Process() {
+  const { PROCESS, PROCESS_HEADING, SUPPORT_LINE } = useContent();
   return (
     <section
       id="process"

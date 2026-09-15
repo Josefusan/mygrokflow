@@ -1,10 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import {
-  CUSTOM_BULLETS,
-  CUSTOM_CLOSE,
-  CUSTOM_HEADING,
-  CUSTOM_LABEL,
-} from "@/lib/content";
 import { CtaRow } from "./cta-buttons";
 import { Counter, SectionHead } from "./section-bits";
 
@@ -13,6 +10,7 @@ import { Counter, SectionHead } from "./section-bits";
  * standard packages do not cover. Anchored by a "Book a call" CTA.
  */
 export function CustomSolution() {
+  const { CUSTOM_BULLETS, CUSTOM_CLOSE, CUSTOM_HEADING, CUSTOM_LABEL } = useContent();
   return (
     <section
       id="custom"

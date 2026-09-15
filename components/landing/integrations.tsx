@@ -1,6 +1,8 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import type { CSSProperties } from "react";
 import { FadeUp } from "@/components/motion/fade-up";
-import { STACK_HEADING, STACK_TOOLS } from "@/lib/content";
 import { Counter, SectionHead } from "./section-bits";
 
 const chip =
@@ -72,6 +74,7 @@ function Row({
  * we plug agents into. Rows drift in opposite directions and pause on hover.
  */
 export function Integrations() {
+  const { STACK_HEADING, STACK_TOOLS } = useContent();
   const third = Math.ceil(STACK_TOOLS.length / 3);
   const rowA = STACK_TOOLS.slice(0, third);
   const rowB = STACK_TOOLS.slice(third, third * 2);

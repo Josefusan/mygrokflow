@@ -1,19 +1,21 @@
-import { FadeUp } from "@/components/motion/fade-up";
-import { FAQ_HEADING, FAQ_NOTE, FAQS } from "@/lib/content";
-import { Counter, SectionHead } from "./section-bits";
+"use client";
 
-const FAQ_JSONLD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
+import { useContent } from "@/components/i18n-provider";
+import { FadeUp } from "@/components/motion/fade-up";
+import { Counter, SectionHead } from "./section-bits";
 
 /** Section 006. Honest Q&A that doubles as FAQPage structured data. */
 export function Faq() {
+  const { FAQS, FAQ_HEADING, FAQ_NOTE } = useContent();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
   return (
     <section
       id="faq"
@@ -22,7 +24,7 @@ export function Faq() {
       <script
         type="application/ld+json"
         // Structured data for rich results; content mirrors the visible FAQ.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Counter n={11} className="mb-5" />
       <SectionHead heading={FAQ_HEADING} note={FAQ_NOTE} tone="panel" uppercase />

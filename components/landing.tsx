@@ -1,3 +1,4 @@
+import { LocaleProvider } from "@/components/i18n-provider";
 import { BackgroundVideo } from "@/components/landing/background-video";
 import { CaseStudy } from "@/components/landing/case-study";
 import { CustomSolution } from "@/components/landing/custom-solution";
@@ -12,9 +13,12 @@ import { Rates } from "@/components/landing/rates";
 import { Statement } from "@/components/landing/statement";
 import { SystemFlow } from "@/components/landing/system-flow";
 import { Work } from "@/components/landing/work";
+import type { Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/i18n/dictionaries";
 
-export function Landing() {
+export function Landing({ locale }: { locale: Locale }) {
   return (
+    <LocaleProvider locale={locale} dict={getDictionary(locale)}>
     <div className="mgf-landing relative">
       <BackgroundVideo />
       <LandingNav />
@@ -33,5 +37,6 @@ export function Landing() {
       </main>
       <LandingFooter />
     </div>
+    </LocaleProvider>
   );
 }

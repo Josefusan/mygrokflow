@@ -1,11 +1,7 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import {
-  APHORISM,
-  AUDIENCE,
-  AUDIENCE_HEADING,
-  STATEMENT_LEAD,
-  TAGLINE,
-} from "@/lib/content";
 import { Counter, SplitHeading } from "./section-bits";
 
 const body = "text-[20px] leading-[1.6] text-(--mgf-text)";
@@ -17,6 +13,7 @@ const mono = "font-mono text-[12px] uppercase text-(--mgf-muted-on-video)";
  * aphorism callback.
  */
 export function Statement() {
+  const { APHORISM, AUDIENCE, AUDIENCE_HEADING, STATEMENT_LEAD, TAGLINE } = useContent();
   return (
     <section className="relative z-[1] flex min-h-svh flex-col justify-center px-8 pt-[96px] pb-16 max-[900px]:px-[18px]">
       <div className="max-w-[720px]">

@@ -287,8 +287,8 @@
   --mgf-card: rgba(255, 255, 255, 0.04);
   --mgf-scrim: linear-gradient(
     180deg,
-    rgba(11, 11, 13, 0.35) 0%,
-    rgba(11, 11, 13, 0.62) 100%
+    rgba(11, 11, 13, 0.58) 0%,
+    rgba(11, 11, 13, 0.78) 100%
   );
   --muted-foreground: #9a9a9e;
   --foreground: #f2f2f0;

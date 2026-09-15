@@ -26,6 +26,8 @@ export const APHORISM =
   "Every missed call is a booking that went to another clinic.";
 
 export const CTA_PRIMARY = "Book a strategy call";
+// Short form for the compact nav pill on phones, where the select sits beside it.
+export const CTA_PRIMARY_SHORT = "Book a call";
 export const CTA_SECONDARY = "Get the free playbook";
 
 export const WORK_HEADING = "What we build";
@@ -482,3 +484,35 @@ export const STACK_TOOLS = [
   { name: "Weave", slug: "weave" },
   { name: "NexHealth", slug: "nexhealth" },
 ] as const;
+
+// Shared promise line (Work head + footer) lives in site.ts; re-exported here so
+// it travels with the locale dictionary.
+export { PROMISE } from "./site";
+
+// UI chrome strings that used to be literals in components. Kept here so every
+// visible word on the landing page is translatable.
+export const NAV_LINKS = [
+  { label: "Work", href: "#work" },
+  { label: "How", href: "#system" },
+  { label: "Process", href: "#process" },
+  { label: "Example", href: "#case" },
+  { label: "Playbook", href: "#playbook" },
+  { label: "Rates", href: "#rates" },
+  { label: "Custom", href: "#custom" },
+  { label: "Stack", href: "#stack" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
+] as const;
+export const RATES_IN = "In";
+export const RATES_OUT = "Not in";
+export const PLAYBOOK_SENDING = "Sending…";
+export const WORK_SHOWS = "Shows:";
+export const FOOTER_CONTACT = "Contact";
+export const FOOTER_PRIVACY = "Privacy Policy";
+export const FOOTER_DISCLAIMER = "Legal Disclaimer";
+export const FOOTER_LEGAL =
+  "MyGrokFlow is an independent, agent-agnostic AI automation business and a separate legal entity. It is not affiliated with, endorsed by, or connected to xAI, Grok, X (formerly Twitter), Tesla, SpaceX, or Elon Musk. All trademarks are the property of their respective owners and are used for identification only. See our";
+export const LANG_LABEL = "Language";
+export const META_TITLE = "MyGrokFlow: AI front desk for med spas and aesthetics clinics";
+export const META_DESCRIPTION =
+  "An AI receptionist that answers every call, books the consult into your own software, cuts no-shows, and follows up on every lead. Built and installed for independent med spas and aesthetics clinics.";

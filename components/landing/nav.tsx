@@ -1,25 +1,16 @@
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { FadeUp } from "@/components/motion/fade-up";
-import { CTA_SECONDARY } from "@/lib/content";
 import { SITE_NAME } from "@/lib/site";
 import { focusRing, PrimaryCta } from "./cta-buttons";
 import { GrokMark } from "./grok-mark";
-
-const LINKS = [
-  ["Work", "#work"],
-  ["How", "#system"],
-  ["Process", "#process"],
-  ["Example", "#case"],
-  ["Playbook", "#playbook"],
-  ["Rates", "#rates"],
-  ["Custom", "#custom"],
-  ["Stack", "#stack"],
-  ["FAQ", "#faq"],
-  ["Contact", "#contact"],
-] as const;
+import { LanguageSwitch } from "./language-switch";
 
 const navLink = `font-mono text-[12px] tracking-[0.06em] text-(--mgf-text) hover:opacity-60 ${focusRing}`;
 
 export function LandingNav() {
+  const { CTA_SECONDARY, NAV_LINKS } = useContent();
   return (
     <nav
       aria-label="Primary"
@@ -31,12 +22,12 @@ export function LandingNav() {
           className={`inline-flex items-center gap-2 text-[16px] font-bold uppercase tracking-[0.12em] text-(--mgf-text) hover:opacity-60 max-[600px]:text-[15px] ${focusRing}`}
         >
           <GrokMark className="text-(--mgf-text)" />
-          {SITE_NAME}
+          <span className="max-[600px]:sr-only">{SITE_NAME}</span>
         </a>
       </FadeUp>
 
       <ul className="flex items-center gap-12 max-[900px]:hidden">
-        {LINKS.map(([label, href], i) => (
+        {NAV_LINKS.map(({ label, href }, i) => (
           <li key={href}>
             <FadeUp delay={0.05 + i * 0.05}>
               <a href={href} className={navLink}>
@@ -47,11 +38,14 @@ export function LandingNav() {
         ))}
       </ul>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4 max-[600px]:gap-2.5">
         <FadeUp delay={0.3} className="max-[900px]:hidden">
           <a href="#playbook" className={navLink}>
             {CTA_SECONDARY}
           </a>
+        </FadeUp>
+        <FadeUp delay={0.33}>
+          <LanguageSwitch />
         </FadeUp>
         <FadeUp delay={0.35}>
           <PrimaryCta size="compact" />

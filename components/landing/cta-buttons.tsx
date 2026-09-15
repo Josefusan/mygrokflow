@@ -1,4 +1,6 @@
-import { CTA_PRIMARY, CTA_SECONDARY } from "@/lib/content";
+"use client";
+
+import { useContent } from "@/components/i18n-provider";
 import { CAL_URL } from "@/lib/site";
 
 // The free lead magnet lives in the Playbook section; the secondary CTA scrolls
@@ -36,13 +38,21 @@ export function PrimaryCta({
   size = "default",
   className = "",
 }: PillProps) {
+  const { CTA_PRIMARY, CTA_PRIMARY_SHORT } = useContent();
   return (
     <a
       href={CAL_URL}
       rel="noopener noreferrer"
       className={`${pillBase} ${pillSize[size]} ${pillVariant[variant]} ${className}`}
     >
-      {CTA_PRIMARY}
+      {size === "compact" ? (
+        <>
+          <span className="max-[600px]:hidden">{CTA_PRIMARY}</span>
+          <span className="min-[601px]:hidden">{CTA_PRIMARY_SHORT}</span>
+        </>
+      ) : (
+        CTA_PRIMARY
+      )}
     </a>
   );
 }
@@ -55,6 +65,7 @@ export function SecondaryCta({
   variant?: "pill" | "link";
   className?: string;
 }) {
+  const { CTA_SECONDARY } = useContent();
   const cls =
     variant === "link"
       ? `${textLink} ${className}`
