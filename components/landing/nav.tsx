@@ -14,7 +14,7 @@ export function LandingNav() {
   return (
     <nav
       aria-label="Primary"
-      className="fixed inset-x-0 top-0 z-10 flex items-center justify-between border-b border-(--mgf-border) bg-transparent px-8 py-5 max-[900px]:px-[18px] max-[900px]:py-4"
+      className="fixed inset-x-0 top-0 z-10 flex items-center justify-between border-b border-(--mgf-border) bg-[rgba(11,11,13,0.72)] px-8 py-5 max-[900px]:px-[18px] max-[900px]:py-4"
     >
       <FadeUp delay={0}>
         <a
