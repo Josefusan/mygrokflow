@@ -9,3 +9,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 <!-- END:nextjs-agent-rules -->
 
 Org 1 Agent OS: `docs/agent-os/` (shared OS, not 23 repos). Load that tree for context, skills, and roles.
+
+## VPS build context
+
+Read the pack in `context/` before building:
+- `context/PROJECT.md`    - what this is, the landing page, the agent OS, how to run
+- `context/ASSETS.md`     - inventory of `drive/` source material
+- `context/BUILD-PLAN.md` - next steps and reusable building blocks
+
+`drive/` is a Google Drive snapshot (git-excluded), Drive folder
+`1pyufEP_2UvRBjcNtcQBPRvpkpGi47_x6`.
