@@ -18,7 +18,7 @@ export function Rates() {
       <Counter n={8} className="mb-5" />
       <SectionHead heading={RATES_HEADING} note={RATES_NOTE} tone="panel" uppercase />
 
-      <ul className="grid auto-rows-fr grid-cols-3 gap-5 max-[900px]:grid-cols-1">
+      <ul className="grid auto-rows-fr grid-cols-3 gap-5 max-[900px]:auto-rows-auto max-[900px]:grid-cols-1">
         {RATES.map((rate, i) => {
           const featured = rate.featured;
           return (

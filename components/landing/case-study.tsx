@@ -18,8 +18,9 @@ const flowLabel =
 /**
  * Branded end-to-end flow for the example: inbound patient calls and messages
  * run into the MyGrokFlow agent (the bot mark sits in the hub) and come out as
- * booked, reminded appointments. Animated accent dash-flows on a dark well,
- * stacked to a vertical rail on mobile. Decorative; the copy carries meaning.
+ * booked, reminded appointments. Animated accent dash-flows on a dark well.
+ * Phones get a vertical rail (second SVG) so the labels stay readable.
+ * Decorative; the copy carries meaning.
  */
 function CaseFlow() {
   return (
@@ -30,7 +31,7 @@ function CaseFlow() {
         backgroundImage: "var(--mgf-well-wide)",
       }}
     >
-      <svg viewBox="0 0 680 172" className="w-full" fill="none">
+      <svg viewBox="0 0 680 172" className="w-full max-[600px]:hidden" fill="none">
         {/* ── inbound: ringing phone (nights included) ── */}
         <path d="M40 44 a9 9 0 1 0 8 11 a7 7 0 0 1 -8 -11 z" stroke={STRUCT} strokeWidth="1.3" />
         <rect x="58" y="60" width="42" height="60" rx="9" stroke={INK} strokeWidth="1.5" />
@@ -69,7 +70,41 @@ function CaseFlow() {
         </text>
       </svg>
 
-      {/* MyGrokFlow mark centered over the hub (cx 340/680 = 50%, cy 90/172 = 52.3%) */}
+      {/* Phone rail: same three stops top to bottom. Hub at (160, 210) of 320x400. */}
+      <svg viewBox="0 0 320 400" className="w-full min-[601px]:hidden" fill="none">
+        <path d="M148 22 a9 9 0 1 0 8 11 a7 7 0 0 1 -8 -11 z" stroke={STRUCT} strokeWidth="1.3" />
+        <rect x="139" y="38" width="42" height="60" rx="9" stroke={INK} strokeWidth="1.5" />
+        <path d="M152 46 h16" stroke={STRUCT} strokeWidth="1.3" strokeLinecap="round" />
+        <circle cx="160" cy="90" r="2.6" fill={STRUCT} />
+        <path d="M191 52 q10 9 10 20 q0 11 -10 20" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" className="mgf-flow" />
+        <text x="160" y="124" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
+          CALLS &amp; MESSAGES
+        </text>
+
+        <path d="M160 134 V 170" stroke={ACCENT} strokeWidth="1.4" className="mgf-flow" />
+
+        <circle cx="160" cy="210" r="38" stroke={STRUCT} strokeWidth="1.4" />
+        <circle cx="160" cy="210" r="38" stroke={ACCENT} strokeWidth="1.6" strokeOpacity="0.9" className="mgf-flow" />
+        <circle cx="160" cy="210" r="46" stroke={STRUCT} strokeWidth="1" strokeOpacity="0.5" />
+        <text x="218" y="214" className="fill-[var(--mgf-accent)] font-mono text-[11px] tracking-[0.16em]">
+          MYGROKFLOW
+        </text>
+
+        <path d="M160 258 V 290" stroke={ACCENT} strokeWidth="1.4" className="mgf-flow" style={{ animationDelay: "0.5s" }} />
+
+        <rect x="130" y="306" width="60" height="60" rx="10" stroke={STRUCT} strokeWidth="1.4" />
+        <path d="M130 324 H190" stroke={STRUCT} strokeWidth="1.4" />
+        <path d="M146 298 v12 M174 298 v12" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
+        <rect x="140" y="332" width="40" height="10" rx="2.5" stroke={STRUCT} strokeWidth="1.2" />
+        <rect x="140" y="347" width="40" height="11" rx="2.5" fill={ACCENT} fillOpacity="0.92" />
+        <path d="M147 353 l3.5 3.5 l7 -7" stroke="var(--mgf-bg)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <text x="160" y="390" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
+          BOOKED &amp; REMINDED
+        </text>
+      </svg>
+
+      {/* MyGrokFlow mark centered over the hub: 50% / 52.3% on desktop (340/680, 90/172)
+          and 50% / 52.5% on the phone rail (160/320, 210/400), so one overlay serves both. */}
       <span
         className="pointer-events-none grid place-items-center"
         style={{
