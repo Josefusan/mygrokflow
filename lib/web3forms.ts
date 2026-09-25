@@ -23,7 +23,7 @@ export async function emailLead(data: LeadPayload): Promise<boolean> {
         email: data.email,
         phone: data.phone,
         instagram_or_linkedin: data.social,
-        source: "Clinic Front Desk Playbook",
+        source: "One-Loop Audit worksheet",
       }),
     });
     return response.ok;

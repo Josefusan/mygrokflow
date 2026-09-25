@@ -16,9 +16,9 @@ const flowLabel =
   "font-mono text-[11px] uppercase tracking-[0.12em] text-(--mgf-muted)";
 
 /**
- * Branded end-to-end flow for the example: inbound patient calls and messages
+ * Branded end-to-end flow for the example: LinkedIn and email touchpoints
  * run into the MyGrokFlow agent (the bot mark sits in the hub) and come out as
- * booked, reminded appointments. Animated accent dash-flows on a dark well.
+ * booked, logged discovery calls. Animated accent dash-flows on a dark well.
  * Phones get a vertical rail (second SVG) so the labels stay readable.
  * Decorative; the copy carries meaning.
  */
@@ -40,7 +40,7 @@ function CaseFlow() {
         <path d="M110 70 q10 9 10 20 q0 11 -10 20" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" className="mgf-flow" />
         <path d="M104 78 q6 6 6 12 q0 6 -6 12" stroke={ACCENT} strokeWidth="1.4" strokeLinecap="round" />
         <text x="82" y="150" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
-          CALLS &amp; MESSAGES
+          EMAIL &amp; LINKEDIN
         </text>
 
         {/* ── inbound → hub ── */}
@@ -66,7 +66,7 @@ function CaseFlow() {
         <rect x="566" y="99" width="40" height="11" rx="2.5" fill={ACCENT} fillOpacity="0.92" />
         <path d="M573 105 l3.5 3.5 l7 -7" stroke="var(--mgf-bg)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         <text x="586" y="150" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
-          BOOKED &amp; REMINDED
+          BOOKED &amp; LOGGED
         </text>
       </svg>
 
@@ -78,7 +78,7 @@ function CaseFlow() {
         <circle cx="160" cy="90" r="2.6" fill={STRUCT} />
         <path d="M191 52 q10 9 10 20 q0 11 -10 20" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" className="mgf-flow" />
         <text x="160" y="124" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
-          CALLS &amp; MESSAGES
+          EMAIL &amp; LINKEDIN
         </text>
 
         <path d="M160 134 V 170" stroke={ACCENT} strokeWidth="1.4" className="mgf-flow" />
@@ -99,7 +99,7 @@ function CaseFlow() {
         <rect x="140" y="347" width="40" height="11" rx="2.5" fill={ACCENT} fillOpacity="0.92" />
         <path d="M147 353 l3.5 3.5 l7 -7" stroke="var(--mgf-bg)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         <text x="160" y="390" textAnchor="middle" className="fill-[var(--mgf-ink-soft)] font-mono text-[11px] tracking-[0.12em]">
-          BOOKED &amp; REMINDED
+          BOOKED &amp; LOGGED
         </text>
       </svg>
 
@@ -122,7 +122,7 @@ function CaseFlow() {
 
 /**
  * Section 005. An illustrative, honest case study on the glass panel: one
- * med spa modeled end to end, before/after columns, modeled target metrics,
+ * B2B sales team modeled end to end, before/after columns, modeled target metrics,
  * and a plain disclaimer that these are projections.
  */
 export function CaseStudy() {

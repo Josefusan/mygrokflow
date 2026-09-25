@@ -4,7 +4,7 @@ export const DIAGNOSTIC_MAILTO = `mailto:${DIAGNOSTIC_EMAIL}?subject=${encodeURI
 export const CAL_URL = "https://cal.com/mygrokflow-availability/15min";
 export const SITE_URL = "https://mygrokflow.com";
 export const SITE_NAME = "MyGrokFlow";
-export const PLAYBOOK_PDF = "/mygrokflow-clinic-front-desk-playbook.pdf";
+export const PLAYBOOK_PDF = "/without-you-one-loop-audit.pdf";
 // Web3Forms access key: public by design (it ships in the client form) and
 // only routes submissions to the inbox it was issued for. Free plan rejects
 // server-side calls, so the browser posts to Web3Forms directly.
@@ -15,7 +15,7 @@ export const BUTTONDOWN_EMBED_URL =
   "https://buttondown.com/api/emails/embed-subscribe/MyGrokFlow";
 export const BUTTONDOWN_REFER_URL = "https://buttondown.com/refer/MyGrokFlow";
 export const PROMISE =
-  "The front desk that never misses a call. Built and installed for your clinic.";
+  "The revenue team that never forgets a follow-up. Built and installed on your stack.";
 
 export const CONTACTS = [
   {
